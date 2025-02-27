@@ -320,7 +320,7 @@ begin
         end;
 
         //ShowMessage('Tgl Aplilkasi : '+vtgl_aplikasi);
-        ShowMessage('Username : '+DMFrm.QUserVUSER.AsString+' - '+DMFrm.QUserIUPDATE.AsString);
+        //ShowMessage('Username : '+DMFrm.QUserVUSER.AsString+' - '+DMFrm.QUserIUPDATE.AsString);
 
 
         { auto kill after 1 min idle  }

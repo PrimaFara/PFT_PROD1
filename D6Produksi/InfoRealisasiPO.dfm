@@ -1,6 +1,6 @@
 object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
-  Left = 171
-  Top = 70
+  Left = 204
+  Top = 75
   Width = 1120
   Height = 579
   Caption = 'Info WIP SOFTCONE'
@@ -24,8 +24,8 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
   object PanelMain: TPanel
     Left = 0
     Top = 0
-    Width = 1112
-    Height = 548
+    Width = 1104
+    Height = 541
     Align = alClient
     BevelOuter = bvNone
     Ctl3D = False
@@ -33,8 +33,8 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
     TabOrder = 0
     object Label1: TLabel
       Left = 0
-      Top = 535
-      Width = 1112
+      Top = 528
+      Width = 1104
       Height = 13
       Align = alBottom
       Color = clSkyBlue
@@ -43,7 +43,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
     object DBText3: TDBText
       Left = 0
       Top = 49
-      Width = 1112
+      Width = 1104
       Height = 27
       Align = alTop
       Alignment = taRightJustify
@@ -61,7 +61,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
     object LabelBanner: TLabel
       Left = 0
       Top = 133
-      Width = 1112
+      Width = 1104
       Height = 13
       Align = alTop
       Color = clSkyBlue
@@ -70,7 +70,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
     object PanelHeader: TPanel
       Left = 0
       Top = 0
-      Width = 1112
+      Width = 1104
       Height = 49
       Align = alTop
       BevelOuter = bvNone
@@ -87,13 +87,13 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
     object PanelFilter: TPanel
       Left = 0
       Top = 76
-      Width = 1112
+      Width = 1104
       Height = 57
       Align = alTop
       BevelOuter = bvNone
       TabOrder = 1
       DesignSize = (
-        1112
+        1104
         57)
       object Label5: TLabel
         Left = 1001
@@ -250,21 +250,21 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
     object PanelBrowse: TPanel
       Left = 0
       Top = 146
-      Width = 528
-      Height = 348
+      Width = 520
+      Height = 341
       Align = alClient
       BevelOuter = bvNone
       TabOrder = 2
       object WebBrowser1: TWebBrowser
         Left = 0
         Top = 0
-        Width = 528
-        Height = 348
+        Width = 520
+        Height = 341
         Align = alClient
         TabOrder = 7
         OnDocumentComplete = WebBrowser1DocumentComplete
         ControlData = {
-          4C00000092360000F82300000000000000000000000000000000000000000000
+          4C000000BE3500003E2300000000000000000000000000000000000000000000
           000000004C000000000000000000000001000000E0D057007335CF11AE690800
           2B2E126208000000000000004C0000000114020000000000C000000000000046
           8000000000000000000000000000000000000000000000000000000000000000
@@ -346,7 +346,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
             Frame.DrawRight = False
             Size.Values = (
               71.437500000000000000
-              838.729166666666700000
+              838.729166666666800000
               111.125000000000000000
               912.812500000000000000)
             Alignment = taCenter
@@ -2628,10 +2628,10 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              34.395833333333330000
+              34.395833333333340000
               222.250000000000000000
               13.229166666666670000
-              76.729166666666670000)
+              76.729166666666680000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -3133,7 +3133,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
               44.979166666666670000
               29.104166666666670000
               55.562500000000000000
-              66.145833333333330000)
+              66.145833333333340000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -3193,9 +3193,9 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              582.083333333333300000
-              42.333333333333330000
-              76.729166666666670000)
+              582.083333333333400000
+              42.333333333333340000
+              76.729166666666680000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -3255,7 +3255,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              232.833333333333300000
+              232.833333333333400000
               55.562500000000000000
               142.875000000000000000)
             Alignment = taLeftJustify
@@ -3316,10 +3316,10 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              42.333333333333330000
+              42.333333333333340000
               1037.166666666667000000
               108.479166666666700000
-              34.395833333333330000)
+              34.395833333333340000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -3349,7 +3349,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
             Size.Values = (
               44.979166666666670000
               1013.354166666667000000
-              58.208333333333330000
+              58.208333333333340000
               214.312500000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -3380,7 +3380,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
             Size.Values = (
               44.979166666666670000
               769.937500000000000000
-              58.208333333333330000
+              58.208333333333340000
               198.437500000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -3409,10 +3409,10 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              42.333333333333330000
-              796.395833333333300000
+              42.333333333333340000
+              796.395833333333400000
               108.479166666666700000
-              34.395833333333330000)
+              34.395833333333340000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -3502,7 +3502,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              42.333333333333330000
+              42.333333333333340000
               920.750000000000000000
               108.479166666666700000
               39.687500000000000000)
@@ -3657,10 +3657,10 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              42.333333333333330000
+              42.333333333333340000
               529.166666666666700000
               108.479166666666700000
-              34.395833333333330000)
+              34.395833333333340000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -3688,8 +3688,8 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
             Frame.DrawLeft = False
             Frame.DrawRight = False
             Size.Values = (
-              42.333333333333330000
-              672.041666666666700000
+              42.333333333333340000
+              672.041666666666800000
               108.479166666666700000
               39.687500000000000000)
             Alignment = taLeftJustify
@@ -4515,7 +4515,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
             Frame.DrawRight = False
             Size.Values = (
               71.437500000000000000
-              759.354166666666700000
+              759.354166666666800000
               111.125000000000000000
               1026.583333333333000000)
             Alignment = taCenter
@@ -5016,7 +5016,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            60.854166666666670000
+            60.854166666666680000
             2547.937500000000000000)
           BandType = rbDetail
           object QRDBText60: TQRDBText
@@ -6598,9 +6598,9 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              264.583333333333300000
+              264.583333333333400000
               7.937500000000000000
-              97.895833333333330000)
+              97.895833333333320000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -6898,7 +6898,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
               44.979166666666670000
               29.104166666666670000
               55.562500000000000000
-              76.729166666666670000)
+              76.729166666666680000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -6959,8 +6959,8 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
             Size.Values = (
               44.979166666666670000
               650.875000000000000000
-              42.333333333333330000
-              89.958333333333330000)
+              42.333333333333340000
+              89.958333333333320000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -7020,7 +7020,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              256.645833333333300000
+              256.645833333333400000
               55.562500000000000000
               156.104166666666700000)
             Alignment = taLeftJustify
@@ -7144,8 +7144,8 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              899.583333333333300000
-              58.208333333333330000
+              899.583333333333400000
+              58.208333333333340000
               142.875000000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -7175,7 +7175,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              891.645833333333300000
+              891.645833333333200000
               105.833333333333300000
               37.041666666666670000)
             Alignment = taLeftJustify
@@ -7423,7 +7423,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              608.541666666666700000
+              608.541666666666800000
               105.833333333333300000
               37.041666666666670000)
             Alignment = taLeftJustify
@@ -7454,7 +7454,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              735.541666666666700000
+              735.541666666666800000
               105.833333333333300000
               52.916666666666670000)
             Alignment = taLeftJustify
@@ -8012,8 +8012,8 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            447.145833333333300000
-            3122.083333333333000000)
+            447.145833333333400000
+            3122.083333333334000000)
           BandType = rbSummary
           object QRShape37: TQRShape
             Left = 89
@@ -9088,7 +9088,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
           ForceNewPage = False
           Size.Values = (
             47.625000000000000000
-            3122.083333333333000000)
+            3122.083333333334000000)
           BandType = rbDetail
           object QRDBText1: TQRDBText
             Left = 95
@@ -9934,7 +9934,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
           ForceNewPage = False
           Size.Values = (
             127.000000000000000000
-            3122.083333333333000000)
+            3122.083333333334000000)
           BandType = rbColumnHeader
           object QRLabel4: TQRLabel
             Left = 45
@@ -9979,7 +9979,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              312.208333333333300000
+              312.208333333333400000
               37.041666666666670000
               190.500000000000000000)
             Alignment = taLeftJustify
@@ -10383,7 +10383,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
             Size.Values = (
               44.979166666666670000
               23.812500000000000000
-              34.395833333333330000
+              34.395833333333340000
               52.916666666666670000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -10987,7 +10987,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
           ForceNewPage = False
           Size.Values = (
             169.333333333333300000
-            3122.083333333333000000)
+            3122.083333333334000000)
           BandType = rbTitle
           object QRLPeriode: TQRLabel
             Left = 510
@@ -11002,7 +11002,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
             Size.Values = (
               44.979166666666670000
               1349.375000000000000000
-              84.666666666666670000
+              84.666666666666680000
               420.687500000000000000)
             Alignment = taCenter
             AlignToBand = True
@@ -11068,7 +11068,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
           ForceNewPage = False
           Size.Values = (
             177.270833333333300000
-            3122.083333333333000000)
+            3122.083333333334000000)
           BandType = rbPageHeader
           object QRDBText11: TQRDBText
             Left = 96
@@ -11084,7 +11084,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
               63.500000000000000000
               254.000000000000000000
               29.104166666666670000
-              288.395833333333300000)
+              288.395833333333400000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -11466,8 +11466,8 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            60.854166666666670000
-            3122.083333333333000000)
+            60.854166666666680000
+            3122.083333333334000000)
           BandType = rbPageFooter
           object QRDBText29: TQRDBText
             Left = 8
@@ -11595,7 +11595,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
           ForceNewPage = False
           Size.Values = (
             455.083333333333300000
-            3122.083333333333000000)
+            3122.083333333334000000)
           BandType = rbSummary
           object QRLabel45: TQRLabel
             Left = 145
@@ -11609,7 +11609,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              383.645833333333300000
+              383.645833333333400000
               13.229166666666670000
               100.541666666666700000)
             Alignment = taLeftJustify
@@ -12557,8 +12557,8 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            60.854166666666670000
-            3122.083333333333000000)
+            60.854166666666680000
+            3122.083333333334000000)
           BandType = rbPageFooter
           object QRDBText23: TQRDBText
             Left = 16
@@ -12639,7 +12639,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
           ForceNewPage = False
           Size.Values = (
             174.625000000000000000
-            3122.083333333333000000)
+            3122.083333333334000000)
           BandType = rbPageHeader
           object QRDBText12: TQRDBText
             Left = 88
@@ -12653,9 +12653,9 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
             Frame.DrawRight = False
             Size.Values = (
               63.500000000000000000
-              232.833333333333300000
+              232.833333333333400000
               31.750000000000000000
-              288.395833333333300000)
+              288.395833333333400000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -13101,7 +13101,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
           ForceNewPage = False
           Size.Values = (
             134.937500000000000000
-            3122.083333333333000000)
+            3122.083333333334000000)
           BandType = rbTitle
           object QRLabel26: TQRLabel
             Left = 510
@@ -13182,7 +13182,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
           ForceNewPage = False
           Size.Values = (
             116.416666666666700000
-            3122.083333333333000000)
+            3122.083333333334000000)
           BandType = rbColumnHeader
           object QRLabel28: TQRLabel
             Left = 141
@@ -14141,7 +14141,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
           ForceNewPage = False
           Size.Values = (
             50.270833333333330000
-            3122.083333333333000000)
+            3122.083333333334000000)
           BandType = rbDetail
           object QRDBText13: TQRDBText
             Left = 108
@@ -15063,9 +15063,9 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
             Frame.DrawRight = False
             Size.Values = (
               52.916666666666670000
-              685.270833333333300000
+              685.270833333333200000
               21.166666666666670000
-              550.333333333333300000)
+              550.333333333333400000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -15095,7 +15095,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
             Size.Values = (
               44.979166666666670000
               738.187500000000000000
-              84.666666666666670000
+              84.666666666666680000
               441.854166666666700000)
             Alignment = taCenter
             AlignToBand = True
@@ -15129,7 +15129,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            89.958333333333330000
+            89.958333333333320000
             1920.875000000000000000)
           BandType = rbColumnHeader
           object QRLabel64: TQRLabel
@@ -15563,7 +15563,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            42.333333333333330000
+            42.333333333333340000
             1920.875000000000000000)
           BandType = rbDetail
           object QRDBText32: TQRDBText
@@ -15923,9 +15923,9 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              656.166666666666700000
+              656.166666666666800000
               0.000000000000000000
-              82.020833333333330000)
+              82.020833333333340000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -16470,8 +16470,8 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
       object wwDBGrid2: TwwDBGrid
         Left = 0
         Top = 0
-        Width = 528
-        Height = 348
+        Width = 520
+        Height = 341
         DisableThemes = True
         DisableThemesInTitle = True
         ControlType.Strings = (
@@ -16538,8 +16538,8 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
       object wwDBGrid1: TwwDBGrid
         Left = 0
         Top = 0
-        Width = 528
-        Height = 348
+        Width = 520
+        Height = 341
         DisableThemes = True
         DisableThemesInTitle = True
         ControlType.Strings = (
@@ -16604,8 +16604,8 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
     end
     object PanelFooter2: TPanel
       Left = 0
-      Top = 494
-      Width = 1112
+      Top = 487
+      Width = 1104
       Height = 41
       Align = alBottom
       BevelOuter = bvNone
@@ -16740,10 +16740,10 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
       end
     end
     object PanelRiwayat: TPanel
-      Left = 528
+      Left = 520
       Top = 146
       Width = 584
-      Height = 348
+      Height = 341
       Align = alRight
       BevelOuter = bvNone
       Caption = 'PanelRiwayat'
@@ -16764,12 +16764,31 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 1
+        object PTopR: TPanel
+          Left = 416
+          Top = 0
+          Width = 168
+          Height = 49
+          Align = alRight
+          BevelOuter = bvNone
+          TabOrder = 0
+          object BitBtn2: TBitBtn
+            Left = 16
+            Top = 14
+            Width = 129
+            Height = 23
+            Caption = 'Export &Riwayat'
+            TabOrder = 0
+            OnClick = BitBtn2Click
+            NumGlyphs = 2
+          end
+        end
       end
       object wwDBGridSoft0: TwwDBGrid
         Left = 0
         Top = 49
         Width = 584
-        Height = 299
+        Height = 292
         ControlType.Strings = (
           'ISFIXED;CheckBox;1;0')
         Selected.Strings = (
@@ -16817,7 +16836,7 @@ object InfoRealisasiPOFrm: TInfoRealisasiPOFrm
         Left = 0
         Top = 49
         Width = 584
-        Height = 299
+        Height = 292
         ControlType.Strings = (
           'ISFIXED;CheckBox;1;0')
         Selected.Strings = (

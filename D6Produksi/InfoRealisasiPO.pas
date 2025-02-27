@@ -708,6 +708,8 @@ type
     QBrowseDetail1QTY_OUT2: TFloatField;
     QBrowseDetail1KETERANGAN: TStringField;
     WebBrowser1: TWebBrowser;
+    PTopR: TPanel;
+    BitBtn2: TBitBtn;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);
@@ -761,6 +763,7 @@ type
     procedure wwDBGrid2RowChanged(Sender: TObject);
     procedure WebBrowser1DocumentComplete(Sender: TObject;
       const pDisp: IDispatch; var URL: OleVariant);
+    procedure BitBtn2Click(Sender: TObject);
   private
     { Private declarations }
     vorder, SelectedFont, vkode, vitem : String;
@@ -1564,6 +1567,46 @@ procedure TInfoRealisasiPOFrm.WebBrowser1DocumentComplete(Sender: TObject;
 begin
     // Memanggil print setelah dokumen selesai dimuat
     WebBrowser1.OleObject.ExecWB(OLECMDID_PRINT, OLECMDEXECOPT_PROMPTUSER, Unassigned, Unassigned);
+end;
+
+procedure TInfoRealisasiPOFrm.BitBtn2Click(Sender: TObject);
+begin
+  QBrowse.Active ;
+  if radiogroup1.ItemIndex=0 then
+  begin
+     DMFrm.SaveDialog1.DefaultExt:='XLK';
+     DMFrm.SaveDialog1.Filter:='Excel files (*.XLK)|*.XLK';
+     DMFrm.SaveDialog1.FileName:='Riwayat DP Softcone '+ vTglAwal.Text+' sd '+vTglAkhir.Text+'.xlK';
+     wwDBGridSoft0.ExportOptions.TitleName:=PanelTop.Caption+' Per '+vTglAwal.Text+' sd '+vTglAkhir.Text;
+       if DMFrm.SaveDialog1.Execute then
+       begin
+         try
+         wwDBGridSoft0.ExportOptions.FileName:=DMFrm.SaveDialog1.FileName;
+         wwDBGridSoft0.ExportOptions.Save;
+         ShowMessage('Simpan Sukses !');
+         except
+         ShowMessage('Simpan Gagal !');
+         end;
+       end;
+    end
+   else
+    begin
+     DMFrm.SaveDialog1.DefaultExt:='XLK';
+     DMFrm.SaveDialog1.Filter:='Excel files (*.XLK)|*.XLK';
+     DMFrm.SaveDialog1.FileName:='Riwayat HP Softcone '+ vTglAwal.Text+' sd '+vTglAkhir.Text+'.xlK';
+     wwDBGridSoft1.ExportOptions.TitleName:=PanelTop.Caption+' Per '+vTglAwal.Text+' sd '+vTglAkhir.Text;
+       if DMFrm.SaveDialog1.Execute then
+       begin
+         try
+         wwDBGridSoft1.ExportOptions.FileName:=DMFrm.SaveDialog1.FileName;
+         wwDBGridSoft1.ExportOptions.Save;
+         ShowMessage('Simpan Sukses !');
+         except
+         ShowMessage('Simpan Gagal !');
+         end;
+       end;
+
+    end;
 end;
 
 end.

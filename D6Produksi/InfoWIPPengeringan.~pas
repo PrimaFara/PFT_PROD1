@@ -437,6 +437,8 @@ type
     QBrowseDetail0QTY_OUT: TFloatField;
     QBrowseDetail0QTY_OUT2: TFloatField;
     QBrowseDetail0KETERANGAN: TStringField;
+    PTopR: TPanel;
+    BitBtn2: TBitBtn;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);
@@ -495,6 +497,7 @@ type
     procedure cbRiwayatClick(Sender: TObject);
     procedure wwDBGrid3RowChanged(Sender: TObject);
     procedure wwDBGrid4RowChanged(Sender: TObject);
+    procedure BitBtn2Click(Sender: TObject);
 
   private
     { Private declarations }
@@ -1562,6 +1565,46 @@ begin
     wwDBGridDry1.BringToFront;
     PanelTop.Caption:='Hasil Proses :'+QBrowseNew2NAMA_ITEM.AsString;
   end;
+end;
+
+procedure TInfoWIPPengeringanFrm.BitBtn2Click(Sender: TObject);
+begin
+  QBrowse.Active ;
+  if radiogroup1.ItemIndex=0 then
+  begin
+     DMFrm.SaveDialog1.DefaultExt:='XLK';
+     DMFrm.SaveDialog1.Filter:='Excel files (*.XLK)|*.XLK';
+     DMFrm.SaveDialog1.FileName:='Riwayat DP Pengering '+ vTglAwal.Text+' sd '+vTglAkhir.Text+'.xlK';
+     wwDBGridDry0.ExportOptions.TitleName:=PanelTop.Caption+' Per '+vTglAwal.Text+' sd '+vTglAkhir.Text;
+       if DMFrm.SaveDialog1.Execute then
+       begin
+         try
+         wwDBGridDry0.ExportOptions.FileName:=DMFrm.SaveDialog1.FileName;
+         wwDBGridDry0.ExportOptions.Save;
+         ShowMessage('Simpan Sukses !');
+         except
+         ShowMessage('Simpan Gagal !');
+         end;
+       end;
+    end
+   else
+    begin
+     DMFrm.SaveDialog1.DefaultExt:='XLK';
+     DMFrm.SaveDialog1.Filter:='Excel files (*.XLK)|*.XLK';
+     DMFrm.SaveDialog1.FileName:='Riwayat HP Pengering '+ vTglAwal.Text+' sd '+vTglAkhir.Text+'.xlK';
+     wwDBGridDry1.ExportOptions.TitleName:=PanelTop.Caption+' Per '+vTglAwal.Text+' sd '+vTglAkhir.Text;
+       if DMFrm.SaveDialog1.Execute then
+       begin
+         try
+         wwDBGridDry1.ExportOptions.FileName:=DMFrm.SaveDialog1.FileName;
+         wwDBGridDry1.ExportOptions.Save;
+         ShowMessage('Simpan Sukses !');
+         except
+         ShowMessage('Simpan Gagal !');
+         end;
+       end;
+
+    end;
 end;
 
 end.

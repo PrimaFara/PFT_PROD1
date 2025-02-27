@@ -23,8 +23,8 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
   object PanelMain: TPanel
     Left = 0
     Top = 0
-    Width = 1084
-    Height = 568
+    Width = 1092
+    Height = 575
     Align = alClient
     BevelOuter = bvNone
     Ctl3D = False
@@ -32,8 +32,8 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
     TabOrder = 0
     object Label1: TLabel
       Left = 0
-      Top = 555
-      Width = 1084
+      Top = 562
+      Width = 1092
       Height = 13
       Align = alBottom
       Color = clSkyBlue
@@ -42,7 +42,7 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
     object DBText3: TDBText
       Left = 0
       Top = 49
-      Width = 1084
+      Width = 1092
       Height = 27
       Align = alTop
       Alignment = taRightJustify
@@ -60,7 +60,7 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
     object PanelHeader: TPanel
       Left = 0
       Top = 0
-      Width = 1084
+      Width = 1092
       Height = 49
       Align = alTop
       BevelOuter = bvNone
@@ -76,14 +76,14 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
     end
     object PanelFooter2: TPanel
       Left = 0
-      Top = 514
-      Width = 1084
+      Top = 521
+      Width = 1092
       Height = 41
       Align = alBottom
       BevelOuter = bvNone
       TabOrder = 1
       DesignSize = (
-        1084
+        1092
         41)
       object wwDBNavigator1: TwwDBNavigator
         Left = 0
@@ -221,8 +221,8 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
     object PageControl1: TPageControl
       Left = 0
       Top = 76
-      Width = 1084
-      Height = 438
+      Width = 1092
+      Height = 445
       ActivePage = TabSheet1
       Align = alClient
       TabOrder = 2
@@ -231,7 +231,7 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
         object LabelBanner: TLabel
           Left = 0
           Top = 93
-          Width = 1076
+          Width = 1084
           Height = 13
           Align = alTop
           Color = clSkyBlue
@@ -240,16 +240,16 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
         object PanelBrowse: TPanel
           Left = 0
           Top = 106
-          Width = 1076
-          Height = 304
+          Width = 1084
+          Height = 311
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 0
           object wwDBGridNew: TwwDBGrid
             Left = 0
             Top = 0
-            Width = 1076
-            Height = 304
+            Width = 1084
+            Height = 311
             ControlType.Strings = (
               'ISFIXED;CheckBox;1;0')
             Selected.Strings = (
@@ -310,8 +310,8 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
           object wwDBGrid2: TwwDBGrid
             Left = 0
             Top = 0
-            Width = 1076
-            Height = 304
+            Width = 1084
+            Height = 311
             ControlType.Strings = (
               'ISFIXED;CheckBox;1;0')
             Selected.Strings = (
@@ -378,13 +378,13 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
         object PanelFilter: TPanel
           Left = 0
           Top = 0
-          Width = 1076
+          Width = 1084
           Height = 93
           Align = alTop
           BevelOuter = bvNone
           TabOrder = 1
           DesignSize = (
-            1076
+            1084
             93)
           object Bevel1: TBevel
             Left = 271
@@ -564,7 +564,7 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
         object LabelBanner2: TLabel
           Left = 0
           Top = 73
-          Width = 1076
+          Width = 1084
           Height = 13
           Align = alTop
           Color = clSkyBlue
@@ -573,13 +573,13 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
         object Panel1: TPanel
           Left = 0
           Top = 0
-          Width = 1076
+          Width = 1084
           Height = 73
           Align = alTop
           BevelOuter = bvNone
           TabOrder = 0
           DesignSize = (
-            1076
+            1084
             73)
           object Bevel2: TBevel
             Left = 334
@@ -588,7 +588,7 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
             Height = 41
           end
           object Label7: TLabel
-            Left = 1018
+            Left = 1026
             Top = 16
             Width = 43
             Height = 13
@@ -651,7 +651,7 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
             NumGlyphs = 2
           end
           object wwDBSpinEdit1: TwwDBSpinEdit
-            Left = 1020
+            Left = 1028
             Top = 32
             Width = 41
             Height = 19
@@ -734,16 +734,16 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
         object Panel2: TPanel
           Left = 0
           Top = 86
-          Width = 1076
-          Height = 324
+          Width = 1084
+          Height = 331
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 1
           object wwDBGrid1: TwwDBGrid
             Left = 0
             Top = 0
-            Width = 560
-            Height = 324
+            Width = 568
+            Height = 331
             ControlType.Strings = (
               'ISFIXED;CheckBox;1;0')
             Selected.Strings = (
@@ -789,10 +789,10 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
             OnTitleButtonClick = wwDBGrid1TitleButtonClick
           end
           object PanelRiwayat: TPanel
-            Left = 560
+            Left = 568
             Top = 0
             Width = 516
-            Height = 324
+            Height = 331
             Align = alRight
             BevelOuter = bvNone
             Caption = 'PanelRiwayat'
@@ -813,12 +813,31 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
               Font.Style = [fsBold]
               ParentFont = False
               TabOrder = 0
+              object PTopR: TPanel
+                Left = 348
+                Top = 0
+                Width = 168
+                Height = 49
+                Align = alRight
+                BevelOuter = bvNone
+                TabOrder = 0
+                object BitBtn3: TBitBtn
+                  Left = 16
+                  Top = 14
+                  Width = 129
+                  Height = 23
+                  Caption = 'Export &Riwayat'
+                  TabOrder = 0
+                  OnClick = BitBtn3Click
+                  NumGlyphs = 2
+                end
+              end
             end
             object wwDBGrid3: TwwDBGrid
               Left = 0
               Top = 49
               Width = 516
-              Height = 275
+              Height = 282
               ControlType.Strings = (
                 'ISFIXED;CheckBox;1;0')
               Selected.Strings = (
@@ -1030,7 +1049,7 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
     PrinterSetup.BinName = 'Default'
     PrinterSetup.DocumentName = 'Report'
     PrinterSetup.Orientation = poLandscape
-    PrinterSetup.PaperName = 'Custom'
+    PrinterSetup.PaperName = 'A4'
     PrinterSetup.PrinterName = 'Fax'
     PrinterSetup.SaveDeviceSettings = False
     PrinterSetup.mmMarginBottom = 6350
@@ -1039,7 +1058,7 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 209974
     PrinterSetup.mmPaperWidth = 297039
-    PrinterSetup.PaperSize = 256
+    PrinterSetup.PaperSize = 9
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\TransaksiOrg.rtm'
     Units = utPrinterPixels
     DeviceType = 'Screen'

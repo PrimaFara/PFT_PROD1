@@ -1,6 +1,6 @@
 object PermintaanKoreksiFrm: TPermintaanKoreksiFrm
-  Left = 238
-  Top = 116
+  Left = 232
+  Top = 53
   Width = 1116
   Height = 608
   Caption = 'Permintaan Koreksi'
@@ -79,7 +79,7 @@ object PermintaanKoreksiFrm: TPermintaanKoreksiFrm
       Top = 76
       Width = 1100
       Height = 481
-      ActivePage = TabSheet1
+      ActivePage = TabSheet2
       Align = alClient
       Style = tsFlatButtons
       TabOrder = 1
@@ -2532,7 +2532,7 @@ object PermintaanKoreksiFrm: TPermintaanKoreksiFrm
     SequenceField.Sequence = 'ipisma_db3.NO_REGISTER'
     SequenceField.ApplyMoment = amOnNewRecord
     QBEDefinition.QBEFieldDefs = {
-      0400000013000000070000004E4F5F4E4F54410100000000000C0000004B445F
+      0400000017000000070000004E4F5F4E4F54410100000000000C0000004B445F
       5452414E53414B53490100000000000300000054474C0100000000000A000000
       4B45544552414E47414E0100000000000A00000054474C5F494E534552540100
       000000000A0000004F50525F494E53455254010000000000060000004953504F
@@ -2542,7 +2542,9 @@ object PermintaanKoreksiFrm: TPermintaanKoreksiFrm
       5348494654010000000000040000004752555001000000000004000000545444
       3101000000000004000000545444320100000000000400000054544433010000
       0000000400000054544434010000000000090000005154595F52455345500100
-      00000000}
+      00000000090000005154595F42455241540100000000000A0000005154595F53
+      5052494E47010000000000050000004A454E4953010000000000070000004A4E
+      535F424E47010000000000}
     Cursor = crSQLWait
     RefreshOptions = [roAfterInsert, roAfterUpdate]
     Session = DMFrm.OS
@@ -2568,6 +2570,7 @@ object PermintaanKoreksiFrm: TPermintaanKoreksiFrm
     end
     object QMasterTGL: TDateTimeField
       FieldName = 'TGL'
+      OnChange = QMasterTGLChange
       DisplayFormat = 'dd mmm yyyy'
     end
     object QMasterKETERANGAN: TStringField
@@ -2638,6 +2641,9 @@ object PermintaanKoreksiFrm: TPermintaanKoreksiFrm
     end
     object QMasterQTY_RESEP: TFloatField
       FieldName = 'QTY_RESEP'
+    end
+    object QMasterJENIS: TStringField
+      FieldName = 'JENIS'
     end
   end
   object dsQMaster: TwwDataSource
@@ -6124,5 +6130,18 @@ object PermintaanKoreksiFrm: TPermintaanKoreksiFrm
     object QRoundQTYPQTY: TFloatField
       FieldName = 'PQTY'
     end
+  end
+  object QProc: TOracleQuery
+    SQL.Strings = (
+      'begin'
+      '  ipisma_db3.proc_temp_lookup_soft0(:vsysdate, :vsysdate2);'
+      'end;')
+    Session = DMFrm.OS
+    Variables.Data = {
+      0300000002000000090000003A56535953444154450C00000007000000786B06
+      01010101000000000A0000003A5653595344415445320C00000007000000786B
+      061E01010100000000}
+    Left = 792
+    Top = 136
   end
 end

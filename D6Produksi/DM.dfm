@@ -140,16 +140,16 @@ object DMFrm: TDMFrm
   object Perusahaan: TOracleDataSet
     SQL.Strings = (
       'select'
-      #39'PT. GAJAH DUDUK'#39' as perusahaan,'
-      #39'Jl. Sapugarut BUARAN-PEKALONGAN'#39' as alamat1,'
+      #39'PT. PRIMA FARA TEXTILE'#39' as perusahaan,'
+      #39'Jl. Abdul Halim No. 39 A, rt/rw 15/5'#39' as alamat1,'
       #39#39' as alamat2,'
       #39#39' as alamat3,'
       #39'Telp. +62285-421145, Fax. -'#39' as telepon1,'
       #39#39' as telepon2,'
       #39#39' as telepon3,'
       #39'http://www.gajahduduk.com'#39' as website,'
-      #39#39' as email,'
-      #39'66.645.690.0-607.000'#39' as npwp'
+      #39'marketing@gajahduduk.com'#39' as email,'
+      #39'41.008.211.9-613.000'#39' as npwp'
       'from dual')
     QBEDefinition.QBEFieldDefs = {
       040000000A0000000A0000005045525553414841414E01000000000007000000

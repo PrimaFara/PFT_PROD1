@@ -347,6 +347,8 @@ type
     QRoundQTY: TOracleDataSet;
     QRoundQTYPQTY: TFloatField;
     Label18: TLabel;
+    QMasterJENIS: TStringField;
+    QProc: TOracleQuery;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);
@@ -406,9 +408,10 @@ type
       State: TGridDrawState; Highlight: Boolean; AFont: TFont;
       ABrush: TBrush);
     procedure QDetailQTY5Change(Sender: TField);
+    procedure QMasterTGLChange(Sender: TField);
   private
     { Private declarations }
-    vshift, vgrup, vorder, SelectedFont, vkode, vjns_brg, vjns_lokasi, vJNS_TRX : String;
+    vshift, vgrup, vorder, SelectedFont, vkode, vjns_brg, vjns_lokasi, vJNS_TRX, vproses : String;
   public
     { Public declarations }
 
@@ -481,11 +484,14 @@ Begin
 //  PermintaanKoreksiFrm.PanelHeader.Caption:=PermintaanKoreksiFrm.QTransaksiKD_TRANSAKSI.AsString+'. '+'KOREKSI SOFTCONE';
 if pJNS_TRX = 'DALAM_PROSES' then
 begin
-      PermintaanKoreksiFrm.PanelHeader.Caption:=PermintaanKoreksiFrm.QTransaksiKD_TRANSAKSI.AsString+'. '+'KOREKSI DALAM PROSES SOFTCONE';
+   PermintaanKoreksiFrm.PanelHeader.Caption:=PermintaanKoreksiFrm.QTransaksiKD_TRANSAKSI.AsString+'. '+'KOREKSI DALAM PROSES SOFTCONE';
+   PermintaanKoreksiFrm.vproses := '0';
 end;
+
 if pJNS_TRX = 'HASIL_PROSES' then
 begin
-      PermintaanKoreksiFrm.PanelHeader.Caption:=PermintaanKoreksiFrm.QTransaksiKD_TRANSAKSI.AsString+'. '+'KOREKSI HASIL PROSES SOFTCONE';
+   PermintaanKoreksiFrm.PanelHeader.Caption:=PermintaanKoreksiFrm.QTransaksiKD_TRANSAKSI.AsString+'. '+'KOREKSI HASIL PROSES SOFTCONE';
+   PermintaanKoreksiFrm.vproses := '1';
 end;
 
   PermintaanKoreksiFrm.Show;
@@ -592,12 +598,14 @@ begin
       QBrowse.DeclareVariable('pawal',otDate);
       QBrowse.DeclareVariable('pakhir',otDate);
       QBrowse.DeclareVariable('kd_transaksi',otString);
+      QBrowse.DeclareVariable('pjenis',otString);
       QBrowse.DeclareVariable('porder',otSubst);
       QBrowse.SQL.Text:='select * from '+cUserTabel+'v'+Name+
-        ' where tanggal>=:pawal and tanggal<=:pakhir and kd_transaksi=:kd_transaksi :porder';
+        ' where tanggal>=:pawal and tanggal<=:pakhir and kd_transaksi=:kd_transaksi and jns_koreksi=:pjenis :porder';
   		QBrowse.SetVariable('pawal',Trunc(vTglAwal.Date));
   		QBrowse.SetVariable('pakhir',Trunc(vTglAkhir.Date)+1-1/86400);
 			QBrowse.SetVariable('kd_transaksi',vkode);
+			QBrowse.SetVariable('pjenis',vproses);
   		QBrowse.SetVariable('porder',vorder);
 //      ShowMessage(QBrowse.SQL.Text);
       QBrowse.Open;
@@ -830,7 +838,7 @@ begin
    begin
      DMFrm.FNoUrut.Close;
      DMFrm.FNoUrut.SetVariable(0,vkode);
-     DMFrm.FNoUrut.SetVariable(1,'-');
+     DMFrm.FNoUrut.SetVariable(1,vproses);
      DMFrm.FNoUrut.SetVariable(2,Trunc(QMasterTGL.AsDateTime));
      DMFrm.FNoUrut.Open;
      QMasterNO_NOTA.AsString:=DMFrm.FNoUrutFNO_URUT.AsString;
@@ -843,6 +851,11 @@ begin
   if QMaster.State<>dsBrowse then
   try
     QMaster.Post;
+
+    QProc.Close;
+    QProc.SetVariable('vsysdate', QMasterTGL.AsDateTime);
+    QProc.SetVariable('vsysdate2', QMasterTGL.AsDateTime);
+    QProc.Execute;
   except
     ShowMessage('Maaf, ada masalah di pengisian MASTER !');
   end;
@@ -867,16 +880,14 @@ end;
 procedure TPermintaanKoreksiFrm.LookItemEnter(Sender: TObject);
 begin
 
-    QItem.DisableControls;
-    QItem.Close;
-    QItem.DeclareVariable('pkd_lokasi',otString);
-    QItem.DeclareVariable('psysdate',otDate);
-
-//    if (QMasterNO_RESEP.AsString='KOREKSI1') OR (QMasterNO_RESEP.AsString='RETUR GD WARNA') then
   if vJNS_TRX = 'DALAM_PROSES' then
-    begin
-  //  showmessage ('TRANSAKSI KOREKSI WIP DALAM PROSES SOFTCONES');
-    QItem.SQL.Text:='SELECT A.*,181.44 as RASIO2 FROM('+
+  begin
+      {
+        QItem.DisableControls;
+        QItem.Close;
+        QItem.DeclareVariable('pkd_lokasi',otString);
+        QItem.DeclareVariable('psysdate',otDate);
+        QItem.SQL.Text:='SELECT A.*,181.44 as RASIO2 FROM('+
                     ' select kd_item, nama_item,kd_sub_lokasi,'+
                     ' (awmasuk1+ (awmasuk3+awmasuk3IN) + (awkoreksi1+awkoreksi1IN) ) - (awkeluar1+ (awkeluar5+awkeluar5OUT) ) as qty,'+
                     ' (round( (((awmasuk1+ (awmasuk3+awmasuk3IN) + (awkoreksi1+awkoreksi1IN) ) - (awkeluar1+ (awkeluar5+awkeluar5OUT) )) /181.44) ,4)) as qty2'+
@@ -929,12 +940,37 @@ begin
                     ' where a.kd_item=b.kd_item1 and a.kd_jns_item=:pkd_lokasi '+
                     ' order by a.nama_item)  '+
                     ')  A, ipisma_db3.vitemall B WHERE A.kd_item=B.kd_item ORDER BY A.QTY desc,A.QTY2 desc, A.NAMA_ITEM';
-//showmessage (QItem.SQL.Text);
+        QItem.SetVariable('pkd_lokasi',vjns_lokasi);
+        QItem.SetVariable('psysdate',Trunc(QMasterTGL.AsDateTime));
+        QItem.Open;
+        QItem.EnableControls;
+      }
+
+      QItem.DisableControls;
+      QItem.Close;
+      QItem.DeclareVariable('pkd_lokasi',otString);
+      QItem.DeclareVariable('psysdate',otDate);
+      QItem.SQL.Clear;
+      QItem.SQL.Text:='SELECT * FROM (select b.nama_item, a.kd_item, :pkd_lokasi as kd_sub_lokasi, '+
+                      '(sum(a.awal_thn2+a.awal_tgl2+a.qty_in2)-sum(a.qty_out2))*181.44 as qty, '+
+                      'sum(a.awal_thn2+a.awal_tgl2+a.qty_in2)-sum(a.qty_out2) as qty2, '+
+                      '181,44 as rasio2, :psysdate as tgl '+
+                      'from ipisma_db3.temp_lookup_soft0 a '+
+                      'left join ipisma_db3.item b on a.kd_item=b.kd_item '+
+                      'group by b.nama_item, a.kd_item, b.rasio) ORDER BY QTY DESC';
+      //ShowMessage(QItem.SQL.Text);
+      QItem.SetVariable('pkd_lokasi','10-00000');
+      QItem.SetVariable('psysdate',Trunc(QMasterTGL.AsDateTime));
+      QItem.Open;
+      QItem.EnableControls;
     end
     else
     begin
-  //  showmessage ('TRANSAKSI KOREKSI WIP HASIL PROSES SOFTCONES');
-    QItem.SQL.Text:='SELECT A.*,B.RASIO2 FROM(  '+
+      QItem.DisableControls;
+      QItem.Close;
+      QItem.DeclareVariable('pkd_lokasi',otString);
+      QItem.DeclareVariable('psysdate',otDate);
+      QItem.SQL.Text:='SELECT A.*,B.RASIO2 FROM(  '+
                     ' select kd_item, nama_item, kd_sub_lokasi,  '+
                     ' (awmasuk1+ (awmasuk5+awmasuk5IN) + (awmasuk3+awmasuk3IN) + (awkoreksi1+awkoreksi1IN) ) - (awkeluar1+ (awkeluar5+awkeluar5OUT) + (awkeluar3+awkeluar3OUT) ) as qty,  '+
                     ' (awmasuk2+ (awmasuk6+awmasuk6IN) + (awmasuk4+awmasuk4IN) + (awkoreksi2+awkoreksi2IN) ) - (awkeluar2+ (awkeluar6+awkeluar6OUT) + (awkeluar4+awkeluar4OUT) ) as qty2  '+
@@ -1024,16 +1060,14 @@ begin
                     ' where a.kd_jns_item=:pkd_lokasi  '+
                     ' order by a.kd_jns_item, a.nama_item)  '+
                     ' ) A, ipisma_db3.vitemall B WHERE A.kd_item=B.kd_item ORDER BY A.QTY desc,A.QTY2 desc, A.NAMA_ITEM  ';
-//showmessage (QItem.SQL.Text);
+
+      QItem.SetVariable('pkd_lokasi',vjns_lokasi);
+      QItem.SetVariable('psysdate',Trunc(QMasterTGL.AsDateTime));
+      QItem.Open;
+      QItem.EnableControls;
     end;
 
-    QItem.SetVariable('pkd_lokasi',vjns_lokasi);
-    QItem.SetVariable('psysdate',Trunc(QMasterTGL.AsDateTime));
-    QItem.Open;
-    QItem.EnableControls;
-
-
-  (sender as TwwDBLookupComboDlg).LookupTable.Open;
+    (sender as TwwDBLookupComboDlg).LookupTable.Open;
 end;
 
 procedure TPermintaanKoreksiFrm.QMasterBeforeDelete(DataSet: TDataSet);
@@ -1050,27 +1084,25 @@ begin
   if vshift<>'' then QMasterSHIFT.AsString:=vshift;
   if vgrup<>'' then QMasterGRUP.AsString:=vgrup;
   QMasterKD_TRANSAKSI.AsString:=vkode;
-  QMasterKD_DIV.AsString:='311';  
+  QMasterKD_DIV.AsString:='311';
   QMasterTGL.AsDateTime:=DMFrm.QTimeJAM.AsDateTime;
   QMasterISPOST.AsString:='0';
   QMasterTTD1.AsString:=QTransaksiTTD1.AsString;
   QMasterTTD2.AsString:=QTransaksiTTD2.AsString;
   QMasterTTD3.AsString:=QTransaksiTTD3.AsString;
   QMasterTTD4.AsString:=QTransaksiTTD4.AsString;
+  QMasterJENIS.AsString:=vproses;
 
-//  QMasterSTATUS.AsString:='KOREKSI';
-//  QMasterNO_RESEP.AsString:='KOREKSI1';
-
-//MAA 11-09-2019
-QMasterSTATUS.AsString:='KOREKSI_IO';
-if vJNS_TRX = 'DALAM_PROSES' then
-begin
-  QMasterNO_RESEP.AsString:='KOREKSI1_IN';
-end;
-if vJNS_TRX = 'HASIL_PROSES' then
-begin
-  QMasterNO_RESEP.AsString:='KOREKSI2_IN';
-end;
+  //MAA 11-09-2019
+  QMasterSTATUS.AsString:='KOREKSI_IO';
+  if vJNS_TRX = 'DALAM_PROSES' then
+  begin
+    QMasterNO_RESEP.AsString:='KOREKSI1_IN';
+  end;
+  if vJNS_TRX = 'HASIL_PROSES' then
+  begin
+    QMasterNO_RESEP.AsString:='KOREKSI2_IN';
+  end;
 
   wwDBComboBox3.ReadOnly:=False;
   wwDBComboBox3.Enabled:=True;
@@ -1577,6 +1609,16 @@ begin
          QDetailQTY4.ReadOnly:=True;      }
     end;
     end;
+end;
+
+procedure TPermintaanKoreksiFrm.QMasterTGLChange(Sender: TField);
+begin
+  if vproses = '0' then
+  begin
+    QProc.SetVariable('vsysdate', wwDBDateTimePicker1.Date);
+    QProc.SetVariable('vsysdate2', wwDBDateTimePicker1.Date);
+    QProc.Execute;
+  end;
 end;
 
 end.

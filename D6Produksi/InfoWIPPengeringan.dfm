@@ -372,9 +372,9 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
             Frame.DrawRight = False
             Size.Values = (
               71.437500000000000000
-              883.708333333333300000
+              883.708333333333400000
               111.125000000000000000
-              780.520833333333300000)
+              780.520833333333400000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -842,7 +842,7 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            60.854166666666670000
+            60.854166666666680000
             2547.937500000000000000)
           BandType = rbDetail
           object QRDBText60: TQRDBText
@@ -2224,7 +2224,7 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
               44.979166666666670000
               243.416666666666700000
               7.937500000000000000
-              97.895833333333330000)
+              97.895833333333320000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -2505,7 +2505,7 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            42.333333333333330000
+            42.333333333333340000
             2547.937500000000000000)
           BandType = rbPageFooter
         end
@@ -2541,7 +2541,7 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
               44.979166666666670000
               29.104166666666670000
               55.562500000000000000
-              76.729166666666670000)
+              76.729166666666680000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -2571,8 +2571,8 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
             Size.Values = (
               44.979166666666670000
               1603.375000000000000000
-              58.208333333333330000
-              232.833333333333300000)
+              58.208333333333340000
+              232.833333333333400000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -2601,9 +2601,9 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              669.395833333333300000
+              669.395833333333400000
               37.041666666666670000
-              89.958333333333330000)
+              89.958333333333320000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -2663,7 +2663,7 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              256.645833333333300000
+              256.645833333333400000
               55.562500000000000000
               156.104166666666700000)
             Alignment = taLeftJustify
@@ -2757,7 +2757,7 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
             Size.Values = (
               44.979166666666670000
               1322.916666666667000000
-              58.208333333333330000
+              58.208333333333340000
               148.166666666666700000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -2787,8 +2787,8 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              957.791666666666700000
-              58.208333333333330000
+              957.791666666666800000
+              58.208333333333340000
               227.541666666666700000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -2818,7 +2818,7 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              963.083333333333300000
+              963.083333333333400000
               105.833333333333300000
               37.041666666666670000)
             Alignment = taLeftJustify
@@ -2973,7 +2973,7 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              608.541666666666700000
+              608.541666666666800000
               105.833333333333300000
               37.041666666666670000)
             Alignment = taLeftJustify
@@ -3036,7 +3036,7 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
             Size.Values = (
               44.979166666666670000
               1949.979166666667000000
-              58.208333333333330000
+              58.208333333333340000
               119.062500000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -3192,7 +3192,7 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
               44.979166666666670000
               2304.520833333333000000
               31.750000000000000000
-              89.958333333333330000)
+              89.958333333333320000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -3573,7 +3573,7 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
             Frame.DrawRight = False
             Size.Values = (
               71.437500000000000000
-              717.020833333333300000
+              717.020833333333400000
               111.125000000000000000
               1111.250000000000000000)
             Alignment = taCenter
@@ -4043,7 +4043,7 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            60.854166666666670000
+            60.854166666666680000
             2547.937500000000000000)
           BandType = rbDetail
           object QRDBText68: TQRDBText
@@ -5425,7 +5425,7 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
               44.979166666666670000
               243.416666666666700000
               7.937500000000000000
-              97.895833333333330000)
+              97.895833333333320000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -5706,7 +5706,7 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            42.333333333333330000
+            42.333333333333340000
             2547.937500000000000000)
           BandType = rbPageFooter
         end
@@ -5742,7 +5742,7 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
               44.979166666666670000
               29.104166666666670000
               55.562500000000000000
-              76.729166666666670000)
+              76.729166666666680000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -5772,7 +5772,7 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
             Size.Values = (
               44.979166666666670000
               1619.250000000000000000
-              58.208333333333330000
+              58.208333333333340000
               201.083333333333300000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -5802,9 +5802,9 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              669.395833333333300000
+              669.395833333333400000
               37.041666666666670000
-              89.958333333333330000)
+              89.958333333333320000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -5864,7 +5864,7 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              256.645833333333300000
+              256.645833333333400000
               55.562500000000000000
               156.104166666666700000)
             Alignment = taLeftJustify
@@ -5958,7 +5958,7 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
             Size.Values = (
               44.979166666666670000
               1322.916666666667000000
-              58.208333333333330000
+              58.208333333333340000
               119.062500000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -5988,9 +5988,9 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              957.791666666666700000
-              58.208333333333330000
-              232.833333333333300000)
+              957.791666666666800000
+              58.208333333333340000
+              232.833333333333400000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -6019,7 +6019,7 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              963.083333333333300000
+              963.083333333333400000
               105.833333333333300000
               37.041666666666670000)
             Alignment = taLeftJustify
@@ -6174,7 +6174,7 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              608.541666666666700000
+              608.541666666666800000
               105.833333333333300000
               37.041666666666670000)
             Alignment = taLeftJustify
@@ -6237,7 +6237,7 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
             Size.Values = (
               44.979166666666670000
               1910.291666666667000000
-              58.208333333333330000
+              58.208333333333340000
               206.375000000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
@@ -6393,7 +6393,7 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
               44.979166666666670000
               2304.520833333333000000
               31.750000000000000000
-              89.958333333333330000)
+              89.958333333333320000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -6764,7 +6764,7 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
           object QRDBText11: TQRDBText
             Left = 8
             Top = 5
-            Width = 132
+            Width = 105
             Height = 24
             Frame.Color = clBlack
             Frame.DrawTop = False
@@ -6775,7 +6775,7 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
               63.500000000000000000
               21.166666666666670000
               13.229166666666670000
-              349.250000000000000000)
+              277.812500000000000000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -6858,9 +6858,9 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
             Frame.DrawRight = False
             Size.Values = (
               52.916666666666670000
-              645.583333333333300000
+              645.583333333333400000
               21.166666666666670000
-              629.708333333333300000)
+              629.708333333333400000)
             Alignment = taCenter
             AlignToBand = True
             AutoSize = True
@@ -6890,7 +6890,7 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
             Size.Values = (
               44.979166666666670000
               706.437500000000000000
-              84.666666666666670000
+              84.666666666666680000
               505.354166666666700000)
             Alignment = taCenter
             AlignToBand = True
@@ -6924,7 +6924,7 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            89.958333333333330000
+            89.958333333333320000
             1920.875000000000000000)
           BandType = rbColumnHeader
           object QRLabel3: TQRLabel
@@ -7358,7 +7358,7 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
           ForceNewColumn = False
           ForceNewPage = False
           Size.Values = (
-            42.333333333333330000
+            42.333333333333340000
             1920.875000000000000000)
           BandType = rbDetail
           object QRDBText3: TQRDBText
@@ -7709,7 +7709,7 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
           object QRLabel2: TQRLabel
             Left = 248
             Top = 0
-            Width = 38
+            Width = 31
             Height = 17
             Frame.Color = clBlack
             Frame.DrawTop = False
@@ -7718,9 +7718,9 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
             Frame.DrawRight = False
             Size.Values = (
               44.979166666666670000
-              656.166666666666700000
+              656.166666666666800000
               0.000000000000000000
-              100.541666666666700000)
+              82.020833333333340000)
             Alignment = taLeftJustify
             AlignToBand = False
             AutoSize = True
@@ -8499,6 +8499,25 @@ object InfoWIPPengeringanFrm: TInfoWIPPengeringanFrm
           Font.Style = [fsBold]
           ParentFont = False
           TabOrder = 2
+          object PTopR: TPanel
+            Left = 433
+            Top = 0
+            Width = 168
+            Height = 49
+            Align = alRight
+            BevelOuter = bvNone
+            TabOrder = 0
+            object BitBtn2: TBitBtn
+              Left = 16
+              Top = 14
+              Width = 129
+              Height = 23
+              Caption = 'Export &Riwayat'
+              TabOrder = 0
+              OnClick = BitBtn2Click
+              NumGlyphs = 2
+            end
+          end
         end
       end
     end
