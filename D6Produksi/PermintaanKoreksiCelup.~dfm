@@ -2790,7 +2790,7 @@ object PermintaanKoreksiCelupFrm: TPermintaanKoreksiCelupFrm
     object QDetailWARNA: TStringField
       FieldKind = fkLookup
       FieldName = 'WARNA'
-      LookupDataSet = QNewItems
+      LookupDataSet = DMFrm.QWarna
       LookupKeyFields = 'KD_WARNA'
       LookupResultField = 'WARNA'
       KeyFields = 'KD_WARNA'

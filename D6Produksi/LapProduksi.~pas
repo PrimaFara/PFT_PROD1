@@ -343,11 +343,6 @@ type
     QBrowseQTY10: TFloatField;
     QBrowse2: TOracleDataSet;
     dsQBrowse2: TwwDataSource;
-    QBrowse2TGL: TDateTimeField;
-    QBrowse2ITEM: TStringField;
-    QBrowse2QTY1: TFloatField;
-    QBrowse2QTY2: TFloatField;
-    QBrowse2PROSES: TStringField;
     PageControl2: TPageControl;
     TabSheet4: TTabSheet;
     TabSheet5: TTabSheet;
@@ -374,6 +369,11 @@ type
     wwDBGrid1: TwwDBGrid;
     TabSheet2: TTabSheet;
     wwDBGrid2: TwwDBGrid;
+    QProcPerTgl: TOracleQuery;
+    QBrowse2NO_TGL: TStringField;
+    QBrowse2PROSES: TStringField;
+    QBrowse2QTY_KG: TFloatField;
+    QBrowse2QTY_PCS: TFloatField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);
@@ -856,11 +856,14 @@ end;
 
 procedure TLapProduksiFrm.BitBtn1Click(Sender: TObject);
 begin
+
+  QProcPerTgl.Close;
+  QProcPerTgl.SetVariable('vsysdate', vtglAwal2.Date);
+  QProcPerTgl.SetVariable('vsysdate2', vtglAkhir2.Date);
+  QProcPerTgl.Execute;
+
   QBrowse2.DisableControls;
   QBrowse2.Close;
-  QBrowse2.SetVariable('pawal',vTglAwal2.Date);
-  QBrowse2.SetVariable('pakhir',vTglAkhir2.Date);
-  QBrowse2.SetVariable('porder',' order by proses, tgl, item');
   QBrowse2.Open;
   QBrowse2.EnableControls;
 end;

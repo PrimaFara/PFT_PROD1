@@ -141,7 +141,7 @@ object DMFrm: TDMFrm
     SQL.Strings = (
       'select'
       #39'PT. PRIMA FARA TEXTILE'#39' as perusahaan,'
-      #39'Jl. Sapugarut BUARAN-PEKALONGAN'#39' as alamat1,'
+      #39'Jl. Abdul Halim No. 39 A, rt/rw 15/5'#39' as alamat1,'
       #39#39' as alamat2,'
       #39#39' as alamat3,'
       #39'Telp. +62285-421145, Fax. -'#39' as telepon1,'

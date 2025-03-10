@@ -80,7 +80,7 @@ object HasilPengeringFrm: THasilPengeringFrm
       Top = 76
       Width = 995
       Height = 532
-      ActivePage = TabSheet1
+      ActivePage = TabSheet2
       Align = alClient
       Style = tsFlatButtons
       TabOrder = 1

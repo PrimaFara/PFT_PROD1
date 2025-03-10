@@ -956,7 +956,7 @@ procedure TPindahLokasi3Frm.LookItemEnter(Sender: TObject);
 var
 tgl_awal : tdatetime;
 begin
- {if wwDBDateTimePicker1.Date >= StrToDate('01/01/2017') then
+ if wwDBDateTimePicker1.Date >= StrToDate('01/01/2017') then
   begin
     QItem.DeclareVariable('vjns_brg',otString);
     QItem.DeclareVariable('vjns_lokasi',otString);
@@ -1017,7 +1017,9 @@ begin
     QItem.open;
     end;
   end;
-  }
+
+
+  {
   QItem.Close;
   QItem.SetVariable('pibukti',QMasterIBUKTI.AsInteger);
   QItem.SetVariable('pkd_lokasi',vjns_lokasi);
@@ -1036,6 +1038,7 @@ begin
   end;
 
   QItem.Open;
+  }
 end;
 
 procedure TPindahLokasi3Frm.QMasterBeforeDelete(DataSet: TDataSet);

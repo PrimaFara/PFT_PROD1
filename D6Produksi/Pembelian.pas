@@ -136,6 +136,7 @@ type
     ProsesAwalTahun1: TMenuItem;
     N20: TMenuItem;
     InactivityTimer: TTimer;
+    N807KoreksiHasilProsesPengeringan1: TMenuItem;
     procedure FormCreate(Sender: TObject);
     procedure Keluar1Click(Sender: TObject);
     procedure ipeMenu1Click(Sender: TObject);
@@ -228,6 +229,7 @@ type
 
     procedure AppMessage(var Msg: TMsg; var Handled: Boolean);
     procedure LogoutUser(Sender: TObject);
+    procedure N807KoreksiHasilProsesPengeringan1Click(Sender: TObject);
     
 
   private
@@ -254,7 +256,8 @@ uses DM, TipeMenu, HakMenu, OrganisasiItem, OrganisasiLokasi,
   KoreksiKeluarJD,LapKeluarGW, WIP_JETDYEING, LapMutStokDyeing,
   LapMutStokGW, HasilPengeringan, MyColor, PenerimaanKG,
   PenerimaanHasilCelup, Penerimaan_JasaKelos, PengeluaranPCS, SJMaklon, TerimaMaklon,
-  DaftarUnpost, PermintaanUnpost, Unpost, DaftarWarna, ProsesAwalTahun, PindahLokasi3;
+  DaftarUnpost, PermintaanUnpost, Unpost, DaftarWarna, ProsesAwalTahun, PindahLokasi3,
+  PermintaanKoreksiPengering;
 
 {$R *.dfm}
 
@@ -563,7 +566,8 @@ end;
 
 procedure TPembelianFrm.Koreksi3Click(Sender: TObject);
 begin
-  PermintaanKoreksiCelup.ShowForm((Sender as TMenuItem).Name,'807',(Sender as TMenuItem).Caption,'22','22');
+  //PermintaanKoreksiCelup.ShowForm((Sender as TMenuItem).Name,'807',(Sender as TMenuItem).Caption,'22','22');
+    PermintaanKoreksiPengering.ShowForm((Sender as TMenuItem).Name,'807',(Sender as TMenuItem).Caption,'22','22','DALAM_PROSES');
 end;
 
 procedure TPembelianFrm.HasilProduksiCelup1Click(Sender: TObject);
@@ -863,6 +867,12 @@ end;
 procedure TPembelianFrm.ProsesAwalTahun1Click(Sender: TObject);
 begin
   ProsesAwalTahun.ShowForm((Sender as TMenuItem).Name);
+end;
+
+procedure TPembelianFrm.N807KoreksiHasilProsesPengeringan1Click(
+  Sender: TObject);
+begin
+    PermintaanKoreksiPengering.ShowForm((Sender as TMenuItem).Name,'807',(Sender as TMenuItem).Caption,'22','22','HASIL_PROSES');
 end;
 
 end.

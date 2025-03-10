@@ -957,7 +957,7 @@ begin
                       '181,44 as rasio2, :psysdate as tgl '+
                       'from ipisma_db3.temp_lookup_soft0 a '+
                       'left join ipisma_db3.item b on a.kd_item=b.kd_item '+
-                      'group by b.nama_item, a.kd_item, b.rasio) ORDER BY QTY';
+                      'group by b.nama_item, a.kd_item, b.rasio) ORDER BY QTY DESC';
       //ShowMessage(QItem.SQL.Text);
       QItem.SetVariable('pkd_lokasi','10-00000');
       QItem.SetVariable('psysdate',Trunc(QMasterTGL.AsDateTime));

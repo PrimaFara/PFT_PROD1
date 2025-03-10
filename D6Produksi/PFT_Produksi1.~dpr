@@ -55,7 +55,9 @@ uses
   PermintaanUnpost in 'PermintaanUnpost.pas' {PermintaanUnpostFrm},
   Unpost in 'Unpost.pas' {UnpostFrm},
   DaftarWarna in 'DaftarWarna.pas' {DaftarWarnaFrm},
-  ProsesAwalTahun in 'ProsesAwalTahun.pas' {ProsesAwalTahunFrm};
+  ProsesAwalTahun in 'ProsesAwalTahun.pas' {ProsesAwalTahunFrm},
+  PindahLokasi3 in 'PindahLokasi3.pas' {PindahLokasi3Frm},
+  PermintaanKoreksiPengering in 'PermintaanKoreksiPengering.pas' {PermintaanKoreksiPengeringFrm};
 
 {$R *.res}
 
@@ -70,6 +72,7 @@ begin
   Application.CreateForm(TPembelianFrm, PembelianFrm);
   Application.CreateForm(TKriteria_Tanggal1_FRM, Kriteria_Tanggal1_FRM);
   Application.CreateForm(TKriteria_Tanggal1_FRM, Kriteria_Tanggal1_FRM);
+  Application.CreateForm(TPermintaanKoreksiPengeringFrm, PermintaanKoreksiPengeringFrm);
   SplashForm.Hide; // Hide Splash Screen
   SplashForm.Free; // Free Splah Screen
   Application.Run;

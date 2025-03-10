@@ -1055,7 +1055,7 @@ object PindahLokasi3Frm: TPindahLokasi3Frm
                   52.916666666666670000
                   587.375000000000000000
                   21.166666666666670000
-                  767.291666666666600000)
+                  767.291666666666800000)
                 Alignment = taCenter
                 AlignToBand = True
                 AutoSize = True
@@ -1084,9 +1084,9 @@ object PindahLokasi3Frm: TPindahLokasi3Frm
                 Frame.DrawRight = False
                 Size.Values = (
                   44.979166666666670000
-                  664.104166666666600000
+                  664.104166666666800000
                   84.666666666666680000
-                  616.479166666666600000)
+                  616.479166666666800000)
                 Alignment = taCenter
                 AlignToBand = True
                 AutoSize = True
@@ -1119,7 +1119,7 @@ object PindahLokasi3Frm: TPindahLokasi3Frm
               ForceNewColumn = False
               ForceNewPage = False
               Size.Values = (
-                92.604166666666660000
+                92.604166666666680000
                 1944.687500000000000000)
               BandType = rbColumnHeader
               object QRLabel25: TQRLabel

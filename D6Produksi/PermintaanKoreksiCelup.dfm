@@ -3,7 +3,7 @@ object PermintaanKoreksiCelupFrm: TPermintaanKoreksiCelupFrm
   Top = 129
   Width = 1011
   Height = 606
-  ActiveControl = LookItem
+  ActiveControl = vTglAwal
   Caption = 'Koreksi'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -24,8 +24,8 @@ object PermintaanKoreksiCelupFrm: TPermintaanKoreksiCelupFrm
   object PanelMain: TPanel
     Left = 0
     Top = 0
-    Width = 995
-    Height = 568
+    Width = 1003
+    Height = 575
     Align = alClient
     BevelOuter = bvNone
     Ctl3D = False
@@ -33,8 +33,8 @@ object PermintaanKoreksiCelupFrm: TPermintaanKoreksiCelupFrm
     TabOrder = 0
     object Label1: TLabel
       Left = 0
-      Top = 555
-      Width = 995
+      Top = 562
+      Width = 1003
       Height = 13
       Align = alBottom
       Color = clSkyBlue
@@ -43,7 +43,7 @@ object PermintaanKoreksiCelupFrm: TPermintaanKoreksiCelupFrm
     object DBText3: TDBText
       Left = 0
       Top = 49
-      Width = 995
+      Width = 1003
       Height = 27
       Align = alTop
       Alignment = taRightJustify
@@ -61,7 +61,7 @@ object PermintaanKoreksiCelupFrm: TPermintaanKoreksiCelupFrm
     object PanelHeader: TPanel
       Left = 0
       Top = 0
-      Width = 995
+      Width = 1003
       Height = 49
       Align = alTop
       BevelOuter = bvNone
@@ -78,9 +78,9 @@ object PermintaanKoreksiCelupFrm: TPermintaanKoreksiCelupFrm
     object PageControl1: TPageControl
       Left = 0
       Top = 76
-      Width = 995
-      Height = 479
-      ActivePage = TabSheet1
+      Width = 1003
+      Height = 486
+      ActivePage = TabSheet2
       Align = alClient
       Style = tsFlatButtons
       TabOrder = 1
@@ -91,7 +91,7 @@ object PermintaanKoreksiCelupFrm: TPermintaanKoreksiCelupFrm
         object PanelMaster: TPanel
           Left = 0
           Top = 0
-          Width = 987
+          Width = 995
           Height = 137
           Align = alTop
           BevelOuter = bvNone
@@ -393,16 +393,16 @@ object PermintaanKoreksiCelupFrm: TPermintaanKoreksiCelupFrm
         object PanelDetail: TPanel
           Left = 0
           Top = 178
-          Width = 987
-          Height = 228
+          Width = 995
+          Height = 235
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 2
           object wwDBGrid1: TwwDBGrid
             Left = 0
             Top = 0
-            Width = 987
-            Height = 228
+            Width = 995
+            Height = 235
             ControlType.Strings = (
               'KD_ITEM;CustomEdit;LookItem;F'
               'KD_SUB_LOKASI2;CustomEdit;LookLokasi2;F'
@@ -517,8 +517,8 @@ object PermintaanKoreksiCelupFrm: TPermintaanKoreksiCelupFrm
         end
         object PanelFooter1: TPanel
           Left = 0
-          Top = 406
-          Width = 987
+          Top = 413
+          Width = 995
           Height = 42
           Align = alBottom
           BevelOuter = bvNone
@@ -612,7 +612,7 @@ object PermintaanKoreksiCelupFrm: TPermintaanKoreksiCelupFrm
         object PanelBand: TPanel
           Left = 0
           Top = 137
-          Width = 987
+          Width = 995
           Height = 41
           Align = alTop
           BevelOuter = bvNone
@@ -735,7 +735,7 @@ object PermintaanKoreksiCelupFrm: TPermintaanKoreksiCelupFrm
         object LabelBanner: TLabel
           Left = 0
           Top = 57
-          Width = 987
+          Width = 995
           Height = 13
           Align = alTop
           Color = clSkyBlue
@@ -744,7 +744,7 @@ object PermintaanKoreksiCelupFrm: TPermintaanKoreksiCelupFrm
         object PanelFilter: TPanel
           Left = 0
           Top = 0
-          Width = 987
+          Width = 995
           Height = 57
           Align = alTop
           BevelOuter = bvNone
@@ -877,16 +877,16 @@ object PermintaanKoreksiCelupFrm: TPermintaanKoreksiCelupFrm
         object PanelBrowse: TPanel
           Left = 0
           Top = 70
-          Width = 987
-          Height = 337
+          Width = 995
+          Height = 344
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 1
           object wwDBGrid2: TwwDBGrid
             Left = 0
             Top = 0
-            Width = 987
-            Height = 337
+            Width = 995
+            Height = 344
             DisableThemes = True
             DisableThemesInTitle = True
             Selected.Strings = (
@@ -942,8 +942,8 @@ object PermintaanKoreksiCelupFrm: TPermintaanKoreksiCelupFrm
         end
         object PanelFooter2: TPanel
           Left = 0
-          Top = 407
-          Width = 987
+          Top = 414
+          Width = 995
           Height = 41
           Align = alBottom
           BevelOuter = bvNone
@@ -1076,8 +1076,8 @@ object PermintaanKoreksiCelupFrm: TPermintaanKoreksiCelupFrm
         object wwDBRichEdit1: TwwDBRichEdit
           Left = 0
           Top = 0
-          Width = 987
-          Height = 448
+          Width = 995
+          Height = 455
           Align = alClient
           AutoURLDetect = False
           Color = clInfoBk
@@ -1223,7 +1223,7 @@ object PermintaanKoreksiCelupFrm: TPermintaanKoreksiCelupFrm
     PrinterSetup.BinName = 'Default'
     PrinterSetup.DocumentName = 'Report'
     PrinterSetup.Orientation = poLandscape
-    PrinterSetup.PaperName = 'Custom'
+    PrinterSetup.PaperName = 'A4'
     PrinterSetup.PrinterName = 'Fax'
     PrinterSetup.SaveDeviceSettings = False
     PrinterSetup.mmMarginBottom = 6350
@@ -1232,7 +1232,7 @@ object PermintaanKoreksiCelupFrm: TPermintaanKoreksiCelupFrm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 210000
     PrinterSetup.mmPaperWidth = 297000
-    PrinterSetup.PaperSize = 256
+    PrinterSetup.PaperSize = 9
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\ts.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'

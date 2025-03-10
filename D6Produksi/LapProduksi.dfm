@@ -24,8 +24,8 @@ object LapProduksiFrm: TLapProduksiFrm
   object PanelMain: TPanel
     Left = 0
     Top = 0
-    Width = 1149
-    Height = 597
+    Width = 1141
+    Height = 590
     Align = alClient
     BevelOuter = bvNone
     Ctl3D = False
@@ -33,8 +33,8 @@ object LapProduksiFrm: TLapProduksiFrm
     TabOrder = 0
     object Label1: TLabel
       Left = 0
-      Top = 584
-      Width = 1149
+      Top = 577
+      Width = 1141
       Height = 13
       Align = alBottom
       Color = clSkyBlue
@@ -43,7 +43,7 @@ object LapProduksiFrm: TLapProduksiFrm
     object DBText3: TDBText
       Left = 0
       Top = 49
-      Width = 1149
+      Width = 1141
       Height = 27
       Align = alTop
       Alignment = taRightJustify
@@ -60,7 +60,7 @@ object LapProduksiFrm: TLapProduksiFrm
     object PanelHeader: TPanel
       Left = 0
       Top = 0
-      Width = 1149
+      Width = 1141
       Height = 49
       Align = alTop
       BevelOuter = bvNone
@@ -77,8 +77,8 @@ object LapProduksiFrm: TLapProduksiFrm
     object PageControl2: TPageControl
       Left = 0
       Top = 76
-      Width = 1149
-      Height = 508
+      Width = 1141
+      Height = 501
       ActivePage = TabSheet4
       Align = alClient
       TabOrder = 1
@@ -87,7 +87,7 @@ object LapProduksiFrm: TLapProduksiFrm
         object LabelBanner: TLabel
           Left = 0
           Top = 57
-          Width = 1141
+          Width = 1133
           Height = 13
           Align = alTop
           Color = clSkyBlue
@@ -96,8 +96,8 @@ object LapProduksiFrm: TLapProduksiFrm
         object PanelBrowse: TPanel
           Left = 0
           Top = 70
-          Width = 1141
-          Height = 369
+          Width = 1133
+          Height = 362
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 0
@@ -339,10 +339,10 @@ object LapProduksiFrm: TLapProduksiFrm
                 Frame.DrawLeft = False
                 Frame.DrawRight = False
                 Size.Values = (
-                  42.333333333333340000
-                  687.916666666666800000
+                  42.333333333333330000
+                  687.916666666666600000
                   105.833333333333300000
-                  42.333333333333340000)
+                  42.333333333333330000)
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = True
@@ -370,10 +370,10 @@ object LapProduksiFrm: TLapProduksiFrm
                 Frame.DrawLeft = False
                 Frame.DrawRight = False
                 Size.Values = (
-                  42.333333333333340000
+                  42.333333333333330000
                   939.270833333333400000
                   105.833333333333300000
-                  60.854166666666680000)
+                  60.854166666666660000)
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = True
@@ -517,7 +517,7 @@ object LapProduksiFrm: TLapProduksiFrm
                   44.979166666666670000
                   1473.729166666667000000
                   103.187500000000000000
-                  60.854166666666680000)
+                  60.854166666666660000)
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = True
@@ -548,7 +548,7 @@ object LapProduksiFrm: TLapProduksiFrm
                   44.979166666666670000
                   1214.437500000000000000
                   103.187500000000000000
-                  42.333333333333340000)
+                  42.333333333333330000)
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = True
@@ -576,10 +576,10 @@ object LapProduksiFrm: TLapProduksiFrm
                 Frame.DrawLeft = False
                 Frame.DrawRight = False
                 Size.Values = (
-                  42.333333333333340000
+                  42.333333333333330000
                   1214.437500000000000000
                   29.104166666666670000
-                  304.270833333333400000)
+                  304.270833333333300000)
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = True
@@ -607,10 +607,10 @@ object LapProduksiFrm: TLapProduksiFrm
                 Frame.DrawLeft = False
                 Frame.DrawRight = False
                 Size.Values = (
-                  42.333333333333340000
-                  703.791666666666800000
+                  42.333333333333330000
+                  703.791666666666600000
                   29.104166666666670000
-                  264.583333333333400000)
+                  264.583333333333300000)
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = True
@@ -638,10 +638,10 @@ object LapProduksiFrm: TLapProduksiFrm
                 Frame.DrawLeft = False
                 Frame.DrawRight = False
                 Size.Values = (
-                  42.333333333333340000
+                  42.333333333333330000
                   2330.979166666667000000
                   0.000000000000000000
-                  296.333333333333400000)
+                  296.333333333333300000)
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = True
@@ -669,10 +669,10 @@ object LapProduksiFrm: TLapProduksiFrm
                 Frame.DrawLeft = False
                 Frame.DrawRight = False
                 Size.Values = (
-                  42.333333333333340000
+                  42.333333333333330000
                   1719.791666666667000000
                   29.104166666666670000
-                  375.708333333333400000)
+                  375.708333333333300000)
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = True
@@ -700,7 +700,7 @@ object LapProduksiFrm: TLapProduksiFrm
                 Frame.DrawLeft = False
                 Frame.DrawRight = False
                 Size.Values = (
-                  42.333333333333340000
+                  42.333333333333330000
                   2259.541666666667000000
                   44.979166666666670000
                   484.187500000000000000)
@@ -748,10 +748,10 @@ object LapProduksiFrm: TLapProduksiFrm
                 Frame.DrawLeft = False
                 Frame.DrawRight = False
                 Size.Values = (
-                  42.333333333333340000
-                  1725.083333333334000000
+                  42.333333333333330000
+                  1725.083333333333000000
                   105.833333333333300000
-                  42.333333333333340000)
+                  42.333333333333330000)
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = True
@@ -779,10 +779,10 @@ object LapProduksiFrm: TLapProduksiFrm
                 Frame.DrawLeft = False
                 Frame.DrawRight = False
                 Size.Values = (
-                  42.333333333333340000
+                  42.333333333333330000
                   2002.895833333333000000
                   105.833333333333300000
-                  60.854166666666680000)
+                  60.854166666666660000)
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = True
@@ -844,7 +844,7 @@ object LapProduksiFrm: TLapProduksiFrm
                   44.979166666666670000
                   2307.166666666667000000
                   103.187500000000000000
-                  42.333333333333340000)
+                  42.333333333333330000)
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = True
@@ -1040,7 +1040,7 @@ object LapProduksiFrm: TLapProduksiFrm
                 Frame.DrawRight = False
                 Size.Values = (
                   44.979166666666670000
-                  97.895833333333320000
+                  97.895833333333340000
                   0.000000000000000000
                   158.750000000000000000)
                 Alignment = taLeftJustify
@@ -1074,7 +1074,7 @@ object LapProduksiFrm: TLapProduksiFrm
                   44.979166666666670000
                   1275.291666666667000000
                   0.000000000000000000
-                  76.729166666666680000)
+                  76.729166666666660000)
                 Alignment = taRightJustify
                 AlignToBand = False
                 AutoSize = True
@@ -1109,7 +1109,7 @@ object LapProduksiFrm: TLapProduksiFrm
                   44.979166666666670000
                   1516.062500000000000000
                   0.000000000000000000
-                  76.729166666666680000)
+                  76.729166666666660000)
                 Alignment = taRightJustify
                 AlignToBand = False
                 AutoSize = True
@@ -1144,7 +1144,7 @@ object LapProduksiFrm: TLapProduksiFrm
                   44.979166666666670000
                   1775.354166666667000000
                   0.000000000000000000
-                  76.729166666666680000)
+                  76.729166666666660000)
                 Alignment = taRightJustify
                 AlignToBand = False
                 AutoSize = True
@@ -1179,7 +1179,7 @@ object LapProduksiFrm: TLapProduksiFrm
                   44.979166666666670000
                   2066.395833333333000000
                   0.000000000000000000
-                  76.729166666666680000)
+                  76.729166666666660000)
                 Alignment = taRightJustify
                 AlignToBand = False
                 AutoSize = True
@@ -1212,9 +1212,9 @@ object LapProduksiFrm: TLapProduksiFrm
                 Frame.DrawRight = False
                 Size.Values = (
                   44.979166666666670000
-                  732.895833333333200000
+                  732.895833333333400000
                   0.000000000000000000
-                  76.729166666666680000)
+                  76.729166666666660000)
                 Alignment = taRightJustify
                 AlignToBand = False
                 AutoSize = True
@@ -1247,9 +1247,9 @@ object LapProduksiFrm: TLapProduksiFrm
                 Frame.DrawRight = False
                 Size.Values = (
                   44.979166666666670000
-                  997.479166666666800000
+                  997.479166666666600000
                   0.000000000000000000
-                  76.729166666666680000)
+                  76.729166666666660000)
                 Alignment = taRightJustify
                 AlignToBand = False
                 AutoSize = True
@@ -1319,7 +1319,7 @@ object LapProduksiFrm: TLapProduksiFrm
                   44.979166666666670000
                   2386.541666666667000000
                   0.000000000000000000
-                  76.729166666666680000)
+                  76.729166666666660000)
                 Alignment = taRightJustify
                 AlignToBand = False
                 AutoSize = True
@@ -1490,7 +1490,7 @@ object LapProduksiFrm: TLapProduksiFrm
                 Frame.DrawRight = False
                 Size.Values = (
                   44.979166666666670000
-                  391.583333333333400000
+                  391.583333333333300000
                   10.583333333333330000
                   100.541666666666700000)
                 Alignment = taLeftJustify
@@ -3528,7 +3528,7 @@ object LapProduksiFrm: TLapProduksiFrm
                 Frame.DrawRight = False
                 Size.Values = (
                   44.979166666666670000
-                  846.666666666666800000
+                  846.666666666666600000
                   23.812500000000000000
                   44.979166666666670000)
                 Alignment = taLeftJustify
@@ -3870,7 +3870,7 @@ object LapProduksiFrm: TLapProduksiFrm
               ForceNewPage = False
               ParentFont = False
               Size.Values = (
-                367.770833333333400000
+                367.770833333333300000
                 1920.875000000000000000)
               BandType = rbTitle
               object QRLabel7: TQRLabel
@@ -3884,10 +3884,10 @@ object LapProduksiFrm: TLapProduksiFrm
                 Frame.DrawLeft = False
                 Frame.DrawRight = False
                 Size.Values = (
-                  60.854166666666680000
+                  60.854166666666660000
                   677.333333333333400000
                   21.166666666666670000
-                  709.083333333333200000)
+                  709.083333333333400000)
                 Alignment = taLeftJustify
                 AlignToBand = False
                 AutoSize = True
@@ -3947,7 +3947,7 @@ object LapProduksiFrm: TLapProduksiFrm
                 Frame.DrawRight = False
                 Size.Values = (
                   44.979166666666670000
-                  989.541666666666800000
+                  989.541666666666600000
                   309.562500000000000000
                   158.750000000000000000)
                 Alignment = taLeftJustify
@@ -3978,7 +3978,7 @@ object LapProduksiFrm: TLapProduksiFrm
                 Frame.DrawRight = False
                 Size.Values = (
                   44.979166666666670000
-                  960.437499999999900000
+                  960.437500000000000000
                   119.062500000000000000
                   153.458333333333300000)
                 Alignment = taCenter
@@ -4009,7 +4009,7 @@ object LapProduksiFrm: TLapProduksiFrm
                 Frame.DrawRight = False
                 Size.Values = (
                   44.979166666666670000
-                  960.437499999999900000
+                  960.437500000000000000
                   174.625000000000000000
                   153.458333333333300000)
                 Alignment = taCenter
@@ -4085,8 +4085,8 @@ object LapProduksiFrm: TLapProduksiFrm
           object PageControl1: TPageControl
             Left = 0
             Top = 0
-            Width = 1141
-            Height = 369
+            Width = 1133
+            Height = 362
             ActivePage = TabSheet1
             Align = alClient
             TabOrder = 2
@@ -4095,8 +4095,8 @@ object LapProduksiFrm: TLapProduksiFrm
               object wwDBGrid1: TwwDBGrid
                 Left = 0
                 Top = 0
-                Width = 1133
-                Height = 341
+                Width = 1125
+                Height = 334
                 ControlType.Strings = (
                   'ISFIXED;CheckBox;1;0')
                 Selected.Strings = (
@@ -4203,8 +4203,8 @@ object LapProduksiFrm: TLapProduksiFrm
         end
         object PanelFooter2: TPanel
           Left = 0
-          Top = 439
-          Width = 1141
+          Top = 432
+          Width = 1133
           Height = 41
           Align = alBottom
           BevelOuter = bvNone
@@ -4342,7 +4342,7 @@ object LapProduksiFrm: TLapProduksiFrm
         object PanelFilter: TPanel
           Left = 0
           Top = 0
-          Width = 1141
+          Width = 1133
           Height = 57
           Align = alTop
           BevelOuter = bvNone
@@ -4453,7 +4453,7 @@ object LapProduksiFrm: TLapProduksiFrm
         object LBanner2: TLabel
           Left = 0
           Top = 57
-          Width = 1141
+          Width = 1133
           Height = 13
           Align = alTop
           Color = clSkyBlue
@@ -4462,7 +4462,7 @@ object LapProduksiFrm: TLapProduksiFrm
         object Panel1: TPanel
           Left = 0
           Top = 0
-          Width = 1141
+          Width = 1133
           Height = 57
           Align = alTop
           BevelOuter = bvNone
@@ -4568,16 +4568,15 @@ object LapProduksiFrm: TLapProduksiFrm
         object wwDBGrid4: TwwDBGrid
           Left = 0
           Top = 70
-          Width = 1141
-          Height = 369
+          Width = 1133
+          Height = 362
           ControlType.Strings = (
             'ISFIXED;CheckBox;1;0')
           Selected.Strings = (
-            'TGL'#9'18'#9'TGL'#9'F'
-            'ITEM'#9'32'#9'ITEM'#9'F'
-            'PROSES'#9'15'#9'PROSES'#9'F'
-            'QTY1'#9'10'#9'KG'#9'F'#9'QTY'
-            'QTY2'#9'10'#9'PCS'#9'F'#9'QTY')
+            'NO_TGL'#9'10'#9'TANGGAL'#9'F'
+            'PROSES'#9'20'#9'PROSES'#9'F'
+            'QTY_KG'#9'10'#9'KG'#9'F'#9'JUMLAH'
+            'QTY_PCS'#9'10'#9'PCS'#9'F'#9'JUMLAH')
           IniAttributes.Enabled = True
           IniAttributes.Delimiter = ';;'
           IniAttributes.CheckNewFields = True
@@ -4613,8 +4612,8 @@ object LapProduksiFrm: TLapProduksiFrm
         end
         object PanelFooter3: TPanel
           Left = 0
-          Top = 439
-          Width = 1141
+          Top = 432
+          Width = 1133
           Height = 41
           Align = alBottom
           BevelOuter = bvNone
@@ -4826,7 +4825,7 @@ object LapProduksiFrm: TLapProduksiFrm
     PrinterSetup.BinName = 'Default'
     PrinterSetup.DocumentName = 'Report'
     PrinterSetup.Orientation = poLandscape
-    PrinterSetup.PaperName = 'A4'
+    PrinterSetup.PaperName = 'A4 210 x 297 mm'
     PrinterSetup.PrinterName = 'Default'
     PrinterSetup.SaveDeviceSettings = False
     PrinterSetup.mmMarginBottom = 6350
@@ -7079,17 +7078,11 @@ object LapProduksiFrm: TLapProduksiFrm
   end
   object QBrowse2: TOracleDataSet
     SQL.Strings = (
-      'select * from ipisma_db3.vlap_prod_dyeing'
-      'where tgl between :pawal and :pakhir'
-      ':porder')
-    Variables.Data = {
-      0300000003000000060000003A504157414C0C00000000000000000000000700
-      00003A50414B4849520C0000000000000000000000070000003A504F52444552
-      010000000000000000000000}
+      'select * from ipisma_db3.vlap_prod_dyeing11')
     QBEDefinition.QBEFieldDefs = {
-      0400000005000000040000005154593101000000000004000000515459320100
-      000000000300000054474C010000000000040000004954454D01000000000006
-      00000050524F534553010000000000}
+      04000000040000000600000050524F534553010000000000060000004E4F5F54
+      474C010000000000060000005154595F4B47010000000000070000005154595F
+      504353010000000000}
     Cursor = crSQLWait
     ReadOnly = True
     QueryAllRecords = False
@@ -7097,29 +7090,38 @@ object LapProduksiFrm: TLapProduksiFrm
     AfterScroll = QBrowse2AfterScroll
     Left = 956
     Top = 256
-    object QBrowse2TGL: TDateTimeField
-      FieldName = 'TGL'
-    end
-    object QBrowse2ITEM: TStringField
-      FieldName = 'ITEM'
-      Size = 32
-    end
-    object QBrowse2QTY1: TFloatField
-      FieldName = 'QTY1'
-      DisplayFormat = '#,0.0000;(#,0.0000);-'
-    end
-    object QBrowse2QTY2: TFloatField
-      FieldName = 'QTY2'
-      DisplayFormat = '#,0;(#,0);-'
+    object QBrowse2NO_TGL: TStringField
+      FieldName = 'NO_TGL'
     end
     object QBrowse2PROSES: TStringField
       FieldName = 'PROSES'
-      Size = 15
+    end
+    object QBrowse2QTY_KG: TFloatField
+      FieldName = 'QTY_KG'
+      DisplayFormat = '#,0.0000;-#,0.0000;-'
+    end
+    object QBrowse2QTY_PCS: TFloatField
+      FieldName = 'QTY_PCS'
+      DisplayFormat = '#,0;(#,0);-'
     end
   end
   object dsQBrowse2: TwwDataSource
     DataSet = QBrowse2
     Left = 992
     Top = 240
+  end
+  object QProcPerTgl: TOracleQuery
+    SQL.Strings = (
+      'begin'
+      '  ipisma_db3.proc_lap_produksi1(:vsysdate, :vsysdate2);'
+      'end;'
+      '')
+    Session = DMFrm.OS
+    Variables.Data = {
+      0300000002000000090000003A56535953444154450C00000007000000787106
+      01010101000000000A0000003A5653595344415445320C000000070000007871
+      061E01010100000000}
+    Left = 488
+    Top = 104
   end
 end
