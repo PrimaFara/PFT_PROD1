@@ -1205,7 +1205,7 @@ object PermintaanKoreksiFrm: TPermintaanKoreksiFrm
     PrinterSetup.BinName = 'Default'
     PrinterSetup.DocumentName = 'Report'
     PrinterSetup.Orientation = poLandscape
-    PrinterSetup.PaperName = 'Custom'
+    PrinterSetup.PaperName = 'A4'
     PrinterSetup.PrinterName = 'Fax'
     PrinterSetup.SaveDeviceSettings = False
     PrinterSetup.mmMarginBottom = 6350

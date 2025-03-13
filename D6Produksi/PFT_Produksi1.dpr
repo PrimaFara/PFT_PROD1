@@ -57,7 +57,8 @@ uses
   DaftarWarna in 'DaftarWarna.pas' {DaftarWarnaFrm},
   ProsesAwalTahun in 'ProsesAwalTahun.pas' {ProsesAwalTahunFrm},
   PindahLokasi3 in 'PindahLokasi3.pas' {PindahLokasi3Frm},
-  PermintaanKoreksiPengering in 'PermintaanKoreksiPengering.pas' {PermintaanKoreksiPengeringFrm};
+  PermintaanKoreksiPengering in 'PermintaanKoreksiPengering.pas' {PermintaanKoreksiPengeringFrm},
+  LaporanDeptKemitraan in 'LaporanDeptKemitraan.pas' {LaporanDeptKemitraanFrm};
 
 {$R *.res}
 

@@ -137,6 +137,12 @@ type
     N20: TMenuItem;
     InactivityTimer: TTimer;
     N807KoreksiHasilProsesPengeringan1: TMenuItem;
+    N12: TMenuItem;
+    Kemitraan1: TMenuItem;
+    LaporanDeptKemitraan1: TMenuItem;
+    Afval1: TMenuItem;
+    Koreksi4: TMenuItem;
+    RekapTransaksi1: TMenuItem;
     procedure FormCreate(Sender: TObject);
     procedure Keluar1Click(Sender: TObject);
     procedure ipeMenu1Click(Sender: TObject);
@@ -230,6 +236,7 @@ type
     procedure AppMessage(var Msg: TMsg; var Handled: Boolean);
     procedure LogoutUser(Sender: TObject);
     procedure N807KoreksiHasilProsesPengeringan1Click(Sender: TObject);
+    procedure LaporanDeptKemitraan1Click(Sender: TObject);
     
 
   private
@@ -257,7 +264,7 @@ uses DM, TipeMenu, HakMenu, OrganisasiItem, OrganisasiLokasi,
   LapMutStokGW, HasilPengeringan, MyColor, PenerimaanKG,
   PenerimaanHasilCelup, Penerimaan_JasaKelos, PengeluaranPCS, SJMaklon, TerimaMaklon,
   DaftarUnpost, PermintaanUnpost, Unpost, DaftarWarna, ProsesAwalTahun, PindahLokasi3,
-  PermintaanKoreksiPengering;
+  PermintaanKoreksiPengering, LaporanDeptKemitraan;
 
 {$R *.dfm}
 
@@ -873,6 +880,11 @@ procedure TPembelianFrm.N807KoreksiHasilProsesPengeringan1Click(
   Sender: TObject);
 begin
     PermintaanKoreksiPengering.ShowForm((Sender as TMenuItem).Name,'807',(Sender as TMenuItem).Caption,'22','22','HASIL_PROSES');
+end;
+
+procedure TPembelianFrm.LaporanDeptKemitraan1Click(Sender: TObject);
+begin
+  LaporanDeptKemitraan.ShowForm((Sender as TMenuItem).Name,'791',(Sender as TMenuItem).Caption,'10','10');
 end;
 
 end.

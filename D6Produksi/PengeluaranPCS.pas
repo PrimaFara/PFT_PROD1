@@ -361,6 +361,7 @@ type
     QProc_getStok: TOracleQuery;
     QItemTGL_STOK: TDateTimeField;
     QDetailJAM1: TDateTimeField;
+    wwDBDateTimePicker222: TwwDBDateTimePicker;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);
@@ -1241,7 +1242,7 @@ begin
 
   QDetailQTY8.AsFloat:=0;
   QDetailQTY3.AsFloat:=0;
-  wwDBDateTimePicker1.Enabled:=False;
+  //wwDBDateTimePicker1.Enabled:=False;
   cbTransaksi.Enabled:=False;
 
   QDetailIBUKTI.AsInteger:=QMasterIBUKTI.AsInteger;
@@ -1600,7 +1601,7 @@ end;
 procedure TPengeluaranPCSFrm.QMasterAfterDelete(DataSet: TDataSet);
 begin
 
-  wwDBDateTimePicker1.Enabled:=False;
+  //wwDBDateTimePicker1.Enabled:=False;
   cbTransaksi.Enabled:=False;
 
 end;

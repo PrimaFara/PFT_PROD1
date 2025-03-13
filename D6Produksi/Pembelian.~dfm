@@ -1,6 +1,6 @@
 object PembelianFrm: TPembelianFrm
-  Left = 300
-  Top = 144
+  Left = 296
+  Top = 59
   BorderStyle = bsSingle
   Caption = 'Aplikasi - PRODUKSI 1 - PT. Prima Fara Textile'
   ClientHeight = 494
@@ -13617,6 +13617,21 @@ object PembelianFrm: TPembelianFrm
           OnClick = OrderCelup1Click
         end
       end
+      object N12: TMenuItem
+        Caption = '-'
+      end
+      object Kemitraan1: TMenuItem
+        Caption = 'Kemitraan'
+        object Afval1: TMenuItem
+          Caption = 'Afval'
+        end
+        object Koreksi4: TMenuItem
+          Caption = 'Koreksi'
+        end
+        object RekapTransaksi1: TMenuItem
+          Caption = 'Rekap Transaksi'
+        end
+      end
     end
     object Laporan1: TMenuItem
       Caption = 'Laporan'
@@ -13636,6 +13651,10 @@ object PembelianFrm: TPembelianFrm
         Caption = 'Laporan Mutasi Stok Gudang Warna'
         Visible = False
         OnClick = LaporanMutasiStokGudangWarna1Click
+      end
+      object LaporanDeptKemitraan1: TMenuItem
+        Caption = 'Laporan Dept Kemitraan'
+        OnClick = LaporanDeptKemitraan1Click
       end
     end
     object Window1: TMenuItem

@@ -371,6 +371,14 @@ type
     QProc_getStok: TOracleQuery;
     QItemTGL_STOK: TDateTimeField;
     QDetailJAM1: TDateTimeField;
+    QResep: TOracleDataSet;
+    QResepNO_RESEP: TStringField;
+    QResepVERSI: TStringField;
+    QResepKP: TStringField;
+    QResepTGL: TDateTimeField;
+    QResepKONSTRUKSI: TStringField;
+    QResepCORAK: TStringField;
+    QResepNO_DESAIN: TFloatField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);
@@ -1368,7 +1376,13 @@ end;
 
 procedure TValidasiKeluarKeMitraFrm.LookResepEnter(Sender: TObject);
 begin
-  DMFrm.QResep.Open;
+  //DMFrm.QResep.Open;
+
+  QResep.Close;
+  QResep.SetVariable('myparam',' (no_resep is not null) ');
+  QResep.SetVariable('pnama_item', QItemKD_SUB_KEL.AsString);
+  QResep.SetVariable('pkd_warna', QItemKD_WARNA.AsString);
+  QResep.Open;
 end;
 
 procedure TValidasiKeluarKeMitraFrm.LookResepUserButton1Click(Sender: TObject;
@@ -1477,9 +1491,15 @@ begin
 DMFrm.QResep.Open;
   if InputQuery('Filter','Filter : ',vfilter)then
   begin
-    DMFrm.QResep.Close;
+    {DMFrm.QResep.Close;
     DMFrm.QResep.SetVariable('myparam',' (no_resep like ''%'+vfilter+'%'')');
-    DMFrm.QResep.Open;
+    DMFrm.QResep.Open; }
+
+    QResep.Close;
+    QResep.SetVariable('myparam',' (no_resep like ''%'+vfilter+'%'') ');
+    QResep.SetVariable('pnama_item', QItemKD_SUB_KEL.AsString);
+    QResep.SetVariable('pkd_warna', QItemKD_WARNA.AsString);
+    QResep.Open;
   end;
 
 end;

@@ -326,6 +326,7 @@ type
     QNewItemsKD_SUB_LOKASI: TStringField;
     LookWarna: TwwDBLookupComboDlg;
     QMasterJENIS: TStringField;
+    QProc: TOracleQuery;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);

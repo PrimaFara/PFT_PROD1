@@ -1,9 +1,9 @@
 object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
-  Left = 288
-  Top = 129
+  Left = 287
+  Top = 47
   Width = 1011
   Height = 606
-  ActiveControl = wwDBEdit1
+  ActiveControl = vTglAwal
   Caption = 'Koreksi Pengering'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -80,7 +80,7 @@ object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
       Top = 76
       Width = 995
       Height = 479
-      ActivePage = TabSheet1
+      ActivePage = TabSheet2
       Align = alClient
       Style = tsFlatButtons
       TabOrder = 1
@@ -882,8 +882,8 @@ object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
           object wwDBGrid2: TwwDBGrid
             Left = 0
             Top = 0
-            Width = 995
-            Height = 344
+            Width = 987
+            Height = 337
             DisableThemes = True
             DisableThemesInTitle = True
             Selected.Strings = (
@@ -1220,7 +1220,7 @@ object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
     PrinterSetup.BinName = 'Default'
     PrinterSetup.DocumentName = 'Report'
     PrinterSetup.Orientation = poLandscape
-    PrinterSetup.PaperName = 'A4'
+    PrinterSetup.PaperName = 'Custom'
     PrinterSetup.PrinterName = 'Fax'
     PrinterSetup.SaveDeviceSettings = False
     PrinterSetup.mmMarginBottom = 6350
@@ -5124,5 +5124,18 @@ object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
       FieldName = 'KD_SUB_LOKASI'
       Size = 4000
     end
+  end
+  object QProc: TOracleQuery
+    SQL.Strings = (
+      'begin'
+      '  ipisma_db3.proc_temp_lookup_pengering0(:vsysdate, :vsysdate2);'
+      'end;')
+    Session = DMFrm.OS
+    Variables.Data = {
+      0300000002000000090000003A56535953444154450C00000007000000786B06
+      01010101000000000A0000003A5653595344415445320C00000007000000786B
+      061E01010100000000}
+    Left = 792
+    Top = 136
   end
 end

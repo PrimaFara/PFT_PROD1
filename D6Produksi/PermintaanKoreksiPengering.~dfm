@@ -1,9 +1,9 @@
 object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
-  Left = 288
-  Top = 129
+  Left = 287
+  Top = 47
   Width = 1011
   Height = 606
-  ActiveControl = wwDBEdit1
+  ActiveControl = vTglAwal
   Caption = 'Koreksi Pengering'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -24,8 +24,8 @@ object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
   object PanelMain: TPanel
     Left = 0
     Top = 0
-    Width = 1003
-    Height = 575
+    Width = 995
+    Height = 568
     Align = alClient
     BevelOuter = bvNone
     Ctl3D = False
@@ -33,8 +33,8 @@ object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
     TabOrder = 0
     object Label1: TLabel
       Left = 0
-      Top = 562
-      Width = 1003
+      Top = 555
+      Width = 995
       Height = 13
       Align = alBottom
       Color = clSkyBlue
@@ -43,7 +43,7 @@ object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
     object DBText3: TDBText
       Left = 0
       Top = 49
-      Width = 1003
+      Width = 995
       Height = 27
       Align = alTop
       Alignment = taRightJustify
@@ -61,7 +61,7 @@ object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
     object PanelHeader: TPanel
       Left = 0
       Top = 0
-      Width = 1003
+      Width = 995
       Height = 49
       Align = alTop
       BevelOuter = bvNone
@@ -78,9 +78,9 @@ object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
     object PageControl1: TPageControl
       Left = 0
       Top = 76
-      Width = 1003
-      Height = 486
-      ActivePage = TabSheet1
+      Width = 995
+      Height = 479
+      ActivePage = TabSheet2
       Align = alClient
       Style = tsFlatButtons
       TabOrder = 1
@@ -91,7 +91,7 @@ object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
         object PanelMaster: TPanel
           Left = 0
           Top = 0
-          Width = 995
+          Width = 987
           Height = 137
           Align = alTop
           BevelOuter = bvNone
@@ -390,16 +390,16 @@ object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
         object PanelDetail: TPanel
           Left = 0
           Top = 178
-          Width = 995
-          Height = 235
+          Width = 987
+          Height = 228
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 2
           object wwDBGrid1: TwwDBGrid
             Left = 0
             Top = 0
-            Width = 995
-            Height = 235
+            Width = 987
+            Height = 228
             ControlType.Strings = (
               'KD_ITEM;CustomEdit;LookItem;F'
               'KD_SUB_LOKASI2;CustomEdit;LookLokasi2;F'
@@ -514,8 +514,8 @@ object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
         end
         object PanelFooter1: TPanel
           Left = 0
-          Top = 413
-          Width = 995
+          Top = 406
+          Width = 987
           Height = 42
           Align = alBottom
           BevelOuter = bvNone
@@ -609,7 +609,7 @@ object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
         object PanelBand: TPanel
           Left = 0
           Top = 137
-          Width = 995
+          Width = 987
           Height = 41
           Align = alTop
           BevelOuter = bvNone
@@ -732,7 +732,7 @@ object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
         object LabelBanner: TLabel
           Left = 0
           Top = 57
-          Width = 995
+          Width = 987
           Height = 13
           Align = alTop
           Color = clSkyBlue
@@ -741,7 +741,7 @@ object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
         object PanelFilter: TPanel
           Left = 0
           Top = 0
-          Width = 995
+          Width = 987
           Height = 57
           Align = alTop
           BevelOuter = bvNone
@@ -874,16 +874,16 @@ object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
         object PanelBrowse: TPanel
           Left = 0
           Top = 70
-          Width = 995
-          Height = 344
+          Width = 987
+          Height = 337
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 1
           object wwDBGrid2: TwwDBGrid
             Left = 0
             Top = 0
-            Width = 995
-            Height = 344
+            Width = 987
+            Height = 337
             DisableThemes = True
             DisableThemesInTitle = True
             Selected.Strings = (
@@ -939,8 +939,8 @@ object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
         end
         object PanelFooter2: TPanel
           Left = 0
-          Top = 414
-          Width = 995
+          Top = 407
+          Width = 987
           Height = 41
           Align = alBottom
           BevelOuter = bvNone
@@ -1073,8 +1073,8 @@ object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
         object wwDBRichEdit1: TwwDBRichEdit
           Left = 0
           Top = 0
-          Width = 995
-          Height = 455
+          Width = 987
+          Height = 448
           Align = alClient
           AutoURLDetect = False
           Color = clInfoBk
@@ -1220,7 +1220,7 @@ object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
     PrinterSetup.BinName = 'Default'
     PrinterSetup.DocumentName = 'Report'
     PrinterSetup.Orientation = poLandscape
-    PrinterSetup.PaperName = 'A4'
+    PrinterSetup.PaperName = 'Custom'
     PrinterSetup.PrinterName = 'Fax'
     PrinterSetup.SaveDeviceSettings = False
     PrinterSetup.mmMarginBottom = 6350
@@ -1229,7 +1229,7 @@ object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 210000
     PrinterSetup.mmPaperWidth = 297000
-    PrinterSetup.PaperSize = 9
+    PrinterSetup.PaperSize = 256
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\ts.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'
@@ -5054,10 +5054,8 @@ object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
       ':myparam'
       'order by nama_item')
     Variables.Data = {
-      03000000030000000D0000003A564B445F4A4E535F4954454D05000000030000
-      00333000000000000F0000003A564B445F5355425F4C4F4B4153490500000009
-      00000032322D30303030300000000000080000003A4D59504152414D01000000
-      0000000000000000}
+      0300000002000000050000003A5054474C0C0000000000000000000000060000
+      003A5054474C320C0000000000000000000000}
     QBEDefinition.QBEFieldDefs = {
       040000000A000000070000004B445F4954454D010000000000090000004E414D
       415F4954454D0100000000000600000053415455414E0100000000000D000000
@@ -5126,5 +5124,18 @@ object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
       FieldName = 'KD_SUB_LOKASI'
       Size = 4000
     end
+  end
+  object QProc: TOracleQuery
+    SQL.Strings = (
+      'begin'
+      '  ipisma_db3.proc_temp_lookup_pengering0(:vsysdate, :vsysdate2);'
+      'end;')
+    Session = DMFrm.OS
+    Variables.Data = {
+      0300000002000000090000003A56535953444154450C00000007000000786B06
+      01010101000000000A0000003A5653595344415445320C00000007000000786B
+      061E01010100000000}
+    Left = 792
+    Top = 136
   end
 end

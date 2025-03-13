@@ -2,7 +2,7 @@ object PenerimaanKGFrm: TPenerimaanKGFrm
   Left = 269
   Top = 0
   Width = 1082
-  Height = 738
+  Height = 677
   Caption = 'PENERIMAAN KG'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -25,7 +25,7 @@ object PenerimaanKGFrm: TPenerimaanKGFrm
     Left = 0
     Top = 0
     Width = 1066
-    Height = 700
+    Height = 639
     Align = alClient
     BevelOuter = bvNone
     Ctl3D = False
@@ -33,7 +33,7 @@ object PenerimaanKGFrm: TPenerimaanKGFrm
     TabOrder = 0
     object Label1: TLabel
       Left = 0
-      Top = 687
+      Top = 626
       Width = 1066
       Height = 13
       Align = alBottom
@@ -79,7 +79,7 @@ object PenerimaanKGFrm: TPenerimaanKGFrm
       Left = 0
       Top = 76
       Width = 1066
-      Height = 611
+      Height = 550
       ActivePage = TabSheet2
       Align = alClient
       Style = tsFlatButtons
@@ -130,7 +130,7 @@ object PenerimaanKGFrm: TPenerimaanKGFrm
           end
           object Label9: TLabel
             Left = 697
-            Top = 67
+            Top = 51
             Width = 47
             Height = 13
             Caption = 'Tanggal'
@@ -143,14 +143,14 @@ object PenerimaanKGFrm: TPenerimaanKGFrm
           end
           object Bevel1: TBevel
             Left = 696
-            Top = 88
+            Top = 69
             Width = 202
             Height = 10
             Shape = bsBottomLine
           end
           object LBarcode: TDBText
             Left = 808
-            Top = 24
+            Top = 0
             Width = 90
             Height = 24
             Alignment = taRightJustify
@@ -166,7 +166,7 @@ object PenerimaanKGFrm: TPenerimaanKGFrm
           end
           object Label8: TLabel
             Left = 584
-            Top = 88
+            Top = 64
             Width = 27
             Height = 13
             Caption = 'Shift'
@@ -179,7 +179,7 @@ object PenerimaanKGFrm: TPenerimaanKGFrm
           end
           object Label10: TLabel
             Left = 624
-            Top = 88
+            Top = 64
             Width = 28
             Height = 13
             Caption = 'Grup'
@@ -220,7 +220,7 @@ object PenerimaanKGFrm: TPenerimaanKGFrm
           end
           object LTransaksi: TLabel
             Left = 672
-            Top = 104
+            Top = 88
             Width = 79
             Height = 13
             Caption = 'Jns Transaksi'
@@ -246,9 +246,23 @@ object PenerimaanKGFrm: TPenerimaanKGFrm
             Font.Style = [fsBold]
             ParentFont = False
           end
+          object Label13: TLabel
+            Left = 672
+            Top = 113
+            Width = 29
+            Height = 13
+            Caption = 'Mitra'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clOlive
+            Font.Height = -12
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            Visible = False
+          end
           object wwDBDateTimePicker1: TwwDBDateTimePicker
             Left = 801
-            Top = 64
+            Top = 48
             Width = 97
             Height = 19
             TabStop = False
@@ -295,7 +309,7 @@ object PenerimaanKGFrm: TPenerimaanKGFrm
           end
           object wwDBComboBox1: TwwDBComboBox
             Left = 624
-            Top = 104
+            Top = 80
             Width = 33
             Height = 19
             ShowButton = True
@@ -315,7 +329,7 @@ object PenerimaanKGFrm: TPenerimaanKGFrm
           end
           object wwDBComboBox2: TwwDBComboBox
             Left = 584
-            Top = 104
+            Top = 80
             Width = 33
             Height = 19
             ShowButton = True
@@ -359,7 +373,7 @@ object PenerimaanKGFrm: TPenerimaanKGFrm
           end
           object cbTransaksi: TwwDBComboBox
             Left = 766
-            Top = 104
+            Top = 88
             Width = 132
             Height = 19
             ShowButton = True
@@ -376,12 +390,37 @@ object PenerimaanKGFrm: TPenerimaanKGFrm
             UnboundDataType = wwDefault
             OnCloseUp = cbTransaksiCloseUp
           end
+          object wwDBLookupComboDlg2: TwwDBLookupComboDlg
+            Left = 766
+            Top = 113
+            Width = 139
+            Height = 19
+            GridOptions = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgPerfectRowFit]
+            GridColor = clWhite
+            GridTitleAlignment = taLeftJustify
+            Caption = 'Lookup'
+            MaxWidth = 0
+            MaxHeight = 209
+            Selected.Strings = (
+              'NAMA_MITRA'#9'50'#9'NAMA_MITRA'#9'F'#9
+              'KD_MITRA'#9'10'#9'KD_MITRA'#9'F'#9)
+            DataField = 'TTD4'
+            DataSource = dsQMaster
+            LookupTable = DMFrm.QMitra_Kerja
+            LookupField = 'NAMA_MITRA'
+            Style = csDropDownList
+            TabOrder = 7
+            Visible = False
+            AutoDropDown = False
+            ShowButton = True
+            AllowClearKey = False
+          end
         end
         object PanelDetail: TPanel
           Left = 0
           Top = 178
           Width = 1058
-          Height = 361
+          Height = 300
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 2
@@ -389,7 +428,7 @@ object PenerimaanKGFrm: TPenerimaanKGFrm
             Left = 0
             Top = 0
             Width = 1058
-            Height = 361
+            Height = 300
             ControlType.Strings = (
               'KD_SUB_LOKASI;CustomEdit;LookLokasi;F'
               'KD_ITEM;CustomEdit;LookItem;F'
@@ -522,7 +561,7 @@ object PenerimaanKGFrm: TPenerimaanKGFrm
         end
         object PanelFooter1: TPanel
           Left = 0
-          Top = 539
+          Top = 478
           Width = 1058
           Height = 41
           Align = alBottom
@@ -953,7 +992,7 @@ object PenerimaanKGFrm: TPenerimaanKGFrm
           Left = 0
           Top = 70
           Width = 1058
-          Height = 469
+          Height = 408
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 1
@@ -961,7 +1000,7 @@ object PenerimaanKGFrm: TPenerimaanKGFrm
             Left = 0
             Top = 0
             Width = 1058
-            Height = 469
+            Height = 408
             DisableThemes = True
             DisableThemesInTitle = True
             ControlType.Strings = (
@@ -1020,7 +1059,7 @@ object PenerimaanKGFrm: TPenerimaanKGFrm
         end
         object PanelFooter2: TPanel
           Left = 0
-          Top = 539
+          Top = 478
           Width = 1058
           Height = 41
           Align = alBottom
@@ -1289,7 +1328,7 @@ object PenerimaanKGFrm: TPenerimaanKGFrm
     PrinterSetup.BinName = 'Default'
     PrinterSetup.DocumentName = 'Report'
     PrinterSetup.Orientation = poLandscape
-    PrinterSetup.PaperName = 'A4'
+    PrinterSetup.PaperName = 'Custom'
     PrinterSetup.PrinterName = 'Fax'
     PrinterSetup.SaveDeviceSettings = False
     PrinterSetup.mmMarginBottom = 6350
@@ -2673,6 +2712,7 @@ object PenerimaanKGFrm: TPenerimaanKGFrm
       DisplayWidth = 22
       FieldName = 'NO_RESEP'
       Visible = False
+      OnChange = QMasterNO_RESEPChange
       Size = 22
     end
   end
@@ -4757,7 +4797,7 @@ object PenerimaanKGFrm: TPenerimaanKGFrm
     Cursor = crSQLWait
     Session = DMFrm.OS
     BeforeOpen = QLokasiBeforeOpen
-    Left = 672
+    Left = 552
     Top = 216
     object QLokasiKD_SUB_LOKASI: TStringField
       DisplayLabel = 'LOKASI'

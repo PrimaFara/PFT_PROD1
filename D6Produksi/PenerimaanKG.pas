@@ -309,6 +309,8 @@ type
     Label18: TLabel;
     QItemKD_SUB_KEL: TStringField;
     QDetailKD_SUB_KEL: TStringField;
+    Label13: TLabel;
+    wwDBLookupComboDlg2: TwwDBLookupComboDlg;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);
@@ -370,6 +372,7 @@ type
     procedure QDetailQTY6Change(Sender: TField);
     procedure QDetailApplyRecord(Sender: TOracleDataSet; Action: Char;
       var Applied: Boolean; var NewRowId: String);
+    procedure QMasterNO_RESEPChange(Sender: TField);
   private
     { Private declarations }
     vorder, SelectedFont, vkode, vjns_brg, vjns_lokasi : String;
@@ -851,6 +854,17 @@ begin
 //    cbtransaksi.Items.Add('LAINNYA');
 end;
 
+  if QMasterNO_RESEP.AsString='DARI MITRA' then
+  begin
+    Label13.Visible:=true;
+    wwDBLookupComboDlg2.Visible:=true;
+  end
+  else
+  begin
+    Label13.Visible:=false;
+    wwDBLookupComboDlg2.Visible:=false;
+  end;
+
 end;
 
 procedure TPenerimaanKGFrm.TabSheet1Exit(Sender: TObject);
@@ -996,35 +1010,33 @@ begin
   cbTransaksi.Visible:=QTransaksiKD_TRANSAKSI.AsString='884';
   LTransaksi.Visible:=QTransaksiKD_TRANSAKSI.AsString='884';
 
-if QTransaksiKD_TRANSAKSI.AsString='883' then
-begin
-  cbTransaksi.Visible:=QTransaksiKD_TRANSAKSI.AsString='883';
-  LTransaksi.Visible:=QTransaksiKD_TRANSAKSI.AsString='883';
+  if QTransaksiKD_TRANSAKSI.AsString='883' then
+  begin
+    cbTransaksi.Visible:=QTransaksiKD_TRANSAKSI.AsString='883';
+    LTransaksi.Visible:=QTransaksiKD_TRANSAKSI.AsString='883';
 
     cbtransaksi.Items.Clear;
     cbtransaksi.Items.Add('DARI PERSIAPAN');
     cbtransaksi.Items.Add('DARI TENUN');
 
    QMasterNO_RESEP.AsString:='DARI PERSIAPAN';
-end
+  end
 
-else
+  else
 
-if QTransaksiKD_TRANSAKSI.AsString='884' then
-begin
-  cbTransaksi.Visible:=QTransaksiKD_TRANSAKSI.AsString='884';
-  LTransaksi.Visible:=QTransaksiKD_TRANSAKSI.AsString='884';
-
-  PanelHeader.Caption:='884. RETUR DARI MITRA';
-
-    cbtransaksi.Items.Clear;
+    if QTransaksiKD_TRANSAKSI.AsString='884' then
+    begin
+      cbTransaksi.Visible:=QTransaksiKD_TRANSAKSI.AsString='884';
+      LTransaksi.Visible:=QTransaksiKD_TRANSAKSI.AsString='884';
+      PanelHeader.Caption:='884. RETUR DARI MITRA';
+      cbtransaksi.Items.Clear;
 //    cbtransaksi.Items.Add('KOREKSI');
 //    cbtransaksi.Items.Add('PROSES ULANG');
 //    cbtransaksi.Items.Add('KELUAR PROSES');
-    cbtransaksi.Items.Add('DARI MITRA');
+      cbtransaksi.Items.Add('DARI MITRA');
 //    cbtransaksi.Items.Add('LAINNYA');
 
-   QMasterNO_RESEP.AsString:='DARI MITRA';
+      QMasterNO_RESEP.AsString:='DARI MITRA';
 end;
 
 
@@ -1372,6 +1384,20 @@ begin
          QDetailQTY6.AsFloat:=QDetailQTY1.AsFloat / QDetailRASIO.AsFloat
        else
           ShowMessage('CEK RASIO MASTER !');  
+end;
+
+procedure TPenerimaanKGFrm.QMasterNO_RESEPChange(Sender: TField);
+begin
+  if QMasterNO_RESEP.AsString='DARI MITRA' then
+  begin
+     Label13.Visible:=true;
+     wwDBLookupComboDlg2.Visible:=true;
+  end
+  else
+  begin
+     Label13.Visible:=false;
+     wwDBLookupComboDlg2.Visible:=false;
+  end;
 end;
 
 end.

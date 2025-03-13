@@ -711,7 +711,7 @@ object ValidasiKeluarKeMitraFrm: TValidasiKeluarKeMitraFrm
               'NO_DESAIN'#9'10'#9'NO REG.'#9'F')
             DataField = 'NO_BUKTI'
             DataSource = dsQDetail
-            LookupTable = DMFrm.QResep
+            LookupTable = QResep
             LookupField = 'NO_RESEP'
             Style = csDropDownList
             TabOrder = 2
@@ -5613,10 +5613,10 @@ object ValidasiKeluarKeMitraFrm: TValidasiKeluarKeMitraFrm
     Top = 368
     object QItemKD_SUB_KEL: TStringField
       DisplayLabel = 'ITEM BENANG'
-      DisplayWidth = 12
+      DisplayWidth = 64
       FieldName = 'KD_SUB_KEL'
       Required = True
-      Size = 12
+      Size = 64
     end
     object QItemNAMA_ITEM: TStringField
       DisplayLabel = 'KETERANGAN ITEM PATAL'
@@ -5842,5 +5842,71 @@ object ValidasiKeluarKeMitraFrm: TValidasiKeluarKeMitraFrm
     Cursor = crSQLWait
     Left = 656
     Top = 144
+  end
+  object QResep: TOracleDataSet
+    SQL.Strings = (
+      'select * from ( '
+      ' select'
+      '   distinct t.*'
+      ' from ipisma_db3.VRESEP682 t, ipisma_db4.desain_detail a'
+      
+        ' where t.no_desain=a.no_desain and (a.nama_item = :pnama_item AN' +
+        'D a.kd_warna=:pkd_warna)'
+      ') WHERE :MYPARAM'
+      ''
+      ''
+      '/*select * from ipisma_db3.vresep682 WHERE :MYPARAM*/'
+      ''
+      '')
+    Variables.Data = {
+      0300000003000000080000003A4D59504152414D01000000110000004E4F5F52
+      45534550204C494B4520272700000000000A0000003A504B445F5741524E4105
+      00000000000000000000000B0000003A504E414D415F4954454D050000000000
+      000000000000}
+    QBEDefinition.QBEFieldDefs = {
+      0400000007000000080000004E4F5F5245534550010000000000050000005645
+      525349010000000000020000004B500100000000000300000054474C01000000
+      00000A0000004B4F4E535452554B534901000000000005000000434F52414B01
+      0000000000090000004E4F5F44455341494E010000000000}
+    Cursor = crSQLWait
+    Session = DMFrm.OS
+    Left = 328
+    Top = 432
+    object QResepNO_RESEP: TStringField
+      DisplayWidth = 16
+      FieldName = 'NO_RESEP'
+    end
+    object QResepVERSI: TStringField
+      DisplayLabel = 'NO.Reg'
+      DisplayWidth = 16
+      FieldName = 'VERSI'
+      Size = 18
+    end
+    object QResepKP: TStringField
+      DisplayWidth = 11
+      FieldName = 'KP'
+    end
+    object QResepTGL: TDateTimeField
+      DisplayLabel = 'TANGGAL'
+      DisplayWidth = 12
+      FieldName = 'TGL'
+      DisplayFormat = 'dd mmm yyyy'
+    end
+    object QResepKONSTRUKSI: TStringField
+      DisplayWidth = 20
+      FieldName = 'KONSTRUKSI'
+      Size = 50
+    end
+    object QResepCORAK: TStringField
+      DisplayWidth = 20
+      FieldName = 'CORAK'
+      Size = 50
+    end
+    object QResepNO_DESAIN: TFloatField
+      DisplayLabel = 'NO REG.'
+      DisplayWidth = 10
+      FieldName = 'NO_DESAIN'
+      Required = True
+    end
   end
 end
