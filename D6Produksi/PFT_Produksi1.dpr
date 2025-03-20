@@ -58,7 +58,10 @@ uses
   ProsesAwalTahun in 'ProsesAwalTahun.pas' {ProsesAwalTahunFrm},
   PindahLokasi3 in 'PindahLokasi3.pas' {PindahLokasi3Frm},
   PermintaanKoreksiPengering in 'PermintaanKoreksiPengering.pas' {PermintaanKoreksiPengeringFrm},
-  LaporanDeptKemitraan in 'LaporanDeptKemitraan.pas' {LaporanDeptKemitraanFrm};
+  LaporanDeptKemitraan in 'LaporanDeptKemitraan.pas' {LaporanDeptKemitraanFrm},
+  AfvalMitra in 'AfvalMitra.pas' {AfvalMitraFrm},
+  KoreksiMitra in 'KoreksiMitra.pas' {KoreksiMitraFrm},
+  RekapMitra in 'RekapMitra.pas' {RekapMitraFrm};
 
 {$R *.res}
 

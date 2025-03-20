@@ -1,9 +1,8 @@
 object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
-  Left = 282
-  Top = 118
+  Left = 268
+  Top = 51
   Width = 1036
   Height = 611
-  ActiveControl = vTglAwal
   Caption = 'Laporan Dept Kemitraan'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -937,6 +936,15 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
             UnboundDataType = wwDefault
             OnChange = wwDBSpinLine2Change
           end
+          object cbAdaTransaksi: TCheckBox
+            Left = 280
+            Top = 0
+            Width = 161
+            Height = 17
+            Caption = 'Yang ada transaksinya saja'
+            TabOrder = 4
+            OnClick = cbAdaTransaksiClick
+          end
         end
         object PanelBrowse: TPanel
           Left = 0
@@ -1169,6 +1177,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
     Session = DMFrm.OS
     AfterScroll = QBrowseAfterScroll
     OnCalcFields = QBrowseCalcFields
+    OnFilterRecord = QBrowseFilterRecord
     Left = 848
     Top = 8
     object QBrowseNAMA_MITRA: TStringField

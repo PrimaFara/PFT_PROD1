@@ -79,7 +79,7 @@ object PengeluaranPCSFrm: TPengeluaranPCSFrm
       Top = 76
       Width = 993
       Height = 476
-      ActivePage = TabSheet2
+      ActivePage = TabSheet1
       Align = alClient
       Style = tsFlatButtons
       TabOrder = 1

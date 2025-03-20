@@ -361,7 +361,7 @@ type
     QProc_getStok: TOracleQuery;
     QItemTGL_STOK: TDateTimeField;
     QDetailJAM1: TDateTimeField;
-    wwDBDateTimePicker2: TwwDBDateTimePicker;
+    wwDBDateTimePicker222: TwwDBDateTimePicker;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);

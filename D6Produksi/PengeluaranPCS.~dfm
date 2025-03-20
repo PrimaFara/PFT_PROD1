@@ -430,7 +430,7 @@ object PengeluaranPCSFrm: TPengeluaranPCSFrm
             ParentFont = False
             TabOrder = 7
           end
-          object wwDBDateTimePicker2: TwwDBDateTimePicker
+          object wwDBDateTimePicker222: TwwDBDateTimePicker
             Left = 682
             Top = 64
             Width = 121

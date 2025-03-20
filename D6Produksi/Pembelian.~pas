@@ -237,6 +237,8 @@ type
     procedure LogoutUser(Sender: TObject);
     procedure N807KoreksiHasilProsesPengeringan1Click(Sender: TObject);
     procedure LaporanDeptKemitraan1Click(Sender: TObject);
+    procedure Afval1Click(Sender: TObject);
+    procedure RekapTransaksi1Click(Sender: TObject);
     
 
   private
@@ -264,7 +266,7 @@ uses DM, TipeMenu, HakMenu, OrganisasiItem, OrganisasiLokasi,
   LapMutStokGW, HasilPengeringan, MyColor, PenerimaanKG,
   PenerimaanHasilCelup, Penerimaan_JasaKelos, PengeluaranPCS, SJMaklon, TerimaMaklon,
   DaftarUnpost, PermintaanUnpost, Unpost, DaftarWarna, ProsesAwalTahun, PindahLokasi3,
-  PermintaanKoreksiPengering, LaporanDeptKemitraan;
+  PermintaanKoreksiPengering, LaporanDeptKemitraan, AfvalMitra, KoreksiMitra, RekapMitra;
 
 {$R *.dfm}
 
@@ -726,7 +728,7 @@ end;
 
 procedure TPembelianFrm.Koreksi4Click(Sender: TObject);
 begin
-  ValidasiPenyerahanBB2.ShowForm((Sender as TMenuItem).Name,'333',(Sender as TMenuItem).Caption,'30','30');
+  KoreksiMitra.ShowForm((Sender as TMenuItem).Name,'771',(Sender as TMenuItem).Caption,'30','30','30');
 end;
 
 procedure TPembelianFrm.SuratJalanDoubling1Click(Sender: TObject);
@@ -884,7 +886,17 @@ end;
 
 procedure TPembelianFrm.LaporanDeptKemitraan1Click(Sender: TObject);
 begin
-  LaporanDeptKemitraan.ShowForm((Sender as TMenuItem).Name,'791',(Sender as TMenuItem).Caption,'10','10');
+  LaporanDeptKemitraan.ShowForm((Sender as TMenuItem).Name,'L04',(Sender as TMenuItem).Caption,'10','10');
+end;
+
+procedure TPembelianFrm.Afval1Click(Sender: TObject);
+begin
+  AfvalMitra.ShowForm((Sender as TMenuItem).Name,'770',(Sender as TMenuItem).Caption,'30','30','30');
+end;
+
+procedure TPembelianFrm.RekapTransaksi1Click(Sender: TObject);
+begin
+ RekapMitra.ShowForm((Sender as TMenuItem).Name,(Sender as TMenuItem).Caption,(Sender as TMenuItem).Caption, '22');
 end;
 
 end.

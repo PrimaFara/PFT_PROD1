@@ -343,6 +343,7 @@ type
     QBrowsePAKAN_KOREKSI: TFloatField;
     QBrowseLUSI_AKHIR: TFloatField;
     QBrowsePAKAN_AKHIR: TFloatField;
+    cbAdaTransaksi: TCheckBox;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);
@@ -409,6 +410,8 @@ type
     procedure wwDBDateTimePicker1Change(Sender: TObject);
     procedure QMasterTGLChange(Sender: TField);
     procedure QItemNewBeforeQuery(Sender: TOracleDataSet);
+    procedure QBrowseFilterRecord(DataSet: TDataSet; var Accept: Boolean);
+    procedure cbAdaTransaksiClick(Sender: TObject);
   //  procedure ppNo2Print(Sender: TObject);
   private
     { Private declarations }
@@ -425,7 +428,7 @@ procedure ShowForm(pNamaMenu:String; pkode : String; pjudul : string; pjns_brg :
 
 implementation
 
-uses DM, Pembelian, HasilSoftCones;
+uses DM, Pembelian, HasilSoftCones, ComObj;
 
 {$R *.dfm}
 
@@ -456,7 +459,7 @@ Begin
     LaporanDeptKemitraanFrm.vjns_brg:=pjns_brg;
     LaporanDeptKemitraanFrm.QTransaksi.Open;
 
-    LaporanDeptKemitraanFrm.PanelHeader.Caption:=LaporanDeptKemitraanFrm.QTransaksiKD_TRANSAKSI.AsString+'. '+LaporanDeptKemitraanFrm.QTransaksiNAMA_TRANSAKSI.AsString;
+    LaporanDeptKemitraanFrm.PanelHeader.Caption:=LaporanDeptKemitraanFrm.QTransaksiNAMA_TRANSAKSI.AsString;
     LaporanDeptKemitraanFrm.wwDBGrid1.IniAttributes.FileName:=DMFrm.sAppPath+Application.Title+'2.ini';
     LaporanDeptKemitraanFrm.wwDBGrid1.IniAttributes.SectionName:=LaporanDeptKemitraanFrm.Caption+'1';
     LaporanDeptKemitraanFrm.wwDBGrid1.IniAttributes.Enabled:=True;
@@ -515,48 +518,100 @@ begin
 //Otoritas Button
   BtnExport.Visible:=DMFrm.cBtnExport;
   BtnDesign2.Visible:=DMFrm.cBtnDesign;
+
+  TabSheet1.TabVisible:=FALSE;
+  TabSheet3.TabVisible:=FALSE;
 end;
 
 procedure TLaporanDeptKemitraanFrm.BtnExportClick(Sender: TObject);
+var
+  ExcelApp: Variant;
+  Workbook: Variant;
+  Worksheet: Variant;
+  i, j: Integer;
+  Field: TField;
+  FormatSettings: TFormatSettings;
 begin
-{DMFrm.SaveDialog1.FileName:=PanelHeader.Caption+' '+
-      vTglAwal.Text+' sd '+vTglAkhir.Text+'.xls';
-    if DMFrm.SaveDialog1.Execute then
-    begin
-      try
-        wwDBGrid2.ExportOptions.FileName:=DMFrm.SaveDialog1.FileName;
-        wwDBGrid2.ExportOptions.TitleName:='Hasil SoftCones';
-        wwDBGrid2.ExportOptions.Save;
-        if MessageDlg('Ekspor Data Sukses, Lihat Hasil ?',mtWarning,[mbYes, mbNo],0)=mrYes then
-        begin
-          DMFrm.LMDStarter1.Command:=DMFrm.SaveDialog1.FileName;
-          DMFrm.LMDStarter1.Execute;
-        end;
-  		Except
-    	  ShowMessage('Ekspor Data Gagal !');
-  		end;
-    end;    }
-     if QBrowse.Active then
+  ShowMessage('Tunggu Hingga Proses Selesai. Klik Ok untuk memulai');
+  
+  // Inisialisasi TFormatSettings untuk mengontrol pemisah desimal
+  GetLocaleFormatSettings(GetThreadLocale, FormatSettings);
+  FormatSettings.DecimalSeparator := '.';
+
+  // Menampilkan dialog Save As
+  DMFrm.SaveDialog1.Filter := 'Excel Files|*.xlsx';
+  DMFrm.SaveDialog1.DefaultExt := 'xlsx';
+
+  if DMFrm.SaveDialog1.Execute then
   begin
-     DMFrm.SaveDialog1.DefaultExt:='XLK';
-     DMFrm.SaveDialog1.Filter:='Excel files (*.XLK)|*.XLK';
-     DMFrm.SaveDialog1.FileName:=PanelHeader.Caption+' '+ vTglAwal.Text+' sd '+vTglAkhir.Text+'.xlK';
-   //DMFrm.SaveDialog1.FileName:='HASIL MESIN SOFTCONES';
-     wwDBGrid2.ExportOptions.TitleName:='HASIL MESIN SOFTCONES';
-       if DMFrm.SaveDialog1.Execute then
-       begin
-         try
-         wwDBGrid2.ExportOptions.FileName:=DMFrm.SaveDialog1.FileName;
-         wwDBGrid2.ExportOptions.Save;
-         ShowMessage('Simpan Sukses !');
-         except
-         ShowMessage('Simpan Gagal !');
-         end;
-       end;
+    // Membuat instance dari Excel
+    ExcelApp := CreateOleObject('Excel.Application');
+    ExcelApp.Visible := False; // Atur ke True jika Anda ingin melihat proses di Excel
+
+    // Menambahkan workbook baru
+    Workbook := ExcelApp.Workbooks.Add;
+    Worksheet := Workbook.Worksheets[1];
+
+    // Menulis header ke worksheet
+    for i := 0 to wwDBGrid2.DataSource.DataSet.FieldCount - 1 do
+    begin
+      Worksheet.Cells[1, i + 1].Value := wwDBGrid2.DataSource.DataSet.Fields[i].DisplayName;
+    end;
+
+    // Menulis data ke worksheet
+    wwDBGrid2.DataSource.DataSet.First;
+    j := 2; // Mulai dari baris kedua untuk data, karena baris pertama untuk header
+    while not wwDBGrid2.DataSource.DataSet.Eof do
+    begin
+      for i := 0 to wwDBGrid2.DataSource.DataSet.FieldCount - 1 do
+      begin
+        Field := wwDBGrid2.DataSource.DataSet.Fields[i];
+
+        // Memeriksa tipe data field
+        if Field.DataType in [ftDate, ftDateTime] then
+        begin
+          Worksheet.Cells[j, i + 1].Value := Field.AsDateTime;
+          Worksheet.Cells[j, i + 1].NumberFormat := 'dd/mm/yyyy';
+        end
+        else if Field.DataType in [ftFloat, ftCurrency, ftBCD] then
+        begin
+          // Menyimpan nilai float dalam string dengan FormatSettings yang benar
+          Worksheet.Cells[j, i + 1].Value := FloatToStr(Field.AsFloat, FormatSettings);
+          Worksheet.Cells[j, i + 1].NumberFormat := '0.00'; // Atur format angka dengan dua desimal
+        end
+        else
+        begin
+          Worksheet.Cells[j, i + 1].Value := Field.AsString;
+        end;
+
+        // Mengatur alignment sel untuk angka menjadi rata kanan
+        if Field.DataType in [ftInteger, ftFloat, ftCurrency, ftBCD] then
+        begin
+          Worksheet.Cells[j, i + 1].HorizontalAlignment := 3; // xlRight
+        end;
+      end;
+      Inc(j);
+      wwDBGrid2.DataSource.DataSet.Next;
+    end;
+
+    // Menyimpan workbook ke file yang dipilih pengguna
+    Workbook.SaveAs(DMFrm.SaveDialog1.FileName);
+
+    // Menutup workbook dan mengeluarkan Excel dari memori
+    Workbook.Close(False);
+    ExcelApp.Quit;
+
+    // Melepaskan objek COM
+    Worksheet := Unassigned;
+    Workbook := Unassigned;
+    ExcelApp := Unassigned;
+
+    ShowMessage('Data berhasil diekspor ke ' + DMFrm.SaveDialog1.FileName);
   end
   else
-    ShowMessage('Tabel belum di-OPEN !');
-
+  begin
+    ShowMessage('Proses penyimpanan dibatalkan.');
+  end;
 end;
 
 procedure TLaporanDeptKemitraanFrm.BtnOkClick(Sender: TObject);
@@ -598,13 +653,15 @@ begin
         vterima_retur_l:=vterima_retur_l+QBrowseLUSI_TERIMA_RETUR.AsFloat;
         vterima_afval_l:=vterima_afval_l+QBrowseLUSI_TERIMA_AFVAL.AsFloat;
         vkoreksi_l:=vkoreksi_l+QBrowseLUSI_KOREKSI.AsFloat;
+        vakhir_l:=vakhir_l+QBrowseLUSI_AKHIR.AsFloat;
 
-        vawal_p:=vawal_p+QBrowseLUSI_AWAL.AsFloat;
-        vkirim_p:=vkirim_p+QBrowseLUSI_KIRIM.AsFloat;
-        vterima_prod_p:=vterima_prod_p+QBrowseLUSI_TERIMA_PRODUKSI.AsFloat;
-        vterima_retur_p:=vterima_retur_p+QBrowseLUSI_TERIMA_RETUR.AsFloat;
-        vterima_afval_p:=vterima_afval_p+QBrowseLUSI_TERIMA_AFVAL.AsFloat;
-        vkoreksi_p:=vkoreksi_p+QBrowseLUSI_KOREKSI.AsFloat;
+        vawal_p:=vawal_p+QBrowsePAKAN_AWAL.AsFloat;
+        vkirim_p:=vkirim_p+QBrowsePAKAN_KIRIM.AsFloat;
+        vterima_prod_p:=vterima_prod_p+QBrowsePAKAN_TERIMA_PRODUKSI.AsFloat;
+        vterima_retur_p:=vterima_retur_p+QBrowsePAKAN_TERIMA_RETUR.AsFloat;
+        vterima_afval_p:=vterima_afval_p+QBrowsePAKAN_TERIMA_AFVAL.AsFloat;
+        vkoreksi_p:=vkoreksi_p+QBrowsePAKAN_KOREKSI.AsFloat;
+        vakhir_p:=vakhir_p+QBrowsePAKAN_AKHIR.AsFloat;
 
         QBrowse.Next;
       end;
@@ -709,14 +766,16 @@ begin
         vterima_retur_l:=vterima_retur_l+QBrowseLUSI_TERIMA_RETUR.AsFloat;
         vterima_afval_l:=vterima_afval_l+QBrowseLUSI_TERIMA_AFVAL.AsFloat;
         vkoreksi_l:=vkoreksi_l+QBrowseLUSI_KOREKSI.AsFloat;
+        vakhir_l:=vakhir_l+QBrowseLUSI_AKHIR.AsFloat;
 
-        vawal_p:=vawal_p+QBrowseLUSI_AWAL.AsFloat;
-        vkirim_p:=vkirim_p+QBrowseLUSI_KIRIM.AsFloat;
-        vterima_prod_p:=vterima_prod_p+QBrowseLUSI_TERIMA_PRODUKSI.AsFloat;
-        vterima_retur_p:=vterima_retur_p+QBrowseLUSI_TERIMA_RETUR.AsFloat;
-        vterima_afval_p:=vterima_afval_p+QBrowseLUSI_TERIMA_AFVAL.AsFloat;
-        vkoreksi_p:=vkoreksi_p+QBrowseLUSI_KOREKSI.AsFloat;
-        
+        vawal_p:=vawal_p+QBrowsePAKAN_AWAL.AsFloat;
+        vkirim_p:=vkirim_p+QBrowsePAKAN_KIRIM.AsFloat;
+        vterima_prod_p:=vterima_prod_p+QBrowsePAKAN_TERIMA_PRODUKSI.AsFloat;
+        vterima_retur_p:=vterima_retur_p+QBrowsePAKAN_TERIMA_RETUR.AsFloat;
+        vterima_afval_p:=vterima_afval_p+QBrowsePAKAN_TERIMA_AFVAL.AsFloat;
+        vkoreksi_p:=vkoreksi_p+QBrowsePAKAN_KOREKSI.AsFloat;
+        vakhir_p:=vakhir_p+QBrowsePAKAN_AKHIR.AsFloat;
+
         QBrowse.Next;
       end;
       QBrowse.EnableControls;
@@ -1293,13 +1352,15 @@ begin
         vterima_retur_l:=vterima_retur_l+QBrowseLUSI_TERIMA_RETUR.AsFloat;
         vterima_afval_l:=vterima_afval_l+QBrowseLUSI_TERIMA_AFVAL.AsFloat;
         vkoreksi_l:=vkoreksi_l+QBrowseLUSI_KOREKSI.AsFloat;
+        vakhir_l:=vakhir_l+QBrowseLUSI_AKHIR.AsFloat;
 
-        vawal_p:=vawal_p+QBrowseLUSI_AWAL.AsFloat;
-        vkirim_p:=vkirim_p+QBrowseLUSI_KIRIM.AsFloat;
-        vterima_prod_p:=vterima_prod_p+QBrowseLUSI_TERIMA_PRODUKSI.AsFloat;
-        vterima_retur_p:=vterima_retur_p+QBrowseLUSI_TERIMA_RETUR.AsFloat;
-        vterima_afval_p:=vterima_afval_p+QBrowseLUSI_TERIMA_AFVAL.AsFloat;
-        vkoreksi_p:=vkoreksi_p+QBrowseLUSI_KOREKSI.AsFloat;
+        vawal_p:=vawal_p+QBrowsePAKAN_AWAL.AsFloat;
+        vkirim_p:=vkirim_p+QBrowsePAKAN_KIRIM.AsFloat;
+        vterima_prod_p:=vterima_prod_p+QBrowsePAKAN_TERIMA_PRODUKSI.AsFloat;
+        vterima_retur_p:=vterima_retur_p+QBrowsePAKAN_TERIMA_RETUR.AsFloat;
+        vterima_afval_p:=vterima_afval_p+QBrowsePAKAN_TERIMA_AFVAL.AsFloat;
+        vkoreksi_p:=vkoreksi_p+QBrowsePAKAN_KOREKSI.AsFloat;
+        vakhir_p:=vakhir_p+QBrowsePAKAN_AKHIR.AsFloat;
         QBrowse.Next;
       end;
       QBrowse.EnableControls;
@@ -1364,6 +1425,31 @@ procedure TLaporanDeptKemitraanFrm.QItemNewBeforeQuery(Sender: TOracleDataSet);
 begin
   QItemNew.SetVariable('pkd_benang', QLokasiKD_BENANG.AsString);
   QItemNew.SetVariable('pibukti', QMasterIBUKTI.AsInteger);
+end;
+
+procedure TLaporanDeptKemitraanFrm.QBrowseFilterRecord(DataSet: TDataSet;
+  var Accept: Boolean);
+begin
+Accept:=
+    ((QBrowseLUSI_AWAL.AsFloat)<>0) or
+    ((QBrowseLUSI_KIRIM.AsFloat)<>0) or
+    ((QBrowseLUSI_TERIMA_PRODUKSI.AsFloat)<>0) or
+    ((QBrowseLUSI_TERIMA_RETUR.AsFloat)<>0) or
+    ((QBrowseLUSI_TERIMA_AFVAL.AsFloat)<>0) or
+    ((QBrowseLUSI_KOREKSI.AsFloat)<>0) or
+    ((QBrowseLUSI_AKHIR.AsFloat)<>0) or
+    ((QBrowsePAKAN_AWAL.AsFloat)<>0) or
+    ((QBrowsePAKAN_KIRIM.AsFloat)<>0) or
+    ((QBrowsePAKAN_TERIMA_PRODUKSI.AsFloat)<>0) or
+    ((QBrowsePAKAN_TERIMA_RETUR.AsFloat)<>0) or
+    ((QBrowsePAKAN_TERIMA_AFVAL.AsFloat)<>0) or
+    ((QBrowsePAKAN_KOREKSI.AsFloat)<>0) or
+    ((QBrowsePAKAN_AKHIR.AsFloat)<>0);
+end;
+
+procedure TLaporanDeptKemitraanFrm.cbAdaTransaksiClick(Sender: TObject);
+begin
+   QBrowse.Filtered:=cbAdaTransaksi.Checked;
 end;
 
 end.

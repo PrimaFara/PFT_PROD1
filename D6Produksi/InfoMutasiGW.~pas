@@ -287,6 +287,8 @@ type
     QBrowseNewAKHIR: TFloatField;
     QBrowseNewQTY20: TFloatField;
     QBrowseNewAWAL: TFloatField;
+    PTopR: TPanel;
+    BitBtn3: TBitBtn;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);
@@ -334,6 +336,7 @@ type
     procedure wwDBGridNewTitleButtonClick(Sender: TObject;
       AFieldName: String);
     procedure QBrowseNewCalcFields(DataSet: TDataSet);
+    procedure BitBtn3Click(Sender: TObject);
   private
     { Private declarations }
     vorder, SelectedFont, vkode, vitem : String;
@@ -1110,6 +1113,25 @@ begin
   QBrowseNewQTY18.AsFloat+
   QBrowseNewQTY19.AsFloat+
   QBrowseNewQTY20.AsFloat);
+end;
+
+procedure TInfoMutasiGWFrm.BitBtn3Click(Sender: TObject);
+begin
+  QBrowseDetail.Active;
+  DMFrm.SaveDialog1.DefaultExt:='XLK';
+  DMFrm.SaveDialog1.Filter:='Excel files (*.XLK)|*.XLK';
+  DMFrm.SaveDialog1.FileName:='Riwayat Mutasi Bng Warna '+ vTglAwal.Text+' sd '+vTglAkhir.Text+'.xlK';
+  wwDBGrid3.ExportOptions.TitleName:=PanelTop.Caption+' Per '+vTglAwal.Text+' sd '+vTglAkhir.Text;
+  if DMFrm.SaveDialog1.Execute then
+  begin
+    try
+      wwDBGrid3.ExportOptions.FileName:=DMFrm.SaveDialog1.FileName;
+      wwDBGrid3.ExportOptions.Save;
+      ShowMessage('Simpan Sukses !');
+    except
+      ShowMessage('Simpan Gagal !');
+    end;
+  end;
 end;
 
 end.
