@@ -1,6 +1,6 @@
 object PembelianFrm: TPembelianFrm
-  Left = 290
-  Top = 127
+  Left = 262
+  Top = 77
   BorderStyle = bsSingle
   Caption = 'Aplikasi - PRODUKSI 1 - PT. Prima Fara Textile'
   ClientHeight = 494

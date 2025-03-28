@@ -414,6 +414,7 @@ object PenerimaanKGFrm: TPenerimaanKGFrm
             AutoDropDown = False
             ShowButton = True
             AllowClearKey = False
+            OnEnter = wwDBLookupComboDlg2Enter
           end
         end
         object PanelDetail: TPanel

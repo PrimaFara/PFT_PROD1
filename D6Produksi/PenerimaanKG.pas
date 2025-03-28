@@ -373,6 +373,7 @@ type
     procedure QDetailApplyRecord(Sender: TOracleDataSet; Action: Char;
       var Applied: Boolean; var NewRowId: String);
     procedure QMasterNO_RESEPChange(Sender: TField);
+    procedure wwDBLookupComboDlg2Enter(Sender: TObject);
   private
     { Private declarations }
     vorder, SelectedFont, vkode, vjns_brg, vjns_lokasi : String;
@@ -1398,6 +1399,12 @@ begin
      Label13.Visible:=false;
      wwDBLookupComboDlg2.Visible:=false;
   end;
+end;
+
+procedure TPenerimaanKGFrm.wwDBLookupComboDlg2Enter(Sender: TObject);
+begin
+  DMFrm.QMitra_Kerja.Close;
+  DMFrm.QMitra_Kerja.Open;
 end;
 
 end.

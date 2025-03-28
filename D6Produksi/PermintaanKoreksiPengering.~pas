@@ -318,8 +318,6 @@ type
     QNewItemsKD_ITEM: TStringField;
     QNewItemsRASIO: TFloatField;
     QNewItemsKD_WARNA: TStringField;
-    QNewItemsWARNA: TStringField;
-    QNewItemsNO_BATCH: TStringField;
     QNewItemsQTY: TFloatField;
     QNewItemsQTY2: TFloatField;
     QNewItemsSATUAN: TStringField;
@@ -327,6 +325,8 @@ type
     LookWarna: TwwDBLookupComboDlg;
     QMasterJENIS: TStringField;
     QProc: TOracleQuery;
+    QNewItemsWARNA: TStringField;
+    QNewItemsNO_BATCH: TStringField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);
@@ -775,6 +775,14 @@ begin
   if QMaster.State<>dsBrowse then
   try
     QMaster.Post;
+    QProc.Close;
+
+    if vjns_trx = 'DALAM_PROSES' then QProc.SetVariable('vproc', 'ipisma_db3.proc_temp_lookup_pengering0');
+    if vjns_trx = 'HASIL_PROSES' then QProc.SetVariable('vproc', 'ipisma_db3.proc_temp_lookup_pengering1');
+
+    QProc.SetVariable('vsysdate', wwDBDateTimePicker1.Date);
+    QProc.SetVariable('vsysdate2', wwDBDateTimePicker1.Date);
+    QProc.Execute;
   except
     ShowMessage('Maaf, ada masalah di pengisian MASTER !');
   end;
@@ -849,16 +857,15 @@ begin
  }
 
  QNewItems.Close;
- if QMasterNO_RESEP.AsString='KOREKSI3' then
- begin
-    QNewItems.SetVariable('vkd_sub_lokasi', '22-10000');
-    QNewItems.SetVariable('vkd_jns_item', '21');
- end;
-
-  if QMasterNO_RESEP.AsString='KOREKSI4' then
+ if vjns_trx = 'HASIL_PROSES' then
  begin
     QNewItems.SetVariable('vkd_sub_lokasi', '22-00000');
-    QNewItems.SetVariable('vkd_jns_item', '22');
+    QNewItems.SetVariable('vview', 'ipisma_db3.vtemp_look_koreksi_pengering1');
+ end;
+ if vjns_trx = 'DALAM_PROSES' then
+ begin
+    QNewItems.SetVariable('vkd_sub_lokasi', '22-10000');
+    QNewItems.SetVariable('vview', 'ipisma_db3.vtemp_look_koreksi_pengering0');
  end;
  QNewItems.Open;
 end;
@@ -883,8 +890,18 @@ begin
   QMasterTTD2.AsString:=QTransaksiTTD2.AsString;
   QMasterTTD3.AsString:=QTransaksiTTD3.AsString;
   QMasterTTD4.AsString:=QTransaksiTTD4.AsString;
-  if vjns_brg='DALAM_PROSES' then QMasterJENIS.AsString:='0';
-  if vjns_brg='HASIL_PROSES' then QMasterJENIS.AsString:='1';
+  if vjns_trx='DALAM_PROSES' then
+  begin
+    QMasterJENIS.AsString:='0';
+    wwDBComboBox3.Enabled:=False;
+    QMasterNO_RESEP.AsString:='KOREKSI3';
+  end;
+
+  if vjns_trx='HASIL_PROSES' then
+  begin
+    QMasterJENIS.AsString:='1';
+    wwDBComboBox3.Enabled:=True;
+  end;
 
   wwDBDateTimePicker1.Enabled:=True;
   wwDBComboBox3.Enabled:=True;
@@ -1141,8 +1158,18 @@ begin
   if InputQuery('Filter','Filter : ',vfilter) then
   begin
     QNewItems.Close;
-    QNewItems.SetVariable('myparam',' and upper(nama_item) like upper(''%'+vfilter+'%'')');
-    QNewItems.Open;
+    if vjns_trx = 'HASIL_PROSES' then
+    begin
+      QNewItems.SetVariable('vkd_sub_lokasi', '22-00000');
+      QNewItems.SetVariable('vview', 'ipisma_db3.vtemp_look_koreksi_pengering1');
+    end;
+    if vjns_trx = 'DALAM_PROSES' then
+    begin
+      QNewItems.SetVariable('vkd_sub_lokasi', '22-10000');
+      QNewItems.SetVariable('vview', 'ipisma_db3.vtemp_look_koreksi_pengering0');
+    end;
+      QNewItems.SetVariable('myparam',' and upper(nama_item) like upper(''%'+vfilter+'%'')');
+      QNewItems.Open;
   end;
 
 end;

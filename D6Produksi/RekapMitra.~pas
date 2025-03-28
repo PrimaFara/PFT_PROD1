@@ -437,6 +437,7 @@ type
     QBrowse5OPR_INSERT: TStringField;
     QBrowse5ISPOST: TStringField;
     QBrowse5WARNA: TStringField;
+    QBrowse3QTY_BS: TFloatField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnOkClick(Sender: TObject);
@@ -505,6 +506,7 @@ type
     procedure BitBtn4Click(Sender: TObject);
     procedure SpeedButton6Click(Sender: TObject);
     procedure SpeedButton7Click(Sender: TObject);
+    procedure QBrowse5AfterScroll(DataSet: TDataSet);
   private
     { Private declarations }
     vorder, SelectedFont, vkode, vitem : String;
@@ -913,7 +915,7 @@ end;
 
 procedure TRekapMitraFrm.BitBtn2Click(Sender: TObject);
 var
-  vqty1, vqty2, vqty3, vqty4 : real;
+  vqty1, vqty2, vqty3, vqty4, vqty5 : real;
 begin
   QBrowse3.DisableControls;
   QBrowse3.Close;
@@ -926,12 +928,14 @@ begin
   vqty2:=0;
   vqty3:=0;
   vqty4:=0;
+  vqty5:=0;
   while not QBrowse3.Eof do
   begin
     vqty1:=vqty1+QBrowse3QTY_PTG.AsFloat;
     vqty2:=vqty2+QBrowse3LS_TERIMA_PRODUKSI.AsFloat;
     vqty3:=vqty3+QBrowse3PK_TERIMA_PRODUKSI.AsFloat;
     vqty4:=vqty4+QBrowse3PK_TERIMA_PRODUKSI2.AsFloat;
+    vqty5:=vqty5+QBrowse3QTY_BS.AsFloat;
     QBrowse3.Next;
   end;
   QBrowse3.EnableControls;
@@ -940,6 +944,7 @@ begin
   wwDBGrid3.ColumnByName('LS_TERIMA_PRODUKSI').FooterValue:=FormatFloat('#,0.000;-#,0.000;-',vqty2);
   wwDBGrid3.ColumnByName('PK_TERIMA_PRODUKSI').FooterValue:=FormatFloat('#,0.000;-#,0.000;-',vqty3);
   wwDBGrid3.ColumnByName('PK_TERIMA_PRODUKSI2').FooterValue:=FormatFloat('#,0.000;-#,0.000;-',vqty4);
+  wwDBGrid3.ColumnByName('QTY_BS').FooterValue:=FormatFloat('#,0.0;-#,0.0;-',vqty5);
 end;
 
 procedure TRekapMitraFrm.Label6Click(Sender: TObject);
@@ -1098,7 +1103,7 @@ begin
 end;
 
 procedure TRekapMitraFrm.SpeedButton3Click(Sender: TObject);
-var t1, t2, t3, t4 : real;
+var t1, t2, t3, t4, t5 : real;
 begin
   if QBrowse3.QBEMode then
   begin
@@ -1109,12 +1114,14 @@ begin
     t2:=0;
     t3:=0;
     t4:=0;
+    t5:=0;
     while not QBrowse3.Eof do
     begin
       t1:=t1+QBrowse3QTY_PTG.AsFloat;
       t2:=t2+QBrowse3LS_TERIMA_PRODUKSI.AsFloat;
       t3:=t3+QBrowse3PK_TERIMA_PRODUKSI.AsFloat;
       t4:=t4+QBrowse3PK_TERIMA_PRODUKSI2.AsFloat;
+      t5:=t5+QBrowse3QTY_BS.AsFloat;
       QBrowse3.Next;
     end;
     QBrowse3.EnableControls;
@@ -1123,6 +1130,7 @@ begin
     wwDBGrid3.ColumnByName('LS_TERIMA_PRODUKSI').FooterValue:=FormatFloat('#,0.000;-#,0.000;-',t2);
     wwDBGrid3.ColumnByName('PK_TERIMA_PRODUKSI').FooterValue:=FormatFloat('#,0.000;-#,0.000;-',t3);
     wwDBGrid3.ColumnByName('PK_TERIMA_PRODUKSI2').FooterValue:=FormatFloat('#,0.000;-#,0.000;-',t4);
+    wwDBGrid3.ColumnByName('QTY_BS').FooterValue:=FormatFloat('#,0.00;-#,0.00;-',t5);
   end;
 end;
 
@@ -1255,6 +1263,11 @@ begin
     wwDBGrid5.ColumnByName('LUSI').FooterValue:=FormatFloat('#,0.000;-#,0.000;-',t1);
     wwDBGrid5.ColumnByName('PAKAN').FooterValue:=FormatFloat('#,0.000;-#,0.000;-',t2);
   end;
+end;
+
+procedure TRekapMitraFrm.QBrowse5AfterScroll(DataSet: TDataSet);
+begin
+  LBanner5.Caption:='Record ke '+IntToStr(QBrowse5.RecNo)+' dari '+FormatFloat('#,#',QBrowse5.RecordCount)+' Records';
 end;
 
 end.

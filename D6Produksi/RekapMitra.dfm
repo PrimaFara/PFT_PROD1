@@ -341,7 +341,7 @@ object RekapMitraFrm: TRekapMitraFrm
                 Frame.DrawRight = False
                 Size.Values = (
                   42.333333333333340000
-                  687.916666666666600000
+                  687.916666666666800000
                   105.833333333333300000
                   42.333333333333340000)
                 Alignment = taCenter
@@ -374,7 +374,7 @@ object RekapMitraFrm: TRekapMitraFrm
                   42.333333333333340000
                   939.270833333333400000
                   105.833333333333300000
-                  60.854166666666660000)
+                  60.854166666666680000)
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = True
@@ -518,7 +518,7 @@ object RekapMitraFrm: TRekapMitraFrm
                   44.979166666666670000
                   1473.729166666667000000
                   103.187500000000000000
-                  60.854166666666660000)
+                  60.854166666666680000)
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = True
@@ -580,7 +580,7 @@ object RekapMitraFrm: TRekapMitraFrm
                   42.333333333333340000
                   1214.437500000000000000
                   29.104166666666670000
-                  304.270833333333300000)
+                  304.270833333333400000)
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = True
@@ -609,9 +609,9 @@ object RekapMitraFrm: TRekapMitraFrm
                 Frame.DrawRight = False
                 Size.Values = (
                   42.333333333333340000
-                  703.791666666666600000
+                  703.791666666666800000
                   29.104166666666670000
-                  264.583333333333300000)
+                  264.583333333333400000)
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = True
@@ -642,7 +642,7 @@ object RekapMitraFrm: TRekapMitraFrm
                   42.333333333333340000
                   2330.979166666667000000
                   0.000000000000000000
-                  296.333333333333300000)
+                  296.333333333333400000)
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = True
@@ -673,7 +673,7 @@ object RekapMitraFrm: TRekapMitraFrm
                   42.333333333333340000
                   1719.791666666667000000
                   29.104166666666670000
-                  375.708333333333300000)
+                  375.708333333333400000)
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = True
@@ -750,7 +750,7 @@ object RekapMitraFrm: TRekapMitraFrm
                 Frame.DrawRight = False
                 Size.Values = (
                   42.333333333333340000
-                  1725.083333333333000000
+                  1725.083333333334000000
                   105.833333333333300000
                   42.333333333333340000)
                 Alignment = taCenter
@@ -783,7 +783,7 @@ object RekapMitraFrm: TRekapMitraFrm
                   42.333333333333340000
                   2002.895833333333000000
                   105.833333333333300000
-                  60.854166666666660000)
+                  60.854166666666680000)
                 Alignment = taCenter
                 AlignToBand = False
                 AutoSize = True
@@ -1075,7 +1075,7 @@ object RekapMitraFrm: TRekapMitraFrm
                   44.979166666666670000
                   1275.291666666667000000
                   0.000000000000000000
-                  76.729166666666660000)
+                  76.729166666666680000)
                 Alignment = taRightJustify
                 AlignToBand = False
                 AutoSize = True
@@ -1110,7 +1110,7 @@ object RekapMitraFrm: TRekapMitraFrm
                   44.979166666666670000
                   1516.062500000000000000
                   0.000000000000000000
-                  76.729166666666660000)
+                  76.729166666666680000)
                 Alignment = taRightJustify
                 AlignToBand = False
                 AutoSize = True
@@ -1145,7 +1145,7 @@ object RekapMitraFrm: TRekapMitraFrm
                   44.979166666666670000
                   1775.354166666667000000
                   0.000000000000000000
-                  76.729166666666660000)
+                  76.729166666666680000)
                 Alignment = taRightJustify
                 AlignToBand = False
                 AutoSize = True
@@ -1180,7 +1180,7 @@ object RekapMitraFrm: TRekapMitraFrm
                   44.979166666666670000
                   2066.395833333333000000
                   0.000000000000000000
-                  76.729166666666660000)
+                  76.729166666666680000)
                 Alignment = taRightJustify
                 AlignToBand = False
                 AutoSize = True
@@ -1215,7 +1215,7 @@ object RekapMitraFrm: TRekapMitraFrm
                   44.979166666666670000
                   732.895833333333400000
                   0.000000000000000000
-                  76.729166666666660000)
+                  76.729166666666680000)
                 Alignment = taRightJustify
                 AlignToBand = False
                 AutoSize = True
@@ -1248,9 +1248,9 @@ object RekapMitraFrm: TRekapMitraFrm
                 Frame.DrawRight = False
                 Size.Values = (
                   44.979166666666670000
-                  997.479166666666600000
+                  997.479166666666900000
                   0.000000000000000000
-                  76.729166666666660000)
+                  76.729166666666680000)
                 Alignment = taRightJustify
                 AlignToBand = False
                 AutoSize = True
@@ -1491,7 +1491,7 @@ object RekapMitraFrm: TRekapMitraFrm
                 Frame.DrawRight = False
                 Size.Values = (
                   44.979166666666670000
-                  391.583333333333300000
+                  391.583333333333400000
                   10.583333333333330000
                   100.541666666666700000)
                 Alignment = taLeftJustify
@@ -3885,7 +3885,7 @@ object RekapMitraFrm: TRekapMitraFrm
                 Frame.DrawLeft = False
                 Frame.DrawRight = False
                 Size.Values = (
-                  60.854166666666660000
+                  60.854166666666680000
                   677.333333333333400000
                   21.166666666666670000
                   709.083333333333400000)
@@ -4501,6 +4501,7 @@ object RekapMitraFrm: TRekapMitraFrm
             'KD_PRODUKSI'#9'10'#9'KP'#9'F'
             'KONSTRUKSI'#9'25'#9'KONSTRUKSI'#9'F'
             'QTY_PTG'#9'10'#9'QTY (PCS)'#9'F'
+            'QTY_BS'#9'10'#9'QTY_BS'#9'F'
             'LS_TERIMA_PRODUKSI'#9'10'#9'LUSI'#9'F'
             'PK_TERIMA_PRODUKSI'#9'10'#9'Pakan 1'#9'F'#9'PAKAN'
             'PK_TERIMA_PRODUKSI2'#9'10'#9'Pakan 2'#9'F'#9'PAKAN'
@@ -7572,7 +7573,8 @@ object RekapMitraFrm: TRekapMitraFrm
       't.nama_mitra, '
       't.kd_produksi, '
       't.konstruksi, '
-      't.qty_ptg, '
+      't.qty_ptg,'
+      't.qty_bs, '
       'SUM(t.ls_terima_produksi) as ls_terima_produksi, '
       'SUM(t.pk_terima_produksi) as pk_terima_produksi, '
       'SUM(t.pk_terima_produksi2) as pk_terima_produksi2,'
@@ -7583,7 +7585,7 @@ object RekapMitraFrm: TRekapMitraFrm
       'where t.tgl between :ptgl and :ptgl2'
       
         'group by t.tgl, t.no_nota, t.nama_mitra, t.kd_produksi, t.konstr' +
-        'uksi, t.qty_ptg, a.opr_insert'
+        'uksi, t.qty_ptg, t.qty_bs, a.opr_insert'
       ''
       ':myparam')
     Variables.Data = {
@@ -7591,13 +7593,14 @@ object RekapMitraFrm: TRekapMitraFrm
       003A5054474C320C0000000000000000000000080000003A4D59504152414D01
       0000000000000000000000}
     QBEDefinition.QBEFieldDefs = {
-      040000000A0000000300000054474C010000000000070000004E4F5F4E4F5441
+      040000000B0000000300000054474C010000000000070000004E4F5F4E4F5441
       0100000000000A0000004E414D415F4D495452410100000000000B0000004B44
       5F50524F44554B53490100000000000A0000004B4F4E535452554B5349010000
       000000070000005154595F505447010000000000120000004C535F544552494D
       415F50524F44554B534901000000000012000000504B5F544552494D415F5052
       4F44554B534901000000000013000000504B5F544552494D415F50524F44554B
-      5349320100000000000A0000004F50525F494E53455254010000000000}
+      5349320100000000000A0000004F50525F494E53455254010000000000060000
+      005154595F4253010000000000}
     Cursor = crSQLWait
     ReadOnly = True
     QueryAllRecords = False
@@ -7642,6 +7645,9 @@ object RekapMitraFrm: TRekapMitraFrm
     object QBrowse3OPR_INSERT: TStringField
       FieldName = 'OPR_INSERT'
       Size = 30
+    end
+    object QBrowse3QTY_BS: TFloatField
+      FieldName = 'QTY_BS'
     end
   end
   object dsQBrowse3: TwwDataSource
@@ -7736,7 +7742,7 @@ object RekapMitraFrm: TRekapMitraFrm
     ReadOnly = True
     QueryAllRecords = False
     Session = DMFrm.OS
-    AfterScroll = QBrowse4AfterScroll
+    AfterScroll = QBrowse5AfterScroll
     Left = 308
     Top = 256
     object QBrowse5TGL: TDateTimeField

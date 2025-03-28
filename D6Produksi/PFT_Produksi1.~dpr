@@ -60,7 +60,8 @@ uses
   PermintaanKoreksiPengering in 'PermintaanKoreksiPengering.pas' {PermintaanKoreksiPengeringFrm},
   LaporanDeptKemitraan in 'LaporanDeptKemitraan.pas' {LaporanDeptKemitraanFrm},
   AfvalMitra in 'AfvalMitra.pas' {AfvalMitraFrm},
-  KoreksiMitra in 'KoreksiMitra.pas' {KoreksiMitraFrm};
+  KoreksiMitra in 'KoreksiMitra.pas' {KoreksiMitraFrm},
+  RekapMitra in 'RekapMitra.pas' {RekapMitraFrm};
 
 {$R *.res}
 

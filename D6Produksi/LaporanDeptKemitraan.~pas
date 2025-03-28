@@ -14,87 +14,12 @@ uses
 
 type
   TLaporanDeptKemitraanFrm = class(TForm)
-    PanelMain: TPanel;
-    PanelHeader: TPanel;
-    PageControl1: TPageControl;
-    TabSheet1: TTabSheet;
-    PanelMaster: TPanel;
-    PanelDetail: TPanel;
-    PanelFooter1: TPanel;
-    TabSheet2: TTabSheet;
-    PanelFilter: TPanel;
-    LabelBanner: TLabel;
-    PanelBrowse: TPanel;
-    PanelFooter2: TPanel;
-    vTglAwal: TwwDBDateTimePicker;
-    vTglAkhir: TwwDBDateTimePicker;
-    Label2: TLabel;
-    BtnOk: TBitBtn;
-    PanelBand: TPanel;
-    wwDBGrid2: TwwDBGrid;
-    Label3: TLabel;
-    Label4: TLabel;
-    wwDBNavigator1: TwwDBNavigator;
-    wwDBNavigator1PriorPage: TwwNavButton;
-    wwDBNavigator1NextPage: TwwNavButton;
-    wwDBNavigator1SaveBookmark: TwwNavButton;
-    wwDBNavigator1RestoreBookmark: TwwNavButton;
     QBrowse: TOracleDataSet;
     dsQBrowse: TwwDataSource;
-    Label5: TLabel;
-    wwDBSpinLine2: TwwDBSpinEdit;
-    BtnClose2: TBitBtn;
-    BtnExport: TBitBtn;
-    BtnPrintBrowse: TBitBtn;
-    BtnPrintInput: TBitBtn;
-    BtnClose1: TBitBtn;
-    Label1: TLabel;
-    BtnFind: TSpeedButton;
-    BtnOk2: TSpeedButton;
-    TabSheet3: TTabSheet;
     ppReportBrowse: TppReport;
-    ppDBQBrowseDetail: TppDBPipeline;
-    ppDesigner1: TppDesigner;
-    BtnDesign2: TBitBtn;
-    dsQBrowseDetail: TwwDataSource;
-    ppDBPerusahaan: TppDBPipeline;
+    ppDBQBrowse: TppDBPipeline;
     QMaster: TOracleDataSet;
-    QMasterNO_NOTA: TStringField;
-    QMasterKD_TRANSAKSI: TStringField;
-    QMasterTGL: TDateTimeField;
-    QMasterKETERANGAN: TStringField;
-    QMasterISPOST: TStringField;
-    QMasterNO_BUKTI: TStringField;
-    wwDBDateTimePicker1: TwwDBDateTimePicker;
     dsQMaster: TwwDataSource;
-    DBMemo1: TDBMemo;
-    Label6: TLabel;
-    Label7: TLabel;
-    Label9: TLabel;
-    Bevel1: TBevel;
-    DBText3: TDBText;
-    wwDBGrid1: TwwDBGrid;
-    QDetail: TOracleDataSet;
-    QDetailIBUKTI_DETAIL: TFloatField;
-    QDetailKD_ITEM: TStringField;
-    dsQDetail: TwwDataSource;
-    Label14: TLabel;
-    wwDBSpinLine1: TwwDBSpinEdit;
-    LBarcode: TDBText;
-    EditCari: TEdit;
-    Label15: TLabel;
-    ppReportInput: TppReport;
-    ppDBQMaster: TppDBPipeline;
-    ppDBQDetail: TppDBPipeline;
-    QMasterIBUKTI: TFloatField;
-    QMasterTTD1: TStringField;
-    QMasterTTD2: TStringField;
-    QMasterTTD3: TStringField;
-    QMasterTTD4: TStringField;
-    QDetailIBUKTI: TFloatField;
-    QDetailQTY1: TFloatField;
-    QDetailKETERANGAN: TStringField;
-    cbPost: TwwCheckBox;
     QTransaksi: TOracleDataSet;
     QTransaksiNAMA_TRANSAKSI: TStringField;
     QTransaksiKD_TRANSAKSI: TStringField;
@@ -114,35 +39,8 @@ type
     QTransaksiJAB2: TStringField;
     QTransaksiJAB3: TStringField;
     QTransaksiJAB4: TStringField;
-    ppDBQTransaksi: TppDBPipeline;
     dsQTransaksi: TwwDataSource;
-    wwDBNavigatorInput: TwwDBNavigator;
-    wwDBNavigatorInputCancel: TwwNavButton;
-    wwDBNavigatorInputButton1: TwwNavButton;
-    wwDBNavigatorInputButton2: TwwNavButton;
-    wwDBEdit1: TwwDBEdit;
-    QDetailKD_SUB_LOKASI: TStringField;
     QProcUpdateMutasi: TOracleQuery;
-    QLokasi: TOracleDataSet;
-    QLokasiKD_SUB_LOKASI: TStringField;
-    QLokasiJNS_LOKASI: TStringField;
-    LookLokasi: TwwDBLookupComboDlg;
-    Label8: TLabel;
-    QMasterSHIFT: TStringField;
-    QMasterGRUP: TStringField;
-    wwDBComboBox1: TwwDBComboBox;
-    wwDBComboBox2: TwwDBComboBox;
-    Label10: TLabel;
-    QItem: TOracleDataSet;
-    QItemNAMA_ITEM: TStringField;
-    QItemKD_ITEM: TStringField;
-    QItemSATUAN: TStringField;
-    LookItem: TwwDBLookupComboDlg;
-    wwDBLookupComboDlg1: TwwDBLookupComboDlg;
-    Label11: TLabel;
-    QMasterKD_DIV: TStringField;
-    QMasterLDIVISI: TStringField;
-    DBText1: TDBText;
     ppTitleBand1: TppTitleBand;
     ppNamaLaporan: TppLabel;
     ppLabel9: TppLabel;
@@ -150,28 +48,11 @@ type
     ppDBText12: TppDBText;
     ppDBText13: TppDBText;
     ppDBText14: TppDBText;
-    ppUserCetak: TppLabel;
     ppHeaderBand1: TppHeaderBand;
-    ppLabel2: TppLabel;
-    ppLabel3: TppLabel;
-    ppLabel4: TppLabel;
-    ppLabel5: TppLabel;
     ppLabel6: TppLabel;
-    ppLabel7: TppLabel;
-    ppLabel8: TppLabel;
-    ppLabel10: TppLabel;
-    ppLabel11: TppLabel;
     ppDetailBand1: TppDetailBand;
-    ppDBText8: TppDBText;
-    ppDBText10: TppDBText;
-    ppDBText6: TppDBText;
-    ppDBMemo3: TppDBMemo;
     ppNo: TppVariable;
     ppDBText1: TppDBText;
-    ppDBText2: TppDBText;
-    ppDBText3: TppDBText;
-    ppDBText4: TppDBText;
-    ppDBText7: TppDBText;
     ppFooterBand1: TppFooterBand;
     ppSystemVariable1: TppSystemVariable;
     ppSummaryBand1: TppSummaryBand;
@@ -184,149 +65,8 @@ type
     ppDBText47: TppDBText;
     ppDBText48: TppDBText;
     ppDBText49: TppDBText;
-    QMasterSTATUS: TStringField;
-    QItemRASIO: TFloatField;
-    QDetailRASIO: TFloatField;
-    QDetailKD_SATUAN: TStringField;
-    QItemKD_SATUAN: TStringField;
-    QDetailNO_MESIN: TStringField;
-    LookMesin: TwwDBLookupComboDlg;
-    QLokasiSPESIFIKASI: TStringField;
-    QLokasiEFF: TFloatField;
-    QDetailQTY2: TFloatField;
-    QDetailQTY3: TFloatField;
-    QDetailQTY4: TFloatField;
-    QLokasiJML: TFloatField;
-    RadioGroup1: TRadioGroup;
-    CBPreview: TCheckBox;
-    ppLabel12: TppLabel;
     ppDBText5: TppDBText;
-    ppLabel18: TppLabel;
-    ppLabel30: TppLabel;
-    ppDBText9: TppDBText;
-    QLokasiKD_BENANG: TStringField;
-    QDetailMESIN: TStringField;
-    QLokasiKPS: TFloatField;
-    QDetailEFF: TFloatField;
-    ppTitleBand2: TppTitleBand;
-    ppDBText15: TppDBText;
-    ppDBText50: TppDBText;
-    ppVariable2: TppVariable;
-    ppDBText26: TppDBText;
-    ppLabel25: TppLabel;
-    ppDBText23: TppDBText;
-    ppDBText24: TppDBText;
-    ppDBText27: TppDBText;
-    ppLabel17: TppLabel;
-    ppLabel14: TppLabel;
-    ppLabel32: TppLabel;
-    ppDBText28: TppDBText;
-    ppLabel33: TppLabel;
-    ppDBText25: TppDBText;
-    ppLabel20: TppLabel;
-    ppLabel35: TppLabel;
-    ppLabel15: TppLabel;
-    ppLabel16: TppLabel;
-    ppHeaderBand2: TppHeaderBand;
-    ppLabel22: TppLabel;
-    ppLabel24: TppLabel;
-    ppLabel26: TppLabel;
-    ppLabel27: TppLabel;
-    ppLabel13: TppLabel;
-    ppLabel21: TppLabel;
-    ppLabel23: TppLabel;
-    ppLabel28: TppLabel;
-    ppLabel1: TppLabel;
-    ppLabel19: TppLabel;
-    ppDetailBand2: TppDetailBand;
-    ppDBText22: TppDBText;
-    ppDBText30: TppDBText;
-    ppDBMemo1: TppDBMemo;
-    ppDBText11: TppDBText;
-    ppDBText18: TppDBText;
-    ppDBText20: TppDBText;
-    ppDBText21: TppDBText;
-    ppDBText16: TppDBText;
-    ppDBText17: TppDBText;
-    ppFooterBand2: TppFooterBand;
-    ppUserCetak2: TppLabel;
-    ppDBText41: TppDBText;
-    ppSummaryBand2: TppSummaryBand;
-    ppLabel29: TppLabel;
-    ppDBMemo2: TppDBMemo;
-    ppPageStyle1: TppPageStyle;
-    raCodeModule1: TraCodeModule;
-    QDetailQTY5: TFloatField;
-    QDetailQTY6: TFloatField;
-    QDetailOPR_INSERT: TStringField;
-    QMasterQTY_RESEP: TFloatField;
-    wwDBEdit2: TwwDBEdit;
-    Label12: TLabel;
-    Label13: TLabel;
-    QDetailJAM1: TDateTimeField;
-    QItemRASIO2: TFloatField;
-    QDetailRASIO2: TFloatField;
-    QDetailQTY_STANDAR: TFloatField;
-    QDetailSTD_PSN: TFloatField;
-    ppDBText29: TppDBText;
-    ppLabel31: TppLabel;
-    ppDBText31: TppDBText;
-    ppLabel34: TppLabel;
-    ppDBText38: TppDBText;
-    ppDBText34: TppDBText;
-    ppDBText35: TppDBText;
-    ppDBText36: TppDBText;
-    ppDBText37: TppDBText;
-    ppDBText32: TppDBText;
-    ppDBText40: TppDBText;
-    ppDBText33: TppDBText;
-    ppDBText39: TppDBText;
-    ppLine2: TppLine;
-    ppLine1: TppLine;
-    ppDBCalc1: TppDBCalc;
-    ppDBCalc2: TppDBCalc;
-    ppVariable1: TppVariable;
-    ppLabel36: TppLabel;
-    QTotal: TOracleDataSet;
-    QTotalKG: TFloatField;
-    QMasterTGL_INSERT: TDateTimeField;
-    QMasterOPR_INSERT: TStringField;
-    Label16: TLabel;
-    DBText4: TDBText;
-    DBText2: TDBText;
-    Label17: TLabel;
-    QDetailKD_ITEM2: TStringField;
-    QTotalKRAT: TFloatField;
-    QTotalPCS: TFloatField;
     QTransaksiDOC_ISO: TStringField;
-    ppDBQTransaksippField19: TppField;
-    ppLabel37: TppLabel;
-    ppDBText51: TppDBText;
-    Label18: TLabel;
-    QDetailQTY7: TFloatField;
-    QDetailQTY8: TFloatField;
-    QDetailRASIO3: TFloatField;
-    QItemQTY: TFloatField;
-    QItemQTY2: TFloatField;
-    QItemNew: TOracleDataSet;
-    QProc_getStok: TOracleQuery;
-    QItemNewNAMA_ITEM: TStringField;
-    QItemNewKD_ITEM: TStringField;
-    QItemNewSATUAN: TStringField;
-    QItemNewRASIO: TFloatField;
-    QItemNewRASIO2: TFloatField;
-    QItemNewKD_SUB_KEL: TStringField;
-    OracleDataSet1: TOracleDataSet;
-    StringField1: TStringField;
-    StringField2: TStringField;
-    StringField3: TStringField;
-    FloatField1: TFloatField;
-    FloatField2: TFloatField;
-    FloatField3: TFloatField;
-    FloatField4: TFloatField;
-    StringField4: TStringField;
-    QItemNewQTY: TFloatField;
-    QItemNewQTY2: TFloatField;
     QBrowseNAMA_MITRA: TStringField;
     QBrowseBENANG: TStringField;
     QBrowseLUSI_AWAL: TFloatField;
@@ -343,7 +83,348 @@ type
     QBrowsePAKAN_KOREKSI: TFloatField;
     QBrowseLUSI_AKHIR: TFloatField;
     QBrowsePAKAN_AKHIR: TFloatField;
+    dsQBrowse1: TwwDataSource;
+    QBrowse1: TOracleDataSet;
+    QBrowse1JENIS: TStringField;
+    QBrowse1AWAL: TFloatField;
+    QBrowse1PEMASUKAN: TFloatField;
+    QBrowse1PENGELUARAN: TFloatField;
+    QBrowse1AKHIR: TFloatField;
+    ppLine1: TppLine;
+    ppLine3: TppLine;
+    ppUserCetak: TppLabel;
+    ppLabel2: TppLabel;
+    ppLabel3: TppLabel;
+    ppLine4: TppLine;
+    ppLine5: TppLine;
+    ppLine6: TppLine;
+    ppLine7: TppLine;
+    ppLabel4: TppLabel;
+    ppLabel5: TppLabel;
+    ppLabel7: TppLabel;
+    ppLabel8: TppLabel;
+    ppLabel10: TppLabel;
+    ppLine8: TppLine;
+    ppLine9: TppLine;
+    ppLabel11: TppLabel;
+    ppLabel12: TppLabel;
+    ppLine10: TppLine;
+    ppLine11: TppLine;
+    ppLabel14: TppLabel;
+    ppLabel17: TppLabel;
+    ppLine12: TppLine;
+    ppLabel18: TppLabel;
+    ppLabel19: TppLabel;
+    ppLabel24: TppLabel;
+    ppLabel27: TppLabel;
+    ppLabel30: TppLabel;
+    ppLabel31: TppLabel;
+    ppLabel32: TppLabel;
+    ppLabel33: TppLabel;
+    ppLabel34: TppLabel;
+    ppLabel37: TppLabel;
+    ppLabel38: TppLabel;
+    ppLabel39: TppLabel;
+    ppLabel40: TppLabel;
+    ppLine13: TppLine;
+    ppLine14: TppLine;
+    ppLine15: TppLine;
+    ppLine16: TppLine;
+    ppLine17: TppLine;
+    ppLine18: TppLine;
+    ppLine19: TppLine;
+    ppLine20: TppLine;
+    ppLine21: TppLine;
+    ppLine22: TppLine;
+    ppLine23: TppLine;
+    ppLine24: TppLine;
+    ppLine25: TppLine;
+    ppDBText2: TppDBText;
+    ppLine26: TppLine;
+    ppDBText3: TppDBText;
+    ppDBText4: TppDBText;
+    ppDBText6: TppDBText;
+    ppDBText7: TppDBText;
+    ppDBText8: TppDBText;
+    ppDBText9: TppDBText;
+    ppDBText10: TppDBText;
+    ppDBText17: TppDBText;
+    ppDBText22: TppDBText;
+    ppDBText23: TppDBText;
+    ppDBText24: TppDBText;
+    ppDBText27: TppDBText;
+    ppDBText28: TppDBText;
+    ppLine27: TppLine;
+    ppLine28: TppLine;
+    ppLine29: TppLine;
+    ppLine30: TppLine;
+    ppLine31: TppLine;
+    ppLine32: TppLine;
+    ppLine33: TppLine;
+    ppLine34: TppLine;
+    ppLine35: TppLine;
+    ppLine36: TppLine;
+    ppLine37: TppLine;
+    ppLine38: TppLine;
+    ppLine39: TppLine;
+    ppLine40: TppLine;
+    ppLine41: TppLine;
+    ppLine42: TppLine;
+    ppLine43: TppLine;
+    ppLine44: TppLine;
+    ppLine45: TppLine;
+    ppDBCalc12: TppDBCalc;
+    ppLine46: TppLine;
+    ppDBCalc1: TppDBCalc;
+    ppDBCalc3: TppDBCalc;
+    ppDBCalc4: TppDBCalc;
+    ppDBCalc5: TppDBCalc;
+    ppDBCalc6: TppDBCalc;
+    ppDBCalc7: TppDBCalc;
+    ppDBCalc8: TppDBCalc;
+    ppDBCalc9: TppDBCalc;
+    ppDBCalc10: TppDBCalc;
+    ppDBCalc11: TppDBCalc;
+    ppDBCalc13: TppDBCalc;
+    ppDBCalc14: TppDBCalc;
+    ppDBCalc15: TppDBCalc;
+    ppLine47: TppLine;
+    ppLine48: TppLine;
+    ppLine49: TppLine;
+    ppLabel41: TppLabel;
+    ppLine50: TppLine;
+    ppLine51: TppLine;
+    ppLine52: TppLine;
+    ppLine53: TppLine;
+    ppLine54: TppLine;
+    ppLine55: TppLine;
+    ppLine56: TppLine;
+    ppLine57: TppLine;
+    ppLine58: TppLine;
+    ppLine59: TppLine;
+    ppLine60: TppLine;
+    ppLine61: TppLine;
+    ppLine62: TppLine;
+    ppLine63: TppLine;
+    ppDBText29: TppDBText;
+    ppDBText30: TppDBText;
+    ppDBText31: TppDBText;
+    ppLabel42: TppLabel;
+    PanelMain: TPanel;
+    Label1: TLabel;
+    PanelHeader: TPanel;
+    PageControl1: TPageControl;
+    TabSheet1: TTabSheet;
+    Label10: TLabel;
+    PanelFooter1: TPanel;
+    BtnClose1: TBitBtn;
+    Panel3: TPanel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    vtglAwal0: TwwDBDateTimePicker;
+    vtglAkhir0: TwwDBDateTimePicker;
+    BitBtn2: TBitBtn;
+    wwDBSpinEdit2: TwwDBSpinEdit;
+    Panel4: TPanel;
+    wwDBGrid1: TwwDBGrid;
+    TabSheet2: TTabSheet;
+    LabelBanner: TLabel;
+    PanelFilter: TPanel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    BtnFind: TSpeedButton;
+    BtnOk2: TSpeedButton;
+    vTglAwal: TwwDBDateTimePicker;
+    vTglAkhir: TwwDBDateTimePicker;
+    BtnOk: TBitBtn;
+    wwDBSpinLine2: TwwDBSpinEdit;
     cbAdaTransaksi: TCheckBox;
+    PanelBrowse: TPanel;
+    wwDBGrid2: TwwDBGrid;
+    PanelFooter2: TPanel;
+    wwDBNavigator1: TwwDBNavigator;
+    wwDBNavigator1PriorPage: TwwNavButton;
+    wwDBNavigator1NextPage: TwwNavButton;
+    wwDBNavigator1SaveBookmark: TwwNavButton;
+    wwDBNavigator1RestoreBookmark: TwwNavButton;
+    BtnClose2: TBitBtn;
+    BtnExport: TBitBtn;
+    BtnPrintBrowse: TBitBtn;
+    BtnDesign2: TBitBtn;
+    TabSheet3: TTabSheet;
+    Panel1: TPanel;
+    Label19: TLabel;
+    Label20: TLabel;
+    Label21: TLabel;
+    Label22: TLabel;
+    SpeedButton1: TSpeedButton;
+    SpeedButton2: TSpeedButton;
+    vTglAwal2: TwwDBDateTimePicker;
+    vTglAkhir2: TwwDBDateTimePicker;
+    BitBtn1: TBitBtn;
+    wwDBSpinEdit1: TwwDBSpinEdit;
+    CheckBox1: TCheckBox;
+    Panel2: TPanel;
+    wwDBGrid3: TwwDBGrid;
+    QMasterMITRA: TStringField;
+    QMasterJENIS: TStringField;
+    QMasterKP: TStringField;
+    QMasterARAH: TStringField;
+    QMasterKONSTRUKSI: TStringField;
+    QMasterQTY_KG: TFloatField;
+    QMasterQTY_PTG: TFloatField;
+    QMasterQTY_SPRING: TFloatField;
+    QMasterQTY_BEAM: TFloatField;
+    QMasterQTY_BS: TFloatField;
+    QProcRekapBulanan: TOracleQuery;
+    ppDBQMaster: TppDBPipeline;
+    ppDBQMasterppField1: TppField;
+    ppDBQMasterppField2: TppField;
+    ppDBQMasterppField3: TppField;
+    ppDBQMasterppField4: TppField;
+    ppDBQMasterppField5: TppField;
+    ppDBQMasterppField6: TppField;
+    ppDBQMasterppField7: TppField;
+    ppDBQMasterppField8: TppField;
+    ppDBQMasterppField9: TppField;
+    ppDBQMasterppField10: TppField;
+    ppDBQMasterppField11: TppField;
+    ppDBQMasterppField12: TppField;
+    ppDBQMasterppField13: TppField;
+    ppDBQMasterppField14: TppField;
+    ppDBQMasterppField15: TppField;
+    ppDBQMasterppField16: TppField;
+    ppDBQMasterppField17: TppField;
+    ppDBQMasterppField18: TppField;
+    ppDBQMasterppField19: TppField;
+    ppReportInput: TppReport;
+    ppTitleBand2: TppTitleBand;
+    ppDBText15: TppDBText;
+    ppDBText50: TppDBText;
+    ppVariable2: TppVariable;
+    ppDBText26: TppDBText;
+    ppLabel25: TppLabel;
+    ppDBText11: TppDBText;
+    ppDBText16: TppDBText;
+    ppDBText18: TppDBText;
+    ppLabel1: TppLabel;
+    ppLabel13: TppLabel;
+    ppLabel15: TppLabel;
+    ppDBText20: TppDBText;
+    ppLabel16: TppLabel;
+    ppDBText25: TppDBText;
+    ppLabel20: TppLabel;
+    ppLabel35: TppLabel;
+    ppLabel21: TppLabel;
+    ppLabel22: TppLabel;
+    ppLabel23: TppLabel;
+    ppDBText51: TppDBText;
+    ppHeaderBand2: TppHeaderBand;
+    ppLabel26: TppLabel;
+    ppLabel28: TppLabel;
+    ppLabel29: TppLabel;
+    ppLabel36: TppLabel;
+    ppLabel43: TppLabel;
+    ppLabel44: TppLabel;
+    ppLabel45: TppLabel;
+    ppLabel46: TppLabel;
+    ppLabel47: TppLabel;
+    ppLabel48: TppLabel;
+    ppLabel49: TppLabel;
+    ppDetailBand2: TppDetailBand;
+    ppDBText21: TppDBText;
+    ppDBText32: TppDBText;
+    ppDBMemo1: TppDBMemo;
+    ppDBText33: TppDBText;
+    ppDBText34: TppDBText;
+    ppDBText35: TppDBText;
+    ppDBText36: TppDBText;
+    ppDBText37: TppDBText;
+    ppDBText38: TppDBText;
+    ppDBText39: TppDBText;
+    ppVariable1: TppVariable;
+    ppLabel50: TppLabel;
+    ppFooterBand2: TppFooterBand;
+    ppUserCetak2: TppLabel;
+    ppDBText41: TppDBText;
+    ppSummaryBand2: TppSummaryBand;
+    ppLabel51: TppLabel;
+    ppDBMemo2: TppDBMemo;
+    ppDBText40: TppDBText;
+    ppDBText52: TppDBText;
+    ppDBText53: TppDBText;
+    ppDBText54: TppDBText;
+    ppDBText55: TppDBText;
+    ppDBText56: TppDBText;
+    ppDBText57: TppDBText;
+    ppDBText58: TppDBText;
+    ppDBText59: TppDBText;
+    ppLine2: TppLine;
+    ppLine64: TppLine;
+    ppDBCalc2: TppDBCalc;
+    ppDBCalc16: TppDBCalc;
+    ppPageStyle1: TppPageStyle;
+    raCodeModule1: TraCodeModule;
+    ppParameterList2: TppParameterList;
+    ppDBQTransaksi: TppDBPipeline;
+    ppDBQDetail: TppDBPipeline;
+    ppDBQDetailppMasterFieldLink1: TppMasterFieldLink;
+    ppReport1: TppReport;
+    ppTitleBand3: TppTitleBand;
+    ppLabel52: TppLabel;
+    ppLabel53: TppLabel;
+    ppLabel54: TppLabel;
+    ppDBText60: TppDBText;
+    ppDBText61: TppDBText;
+    ppDBText62: TppDBText;
+    ppLabel55: TppLabel;
+    ppHeaderBand3: TppHeaderBand;
+    ppLabel56: TppLabel;
+    ppLabel57: TppLabel;
+    ppLabel58: TppLabel;
+    ppLabel59: TppLabel;
+    ppLabel60: TppLabel;
+    ppLabel61: TppLabel;
+    ppLabel62: TppLabel;
+    ppLabel63: TppLabel;
+    ppLabel64: TppLabel;
+    ppLabel65: TppLabel;
+    ppLabel66: TppLabel;
+    ppLabel67: TppLabel;
+    ppLabel68: TppLabel;
+    ppDetailBand3: TppDetailBand;
+    ppDBText63: TppDBText;
+    ppDBText64: TppDBText;
+    ppDBText65: TppDBText;
+    ppDBMemo3: TppDBMemo;
+    ppVariable3: TppVariable;
+    ppDBText66: TppDBText;
+    ppDBText67: TppDBText;
+    ppDBText68: TppDBText;
+    ppDBText69: TppDBText;
+    ppDBText70: TppDBText;
+    ppDBText71: TppDBText;
+    ppDBText72: TppDBText;
+    ppDBText73: TppDBText;
+    ppFooterBand3: TppFooterBand;
+    ppSystemVariable2: TppSystemVariable;
+    ppSummaryBand3: TppSummaryBand;
+    ppDBText74: TppDBText;
+    ppDBText75: TppDBText;
+    ppDBText76: TppDBText;
+    ppDBText77: TppDBText;
+    ppDBText78: TppDBText;
+    ppDBText79: TppDBText;
+    ppDBText80: TppDBText;
+    ppDBText81: TppDBText;
+    ppDBText82: TppDBText;
+    ppParameterList3: TppParameterList;
+    Panel5: TPanel;
+    QMasterQTY_PERSEN: TFloatField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);
@@ -359,59 +440,34 @@ type
     procedure BtnOk2Click(Sender: TObject);
     procedure ppHeaderBand1BeforePrint(Sender: TObject);
     procedure BtnPrintBrowseClick(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
-    procedure BtnDesign2Click(Sender: TObject);
     procedure ppTitleBand1BeforePrint(Sender: TObject);
-    procedure wwDBSpinLine1Change(Sender: TObject);
-    procedure EditCariKeyDown(Sender: TObject; var Key: Word;
-      Shift: TShiftState);
     procedure TabSheet1Show(Sender: TObject);
-    procedure TabSheet1Exit(Sender: TObject);
     procedure ppDetailBand2BeforePrint(Sender: TObject);
-    procedure ppFooterBand2BeforePrint(Sender: TObject);
-    procedure BtnPrintInputClick(Sender: TObject);
-    procedure QMasterBeforePost(DataSet: TDataSet);
     procedure wwDBGrid1Enter(Sender: TObject);
     procedure wwDBGrid2DblClick(Sender: TObject);
     procedure Label5Click(Sender: TObject);
     procedure LookItemEnter(Sender: TObject);
-    procedure QMasterBeforeDelete(DataSet: TDataSet);
-    procedure QMasterNewRecord(DataSet: TDataSet);
     procedure QTransaksiBeforeOpen(DataSet: TDataSet);
-//    procedure ppPageStyle1BeforePrint(Sender: TObject);
-    procedure Label14Click(Sender: TObject);
-    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure QMasterAfterPost(DataSet: TDataSet);
     procedure QMasterBeforeInsert(DataSet: TDataSet);
-    procedure ppGroupHeaderBand1BeforePrint(Sender: TObject);
     procedure QProcUpdateMutasiBeforeQuery(Sender: TOracleQuery);
-    procedure LookLokasiEnter(Sender: TObject);
-    procedure QItemBeforeQuery(Sender: TOracleDataSet);
-    procedure LookItemCloseUp(Sender: TObject; LookupTable,
-      FillTable: TDataSet; modified: Boolean);
-    procedure QDetailNewRecord(DataSet: TDataSet);
-    procedure QDetailBeforePost(DataSet: TDataSet);
     procedure FormShow(Sender: TObject);
-    procedure QDetailQTY6Change(Sender: TField);
-    procedure LookMesinEnter(Sender: TObject);
-    procedure LookMesinCloseUp(Sender: TObject; LookupTable,
-      FillTable: TDataSet; modified: Boolean);
-    procedure QDetailCalcFields(DataSet: TDataSet);
     procedure ppDetailBand1BeforePrint(Sender: TObject);
-    procedure wwDBGrid1UpdateFooter(Sender: TObject);
-    procedure LookItemUserButton1Click(Sender: TObject;
-      LookupTable: TDataSet);
     procedure QBrowseCalcFields(DataSet: TDataSet);
     procedure wwDBGrid2UpdateFooter(Sender: TObject);
     procedure wwDBGrid1CalcCellColors(Sender: TObject; Field: TField;
       State: TGridDrawState; Highlight: Boolean; AFont: TFont;
       ABrush: TBrush);
-    procedure QMasterAfterDelete(DataSet: TDataSet);
-    procedure wwDBDateTimePicker1Change(Sender: TObject);
-    procedure QMasterTGLChange(Sender: TField);
-    procedure QItemNewBeforeQuery(Sender: TOracleDataSet);
     procedure QBrowseFilterRecord(DataSet: TDataSet; var Accept: Boolean);
     procedure cbAdaTransaksiClick(Sender: TObject);
+    procedure vTglAwal2Change(Sender: TObject);
+    procedure BitBtn1Click(Sender: TObject);
+    procedure ppSummaryBand1BeforePrint(Sender: TObject);
+    procedure BitBtn2Click(Sender: TObject);
+    procedure vtglAwal0Change(Sender: TObject);
+    procedure Label9Click(Sender: TObject);
+    procedure wwDBSpinEdit2Change(Sender: TObject);
+    procedure QMasterCalcFields(DataSet: TDataSet);
   //  procedure ppNo2Print(Sender: TObject);
   private
     { Private declarations }
@@ -444,12 +500,8 @@ Begin
 //  if BPBFrm=Nil then
   begin
     LaporanDeptKemitraanFrm:=TLaporanDeptKemitraanFrm.Create(Application);
-    LaporanDeptKemitraanFrm.PageControl1.ActivePageIndex:=1;
-    if not DMFrm.cHakInput then
-    begin
-       LaporanDeptKemitraanFrm.QMaster.ReadOnly:=True;
-       LaporanDeptKemitraanFrm.QDetail.ReadOnly:=True;
-    end;
+    LaporanDeptKemitraanFrm.PageControl1.ActivePageIndex:=0;
+
     mychar:=pjudul;
     Delete(mychar,Pos('&',mychar),1);
     pjudul:=mychar;
@@ -460,17 +512,12 @@ Begin
     LaporanDeptKemitraanFrm.QTransaksi.Open;
 
     LaporanDeptKemitraanFrm.PanelHeader.Caption:=LaporanDeptKemitraanFrm.QTransaksiNAMA_TRANSAKSI.AsString;
-    LaporanDeptKemitraanFrm.wwDBGrid1.IniAttributes.FileName:=DMFrm.sAppPath+Application.Title+'2.ini';
-    LaporanDeptKemitraanFrm.wwDBGrid1.IniAttributes.SectionName:=LaporanDeptKemitraanFrm.Caption+'1';
-    LaporanDeptKemitraanFrm.wwDBGrid1.IniAttributes.Enabled:=True;
-    LaporanDeptKemitraanFrm.wwDBGrid1.LoadFromIniFile;
+
     LaporanDeptKemitraanFrm.wwDBGrid2.IniAttributes.FileName:=DMFrm.sAppPath+Application.Title+'2.ini';
     LaporanDeptKemitraanFrm.wwDBGrid2.IniAttributes.SectionName:=LaporanDeptKemitraanFrm.Caption+'2';
     LaporanDeptKemitraanFrm.wwDBGrid2.IniAttributes.Enabled:=True;
     LaporanDeptKemitraanFrm.wwDBGrid2.LoadFromIniFile;
-    DMFrm.ProcReadIni(Application.Title,LaporanDeptKemitraanFrm.Caption+'1',LaporanDeptKemitraanFrm.wwDBGrid1);
     DMFrm.ProcReadIni(Application.Title,LaporanDeptKemitraanFrm.Caption+'2',LaporanDeptKemitraanFrm.wwDBGrid2);
-    LaporanDeptKemitraanFrm.wwDBSpinLine1.Value:=LaporanDeptKemitraanFrm.wwDBGrid1.RowHeightPercent;
     LaporanDeptKemitraanFrm.wwDBSpinLine2.Value:=LaporanDeptKemitraanFrm.wwDBGrid2.RowHeightPercent;
 
   end;
@@ -481,7 +528,6 @@ end;
 procedure TLaporanDeptKemitraanFrm.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-   DMFrm.ProcWtiteIni(Application.Title,Caption+'1',wwDBGrid1);
    DMFrm.ProcWtiteIni(Application.Title,Caption+'2',wwDBGrid2);
    Action:=caFree;
    LaporanDeptKemitraanFrm:=Nil;
@@ -497,7 +543,6 @@ begin
      DMFrm.BType := 'C128';
      DMFrm.FontToUse.Size := 12;
      DMFrm.FontToUse.Name := SelectedFont;
-     LBarcode.Font := DMFrm.FontToUse;
 //     QRBarcode11.Font := LoginFrm.FontToUse;
      DMFrm.BType := DMFrm.BType + '-';
      DMFrm.BType := DMFrm.BType + DMFrm.Format;
@@ -505,7 +550,7 @@ begin
 // end barcode
 
 //  BtnAmbilData.Glyph.LoadFromFile(DMFrm.sAppPath+'Images\COPY.Bmp');
-  BtnPrintInput.Glyph.LoadFromFile(DMFrm.sAppPath+'Images\PRINT.Bmp');
+
   BtnClose1.Glyph.LoadFromFile(DMFrm.sAppPath+'Images\CLOSE.Bmp');
   BtnOk.Glyph.LoadFromFile(DMFrm.sAppPath+'Images\CHECK.Bmp');
   BtnOk2.Glyph.LoadFromFile(DMFrm.sAppPath+'Images\CHECK.Bmp');
@@ -515,12 +560,11 @@ begin
   BtnExport.Glyph.LoadFromFile(DMFrm.sAppPath+'Images\EXPORT.Bmp');
   BtnClose2.Glyph.LoadFromFile(DMFrm.sAppPath+'Images\CLOSE.Bmp');
   vTglAwal.Date:=Trunc(Date);
+  vTglAwal0.Date:=Trunc(Date);
+  vTglAwal2.Date:=Trunc(Date);
 //Otoritas Button
   BtnExport.Visible:=DMFrm.cBtnExport;
   BtnDesign2.Visible:=DMFrm.cBtnDesign;
-
-  TabSheet1.TabVisible:=FALSE;
-  TabSheet3.TabVisible:=FALSE;
 end;
 
 procedure TLaporanDeptKemitraanFrm.BtnExportClick(Sender: TObject);
@@ -817,53 +861,15 @@ begin
     end;
 end;
 
-procedure TLaporanDeptKemitraanFrm.Button1Click(Sender: TObject);
-begin
-  ppDesigner1.ShowModal;
-end;
-
-procedure TLaporanDeptKemitraanFrm.BtnDesign2Click(Sender: TObject);
-begin
-  ppDesigner1.ShowModal;
-end;
-
 procedure TLaporanDeptKemitraanFrm.ppTitleBand1BeforePrint(Sender: TObject);
 begin
 //ppNo2.AsInteger:=0;
   ppNo.AsInteger:=0;
-  ppNamaLaporan.Caption:=Caption;
+  ppNamaLaporan.Caption:='LAPORAN STOK BARANG DALAM PROSES KEMITRAAN';
   ppPeriode.Caption:=vTglAwal.Text+' s/d '+vTglAkhir.Text;
   DMFrm.QTime.Close;
   DMFrm.QTime.Open;
   ppUserCetak.Caption:=DMFrm.QTimeVUSER_CETAK.AsString;
-end;
-
-procedure TLaporanDeptKemitraanFrm.wwDBSpinLine1Change(Sender: TObject);
-begin
-    wwDBGrid1.RowHeightPercent:=Round(wwDBSpinLine1.Value);
-end;
-
-procedure TLaporanDeptKemitraanFrm.EditCariKeyDown(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
-begin
-  if key=13 then
-  begin
-
-  IF copy(editCari.text,1,3) = QmasterKd_transaksi.asstring then
-    begin
-    wwDBSpinLine1.SetFocus;
-    QMaster.Close;
-    QMaster.SetVariable('myparam1','0');
-    QMaster.SetVariable('myparam2',EditCari.Text);
-    QMaster.Open;
-    QDetail.Close;
-    QDetail.Open;
-    EditCari.SetFocus;
-  end
-    else
-      ShowMessage('Kode transaksi tidak sesuai');
-    end;
-    
 end;
 
 procedure TLaporanDeptKemitraanFrm.TabSheet1Show(Sender: TObject);
@@ -877,82 +883,6 @@ begin
   EditCari.Text:=QBrowseIBUKTI.AsString;
   if (QBrowseNO_NOTA.AsString<>'') then EditCari.Text:=QBrowseNO_NOTA.AsString;
   wwDBGrid1UpdateFooter(nil);}
-end;
-
-procedure TLaporanDeptKemitraanFrm.TabSheet1Exit(Sender: TObject);
-begin
-  EditCari.Text:='';
-end;
-
-procedure TLaporanDeptKemitraanFrm.ppFooterBand2BeforePrint(Sender: TObject);
-begin
-//  ppHalInput.Visible:=ppReportInput.PageNo>1;
-  DMFrm.QTime.Close;
-  DMFrm.QTime.Open;
-  ppUserCetak2.Caption:=DMFrm.QTimeVUSER_CETAK.AsString;
-end;
-
-procedure TLaporanDeptKemitraanFrm.BtnPrintInputClick(Sender: TObject);
-begin
-//  ppNo2.AsInteger:=0;
-  ppDBQMaster.Close;
-  ppDBQMaster.Open;
-  ppDBQDetail.Close;
-  ppDBQDetail.Open;
-  case RadioGroup1.ItemIndex of
-     0 : ppReportInput.PrinterSetup.PaperHeight:=297;
-     1 : ppReportInput.PrinterSetup.PaperHeight:=140;
-  end;
-  if CBPreview.Checked then
-    begin
-      ppReportInput.DeviceType:='Screen';
-      ppReportInput.Print;
-    end
-    else
-    begin
-      ppReportInput.DeviceType:='Printer';
-      ppReportInput.Print;
-    end;
-end;
-
-procedure TLaporanDeptKemitraanFrm.QMasterBeforePost(DataSet: TDataSet);
-begin
-  vshift:=QMasterSHIFT.AsString;
-  vgrup:=QMasterGRUP.AsString;
-  if QMasterTGL.AsString='' then
-     begin
-        ShowMessage('TANGGAL harus diisi !');
-        Abort;
-     end
-     else
-  if QMasterKD_DIV.AsString='' then
-     begin
-        ShowMessage('DIVISI harus diisi !');
-        Abort;
-     end
-     else
-  if QMasterSHIFT.AsString='' then
-     begin
-        ShowMessage('SHIFT harus diisi !');
-        Abort;
-     end
-     else
-  if QMasterGRUP.AsString='' then
-     begin
-        ShowMessage('GRUP harus diisi !');
-        Abort;
-     end;
-
-   if (Dataset.State=dsEdit) and (QMasterNO_NOTA.AsString='') and (QMasterISPOST.AsString='1') then
-   begin
-     DMFrm.FNoUrut.Close;
-     DMFrm.FNoUrut.SetVariable(0,vkode);
-     DMFrm.FNoUrut.SetVariable(1,'-');
-     DMFrm.FNoUrut.SetVariable(2,Trunc(QMasterTGL.AsDateTime));
-     DMFrm.FNoUrut.Open;
-     QMasterNO_NOTA.AsString:=DMFrm.FNoUrutFNO_URUT.AsString;
-   end;
-
 end;
 
 procedure TLaporanDeptKemitraanFrm.wwDBGrid1Enter(Sender: TObject);
@@ -988,35 +918,6 @@ begin
 
 end;
 
-procedure TLaporanDeptKemitraanFrm.QMasterBeforeDelete(DataSet: TDataSet);
-begin
-  if QMasterISPOST.AsString='1' then
-  begin
-     ShowMessage('Maaf, sudah di-POST !, tidak bisa diubah...');
-     Abort;
-  end;
-end;
-
-procedure TLaporanDeptKemitraanFrm.QMasterNewRecord(DataSet: TDataSet);
-begin
-  QMasterKD_TRANSAKSI.AsString:=vkode;
-  QMasterTGL.AsDateTime:=DMFrm.QTimeJAM.AsDateTime;
-  QMasterISPOST.AsString:='0';
-  QMasterTTD1.AsString:=QTransaksiTTD1.AsString;
-  QMasterTTD2.AsString:=QTransaksiTTD2.AsString;
-  QMasterTTD3.AsString:=QTransaksiTTD3.AsString;
-  QMasterTTD4.AsString:=QTransaksiTTD4.AsString;
-  QMasterSTATUS.AsString:='IN';
-  wwDBEdit1.SetFocus;
-  QMasterQTY_RESEP.AsFloat:=1.8;
-  QMasterKD_DIV.AsString:='311';
-
-  wwDBDateTimePicker1.Enabled:=True;
-
-  if vshift<>'' then QMasterSHIFT.AsString:=vshift;
-  if vgrup<>'' then QMasterGRUP.AsString:=vgrup;
-end;
-
 procedure TLaporanDeptKemitraanFrm.QTransaksiBeforeOpen(DataSet: TDataSet);
 begin
   QTransaksi.DeclareVariable('kd_transaksi', otString);
@@ -1028,34 +929,6 @@ end;
 begin
   ppNo2.AsInteger:=0;
 end;   }
-
-procedure TLaporanDeptKemitraanFrm.Label14Click(Sender: TObject);
-begin
-  if DMFrm.FontDialog1.Execute then
-  begin
-    wwDBGrid1.Font.Name:=DMFrm.FontDialog1.Font.Name;
-    wwDBGrid1.Font.Size:=DMFrm.FontDialog1.Font.Size;
-    wwDBGrid1.Font.Color:=DMFrm.FontDialog1.Font.Color;
-    wwDBGrid1.Font.Style:=DMFrm.FontDialog1.Font.Style;
-  end;
-
-end;
-
-procedure TLaporanDeptKemitraanFrm.FormCloseQuery(Sender: TObject;
-  var CanClose: Boolean);
-begin
-  if ((not QMaster.IsEmpty) and (QMasterISPOST.AsString='0')) or (QMaster.State<>dsBrowse) then
-  begin
-    if MessageDlg('Data belum di POSTING/ Disimpan akan terhapus !',mtWarning,[mbOK, mbCancel],0)=mrOK then
-    begin
-     QMaster.Delete;
-     CanClose:=True;
-    end
-     else
-     CanClose:=FALSE;
-  end;
-
-end;
 
 procedure TLaporanDeptKemitraanFrm.QMasterAfterPost(DataSet: TDataSet);
 begin
@@ -1082,200 +955,14 @@ begin
 
 end;
 
-procedure TLaporanDeptKemitraanFrm.ppGroupHeaderBand1BeforePrint(Sender: TObject);
-begin
-  //PPno.AsInteger:=ppNo.AsInteger+1;
-  PPno.Caption:=IntToStr(ppDBQDetail.RecordNo+1);
-end;
-
 procedure TLaporanDeptKemitraanFrm.QProcUpdateMutasiBeforeQuery(Sender: TOracleQuery);
 begin
   {QProc_Update_PO.SetVariable('NO_PO',QMasterNO_BUKTI.AsString);}
 end;
 
-procedure TLaporanDeptKemitraanFrm.LookLokasiEnter(Sender: TObject);
-begin
-  QLokasi.Close;
-  QLokasi.SetVariable('pkd_lokasi',vjns_lokasi);
-  QLokasi.SetVariable('pjns_lokasi','LOKASI');
-  QLokasi.Open;
-end;
-
-procedure TLaporanDeptKemitraanFrm.QItemBeforeQuery(Sender: TOracleDataSet);
-begin
-  if vjns_brg<>'' then
-  begin
-    QItem.SetVariable('vjns_brg',vjns_brg);
-    QItem.SetVariable('vkd_benang',vkd_benang);
-
-  QItem.SetVariable('psysdate',QMasterTGL.AsDateTime);
-
-//  QItem.SetVariable('pkd_lokasi','10');
-  QItem.SetVariable('ibukti',QMasterIBUKTI.AsInteger);
-
-  end;
-end;
-
-procedure TLaporanDeptKemitraanFrm.LookItemCloseUp(Sender: TObject; LookupTable,
-  FillTable: TDataSet; modified: Boolean);
-begin
-  if modified then
-  begin
-    QDetailKETERANGAN.AsString:=QItemNewNAMA_ITEM.AsString;
-    QDetailRASIO.AsFloat:=QItemNewRASIO.AsFloat; //RASIO MASTER
-    //QDetailKD_SATUAN.AsString:=QItemNewKD_SATUAN.AsString;
-    QDetailKD_SATUAN.AsString:='04';
-
-    //MAA 06-09-2019
-    QDetailQTY7.AsFloat:=QItemNewQTY.AsFloat;
-    QDetailQTY8.AsFloat:=QItemNewQTY2.AsFloat;
-  end;
-  
-end;
-
-procedure TLaporanDeptKemitraanFrm.QDetailNewRecord(DataSet: TDataSet);
-begin
-  QDetailQTY1.AsFloat:=0;
-  QDetailQTY2.AsFloat:=0;
-  QDetailQTY3.AsFloat:=0;
-  QDetailQTY4.AsFloat:=0;
-  QDetailQTY5.AsFloat:=0;
-  QDetailQTY6.AsFloat:=0;
-
-  wwDBDateTimePicker1.Enabled:=False;
-
-  QDetailIBUKTI.AsInteger:=QMasterIBUKTI.AsInteger;
-  QDetailKD_SUB_LOKASI.AsString:=vjns_lokasi+'-00000';
-  if vopr<>'' then
-    QDetailOPR_INSERT.AsString:=vopr
-    else
-      QDetailOPR_INSERT.AsString:=DMFrm.QTimeVUSER.AsString;
-end;
-
-procedure TLaporanDeptKemitraanFrm.QDetailBeforePost(DataSet: TDataSet);
-begin
-
-////KONSEP LOCK PCS
-if QDetailQTY8.AsFloat<0 then   //MAA 11-9-2019
-begin
-   showmessage('QTY STOK MINUS, ANDA TIDAK BISA ENTRY !!!');
-   QDetailQTY2.AsFloat:=0;
-   QDetailQTY1.AsFloat:=0;
-   Abort;
-end
-else
-begin
-  if QDetailQTY2.AsFloat>QDetailQTY8.AsFloat then
-  begin
-   showmessage('QTY HASIL MELEBIHI QTY STOK, SILAHKAN DI ENTRY ULANG !!!');
-   QDetailQTY2.AsFloat:=0;
-   QDetailQTY1.AsFloat:=0;
-  end;
-end;
-////KONSEP LOCK PCS
-
-////KONSEP LOCK KG
-{
-if QDetailQTY7.AsFloat<0 then   //MAA 11-9-2019
-begin
-   showmessage('QTY STOK MINUS, ANDA TIDAK BISA ENTRY !!!');
-   QDetailQTY2.AsFloat:=0;
-   QDetailQTY1.AsFloat:=0;
-   Abort;
-end
-else
-begin
-  if QDetailQTY1.AsFloat>QDetailQTY7.AsFloat then
-  begin
-   showmessage('QTY HASIL MELEBIHI QTY STOK, SILAHKAN DI ENTRY ULANG !!!');
-   QDetailQTY2.AsFloat:=0;
-   QDetailQTY1.AsFloat:=0;
-  end;
-end;
-}
-////KONSEP LOCK KG
-
- if QDetailQTY2.AsFloat=0 then //MAA 9-9-2019
-    begin
-//    showmessage('Silahkan masukkan QTY PCS Hasil Softcone');
-    QDetailQTY1.AsFloat:=0;
-    end
- else
- begin
-  QDetailQTY1.AsFloat:=
-    (QDetailQTY6.AsFloat-(QDetailQTY5.AsFloat*QMasterQTY_RESEP.AsFloat))
-    -
-    (QDetailRASIO.AsFloat*QDetailQTY2.AsFloat); //RASIO MASTER
- end;
-
-  vopr:=QDetailOPR_INSERT.AsString;
-  if QDetailKD_ITEM.AsString='' then
-     begin
-        ShowMessage('BARANG harus diisi !');
-        Abort;
-     end
-     else
-  if QDetailQTY1.Asfloat=0 then
-     begin
-        ShowMessage('QTY harus diisi !');
-        Abort;
-     end
-     else
-  if QDetailKD_SUB_LOKASI.AsString='' then
-     begin
-        ShowMessage('LOKASI harus diisi !');
-        Abort;
-     end;
-end;
-
 procedure TLaporanDeptKemitraanFrm.FormShow(Sender: TObject);
 begin
 //  PanelHeader.Caption:=QTransaksiKD_TRANSAKSI.AsString+'. '+UpperCase(Caption);
-end;
-
-procedure TLaporanDeptKemitraanFrm.QDetailQTY6Change(Sender: TField);
-begin
-  if QDetailRASIO.AsFloat>0 then
-    QDetailQTY1.AsFloat:=QDetailQTY2.AsFloat*QDetailRASIO.AsFloat
-    else
-    begin
-        ShowMessage('Maaf, RASIO di Master Barang belum ada !');
-        Abort;
-    end;
-end;
-
-procedure TLaporanDeptKemitraanFrm.LookMesinEnter(Sender: TObject);
-begin
-  QLokasi.Close;
-  QLokasi.SetVariable('pkd_lokasi',vjns_lokasi);
-  QLokasi.SetVariable('pjns_lokasi','MESIN');
-  QLokasi.Open;
-end;
-
-procedure TLaporanDeptKemitraanFrm.LookMesinCloseUp(Sender: TObject; LookupTable,
-  FillTable: TDataSet; modified: Boolean);
-begin
-  if modified then
-  begin
-     QDetailMESIN.AsString := QLokasiSPESIFIKASI.AsString;
-     QDetailQTY3.AsFloat:=QLokasiJML.AsFloat;
-     QDetailQTY4.AsFloat:=QLokasiKPS.AsFloat;
-     vkd_benang:=QLokasiKD_BENANG.AsString;
-  end;
-end;
-
-procedure TLaporanDeptKemitraanFrm.QDetailCalcFields(DataSet: TDataSet);
-begin
-  if QDetailQTY1.AsFloat>0 then
-     QDetailRASIO3.AsFloat:=QDetailQTY1.AsFloat/QDetailQTY2.AsFloat;
-
-  if (QDetailQTY3.AsFloat>0) and (QDetailQTY4.AsFloat>0) then
-    QDetailEFF.AsFloat := 100*QDetailQTY1.AsFloat/(QDetailQTY3.AsFloat*QDetailQTY4.AsFloat);
-    QDetailQTY_STANDAR.AsFloat := QDetailQTY2.AsFloat*QDetailRASIO2.AsFloat;
-
-  if QDetailQTY_STANDAR.AsFloat>0 then
-    QDetailSTD_PSN.AsFloat := (QDetailQTY1.AsFloat-QDetailQTY_STANDAR.AsFloat)*100/QDetailQTY_STANDAR.AsFloat;
-
 end;
 
 procedure TLaporanDeptKemitraanFrm.ppDetailBand2BeforePrint(Sender: TObject);
@@ -1286,29 +973,6 @@ end;
 procedure TLaporanDeptKemitraanFrm.ppDetailBand1BeforePrint(Sender: TObject);
 begin
   ppNo.AsInteger:=ppNo.AsInteger+1;
-end;
-
-procedure TLaporanDeptKemitraanFrm.wwDBGrid1UpdateFooter(Sender: TObject);
-begin
-  QTotal.Close;
-  QTotal.SetVariable('ibukti',QMasterIBUKTI.AsInteger);
-  QTotal.Open;
-  wwDBGrid1.ColumnByName('QTY5').FooterValue:=FormatFloat('#,0;-#,0;-',QTotalKRAT.AsFloat);
-  wwDBGrid1.ColumnByName('QTY6').FooterValue:=FormatFloat('#,0.0000;-#,0.0000;-',QTotalKG.AsFloat);
-  wwDBGrid1.ColumnByName('QTY2').FooterValue:=FormatFloat('#,0;-#,0;-',QTotalPCS.AsFloat);
-end;
-
-procedure TLaporanDeptKemitraanFrm.LookItemUserButton1Click(Sender: TObject;
-  LookupTable: TDataSet);
-begin
-  if InputQuery('Filter','Filter : ',vfilter) then
-  begin
-    QItem.Close;
-    QItem.SetVariable('vjns_brg',vjns_brg);
-    QItem.SetVariable('vkd_benang',vkd_benang);
-    QItem.SetVariable('pfilter',vfilter);
-    QItem.Open;
-  end;
 end;
 
 procedure TLaporanDeptKemitraanFrm.QBrowseCalcFields(DataSet: TDataSet);
@@ -1399,34 +1063,6 @@ begin
     end;
 end;
 
-procedure TLaporanDeptKemitraanFrm.QMasterAfterDelete(DataSet: TDataSet);
-begin
-  wwDBDateTimePicker1.Enabled:=False;
-end;
-
-procedure TLaporanDeptKemitraanFrm.wwDBDateTimePicker1Change(Sender: TObject);
-begin
-  QProc_getStok.Close;
-  QProc_getStok.SetVariable('ptgl', QMasterTGL.AsDateTime);
-  QProc_getStok.SetVariable('ptgl2', QMasterTGL.AsDateTime);
-  QProc_getStok.Execute;
-end;
-
-procedure TLaporanDeptKemitraanFrm.QMasterTGLChange(Sender: TField);
-begin
-  QProc_getStok.Close;
-  QProc_getStok.SetVariable('ptgl', QMasterTGL.AsDateTime);
-  QProc_getStok.SetVariable('ptgl2', QMasterTGL.AsDateTime);
-  QProc_getStok.Execute;
-  //ShowMessage(QProc_getStok.SQL.Text);
-end;
-
-procedure TLaporanDeptKemitraanFrm.QItemNewBeforeQuery(Sender: TOracleDataSet);
-begin
-  QItemNew.SetVariable('pkd_benang', QLokasiKD_BENANG.AsString);
-  QItemNew.SetVariable('pibukti', QMasterIBUKTI.AsInteger);
-end;
-
 procedure TLaporanDeptKemitraanFrm.QBrowseFilterRecord(DataSet: TDataSet;
   var Accept: Boolean);
 begin
@@ -1450,6 +1086,111 @@ end;
 procedure TLaporanDeptKemitraanFrm.cbAdaTransaksiClick(Sender: TObject);
 begin
    QBrowse.Filtered:=cbAdaTransaksi.Checked;
+end;
+
+procedure TLaporanDeptKemitraanFrm.vTglAwal2Change(Sender: TObject);
+begin
+  vTglAkhir2.DateTime:=EndOfTheMonth(vTglAwal2.Date);
+end;
+
+procedure TLaporanDeptKemitraanFrm.BitBtn1Click(Sender: TObject);
+var
+  vqty1, vqty2 : real;
+begin
+     QBrowse1.DisableControls;
+     QBrowse1.SetVariable('pawal', vTglAwal2.Date);
+     QBrowse1.SetVariable('pakhir', vTglAkhir2.Date);
+     QBrowse1.Close;
+     QBrowse1.Open;
+     QBrowse1.EnableControls;
+     vqty1:=0;
+     vqty2:=0;
+     while not QBrowse1.Eof do
+     begin
+       vqty1:=vqty1+QBrowse1PEMASUKAN.AsFloat;
+       vqty2:=vqty2+QBrowse1PENGELUARAN.AsFloat;
+       QBrowse1.Next;
+     end;
+     QBrowse1.EnableControls;
+     wwDBGrid3.ColumnByName('AWAL').FooterValue:=FormatFloat('#,0.000;-#,0.000;-',0);
+     wwDBGrid3.ColumnByName('PEMASUKAN').FooterValue:=FormatFloat('#,0.000;-#,0.000;-',vqty1);
+     wwDBGrid3.ColumnByName('PENGELUARAN').FooterValue:=FormatFloat('#,0.000;-#,0.000;-',vqty1);
+     wwDBGrid3.ColumnByName('AKHIR').FooterValue:=FormatFloat('#,0.000;-#,0.000;-',0);
+end;
+
+procedure TLaporanDeptKemitraanFrm.ppSummaryBand1BeforePrint(
+  Sender: TObject);
+begin
+  ppLabel42.Caption:='Pekalongan, '+FormatDateTime('mmmm yyyy',vTglAwal.Date);
+end;
+
+procedure TLaporanDeptKemitraanFrm.BitBtn2Click(Sender: TObject);
+var vt1, vt2, vt3, vt4, vt5 : Real;
+begin
+  if vTglAwal0.Date>vTglAkhir0.DateTime then
+    ShowMessage('Tgl. Akhir harus lebih besar dari Tgl. Awal !')
+    else
+    begin
+
+      QProcRekapBulanan.Close;
+      QProcRekapBulanan.SetVariable('pawal', vTglAwal0.Date);
+      QProcRekapBulanan.SetVariable('pakhir', vTglAkhir0.Date);
+      QProcRekapBulanan.Execute;
+
+      if QMaster.QBEMode then QMaster.QBEMode:=False;
+      QMaster.DisableControls;
+      QMaster.Close;
+      QMaster.Open;
+      vt1:=0;
+      vt2:=0;
+      vt3:=0;
+      vt4:=0;
+      vt5:=0;
+      while not QMaster.Eof do
+      begin
+        vt1:=vt1+QMasterQTY_KG.AsFloat;
+        vt2:=vt2+QMasterQTY_PTG.AsFloat;
+        vt3:=vt3+QMasterQTY_SPRING.AsFloat;
+        vt4:=vt4+QMasterQTY_BEAM.AsFloat;
+        vt5:=vt5+QMasterQTY_BS.AsFloat;
+        QMaster.Next;
+      end;
+      QMaster.EnableControls;
+      wwDBGrid1.ColumnByName('QTY_KG').FooterValue:=FormatFloat('#,0.000;-#,0.000;-',vt1);
+      wwDBGrid1.ColumnByName('QTY_PTG').FooterValue:=FormatFloat('#,0;-#,0;-',vt2);
+      wwDBGrid1.ColumnByName('QTY_SPRING').FooterValue:=FormatFloat('#,0;-#,0;-',vt3);
+      wwDBGrid1.ColumnByName('QTY_BEAM').FooterValue:=FormatFloat('#,0;-#,0;-',vt4);
+      wwDBGrid1.ColumnByName('QTY_BS').FooterValue:=FormatFloat('#,0;-#,0;-',vt5);
+      wwDBGrid1.ColumnByName('QTY_PERSEN').FooterValue:=FormatFloat('#,0.00;-#,0.00;-',vt5/vt2*100);
+    end;
+end;
+
+procedure TLaporanDeptKemitraanFrm.vtglAwal0Change(Sender: TObject);
+begin
+  vTglAkhir0.DateTime:=EndOfTheMonth(vTglAwal0.Date);
+end;
+
+procedure TLaporanDeptKemitraanFrm.Label9Click(Sender: TObject);
+begin
+  if DMFrm.FontDialog1.Execute then
+  begin
+    wwDBGrid1.Font.Name:=DMFrm.FontDialog1.Font.Name;
+    wwDBGrid1.Font.Size:=DMFrm.FontDialog1.Font.Size;
+    wwDBGrid1.Font.Color:=DMFrm.FontDialog1.Font.Color;
+    wwDBGrid1.Font.Style:=DMFrm.FontDialog1.Font.Style;
+  end;
+end;
+
+procedure TLaporanDeptKemitraanFrm.wwDBSpinEdit2Change(Sender: TObject);
+begin
+  wwDBGrid1.RowHeightPercent:=Round(wwDBSpinLine2.Value);
+end;
+
+procedure TLaporanDeptKemitraanFrm.QMasterCalcFields(DataSet: TDataSet);
+var vqty_ptg: Real;
+begin
+  if QMasterQTY_PTG.AsFloat >= 1 then vqty_ptg:=QMasterQTY_PTG.AsFloat else vqty_ptg:=1;
+  QMasterQTY_PERSEN.AsFloat:=(QMasterQTY_BS.AsFloat/vqty_ptg)*100;
 end;
 
 end.

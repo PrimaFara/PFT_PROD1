@@ -5883,7 +5883,7 @@ object ValidasiKeluarKeMitraFrm: TValidasiKeluarKeMitraFrm
       Size = 18
     end
     object QResepKP: TStringField
-      DisplayWidth = 11
+      DisplayWidth = 8
       FieldName = 'KP'
     end
     object QResepTGL: TDateTimeField

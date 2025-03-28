@@ -1,6 +1,6 @@
 object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
-  Left = 287
-  Top = 47
+  Left = 246
+  Top = 99
   Width = 1011
   Height = 606
   ActiveControl = vTglAwal
@@ -165,7 +165,7 @@ object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
             ParentFont = False
           end
           object Label8: TLabel
-            Left = 579
+            Left = 715
             Top = 75
             Width = 27
             Height = 13
@@ -178,7 +178,7 @@ object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
             ParentFont = False
           end
           object Label10: TLabel
-            Left = 619
+            Left = 755
             Top = 75
             Width = 28
             Height = 13
@@ -191,7 +191,7 @@ object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
             ParentFont = False
           end
           object Label11: TLabel
-            Left = 379
+            Left = 419
             Top = 8
             Width = 32
             Height = 13
@@ -204,7 +204,7 @@ object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
             ParentFont = False
           end
           object DBText1: TDBText
-            Left = 452
+            Left = 492
             Top = 24
             Width = 60
             Height = 16
@@ -293,7 +293,7 @@ object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
             WordWrap = False
           end
           object wwDBComboBox1: TwwDBComboBox
-            Left = 619
+            Left = 755
             Top = 91
             Width = 33
             Height = 19
@@ -318,7 +318,7 @@ object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
             UnboundDataType = wwDefault
           end
           object wwDBComboBox2: TwwDBComboBox
-            Left = 579
+            Left = 715
             Top = 91
             Width = 33
             Height = 19
@@ -341,7 +341,7 @@ object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
             UnboundDataType = wwDefault
           end
           object wwDBLookupComboDlg1: TwwDBLookupComboDlg
-            Left = 380
+            Left = 420
             Top = 24
             Width = 65
             Height = 19
@@ -5044,6 +5044,19 @@ object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
     SQL.Strings = (
       'select'
       
+        '  a.nama_item, a.kd_item, a.rasio, a.kd_warna, a.warna, a.no_bat' +
+        'ch,'
+      
+        '  a.qty_kg as qty, qty_pcs as qty2, '#39'04'#39' as satuan, :vkd_sub_lok' +
+        'asi as kd_sub_lokasi'
+      'from :vview a'
+      'where a.qty_kg <> 0 :myparam'
+      'order by a.qty_kg, a.nama_item, a.warna, a.no_batch desc'
+      ''
+      ''
+      '/*'
+      'select'
+      
         '  nama_item, kd_item, rasio, kd_warna, '#39#39' as warna, '#39#39' as no_bat' +
         'ch,'
       
@@ -5052,10 +5065,12 @@ object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
       'from ipisma_db3.item'
       'where kd_jns_item = :vkd_jns_item and isjasa = '#39'1'#39
       ':myparam'
-      'order by nama_item')
+      'order by nama_item'
+      '*/')
     Variables.Data = {
-      0300000002000000050000003A5054474C0C0000000000000000000000060000
-      003A5054474C320C0000000000000000000000}
+      0300000003000000080000003A4D59504152414D010000000000000000000000
+      060000003A56564945570100000000000000000000000F0000003A564B445F53
+      55425F4C4F4B415349050000000000000000000000}
     QBEDefinition.QBEFieldDefs = {
       040000000A000000070000004B445F4954454D010000000000090000004E414D
       415F4954454D0100000000000600000053415455414E0100000000000D000000
@@ -5097,44 +5112,48 @@ object PermintaanKoreksiPengeringFrm: TPermintaanKoreksiPengeringFrm
     object QNewItemsWARNA: TStringField
       DisplayWidth = 20
       FieldName = 'WARNA'
-      Size = 1
+      Size = 50
     end
     object QNewItemsNO_BATCH: TStringField
       DisplayLabel = 'NO BATCH'
       DisplayWidth = 8
       FieldName = 'NO_BATCH'
-      Size = 1
+      Size = 64
     end
     object QNewItemsQTY: TFloatField
       DisplayLabel = 'KG'
       DisplayWidth = 15
       FieldName = 'QTY'
+      DisplayFormat = '#,##0.######;(#,##0.######); '
     end
     object QNewItemsQTY2: TFloatField
       DisplayLabel = 'PCS'
       DisplayWidth = 15
       FieldName = 'QTY2'
+      DisplayFormat = '#,##0.######;(#,##0.######); '
     end
     object QNewItemsSATUAN: TStringField
       FieldName = 'SATUAN'
       Required = True
+      Visible = False
       Size = 2
     end
     object QNewItemsKD_SUB_LOKASI: TStringField
       FieldName = 'KD_SUB_LOKASI'
+      Visible = False
       Size = 4000
     end
   end
   object QProc: TOracleQuery
     SQL.Strings = (
       'begin'
-      '  ipisma_db3.proc_temp_lookup_pengering0(:vsysdate, :vsysdate2);'
+      '  :vproc(:vsysdate, :vsysdate2);'
       'end;')
     Session = DMFrm.OS
     Variables.Data = {
-      0300000002000000090000003A56535953444154450C00000007000000786B06
+      0300000003000000090000003A56535953444154450C00000007000000786B06
       01010101000000000A0000003A5653595344415445320C00000007000000786B
-      061E01010100000000}
+      061E01010100000000060000003A5650524F43010000000000000000000000}
     Left = 792
     Top = 136
   end
