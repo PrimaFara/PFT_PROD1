@@ -329,7 +329,6 @@ type
     LTResep: TLabel;
     QQty_resep: TOracleDataSet;
     QQty_resepJML_RESEP: TFloatField;
-    ppDBQTransaksippField19: TppField;
     ppLabel23: TppLabel;
     QTransaksiDOC_ISO: TStringField;
     ppDBText29: TppDBText;
@@ -357,6 +356,158 @@ type
     QResepKONSTRUKSI: TStringField;
     QResepCORAK: TStringField;
     QResepNO_DESAIN: TFloatField;
+    ppReportSJDoubling: TppReport;
+    ppTitleBand3: TppTitleBand;
+    ppLabel30: TppLabel;
+    ppLabel31: TppLabel;
+    ppLabel34: TppLabel;
+    ppDBText31: TppDBText;
+    ppDBText51: TppDBText;
+    ppDBText52: TppDBText;
+    ppLabel36: TppLabel;
+    ppHeaderBand3: TppHeaderBand;
+    ppLabel37: TppLabel;
+    ppLabel38: TppLabel;
+    ppLabel39: TppLabel;
+    ppLabel40: TppLabel;
+    ppLabel41: TppLabel;
+    ppLabel42: TppLabel;
+    ppLabel43: TppLabel;
+    ppLabel44: TppLabel;
+    ppLabel45: TppLabel;
+    ppLabel46: TppLabel;
+    ppDetailBand3: TppDetailBand;
+    ppDBText53: TppDBText;
+    ppDBText54: TppDBText;
+    ppDBText55: TppDBText;
+    ppDBText56: TppDBText;
+    ppDBMemo1: TppDBMemo;
+    ppNo2: TppVariable;
+    ppDBText57: TppDBText;
+    ppDBText58: TppDBText;
+    ppDBText59: TppDBText;
+    ppDBText60: TppDBText;
+    ppDBText61: TppDBText;
+    ppDBText62: TppDBText;
+    ppLabel47: TppLabel;
+    ppFooterBand3: TppFooterBand;
+    ppSystemVariable3: TppSystemVariable;
+    ppSummaryBand3: TppSummaryBand;
+    ppParameterList3: TppParameterList;
+    ppDBPipeline1: TppDBPipeline;
+    ppField1: TppField;
+    ppField2: TppField;
+    ppField3: TppField;
+    ppField4: TppField;
+    ppField5: TppField;
+    ppField6: TppField;
+    ppField7: TppField;
+    ppField8: TppField;
+    ppField9: TppField;
+    ppField10: TppField;
+    ppField11: TppField;
+    ppField12: TppField;
+    ppField13: TppField;
+    ppField14: TppField;
+    ppField15: TppField;
+    ppField16: TppField;
+    ppField17: TppField;
+    ppField18: TppField;
+    ppField19: TppField;
+    ppField20: TppField;
+    ppField21: TppField;
+    ppField22: TppField;
+    ppField23: TppField;
+    ppLabel48: TppLabel;
+    ppLabel49: TppLabel;
+    ppLabel50: TppLabel;
+    ppLabel51: TppLabel;
+    ppLabel52: TppLabel;
+    ppLabel53: TppLabel;
+    ppLabel54: TppLabel;
+    ppLabel55: TppLabel;
+    ppLabel56: TppLabel;
+    ppLabel57: TppLabel;
+    ppLabel58: TppLabel;
+    ppLabel59: TppLabel;
+    ppLabel60: TppLabel;
+    ppLabel61: TppLabel;
+    ppLabel62: TppLabel;
+    BitBtn1: TBitBtn;
+    ppReportSJD: TppReport;
+    ppTitleBand4: TppTitleBand;
+    ppDBText63: TppDBText;
+    ppDBText64: TppDBText;
+    ppVariable1: TppVariable;
+    ppDBText65: TppDBText;
+    ppLabel63: TppLabel;
+    ppDBText66: TppDBText;
+    ppDBText67: TppDBText;
+    ppDBText68: TppDBText;
+    ppLabel64: TppLabel;
+    ppLabel65: TppLabel;
+    ppLabel66: TppLabel;
+    ppDBText69: TppDBText;
+    ppLabel67: TppLabel;
+    ppLabel68: TppLabel;
+    ppLabel69: TppLabel;
+    ppLabel70: TppLabel;
+    ppLabel71: TppLabel;
+    ppLabel72: TppLabel;
+    ppDBText71: TppDBText;
+    ppHeaderBand4: TppHeaderBand;
+    ppLabel73: TppLabel;
+    ppLabel74: TppLabel;
+    ppLabel75: TppLabel;
+    ppLabel76: TppLabel;
+    ppLabel77: TppLabel;
+    ppLabel78: TppLabel;
+    ppLabel79: TppLabel;
+    ppLabel80: TppLabel;
+    ppDetailBand4: TppDetailBand;
+    ppDBText72: TppDBText;
+    ppDBText73: TppDBText;
+    ppLabel81: TppLabel;
+    ppDBText74: TppDBText;
+    ppDBText75: TppDBText;
+    ppDBText76: TppDBText;
+    ppDBText77: TppDBText;
+    ppDBText78: TppDBText;
+    ppFooterBand4: TppFooterBand;
+    ppLabel82: TppLabel;
+    ppDBText79: TppDBText;
+    ppSystemVariable4: TppSystemVariable;
+    ppSummaryBand4: TppSummaryBand;
+    ppLabel83: TppLabel;
+    ppDBMemo4: TppDBMemo;
+    ppDBCalc3: TppDBCalc;
+    ppLine3: TppLine;
+    ppDBCalc4: TppDBCalc;
+    ppLine4: TppLine;
+    ppPageStyle2: TppPageStyle;
+    raCodeModule2: TraCodeModule;
+    ppParameterList4: TppParameterList;
+    ppDBSJD: TppDBPipeline;
+    ppMasterFieldLink1: TppMasterFieldLink;
+    ppLabel85: TppLabel;
+    ppLabel86: TppLabel;
+    ppLabel87: TppLabel;
+    ppLabel88: TppLabel;
+    ppLabel89: TppLabel;
+    ppLabel90: TppLabel;
+    ppLabel91: TppLabel;
+    ppLabel92: TppLabel;
+    ppLabel93: TppLabel;
+    ppLabel94: TppLabel;
+    ppLabel95: TppLabel;
+    ppLabel96: TppLabel;
+    ppLabel97: TppLabel;
+    ppLabel98: TppLabel;
+    ppLabel99: TppLabel;
+    ppLabel100: TppLabel;
+    ppLabel84: TppLabel;
+    ppLabel101: TppLabel;
+    ppLabel102: TppLabel;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);
@@ -426,6 +577,12 @@ type
     procedure QMasterAfterDelete(DataSet: TDataSet);
     procedure QDetailQTY8Change(Sender: TField);
     procedure QMasterTGLChange(Sender: TField);
+    procedure BitBtn1Click(Sender: TObject);
+    procedure ppTitleBand3BeforePrint(Sender: TObject);
+    procedure ppDetailBand3BeforePrint(Sender: TObject);
+    procedure ppTitleBand4BeforePrint(Sender: TObject);
+    procedure ppDetailBand4BeforePrint(Sender: TObject);
+    procedure ppFooterBand4BeforePrint(Sender: TObject);
   private
     { Private declarations }
     vshift, vgrup, vdiv, vorder, SelectedFont, vkode, vjns_brg, vjns_lokasi, vfilter_item,
@@ -838,6 +995,8 @@ begin
   EditCari.Text:=QBrowseNO_NOTA.AsString;
   cbTransaksi.Visible:=QTransaksiKD_TRANSAKSI.AsString='686';
   LTransaksi.Visible:=QTransaksiKD_TRANSAKSI.AsString='686';
+
+  if QTransaksiKD_TRANSAKSI.AsString = '689' then BitBtn1.Visible:=true else BitBtn1.Visible:=false;
 
 if QTransaksiKD_TRANSAKSI.AsString='686' then
 begin
@@ -1502,6 +1661,65 @@ begin
   QProc_getStok.SetVariable('ptgl', QMasterTGL.AsDateTime);
   QProc_getStok.SetVariable('ptgl2', QMasterTGL.AsDateTime);
   QProc_getStok.Execute;
+end;
+
+procedure TValidasiKeluarBBFrm.BitBtn1Click(Sender: TObject);
+begin
+  ppDBQMaster.Close;
+  ppDBQMaster.Open;
+  ppDBQDetail.Close;
+  ppDBQDetail.Open;
+  case RadioGroup1.ItemIndex of
+     0 : ppReportSJD.PrinterSetup.PaperHeight:=297;
+     1 : ppReportSJD.PrinterSetup.PaperHeight:=140;
+  end;
+  if CBPreview.Checked then
+    begin
+      ppReportSJD.DeviceType:='Screen';
+      ppReportSJD.Print;
+    end
+    else
+    begin
+      ppReportSJD.DeviceType:='Printer';
+      ppReportSJD.Print;
+    end;
+end;
+
+procedure TValidasiKeluarBBFrm.ppTitleBand3BeforePrint(Sender: TObject);
+begin
+  ppLabel30.Caption:=Caption;
+  ppNo2.AsInteger:=0;
+  ppLabel34.Caption:=vTglAwal.Text+' s/d '+vTglAkhir.Text;
+  DMFrm.QTime.Close;
+  DMFrm.QTime.Open;
+  ppLabel36.Caption:=DMFrm.QTimeVUSER_CETAK.AsString;
+end;
+
+procedure TValidasiKeluarBBFrm.ppDetailBand3BeforePrint(Sender: TObject);
+begin
+  ppNo2.AsInteger:=0;
+end;
+
+procedure TValidasiKeluarBBFrm.ppTitleBand4BeforePrint(Sender: TObject);
+begin
+  ppNamaLaporan.Caption:=Caption;
+ // ppNo2.AsInteger:=0;
+  ppPeriode.Caption:=vTglAwal.Text+' s/d '+vTglAkhir.Text;
+  DMFrm.QTime.Close;
+  DMFrm.QTime.Open;
+  ppUserCetak.Caption:=DMFrm.QTimeVUSER_CETAK.AsString;
+end;
+
+procedure TValidasiKeluarBBFrm.ppDetailBand4BeforePrint(Sender: TObject);
+begin
+  ppLabel81.Caption:=IntToStr(ppDBSJD.RecordNo+1);
+end;
+
+procedure TValidasiKeluarBBFrm.ppFooterBand4BeforePrint(Sender: TObject);
+begin
+  DMFrm.QTime.Close;
+  DMFrm.QTime.Open;
+  ppLabel82.Caption:=DMFrm.QTimeVUSER_CETAK.AsString;
 end;
 
 end.

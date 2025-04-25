@@ -1,6 +1,6 @@
 object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
-  Left = 205
-  Top = 60
+  Left = 186
+  Top = 112
   Width = 1091
   Height = 611
   Caption = 'Laporan Dept Kemitraan'
@@ -23,8 +23,8 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
   object PanelMain: TPanel
     Left = 0
     Top = 0
-    Width = 1075
-    Height = 573
+    Width = 1083
+    Height = 580
     Align = alClient
     BevelOuter = bvNone
     Ctl3D = False
@@ -32,8 +32,8 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
     TabOrder = 0
     object Label1: TLabel
       Left = 0
-      Top = 560
-      Width = 1075
+      Top = 567
+      Width = 1083
       Height = 13
       Align = alBottom
       Color = clSkyBlue
@@ -42,7 +42,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
     object PanelHeader: TPanel
       Left = 0
       Top = 0
-      Width = 1075
+      Width = 1083
       Height = 49
       Align = alTop
       BevelOuter = bvNone
@@ -59,8 +59,8 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
     object PageControl1: TPageControl
       Left = 0
       Top = 73
-      Width = 1075
-      Height = 487
+      Width = 1083
+      Height = 494
       ActivePage = TabSheet1
       Align = alClient
       Style = tsFlatButtons
@@ -71,7 +71,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         object Label10: TLabel
           Left = 0
           Top = 57
-          Width = 1067
+          Width = 1075
           Height = 13
           Align = alTop
           Color = clSkyBlue
@@ -79,8 +79,8 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         end
         object PanelFooter1: TPanel
           Left = 0
-          Top = 415
-          Width = 1067
+          Top = 422
+          Width = 1075
           Height = 41
           Align = alBottom
           BevelOuter = bvNone
@@ -95,11 +95,21 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
             OnClick = BtnClose1Click
             NumGlyphs = 2
           end
+          object BitBtn7: TBitBtn
+            Left = 452
+            Top = 14
+            Width = 75
+            Height = 25
+            Caption = '&Print'
+            TabOrder = 1
+            OnClick = BitBtn7Click
+            NumGlyphs = 2
+          end
         end
         object Panel3: TPanel
           Left = 0
           Top = 0
-          Width = 1067
+          Width = 1075
           Height = 57
           Align = alTop
           BevelOuter = bvNone
@@ -212,16 +222,16 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         object Panel4: TPanel
           Left = 0
           Top = 70
-          Width = 1067
-          Height = 345
+          Width = 1075
+          Height = 352
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 2
           object wwDBGrid1: TwwDBGrid
             Left = 0
             Top = 0
-            Width = 1067
-            Height = 345
+            Width = 1075
+            Height = 352
             Selected.Strings = (
               'MITRA'#9'15'#9'MITRA'#9'F'
               'JENIS'#9'35'#9'JENIS'#9'F'
@@ -281,7 +291,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         object LabelBanner: TLabel
           Left = 0
           Top = 57
-          Width = 1067
+          Width = 1075
           Height = 13
           Align = alTop
           Color = clSkyBlue
@@ -290,7 +300,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         object PanelFilter: TPanel
           Left = 0
           Top = 0
-          Width = 1067
+          Width = 1075
           Height = 57
           Align = alTop
           BevelOuter = bvNone
@@ -432,16 +442,16 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         object PanelBrowse: TPanel
           Left = 0
           Top = 70
-          Width = 1067
-          Height = 345
+          Width = 1075
+          Height = 352
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 1
           object wwDBGrid2: TwwDBGrid
             Left = 0
             Top = 0
-            Width = 1067
-            Height = 345
+            Width = 1075
+            Height = 352
             Selected.Strings = (
               'NAMA_MITRA'#9'25'#9'NAMA MITRA'#9'F'
               'BENANG'#9'20'#9'BENANG'#9'F'
@@ -501,8 +511,8 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         end
         object PanelFooter2: TPanel
           Left = 0
-          Top = 415
-          Width = 1067
+          Top = 422
+          Width = 1075
           Height = 41
           Align = alBottom
           BevelOuter = bvNone
@@ -630,10 +640,11 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
       object TabSheet3: TTabSheet
         Caption = 'Lap. Afval'
         ImageIndex = 2
+        OnShow = TabSheet3Show
         object Panel1: TPanel
           Left = 0
           Top = 0
-          Width = 1067
+          Width = 1075
           Height = 57
           Align = alTop
           BevelOuter = bvNone
@@ -676,18 +687,18 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
           end
           object SpeedButton1: TSpeedButton
             Left = 352
-            Top = 24
+            Top = 26
             Width = 89
-            Height = 30
+            Height = 25
             GroupIndex = 1
             Caption = 'Mode &Cari'
             NumGlyphs = 2
           end
           object SpeedButton2: TSpeedButton
             Left = 448
-            Top = 24
+            Top = 26
             Width = 89
-            Height = 30
+            Height = 25
             GroupIndex = 1
             Caption = '&Oke'
             NumGlyphs = 2
@@ -773,16 +784,16 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         object Panel2: TPanel
           Left = 0
           Top = 57
-          Width = 1067
-          Height = 399
+          Width = 1075
+          Height = 406
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 1
           object wwDBGrid3: TwwDBGrid
             Left = 0
             Top = 0
-            Width = 1067
-            Height = 399
+            Width = 1075
+            Height = 365
             Selected.Strings = (
               'JENIS'#9'15'#9'JENIS'#9'F'
               'AWAL'#9'10'#9'AWAL'#9'F'
@@ -825,13 +836,80 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
             UseTFields = False
             GroupFieldName = 'NAMA_MITRA'
           end
+          object Panel6: TPanel
+            Left = 0
+            Top = 365
+            Width = 1075
+            Height = 41
+            Align = alBottom
+            BevelOuter = bvNone
+            TabOrder = 1
+            object BitBtn3: TBitBtn
+              Left = 540
+              Top = 14
+              Width = 75
+              Height = 25
+              Caption = '&Close'
+              TabOrder = 0
+              OnClick = BtnClose1Click
+              NumGlyphs = 2
+            end
+            object Panel7: TPanel
+              Left = 0
+              Top = 0
+              Width = 1075
+              Height = 41
+              Align = alBottom
+              BevelOuter = bvNone
+              TabOrder = 1
+              object BitBtn4: TBitBtn
+                Left = 540
+                Top = 14
+                Width = 75
+                Height = 25
+                Caption = '&Close'
+                TabOrder = 0
+                OnClick = BtnClose1Click
+                NumGlyphs = 2
+              end
+              object Panel8: TPanel
+                Left = 0
+                Top = 0
+                Width = 1075
+                Height = 41
+                Align = alBottom
+                BevelOuter = bvNone
+                TabOrder = 1
+                object BitBtn5: TBitBtn
+                  Left = 540
+                  Top = 14
+                  Width = 75
+                  Height = 25
+                  Caption = '&Close'
+                  TabOrder = 0
+                  OnClick = BtnClose1Click
+                  NumGlyphs = 2
+                end
+                object BitBtn6: TBitBtn
+                  Left = 442
+                  Top = 14
+                  Width = 75
+                  Height = 25
+                  Caption = '&Print'
+                  TabOrder = 1
+                  OnClick = BitBtn6Click
+                  NumGlyphs = 2
+                end
+              end
+            end
+          end
         end
       end
     end
     object Panel5: TPanel
       Left = 0
       Top = 49
-      Width = 1075
+      Width = 1083
       Height = 24
       Align = alTop
       BevelOuter = bvNone
@@ -944,8 +1022,8 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
     PrinterSetup.BinName = 'Default'
     PrinterSetup.DocumentName = 'Report'
     PrinterSetup.Orientation = poLandscape
-    PrinterSetup.PaperName = 'A4 210 x 297 mm'
-    PrinterSetup.PrinterName = '\\192.168.1.53\EPSON L360 Series'
+    PrinterSetup.PaperName = 'A4'
+    PrinterSetup.PrinterName = 'doPDF 11'
     PrinterSetup.SaveDeviceSettings = False
     PrinterSetup.mmMarginBottom = 6350
     PrinterSetup.mmMarginLeft = 6350
@@ -978,7 +1056,6 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
     TextSearchSettings.DefaultString = '<FindText>'
     TextSearchSettings.Enabled = False
     Left = 776
-    Top = 16
     Version = '12.03'
     mmColumnWidth = 197300
     DataPipelineName = 'ppDBQBrowse'
@@ -1064,6 +1141,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'PERUSAHAAN'
+        DataPipeline = ppDBPerusahaan
         Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
@@ -1072,6 +1150,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Font.Style = [fsBold]
         ParentDataPipeline = False
         Transparent = True
+        DataPipelineName = 'ppDBPerusahaan'
         mmHeight = 4191
         mmLeft = 6615
         mmTop = 1058
@@ -1087,6 +1166,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'ALAMAT1'
+        DataPipeline = ppDBPerusahaan
         Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
@@ -1095,6 +1175,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Font.Style = []
         ParentDataPipeline = False
         Transparent = True
+        DataPipelineName = 'ppDBPerusahaan'
         mmHeight = 4022
         mmLeft = 6615
         mmTop = 6085
@@ -1110,6 +1191,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'TELEPON1'
+        DataPipeline = ppDBPerusahaan
         Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
@@ -1118,6 +1200,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Font.Style = []
         ParentDataPipeline = False
         Transparent = True
+        DataPipelineName = 'ppDBPerusahaan'
         mmHeight = 4022
         mmLeft = 6615
         mmTop = 10583
@@ -2789,6 +2872,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'TTD1'
+        DataPipeline = ppDBQTransaksi
         Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
@@ -2798,6 +2882,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         ParentDataPipeline = False
         TextAlignment = taCentered
         Transparent = True
+        DataPipelineName = 'ppDBQTransaksi'
         mmHeight = 4233
         mmLeft = 122238
         mmTop = 34925
@@ -2812,6 +2897,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'TTD2'
+        DataPipeline = ppDBQTransaksi
         Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
@@ -2821,6 +2907,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         ParentDataPipeline = False
         TextAlignment = taCentered
         Transparent = True
+        DataPipelineName = 'ppDBQTransaksi'
         mmHeight = 4233
         mmLeft = 160338
         mmTop = 34925
@@ -2835,6 +2922,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'TTD3'
+        DataPipeline = ppDBQTransaksi
         Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
@@ -2844,6 +2932,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         ParentDataPipeline = False
         TextAlignment = taCentered
         Transparent = True
+        DataPipelineName = 'ppDBQTransaksi'
         mmHeight = 4233
         mmLeft = 198438
         mmTop = 34925
@@ -2858,6 +2947,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'DIV3'
+        DataPipeline = ppDBQTransaksi
         Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
@@ -2867,6 +2957,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         ParentDataPipeline = False
         TextAlignment = taCentered
         Transparent = True
+        DataPipelineName = 'ppDBQTransaksi'
         mmHeight = 4233
         mmLeft = 198438
         mmTop = 12700
@@ -2881,6 +2972,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'DIV2'
+        DataPipeline = ppDBQTransaksi
         Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
@@ -2890,6 +2982,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         ParentDataPipeline = False
         TextAlignment = taCentered
         Transparent = True
+        DataPipelineName = 'ppDBQTransaksi'
         mmHeight = 3440
         mmLeft = 160338
         mmTop = 12700
@@ -2904,6 +2997,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'DIV1'
+        DataPipeline = ppDBQTransaksi
         Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
@@ -2913,6 +3007,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         ParentDataPipeline = False
         TextAlignment = taCentered
         Transparent = True
+        DataPipelineName = 'ppDBQTransaksi'
         mmHeight = 3440
         mmLeft = 139965
         mmTop = 12700
@@ -2927,6 +3022,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'JAB3'
+        DataPipeline = ppDBQTransaksi
         Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
@@ -2936,6 +3032,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         ParentDataPipeline = False
         TextAlignment = taCentered
         Transparent = True
+        DataPipelineName = 'ppDBQTransaksi'
         mmHeight = 4233
         mmLeft = 198438
         mmTop = 39158
@@ -2950,6 +3047,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'JAB2'
+        DataPipeline = ppDBQTransaksi
         Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
@@ -2959,6 +3057,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         ParentDataPipeline = False
         TextAlignment = taCentered
         Transparent = True
+        DataPipelineName = 'ppDBQTransaksi'
         mmHeight = 3969
         mmLeft = 160338
         mmTop = 39158
@@ -2973,6 +3072,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'JAB1'
+        DataPipeline = ppDBQTransaksi
         Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
@@ -2982,6 +3082,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         ParentDataPipeline = False
         TextAlignment = taCentered
         Transparent = True
+        DataPipelineName = 'ppDBQTransaksi'
         mmHeight = 3969
         mmLeft = 122238
         mmTop = 39158
@@ -3632,6 +3733,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'TTD4'
+        DataPipeline = ppDBQTransaksi
         Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
@@ -3641,6 +3743,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         ParentDataPipeline = False
         TextAlignment = taCentered
         Transparent = True
+        DataPipelineName = 'ppDBQTransaksi'
         mmHeight = 4233
         mmLeft = 237332
         mmTop = 34925
@@ -3655,6 +3758,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'DIV4'
+        DataPipeline = ppDBQTransaksi
         Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
@@ -3664,6 +3768,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         ParentDataPipeline = False
         TextAlignment = taCentered
         Transparent = True
+        DataPipelineName = 'ppDBQTransaksi'
         mmHeight = 4233
         mmLeft = 237332
         mmTop = 12700
@@ -3678,6 +3783,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'JAB4'
+        DataPipeline = ppDBQTransaksi
         Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
@@ -3687,6 +3793,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         ParentDataPipeline = False
         TextAlignment = taCentered
         Transparent = True
+        DataPipelineName = 'ppDBQTransaksi'
         mmHeight = 4233
         mmLeft = 237332
         mmTop = 39158
@@ -3724,7 +3831,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
     OpenDataSource = False
     UserName = 'DBQBrowse'
     Left = 720
-    Top = 16
+    Top = 8
     object ppDBQBrowseppField1: TppField
       FieldAlias = 'NAMA_MITRA'
       FieldName = 'NAMA_MITRA'
@@ -3952,7 +4059,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
   end
   object dsQMaster: TwwDataSource
     DataSet = QMaster
-    Left = 104
+    Left = 120
     Top = 256
   end
   object QTransaksi: TOracleDataSet
@@ -3971,7 +4078,6 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
       000007000000444F435F49534F010000000000}
     Cursor = crSQLWait
     Session = DMFrm.OS
-    Active = True
     BeforeOpen = QTransaksiBeforeOpen
     Left = 312
     Top = 8
@@ -4108,9 +4214,6 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
     ReadOnly = True
     QueryAllRecords = False
     Session = DMFrm.OS
-    AfterScroll = QBrowseAfterScroll
-    OnCalcFields = QBrowseCalcFields
-    OnFilterRecord = QBrowseFilterRecord
     Left = 816
     Top = 72
     object QBrowse1JENIS: TStringField
@@ -4153,11 +4256,11 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
     OpenDataSource = False
     RefreshAfterPost = True
     UserName = 'DBQMaster'
-    Left = 120
-    Top = 16
+    Left = 720
+    Top = 120
     object ppDBQMasterppField1: TppField
-      FieldAlias = 'IBUKTI'
-      FieldName = 'IBUKTI'
+      FieldAlias = 'MITRA'
+      FieldName = 'MITRA'
       FieldLength = 0
       DataType = dtNotKnown
       DisplayWidth = 0
@@ -4166,8 +4269,8 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
       Sortable = False
     end
     object ppDBQMasterppField2: TppField
-      FieldAlias = 'NO_NOTA'
-      FieldName = 'NO_NOTA'
+      FieldAlias = 'JENIS'
+      FieldName = 'JENIS'
       FieldLength = 0
       DataType = dtNotKnown
       DisplayWidth = 0
@@ -4176,8 +4279,8 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
       Sortable = False
     end
     object ppDBQMasterppField3: TppField
-      FieldAlias = 'KD_TRANSAKSI'
-      FieldName = 'KD_TRANSAKSI'
+      FieldAlias = 'KP'
+      FieldName = 'KP'
       FieldLength = 0
       DataType = dtNotKnown
       DisplayWidth = 0
@@ -4186,8 +4289,8 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
       Sortable = False
     end
     object ppDBQMasterppField4: TppField
-      FieldAlias = 'TGL'
-      FieldName = 'TGL'
+      FieldAlias = 'ARAH'
+      FieldName = 'ARAH'
       FieldLength = 0
       DataType = dtNotKnown
       DisplayWidth = 0
@@ -4196,8 +4299,8 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
       Sortable = False
     end
     object ppDBQMasterppField5: TppField
-      FieldAlias = 'KETERANGAN'
-      FieldName = 'KETERANGAN'
+      FieldAlias = 'KONSTRUKSI'
+      FieldName = 'KONSTRUKSI'
       FieldLength = 0
       DataType = dtNotKnown
       DisplayWidth = 0
@@ -4206,8 +4309,8 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
       Sortable = False
     end
     object ppDBQMasterppField6: TppField
-      FieldAlias = 'ISPOST'
-      FieldName = 'ISPOST'
+      FieldAlias = 'QTY_KG'
+      FieldName = 'QTY_KG'
       FieldLength = 0
       DataType = dtNotKnown
       DisplayWidth = 0
@@ -4216,8 +4319,8 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
       Sortable = False
     end
     object ppDBQMasterppField7: TppField
-      FieldAlias = 'NO_BUKTI'
-      FieldName = 'NO_BUKTI'
+      FieldAlias = 'QTY_PTG'
+      FieldName = 'QTY_PTG'
       FieldLength = 0
       DataType = dtNotKnown
       DisplayWidth = 0
@@ -4226,8 +4329,8 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
       Sortable = False
     end
     object ppDBQMasterppField8: TppField
-      FieldAlias = 'TTD1'
-      FieldName = 'TTD1'
+      FieldAlias = 'QTY_SPRING'
+      FieldName = 'QTY_SPRING'
       FieldLength = 0
       DataType = dtNotKnown
       DisplayWidth = 0
@@ -4236,8 +4339,8 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
       Sortable = False
     end
     object ppDBQMasterppField9: TppField
-      FieldAlias = 'TTD2'
-      FieldName = 'TTD2'
+      FieldAlias = 'QTY_BEAM'
+      FieldName = 'QTY_BEAM'
       FieldLength = 0
       DataType = dtNotKnown
       DisplayWidth = 0
@@ -4246,8 +4349,8 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
       Sortable = False
     end
     object ppDBQMasterppField10: TppField
-      FieldAlias = 'TTD3'
-      FieldName = 'TTD3'
+      FieldAlias = 'QTY_BS'
+      FieldName = 'QTY_BS'
       FieldLength = 0
       DataType = dtNotKnown
       DisplayWidth = 0
@@ -4256,1608 +4359,14 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
       Sortable = False
     end
     object ppDBQMasterppField11: TppField
-      FieldAlias = 'TTD4'
-      FieldName = 'TTD4'
+      FieldAlias = 'QTY_PERSEN'
+      FieldName = 'QTY_PERSEN'
       FieldLength = 0
       DataType = dtNotKnown
       DisplayWidth = 0
       Position = 10
       Searchable = False
       Sortable = False
-    end
-    object ppDBQMasterppField12: TppField
-      FieldAlias = 'SHIFT'
-      FieldName = 'SHIFT'
-      FieldLength = 0
-      DataType = dtNotKnown
-      DisplayWidth = 0
-      Position = 11
-      Searchable = False
-      Sortable = False
-    end
-    object ppDBQMasterppField13: TppField
-      FieldAlias = 'GRUP'
-      FieldName = 'GRUP'
-      FieldLength = 0
-      DataType = dtNotKnown
-      DisplayWidth = 0
-      Position = 12
-      Searchable = False
-      Sortable = False
-    end
-    object ppDBQMasterppField14: TppField
-      FieldAlias = 'KD_DIV'
-      FieldName = 'KD_DIV'
-      FieldLength = 0
-      DataType = dtNotKnown
-      DisplayWidth = 0
-      Position = 13
-      Searchable = False
-      Sortable = False
-    end
-    object ppDBQMasterppField15: TppField
-      FieldAlias = 'LDIVISI'
-      FieldName = 'LDIVISI'
-      FieldLength = 0
-      DataType = dtNotKnown
-      DisplayWidth = 0
-      Position = 14
-      Searchable = False
-      Sortable = False
-    end
-    object ppDBQMasterppField16: TppField
-      FieldAlias = 'STATUS'
-      FieldName = 'STATUS'
-      FieldLength = 0
-      DataType = dtNotKnown
-      DisplayWidth = 0
-      Position = 15
-      Searchable = False
-      Sortable = False
-    end
-    object ppDBQMasterppField17: TppField
-      FieldAlias = 'QTY_RESEP'
-      FieldName = 'QTY_RESEP'
-      FieldLength = 0
-      DataType = dtNotKnown
-      DisplayWidth = 0
-      Position = 16
-      Searchable = False
-      Sortable = False
-    end
-    object ppDBQMasterppField18: TppField
-      FieldAlias = 'TGL_INSERT'
-      FieldName = 'TGL_INSERT'
-      FieldLength = 0
-      DataType = dtNotKnown
-      DisplayWidth = 0
-      Position = 17
-      Searchable = False
-      Sortable = False
-    end
-    object ppDBQMasterppField19: TppField
-      FieldAlias = 'OPR_INSERT'
-      FieldName = 'OPR_INSERT'
-      FieldLength = 0
-      DataType = dtNotKnown
-      DisplayWidth = 0
-      Position = 18
-      Searchable = False
-      Sortable = False
-    end
-  end
-  object ppReportInput: TppReport
-    AutoStop = False
-    DataPipeline = ppDBQDetail
-    PrinterSetup.BinName = 'Default'
-    PrinterSetup.DocumentName = 'Report'
-    PrinterSetup.PaperName = 'Custom'
-    PrinterSetup.PrinterName = 'Default'
-    PrinterSetup.SaveDeviceSettings = False
-    PrinterSetup.mmMarginBottom = 6350
-    PrinterSetup.mmMarginLeft = 6350
-    PrinterSetup.mmMarginRight = 6350
-    PrinterSetup.mmMarginTop = 6350
-    PrinterSetup.mmPaperHeight = 139700
-    PrinterSetup.mmPaperWidth = 210000
-    PrinterSetup.PaperSize = 256
-    Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\ts.rtm'
-    Units = utMillimeters
-    DeviceType = 'Screen'
-    EmailSettings.ReportFormat = 'PDF'
-    LanguageID = 'Default'
-    OutlineSettings.CreateNode = True
-    OutlineSettings.CreatePageNodes = True
-    OutlineSettings.Enabled = False
-    OutlineSettings.Visible = False
-    PDFSettings.EmbedFontOptions = [efUseSubset]
-    PDFSettings.EncryptSettings.AllowCopy = True
-    PDFSettings.EncryptSettings.AllowInteract = True
-    PDFSettings.EncryptSettings.AllowModify = True
-    PDFSettings.EncryptSettings.AllowPrint = True
-    PDFSettings.EncryptSettings.Enabled = False
-    PDFSettings.FontEncoding = feAnsi
-    RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
-    RTFSettings.DefaultFont.Color = clWindowText
-    RTFSettings.DefaultFont.Height = -13
-    RTFSettings.DefaultFont.Name = 'Arial'
-    RTFSettings.DefaultFont.Style = []
-    TextSearchSettings.DefaultString = '<FindText>'
-    TextSearchSettings.Enabled = False
-    Left = 184
-    Top = 24
-    Version = '12.03'
-    mmColumnWidth = 197300
-    DataPipelineName = 'ppDBQDetail'
-    object ppTitleBand2: TppTitleBand
-      BeforePrint = ppTitleBand1BeforePrint
-      PrintHeight = phDynamic
-      mmBottomOffset = 0
-      mmHeight = 41275
-      mmPrintPosition = 0
-      object ppDBText15: TppDBText
-        UserName = 'DBText11'
-        HyperlinkColor = clBlue
-        AutoSize = True
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'PERUSAHAAN'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = [fsBold]
-        ParentDataPipeline = False
-        Transparent = True
-        mmHeight = 4233
-        mmLeft = 1588
-        mmTop = 0
-        mmWidth = 60029
-        BandType = 1
-      end
-      object ppDBText50: TppDBText
-        UserName = 'DBText50'
-        HyperlinkColor = clBlue
-        AutoSize = True
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'NAMA_TRANSAKSI'
-        DataPipeline = ppDBQTransaksi
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial Narrow'
-        Font.Size = 18
-        Font.Style = [fsUnderline]
-        ParentDataPipeline = False
-        TextAlignment = taCentered
-        Transparent = True
-        DataPipelineName = 'ppDBQTransaksi'
-        mmHeight = 7479
-        mmLeft = 76253
-        mmTop = 14288
-        mmWidth = 39582
-        BandType = 1
-      end
-      object ppVariable2: TppVariable
-        UserName = 'Variable1'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        BlankWhenZero = False
-        CalcOrder = 0
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = []
-        TextAlignment = taCentered
-        Transparent = True
-        mmHeight = 3440
-        mmLeft = 90752
-        mmTop = 22225
-        mmWidth = 11377
-        BandType = 1
-      end
-      object ppDBText26: TppDBText
-        UserName = 'DBText4'
-        HyperlinkColor = clBlue
-        AutoSize = True
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'NO_BUKTI'
-        DataPipeline = ppDBQMaster
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = [fsBold]
-        ParentDataPipeline = False
-        SuppressRepeatedValues = True
-        Transparent = True
-        DataPipelineName = 'ppDBQMaster'
-        mmHeight = 4233
-        mmLeft = 20638
-        mmTop = 20638
-        mmWidth = 18034
-        BandType = 1
-      end
-      object ppLabel25: TppLabel
-        UserName = 'Label25'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        Caption = 'Telah diproduksi barang-barang berikut :'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = []
-        Transparent = True
-        mmHeight = 3969
-        mmLeft = 1852
-        mmTop = 34925
-        mmWidth = 63765
-        BandType = 1
-      end
-      object ppDBText11: TppDBText
-        UserName = 'DBText1'
-        HyperlinkColor = clBlue
-        AutoSize = True
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'NO_NOTA'
-        DataPipeline = ppDBQMaster
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial Narrow'
-        Font.Size = 14
-        Font.Style = []
-        ParentDataPipeline = False
-        SuppressRepeatedValues = True
-        TextAlignment = taRightJustified
-        Transparent = True
-        DataPipelineName = 'ppDBQMaster'
-        mmHeight = 5821
-        mmLeft = 170921
-        mmTop = 4763
-        mmWidth = 19579
-        BandType = 1
-      end
-      object ppDBText16: TppDBText
-        UserName = 'DBText2'
-        HyperlinkColor = clBlue
-        AutoSize = True
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'TGL'
-        DataPipeline = ppDBQMaster
-        DisplayFormat = 'dd mmm yyyy'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = [fsBold]
-        ParentDataPipeline = False
-        SuppressRepeatedValues = True
-        Transparent = True
-        DataPipelineName = 'ppDBQMaster'
-        mmHeight = 4233
-        mmLeft = 172244
-        mmTop = 20638
-        mmWidth = 18627
-        BandType = 1
-      end
-      object ppDBText18: TppDBText
-        UserName = 'DBText6'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'SHIFT'
-        DataPipeline = ppDBQMaster
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = [fsBold]
-        ParentDataPipeline = False
-        SuppressRepeatedValues = True
-        Transparent = True
-        DataPipelineName = 'ppDBQMaster'
-        mmHeight = 4233
-        mmLeft = 173038
-        mmTop = 26988
-        mmWidth = 3969
-        BandType = 1
-      end
-      object ppLabel1: TppLabel
-        UserName = 'Label17'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        Caption = 'Tanggal :'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = []
-        TextAlignment = taRightJustified
-        Transparent = True
-        mmHeight = 4498
-        mmLeft = 153988
-        mmTop = 20638
-        mmWidth = 14552
-        BandType = 1
-      end
-      object ppLabel13: TppLabel
-        UserName = 'Label18'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        Caption = 'No. Nota'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = []
-        TextAlignment = taRightJustified
-        Transparent = True
-        mmHeight = 3440
-        mmLeft = 179123
-        mmTop = 1058
-        mmWidth = 11113
-        BandType = 1
-      end
-      object ppLabel15: TppLabel
-        UserName = 'Label32'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        Caption = 'Shift/ Grup :'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = []
-        TextAlignment = taRightJustified
-        Transparent = True
-        mmHeight = 4163
-        mmLeft = 149825
-        mmTop = 26988
-        mmWidth = 18979
-        BandType = 1
-      end
-      object ppDBText20: TppDBText
-        UserName = 'DBText28'
-        HyperlinkColor = clBlue
-        AutoSize = True
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'GRUP'
-        DataPipeline = ppDBQMaster
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = [fsBold]
-        ParentDataPipeline = False
-        SuppressRepeatedValues = True
-        Transparent = True
-        DataPipelineName = 'ppDBQMaster'
-        mmHeight = 4233
-        mmLeft = 179388
-        mmTop = 26988
-        mmWidth = 2540
-        BandType = 1
-      end
-      object ppLabel16: TppLabel
-        UserName = 'Label33'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        Caption = '/'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = []
-        TextAlignment = taRightJustified
-        Transparent = True
-        mmHeight = 4233
-        mmLeft = 177800
-        mmTop = 26988
-        mmWidth = 1058
-        BandType = 1
-      end
-      object ppDBText25: TppDBText
-        UserName = 'DBText25'
-        HyperlinkColor = clBlue
-        AutoSize = True
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'LDIVISI'
-        DataPipeline = ppDBQMaster
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = [fsBold]
-        ParentDataPipeline = False
-        SuppressRepeatedValues = True
-        Transparent = True
-        DataPipelineName = 'ppDBQMaster'
-        mmHeight = 4233
-        mmLeft = 20638
-        mmTop = 26988
-        mmWidth = 19473
-        BandType = 1
-      end
-      object ppLabel20: TppLabel
-        UserName = 'Label20'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        Caption = 'No. WO'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = []
-        Transparent = True
-        mmHeight = 3969
-        mmLeft = 1588
-        mmTop = 20638
-        mmWidth = 12700
-        BandType = 1
-      end
-      object ppLabel35: TppLabel
-        UserName = 'Label201'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        Caption = 'Divisi'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = []
-        Transparent = True
-        mmHeight = 4233
-        mmLeft = 1588
-        mmTop = 26988
-        mmWidth = 8731
-        BandType = 1
-      end
-      object ppLabel21: TppLabel
-        UserName = 'Label202'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        Caption = ':'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = []
-        Transparent = True
-        mmHeight = 4233
-        mmLeft = 17463
-        mmTop = 20638
-        mmWidth = 1058
-        BandType = 1
-      end
-      object ppLabel22: TppLabel
-        UserName = 'Label16'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        Caption = ':'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = []
-        Transparent = True
-        mmHeight = 4233
-        mmLeft = 17463
-        mmTop = 26988
-        mmWidth = 1058
-        BandType = 1
-      end
-      object ppLabel23: TppLabel
-        UserName = 'Label37'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        Caption = 'No. Doc :'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = []
-        TextAlignment = taRightJustified
-        Transparent = True
-        mmHeight = 4163
-        mmLeft = 154058
-        mmTop = 14552
-        mmWidth = 14746
-        BandType = 1
-      end
-      object ppDBText51: TppDBText
-        UserName = 'DBText51'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'DOC_ISO'
-        DataPipeline = ppDBQTransaksi
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = [fsBold]
-        ParentDataPipeline = False
-        SuppressRepeatedValues = True
-        Transparent = True
-        DataPipelineName = 'ppDBQTransaksi'
-        mmHeight = 4233
-        mmLeft = 172244
-        mmTop = 14552
-        mmWidth = 21960
-        BandType = 1
-      end
-    end
-    object ppHeaderBand2: TppHeaderBand
-      mmBottomOffset = 0
-      mmHeight = 5027
-      mmPrintPosition = 0
-      object ppLabel26: TppLabel
-        UserName = 'Label2'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        Caption = 'MESIN'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = [fsBold]
-        Transparent = True
-        mmHeight = 4233
-        mmLeft = 11113
-        mmTop = 794
-        mmWidth = 11113
-        BandType = 0
-      end
-      object ppLabel28: TppLabel
-        UserName = 'Label4'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        Caption = 'PCS'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = [fsBold]
-        TextAlignment = taRightJustified
-        Transparent = True
-        mmHeight = 4233
-        mmLeft = 133615
-        mmTop = 794
-        mmWidth = 7144
-        BandType = 0
-      end
-      object ppLabel29: TppLabel
-        UserName = 'Label6'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        Caption = 'NO'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = [fsBold]
-        TextAlignment = taCentered
-        Transparent = True
-        mmHeight = 4233
-        mmLeft = 2910
-        mmTop = 794
-        mmWidth = 5292
-        BandType = 0
-      end
-      object ppLabel36: TppLabel
-        UserName = 'Label7'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        Caption = 'KG'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = [fsBold]
-        TextAlignment = taRightJustified
-        Transparent = True
-        mmHeight = 4233
-        mmLeft = 151342
-        mmTop = 794
-        mmWidth = 5821
-        BandType = 0
-      end
-      object ppLabel43: TppLabel
-        UserName = 'Label13'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        Caption = 'SPIN'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = [fsBold]
-        TextAlignment = taRightJustified
-        Transparent = True
-        mmHeight = 4233
-        mmLeft = 51858
-        mmTop = 794
-        mmWidth = 8202
-        BandType = 0
-      end
-      object ppLabel44: TppLabel
-        UserName = 'Label21'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        Caption = 'KODE'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = [fsBold]
-        Transparent = True
-        mmHeight = 4233
-        mmLeft = 70379
-        mmTop = 794
-        mmWidth = 10319
-        BandType = 0
-      end
-      object ppLabel45: TppLabel
-        UserName = 'Label23'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        Caption = 'BENANG'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = [fsBold]
-        Transparent = True
-        mmHeight = 4233
-        mmLeft = 89165
-        mmTop = 794
-        mmWidth = 19050
-        BandType = 0
-      end
-      object ppLabel46: TppLabel
-        UserName = 'Label28'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        Caption = 'KPS'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = [fsBold]
-        TextAlignment = taCentered
-        Transparent = True
-        mmHeight = 4159
-        mmLeft = 61383
-        mmTop = 794
-        mmWidth = 7241
-        BandType = 0
-      end
-      object ppLabel47: TppLabel
-        UserName = 'Label1'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        Caption = 'RPM'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = [fsBold]
-        Transparent = True
-        mmHeight = 4159
-        mmLeft = 33338
-        mmTop = 529
-        mmWidth = 7835
-        BandType = 0
-      end
-      object ppLabel48: TppLabel
-        UserName = 'Label19'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        Caption = '%'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = [fsBold]
-        TextAlignment = taRightJustified
-        Transparent = True
-        mmHeight = 4233
-        mmLeft = 189442
-        mmTop = 794
-        mmWidth = 3175
-        BandType = 0
-      end
-      object ppLabel49: TppLabel
-        UserName = 'Label31'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        Caption = 'KG STD'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = [fsBold]
-        TextAlignment = taRightJustified
-        Transparent = True
-        mmHeight = 4233
-        mmLeft = 161555
-        mmTop = 794
-        mmWidth = 13335
-        BandType = 0
-      end
-    end
-    object ppDetailBand2: TppDetailBand
-      Background1.Brush.Style = bsClear
-      Background1.Gradient.EndColor = clWhite
-      Background1.Gradient.StartColor = clWhite
-      Background1.Gradient.Style = gsNone
-      Background2.Brush.Style = bsClear
-      Background2.Gradient.EndColor = clWhite
-      Background2.Gradient.StartColor = clWhite
-      Background2.Gradient.Style = gsNone
-      PrintHeight = phDynamic
-      mmBottomOffset = 0
-      mmHeight = 5821
-      mmPrintPosition = 0
-      object ppDBText21: TppDBText
-        UserName = 'DBText101'
-        HyperlinkColor = clBlue
-        AutoSize = True
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'QTY1'
-        DataPipeline = ppDBQDetail
-        DisplayFormat = '0.0,0;(0.0,0);-'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = []
-        ParentDataPipeline = False
-        TextAlignment = taRightJustified
-        Transparent = True
-        DataPipelineName = 'ppDBQDetail'
-        mmHeight = 4487
-        mmLeft = 141848
-        mmTop = 1058
-        mmWidth = 15579
-        BandType = 4
-      end
-      object ppDBText32: TppDBText
-        UserName = 'DBText30'
-        HyperlinkColor = clBlue
-        AutoSize = True
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'QTY2'
-        DataPipeline = ppDBQDetail
-        DisplayFormat = '#,0;-#,0'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = []
-        ParentDataPipeline = False
-        TextAlignment = taRightJustified
-        Transparent = True
-        DataPipelineName = 'ppDBQDetail'
-        mmHeight = 4487
-        mmLeft = 128577
-        mmTop = 1058
-        mmWidth = 12446
-        BandType = 4
-      end
-      object ppDBMemo1: TppDBMemo
-        UserName = 'DBMemo1'
-        SaveOrder = 0
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        CharWrap = False
-        DataField = 'KETERANGAN'
-        DataPipeline = ppDBQDetail
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = []
-        ParentDataPipeline = False
-        Stretch = True
-        Transparent = True
-        DataPipelineName = 'ppDBQDetail'
-        mmHeight = 4233
-        mmLeft = 89165
-        mmTop = 794
-        mmWidth = 38365
-        BandType = 4
-        mmBottomOffset = 0
-        mmOverFlowOffset = 0
-        mmStopPosition = 0
-        mmMinHeight = 0
-        mmLeading = 0
-      end
-      object ppDBText33: TppDBText
-        UserName = 'DBText3'
-        HyperlinkColor = clBlue
-        AutoSize = True
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'NO_MESIN'
-        DataPipeline = ppDBQDetail
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = []
-        Transparent = True
-        DataPipelineName = 'ppDBQDetail'
-        mmHeight = 4498
-        mmLeft = 19050
-        mmTop = 794
-        mmWidth = 16404
-        BandType = 4
-      end
-      object ppDBText34: TppDBText
-        UserName = 'DBText18'
-        HyperlinkColor = clBlue
-        AutoSize = True
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'QTY3'
-        DataPipeline = ppDBQDetail
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = []
-        TextAlignment = taCentered
-        Transparent = True
-        DataPipelineName = 'ppDBQDetail'
-        mmHeight = 4572
-        mmLeft = 54055
-        mmTop = 1058
-        mmWidth = 3810
-        BandType = 4
-      end
-      object ppDBText35: TppDBText
-        UserName = 'DBText20'
-        HyperlinkColor = clBlue
-        AutoSize = True
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'QTY4'
-        DataPipeline = ppDBQDetail
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = []
-        TextAlignment = taCentered
-        Transparent = True
-        DataPipelineName = 'ppDBQDetail'
-        mmHeight = 4572
-        mmLeft = 60638
-        mmTop = 1058
-        mmWidth = 8636
-        BandType = 4
-      end
-      object ppDBText36: TppDBText
-        UserName = 'DBText21'
-        HyperlinkColor = clBlue
-        AutoSize = True
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'KD_ITEM'
-        DataPipeline = ppDBQDetail
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = []
-        Transparent = True
-        DataPipelineName = 'ppDBQDetail'
-        mmHeight = 4572
-        mmLeft = 70644
-        mmTop = 1058
-        mmWidth = 14393
-        BandType = 4
-      end
-      object ppDBText37: TppDBText
-        UserName = 'DBText16'
-        HyperlinkColor = clBlue
-        AutoSize = True
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'MESIN'
-        DataPipeline = ppDBQDetail
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = []
-        Transparent = True
-        DataPipelineName = 'ppDBQDetail'
-        mmHeight = 4572
-        mmLeft = 33602
-        mmTop = 1058
-        mmWidth = 14563
-        BandType = 4
-      end
-      object ppDBText38: TppDBText
-        UserName = 'DBText17'
-        HyperlinkColor = clBlue
-        AutoSize = True
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'STD_PSN'
-        DataPipeline = ppDBQDetail
-        DisplayFormat = '0.0,0;(0.0,0) %'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = []
-        ParentDataPipeline = False
-        TextAlignment = taRightJustified
-        Transparent = True
-        DataPipelineName = 'ppDBQDetail'
-        mmHeight = 4586
-        mmLeft = 176795
-        mmTop = 1058
-        mmWidth = 16087
-        BandType = 4
-      end
-      object ppDBText39: TppDBText
-        UserName = 'DBText29'
-        HyperlinkColor = clBlue
-        AutoSize = True
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'QTY_STANDAR'
-        DataPipeline = ppDBQDetail
-        DisplayFormat = '#,##0.######;(#,##0.######)'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = []
-        ParentDataPipeline = False
-        TextAlignment = taRightJustified
-        Transparent = True
-        DataPipelineName = 'ppDBQDetail'
-        mmHeight = 4498
-        mmLeft = 158486
-        mmTop = 1058
-        mmWidth = 16669
-        BandType = 4
-      end
-      object ppVariable1: TppVariable
-        UserName = 'No'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        BlankWhenZero = False
-        CalcOrder = 0
-        DataType = dtInteger
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = []
-        TextAlignment = taCentered
-        Transparent = True
-        mmHeight = 4233
-        mmLeft = 2381
-        mmTop = 1058
-        mmWidth = 4498
-        BandType = 4
-      end
-      object ppLabel50: TppLabel
-        UserName = 'Nomer'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        Caption = 'Nomer'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = []
-        TextAlignment = taCentered
-        Transparent = True
-        mmHeight = 4163
-        mmLeft = 6915
-        mmTop = 1323
-        mmWidth = 10513
-        BandType = 4
-      end
-    end
-    object ppFooterBand2: TppFooterBand
-      mmBottomOffset = 0
-      mmHeight = 9525
-      mmPrintPosition = 0
-      object ppUserCetak2: TppLabel
-        UserName = 'UserCetak'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        Caption = 'SYSTEM, 17 Jan 2007 16:35'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = []
-        Transparent = True
-        mmHeight = 3175
-        mmLeft = 2117
-        mmTop = 2646
-        mmWidth = 28840
-        BandType = 8
-      end
-      object ppDBText41: TppDBText
-        UserName = 'DBText41'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'DISTRIBUSI'
-        DataPipeline = ppDBQTransaksi
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = []
-        ParentDataPipeline = False
-        TextAlignment = taCentered
-        Transparent = True
-        DataPipelineName = 'ppDBQTransaksi'
-        mmHeight = 3440
-        mmLeft = 39423
-        mmTop = 2381
-        mmWidth = 118798
-        BandType = 8
-      end
-    end
-    object ppSummaryBand2: TppSummaryBand
-      PrintHeight = phDynamic
-      AlignToBottom = False
-      mmBottomOffset = 0
-      mmHeight = 43656
-      mmPrintPosition = 0
-      object ppLabel51: TppLabel
-        UserName = 'Label29'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        Caption = 'Catatan :'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = [fsUnderline]
-        Transparent = True
-        mmHeight = 4163
-        mmLeft = 3440
-        mmTop = 2910
-        mmWidth = 14393
-        BandType = 7
-      end
-      object ppDBMemo2: TppDBMemo
-        UserName = 'DBMemo2'
-        SaveOrder = 0
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        CharWrap = False
-        DataField = 'KETERANGAN'
-        DataPipeline = ppDBQMaster
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = []
-        ParentDataPipeline = False
-        Stretch = True
-        Transparent = True
-        DataPipelineName = 'ppDBQMaster'
-        mmHeight = 4233
-        mmLeft = 19050
-        mmTop = 2910
-        mmWidth = 93927
-        BandType = 7
-        mmBottomOffset = 0
-        mmOverFlowOffset = 0
-        mmStopPosition = 0
-        mmMinHeight = 0
-        mmLeading = 0
-      end
-      object ppDBText40: TppDBText
-        UserName = 'DBText38'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'JAB3'
-        DataPipeline = ppDBQTransaksi
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = [fsItalic]
-        ParentDataPipeline = False
-        TextAlignment = taCentered
-        Transparent = True
-        DataPipelineName = 'ppDBQTransaksi'
-        mmHeight = 4233
-        mmLeft = 79640
-        mmTop = 37306
-        mmWidth = 33602
-        BandType = 7
-      end
-      object ppDBText52: TppDBText
-        UserName = 'DBText34'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'TTD3'
-        DataPipeline = ppDBQMaster
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = [fsBold, fsUnderline]
-        ParentDataPipeline = False
-        TextAlignment = taCentered
-        Transparent = True
-        DataPipelineName = 'ppDBQMaster'
-        mmHeight = 4233
-        mmLeft = 79640
-        mmTop = 33073
-        mmWidth = 33602
-        BandType = 7
-      end
-      object ppDBText53: TppDBText
-        UserName = 'DBText35'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'DIV3'
-        DataPipeline = ppDBQTransaksi
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = []
-        ParentDataPipeline = False
-        TextAlignment = taCentered
-        Transparent = True
-        DataPipelineName = 'ppDBQTransaksi'
-        mmHeight = 4233
-        mmLeft = 79640
-        mmTop = 16140
-        mmWidth = 33602
-        BandType = 7
-      end
-      object ppDBText54: TppDBText
-        UserName = 'DBText36'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'DIV2'
-        DataPipeline = ppDBQTransaksi
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = []
-        ParentDataPipeline = False
-        TextAlignment = taCentered
-        Transparent = True
-        DataPipelineName = 'ppDBQTransaksi'
-        mmHeight = 3440
-        mmLeft = 41540
-        mmTop = 16140
-        mmWidth = 33602
-        BandType = 7
-      end
-      object ppDBText55: TppDBText
-        UserName = 'DBText37'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'DIV1'
-        DataPipeline = ppDBQTransaksi
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = []
-        ParentDataPipeline = False
-        TextAlignment = taCentered
-        Transparent = True
-        DataPipelineName = 'ppDBQTransaksi'
-        mmHeight = 3440
-        mmLeft = 3440
-        mmTop = 16140
-        mmWidth = 33602
-        BandType = 7
-      end
-      object ppDBText56: TppDBText
-        UserName = 'DBText32'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'TTD1'
-        DataPipeline = ppDBQMaster
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = [fsBold, fsUnderline]
-        ParentDataPipeline = False
-        TextAlignment = taCentered
-        Transparent = True
-        DataPipelineName = 'ppDBQMaster'
-        mmHeight = 4233
-        mmLeft = 3440
-        mmTop = 33073
-        mmWidth = 33602
-        BandType = 7
-      end
-      object ppDBText57: TppDBText
-        UserName = 'DBText40'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'JAB1'
-        DataPipeline = ppDBQTransaksi
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = [fsItalic]
-        ParentDataPipeline = False
-        TextAlignment = taCentered
-        Transparent = True
-        DataPipelineName = 'ppDBQTransaksi'
-        mmHeight = 3969
-        mmLeft = 3440
-        mmTop = 37306
-        mmWidth = 33602
-        BandType = 7
-      end
-      object ppDBText58: TppDBText
-        UserName = 'DBText33'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'TTD2'
-        DataPipeline = ppDBQMaster
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = [fsBold, fsUnderline]
-        ParentDataPipeline = False
-        TextAlignment = taCentered
-        Transparent = True
-        DataPipelineName = 'ppDBQMaster'
-        mmHeight = 4233
-        mmLeft = 41540
-        mmTop = 33073
-        mmWidth = 33602
-        BandType = 7
-      end
-      object ppDBText59: TppDBText
-        UserName = 'DBText39'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'JAB2'
-        DataPipeline = ppDBQTransaksi
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = [fsItalic]
-        ParentDataPipeline = False
-        TextAlignment = taCentered
-        Transparent = True
-        DataPipelineName = 'ppDBQTransaksi'
-        mmHeight = 3969
-        mmLeft = 41540
-        mmTop = 37306
-        mmWidth = 33602
-        BandType = 7
-      end
-      object ppLine2: TppLine
-        UserName = 'Line2'
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        Weight = 0.750000000000000000
-        mmHeight = 1058
-        mmLeft = 125677
-        mmTop = 529
-        mmWidth = 15081
-        BandType = 7
-      end
-      object ppLine64: TppLine
-        UserName = 'Line1'
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        Weight = 0.750000000000000000
-        mmHeight = 1058
-        mmLeft = 142082
-        mmTop = 794
-        mmWidth = 15081
-        BandType = 7
-      end
-      object ppDBCalc2: TppDBCalc
-        UserName = 'DBCalc1'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'QTY1'
-        DataPipeline = ppDBQDetail
-        DisplayFormat = '0.0,0;(0.0,0);-'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = []
-        TextAlignment = taRightJustified
-        Transparent = True
-        DataPipelineName = 'ppDBQDetail'
-        mmHeight = 3969
-        mmLeft = 142346
-        mmTop = 2646
-        mmWidth = 15081
-        BandType = 7
-      end
-      object ppDBCalc16: TppDBCalc
-        UserName = 'DBCalc2'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'QTY2'
-        DataPipeline = ppDBQDetail
-        DisplayFormat = '#,0;-#,0'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 10
-        Font.Style = []
-        TextAlignment = taRightJustified
-        Transparent = True
-        DataPipelineName = 'ppDBQDetail'
-        mmHeight = 3969
-        mmLeft = 126207
-        mmTop = 2381
-        mmWidth = 14552
-        BandType = 7
-      end
-    end
-    object ppPageStyle1: TppPageStyle
-      EndPage = 0
-      SinglePage = 0
-      StartPage = 0
-      mmBottomOffset = 0
-      mmHeight = 28840
-      mmPrintPosition = 0
-    end
-    object raCodeModule1: TraCodeModule
-      ProgramStream = {
-        01060F5472614576656E7448616E646C65720B50726F6772616D4E616D65060F
-        5661726961626C65314F6E43616C630B50726F6772616D54797065070B747450
-        726F63656475726506536F75726365066C70726F636564757265205661726961
-        626C65314F6E43616C63287661722056616C75653A2056617269616E74293B0D
-        0A626567696E0D0A56616C7565203A3D20274D6F64656C203A20272B20444251
-        5472616E73616B73695B27505245464958275D0D0A0D0A656E643B0D0A0D436F
-        6D706F6E656E744E616D6506095661726961626C6531094576656E744E616D65
-        06064F6E43616C63074576656E74494402210000}
-    end
-    object ppParameterList2: TppParameterList
     end
   end
   object ppDBQTransaksi: TppDBPipeline
@@ -5868,135 +4377,192 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
     object ppDBQTransaksippField1: TppField
       FieldAlias = 'NAMA_TRANSAKSI'
       FieldName = 'NAMA_TRANSAKSI'
-      FieldLength = 50
-      DisplayWidth = 50
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
       Position = 0
+      Searchable = False
+      Sortable = False
     end
     object ppDBQTransaksippField2: TppField
       FieldAlias = 'KD_TRANSAKSI'
       FieldName = 'KD_TRANSAKSI'
-      FieldLength = 3
-      DisplayWidth = 3
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
       Position = 1
+      Searchable = False
+      Sortable = False
     end
     object ppDBQTransaksippField3: TppField
       FieldAlias = 'PREFIX'
       FieldName = 'PREFIX'
-      FieldLength = 5
-      DisplayWidth = 5
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
       Position = 2
+      Searchable = False
+      Sortable = False
     end
     object ppDBQTransaksippField4: TppField
       FieldAlias = 'PLINE'
       FieldName = 'PLINE'
-      FieldLength = 1
-      DisplayWidth = 1
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
       Position = 3
+      Searchable = False
+      Sortable = False
     end
     object ppDBQTransaksippField5: TppField
       FieldAlias = 'PHEADER'
       FieldName = 'PHEADER'
-      FieldLength = 1
-      DisplayWidth = 1
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
       Position = 4
+      Searchable = False
+      Sortable = False
     end
     object ppDBQTransaksippField6: TppField
       FieldAlias = 'DISTRIBUSI'
       FieldName = 'DISTRIBUSI'
-      FieldLength = 80
-      DisplayWidth = 80
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
       Position = 5
+      Searchable = False
+      Sortable = False
     end
     object ppDBQTransaksippField7: TppField
       FieldAlias = 'TTD1'
       FieldName = 'TTD1'
-      FieldLength = 30
-      DisplayWidth = 30
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
       Position = 6
+      Searchable = False
+      Sortable = False
     end
     object ppDBQTransaksippField8: TppField
       FieldAlias = 'TTD2'
       FieldName = 'TTD2'
-      FieldLength = 30
-      DisplayWidth = 30
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
       Position = 7
+      Searchable = False
+      Sortable = False
     end
     object ppDBQTransaksippField9: TppField
       FieldAlias = 'TTD3'
       FieldName = 'TTD3'
-      FieldLength = 30
-      DisplayWidth = 30
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
       Position = 8
+      Searchable = False
+      Sortable = False
     end
     object ppDBQTransaksippField10: TppField
       FieldAlias = 'TTD4'
       FieldName = 'TTD4'
-      FieldLength = 30
-      DisplayWidth = 30
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
       Position = 9
+      Searchable = False
+      Sortable = False
     end
     object ppDBQTransaksippField11: TppField
       FieldAlias = 'DIV1'
       FieldName = 'DIV1'
-      FieldLength = 30
-      DisplayWidth = 30
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
       Position = 10
+      Searchable = False
+      Sortable = False
     end
     object ppDBQTransaksippField12: TppField
       FieldAlias = 'DIV2'
       FieldName = 'DIV2'
-      FieldLength = 30
-      DisplayWidth = 30
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
       Position = 11
+      Searchable = False
+      Sortable = False
     end
     object ppDBQTransaksippField13: TppField
       FieldAlias = 'DIV3'
       FieldName = 'DIV3'
-      FieldLength = 30
-      DisplayWidth = 30
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
       Position = 12
+      Searchable = False
+      Sortable = False
     end
     object ppDBQTransaksippField14: TppField
       FieldAlias = 'DIV4'
       FieldName = 'DIV4'
-      FieldLength = 30
-      DisplayWidth = 30
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
       Position = 13
+      Searchable = False
+      Sortable = False
     end
     object ppDBQTransaksippField15: TppField
       FieldAlias = 'JAB1'
       FieldName = 'JAB1'
-      FieldLength = 30
-      DisplayWidth = 30
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
       Position = 14
+      Searchable = False
+      Sortable = False
     end
     object ppDBQTransaksippField16: TppField
       FieldAlias = 'JAB2'
       FieldName = 'JAB2'
-      FieldLength = 30
-      DisplayWidth = 30
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
       Position = 15
+      Searchable = False
+      Sortable = False
     end
     object ppDBQTransaksippField17: TppField
       FieldAlias = 'JAB3'
       FieldName = 'JAB3'
-      FieldLength = 30
-      DisplayWidth = 30
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
       Position = 16
+      Searchable = False
+      Sortable = False
     end
     object ppDBQTransaksippField18: TppField
       FieldAlias = 'JAB4'
       FieldName = 'JAB4'
-      FieldLength = 30
-      DisplayWidth = 30
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
       Position = 17
+      Searchable = False
+      Sortable = False
     end
     object ppDBQTransaksippField19: TppField
       FieldAlias = 'DOC_ISO'
       FieldName = 'DOC_ISO'
-      FieldLength = 15
-      DisplayWidth = 15
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
       Position = 18
+      Searchable = False
+      Sortable = False
     end
   end
   object ppDBQDetail: TppDBPipeline
@@ -6013,12 +4579,120 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
       DetailSortOrder = soAscending
     end
   end
-  object ppReport1: TppReport
+  object ppDBPerusahaan: TppDBPipeline
+    DataSource = DMFrm.dsPerusahaan
+    OpenDataSource = False
+    UserName = 'DBPerusahaan'
+    Left = 936
+    Top = 96
+    object ppDBPerusahaanppField1: TppField
+      FieldAlias = 'PERUSAHAAN'
+      FieldName = 'PERUSAHAAN'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 0
+      Searchable = False
+      Sortable = False
+    end
+    object ppDBPerusahaanppField2: TppField
+      FieldAlias = 'ALAMAT1'
+      FieldName = 'ALAMAT1'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 1
+      Searchable = False
+      Sortable = False
+    end
+    object ppDBPerusahaanppField3: TppField
+      FieldAlias = 'ALAMAT2'
+      FieldName = 'ALAMAT2'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 2
+      Searchable = False
+      Sortable = False
+    end
+    object ppDBPerusahaanppField4: TppField
+      FieldAlias = 'ALAMAT3'
+      FieldName = 'ALAMAT3'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 3
+      Searchable = False
+      Sortable = False
+    end
+    object ppDBPerusahaanppField5: TppField
+      FieldAlias = 'TELEPON1'
+      FieldName = 'TELEPON1'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 4
+      Searchable = False
+      Sortable = False
+    end
+    object ppDBPerusahaanppField6: TppField
+      FieldAlias = 'TELEPON2'
+      FieldName = 'TELEPON2'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 5
+      Searchable = False
+      Sortable = False
+    end
+    object ppDBPerusahaanppField7: TppField
+      FieldAlias = 'TELEPON3'
+      FieldName = 'TELEPON3'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 6
+      Searchable = False
+      Sortable = False
+    end
+    object ppDBPerusahaanppField8: TppField
+      FieldAlias = 'WEBSITE'
+      FieldName = 'WEBSITE'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 7
+      Searchable = False
+      Sortable = False
+    end
+    object ppDBPerusahaanppField9: TppField
+      FieldAlias = 'EMAIL'
+      FieldName = 'EMAIL'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 8
+      Searchable = False
+      Sortable = False
+    end
+    object ppDBPerusahaanppField10: TppField
+      FieldAlias = 'NPWP'
+      FieldName = 'NPWP'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 9
+      Searchable = False
+      Sortable = False
+    end
+  end
+  object ppReportBrowse1: TppReport
     AutoStop = False
+    DataPipeline = ppDBQReportBowse1
     PrinterSetup.BinName = 'Default'
     PrinterSetup.DocumentName = 'Report'
-    PrinterSetup.PaperName = 'A4 210 x 297 mm'
-    PrinterSetup.PrinterName = '\\192.168.1.53\EPSON L360 Series'
+    PrinterSetup.PaperName = 'A4'
+    PrinterSetup.PrinterName = 'doPDF 11'
     PrinterSetup.SaveDeviceSettings = False
     PrinterSetup.mmMarginBottom = 6350
     PrinterSetup.mmMarginLeft = 6350
@@ -6051,16 +4725,17 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
     TextSearchSettings.DefaultString = '<FindText>'
     TextSearchSettings.Enabled = False
     Left = 776
-    Top = 16
+    Top = 56
     Version = '12.03'
     mmColumnWidth = 197300
-    object ppTitleBand3: TppTitleBand
-      BeforePrint = ppTitleBand1BeforePrint
+    DataPipelineName = 'ppDBQReportBowse1'
+    object ppTitleBand4: TppTitleBand
+      BeforePrint = ppTitleBand4BeforePrint
       PrintHeight = phDynamic
       mmBottomOffset = 0
-      mmHeight = 34925
+      mmHeight = 34131
       mmPrintPosition = 0
-      object ppLabel52: TppLabel
+      object ppLabel69: TppLabel
         UserName = 'NamaLaporan'
         HyperlinkColor = clBlue
         AutoSize = False
@@ -6077,13 +4752,13 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Font.Style = []
         TextAlignment = taCentered
         Transparent = True
-        mmHeight = 5821
-        mmLeft = 6879
-        mmTop = 19315
-        mmWidth = 187061
+        mmHeight = 6350
+        mmLeft = 3440
+        mmTop = 21431
+        mmWidth = 189177
         BandType = 1
       end
-      object ppLabel53: TppLabel
+      object ppLabel70: TppLabel
         UserName = 'Label9'
         HyperlinkColor = clBlue
         Border.BorderPositions = []
@@ -6098,13 +4773,13 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Font.Size = 10
         Font.Style = []
         Transparent = True
-        mmHeight = 4233
-        mmLeft = 6615
+        mmHeight = 6085
+        mmLeft = 3175
         mmTop = 15081
         mmWidth = 75671
         BandType = 1
       end
-      object ppLabel54: TppLabel
+      object ppLabel71: TppLabel
         UserName = 'Periode'
         HyperlinkColor = clBlue
         AutoSize = False
@@ -6121,13 +4796,13 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Font.Style = []
         TextAlignment = taCentered
         Transparent = True
-        mmHeight = 3175
-        mmLeft = 6879
-        mmTop = 25665
-        mmWidth = 187590
+        mmHeight = 5821
+        mmLeft = 3440
+        mmTop = 28310
+        mmWidth = 189177
         BandType = 1
       end
-      object ppDBText60: TppDBText
+      object ppDBText83: TppDBText
         UserName = 'DBText11'
         HyperlinkColor = clBlue
         AutoSize = True
@@ -6136,6 +4811,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'PERUSAHAAN'
+        DataPipeline = ppDBPerusahaan
         Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
@@ -6144,13 +4820,14 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Font.Style = [fsBold]
         ParentDataPipeline = False
         Transparent = True
+        DataPipelineName = 'ppDBPerusahaan'
         mmHeight = 4191
-        mmLeft = 6615
+        mmLeft = 3175
         mmTop = 1058
         mmWidth = 58886
         BandType = 1
       end
-      object ppDBText61: TppDBText
+      object ppDBText84: TppDBText
         UserName = 'DBText12'
         HyperlinkColor = clBlue
         AutoSize = True
@@ -6159,6 +4836,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'ALAMAT1'
+        DataPipeline = ppDBPerusahaan
         Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
@@ -6167,13 +4845,14 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Font.Style = []
         ParentDataPipeline = False
         Transparent = True
+        DataPipelineName = 'ppDBPerusahaan'
         mmHeight = 4022
-        mmLeft = 6615
+        mmLeft = 3175
         mmTop = 6085
         mmWidth = 61595
         BandType = 1
       end
-      object ppDBText62: TppDBText
+      object ppDBText85: TppDBText
         UserName = 'DBText13'
         HyperlinkColor = clBlue
         AutoSize = True
@@ -6182,6 +4861,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Border.Style = psSolid
         Border.Visible = False
         DataField = 'TELEPON1'
+        DataPipeline = ppDBPerusahaan
         Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
@@ -6190,127 +4870,20 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Font.Style = []
         ParentDataPipeline = False
         Transparent = True
+        DataPipelineName = 'ppDBPerusahaan'
         mmHeight = 4022
-        mmLeft = 6615
+        mmLeft = 3175
         mmTop = 10583
         mmWidth = 81492
         BandType = 1
       end
-      object ppLabel55: TppLabel
-        UserName = 'UserCetak'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        Caption = 'SYSTEM, 17 Jan 2007 16:35'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = []
-        TextAlignment = taRightJustified
-        Transparent = True
-        mmHeight = 3175
-        mmLeft = 165894
-        mmTop = 30692
-        mmWidth = 28840
-        BandType = 1
-      end
     end
-    object ppHeaderBand3: TppHeaderBand
+    object ppHeaderBand4: TppHeaderBand
       BeforePrint = ppHeaderBand1BeforePrint
       mmBottomOffset = 0
-      mmHeight = 7408
+      mmHeight = 19579
       mmPrintPosition = 0
-      object ppLabel56: TppLabel
-        UserName = 'Label2'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = [bpBottom]
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = True
-        Caption = 'NO. NOTA'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = [fsBold]
-        Transparent = True
-        mmHeight = 3440
-        mmLeft = 12965
-        mmTop = 2910
-        mmWidth = 22225
-        BandType = 0
-      end
-      object ppLabel57: TppLabel
-        UserName = 'Label3'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = [bpBottom]
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = True
-        Caption = 'TANGGAL'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = [fsBold]
-        Transparent = True
-        mmHeight = 3387
-        mmLeft = 38100
-        mmTop = 2910
-        mmWidth = 13674
-        BandType = 0
-      end
-      object ppLabel58: TppLabel
-        UserName = 'Label4'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = [bpBottom]
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = True
-        Caption = 'KPS'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = [fsBold]
-        TextAlignment = taRightJustified
-        Transparent = True
-        mmHeight = 3387
-        mmLeft = 91811
-        mmTop = 2910
-        mmWidth = 5842
-        BandType = 0
-      end
-      object ppLabel59: TppLabel
-        UserName = 'Label5'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = [bpBottom]
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = True
-        Caption = 'PCS'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = [fsBold]
-        TextAlignment = taRightJustified
-        Transparent = True
-        mmHeight = 3387
-        mmLeft = 149215
-        mmTop = 2910
-        mmWidth = 5842
-        BandType = 0
-      end
-      object ppLabel60: TppLabel
+      object ppLabel72: TppLabel
         UserName = 'Label6'
         HyperlinkColor = clBlue
         Border.BorderPositions = []
@@ -6328,126 +4901,18 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Transparent = True
         mmHeight = 3440
         mmLeft = 4498
-        mmTop = 2910
+        mmTop = 8996
         mmWidth = 8202
         BandType = 0
       end
-      object ppLabel61: TppLabel
-        UserName = 'Label7'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = [bpBottom]
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = True
-        Caption = 'GRUP'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = [fsBold]
-        TextAlignment = taRightJustified
-        Transparent = True
-        mmHeight = 3387
-        mmLeft = 53711
-        mmTop = 2910
-        mmWidth = 8170
-        BandType = 0
-      end
-      object ppLabel62: TppLabel
-        UserName = 'Label8'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = [bpBottom]
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = True
-        Caption = 'KODE'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = [fsBold]
-        Transparent = True
-        mmHeight = 3387
-        mmLeft = 100013
-        mmTop = 2910
-        mmWidth = 8170
-        BandType = 0
-      end
-      object ppLabel63: TppLabel
-        UserName = 'Label10'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = [bpBottom]
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = True
-        Caption = 'KG'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = [fsBold]
-        TextAlignment = taRightJustified
-        Transparent = True
-        mmHeight = 3387
-        mmLeft = 161396
-        mmTop = 2910
-        mmWidth = 4233
-        BandType = 0
-      end
-      object ppLabel64: TppLabel
-        UserName = 'Label11'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = [bpBottom]
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = True
-        Caption = 'NAMA BARANG'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = [fsBold]
-        Transparent = True
-        mmHeight = 3387
-        mmLeft = 114036
-        mmTop = 2910
-        mmWidth = 21167
-        BandType = 0
-      end
-      object ppLabel65: TppLabel
-        UserName = 'Label12'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = [bpBottom]
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = True
-        Caption = '(%)'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = [fsBold]
-        TextAlignment = taCentered
-        Transparent = True
-        mmHeight = 3387
-        mmLeft = 187061
-        mmTop = 2910
-        mmWidth = 4360
-        BandType = 0
-      end
-      object ppLabel66: TppLabel
+      object ppLabel73: TppLabel
         UserName = 'Label1'
         HyperlinkColor = clBlue
-        Border.BorderPositions = [bpBottom]
+        Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
-        Border.Visible = True
-        Caption = 'SPINDLE'
+        Border.Visible = False
+        Caption = 'JENIS'
         Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
@@ -6456,58 +4921,227 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Font.Style = [fsBold]
         TextAlignment = taCentered
         Transparent = True
-        mmHeight = 3387
-        mmLeft = 74613
-        mmTop = 2910
-        mmWidth = 12319
+        mmHeight = 3302
+        mmLeft = 31221
+        mmTop = 8996
+        mmWidth = 7959
         BandType = 0
       end
-      object ppLabel67: TppLabel
-        UserName = 'Label30'
+      object ppLabel74: TppLabel
+        UserName = 'Label3'
         HyperlinkColor = clBlue
-        Border.BorderPositions = [bpBottom]
+        Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
-        Border.Visible = True
-        Caption = 'MESIN'
+        Border.Visible = False
+        Caption = 'AWAL'
         Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
         Font.Size = 8
         Font.Style = [fsBold]
+        TextAlignment = taCentered
         Transparent = True
-        mmHeight = 3387
-        mmLeft = 63765
-        mmTop = 2910
-        mmWidth = 9059
+        mmHeight = 3302
+        mmLeft = 69586
+        mmTop = 8996
+        mmWidth = 7874
         BandType = 0
       end
-      object ppLabel68: TppLabel
-        UserName = 'Label101'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = [bpBottom]
+      object ppLine67: TppLine
+        UserName = 'Line4'
+        Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
-        Border.Visible = True
-        Caption = 'KG STD'
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 19315
+        mmLeft = 2910
+        mmTop = 0
+        mmWidth = 265
+        BandType = 0
+      end
+      object ppLine68: TppLine
+        UserName = 'Line5'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 19315
+        mmLeft = 12700
+        mmTop = 0
+        mmWidth = 265
+        BandType = 0
+      end
+      object ppLine69: TppLine
+        UserName = 'Line6'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 19315
+        mmLeft = 60854
+        mmTop = 0
+        mmWidth = 265
+        BandType = 0
+      end
+      object ppLine70: TppLine
+        UserName = 'Line7'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 19315
+        mmLeft = 84931
+        mmTop = 0
+        mmWidth = 265
+        BandType = 0
+      end
+      object ppLabel76: TppLabel
+        UserName = 'Label5'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'KELUAR'
         Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
         Font.Size = 8
         Font.Style = [fsBold]
-        TextAlignment = taRightJustified
+        TextAlignment = taCentered
         Transparent = True
-        mmHeight = 3387
-        mmLeft = 169069
-        mmTop = 2910
-        mmWidth = 10668
+        mmHeight = 3440
+        mmLeft = 130440
+        mmTop = 8996
+        mmWidth = 12965
+        BandType = 0
+      end
+      object ppLine71: TppLine
+        UserName = 'Line8'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 19315
+        mmLeft = 118798
+        mmTop = 0
+        mmWidth = 265
+        BandType = 0
+      end
+      object ppLine72: TppLine
+        UserName = 'Line9'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 19315
+        mmLeft = 192617
+        mmTop = 0
+        mmWidth = 265
+        BandType = 0
+      end
+      object ppLabel75: TppLabel
+        UserName = 'Label75'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'MASUK'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 3302
+        mmLeft = 97367
+        mmTop = 8996
+        mmWidth = 10245
+        BandType = 0
+      end
+      object ppLabel77: TppLabel
+        UserName = 'Label77'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'AKHIR'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 3302
+        mmLeft = 169598
+        mmTop = 8996
+        mmWidth = 8721
+        BandType = 0
+      end
+      object ppLine65: TppLine
+        UserName = 'Line65'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 19315
+        mmLeft = 155311
+        mmTop = 264
+        mmWidth = 265
+        BandType = 0
+      end
+      object ppLine73: TppLine
+        UserName = 'Line73'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Weight = 0.750000000000000000
+        mmHeight = 265
+        mmLeft = 3175
+        mmTop = 0
+        mmWidth = 189707
+        BandType = 0
+      end
+      object ppLine66: TppLine
+        UserName = 'Line66'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Weight = 0.750000000000000000
+        mmHeight = 265
+        mmLeft = 3175
+        mmTop = 19315
+        mmWidth = 189707
         BandType = 0
       end
     end
-    object ppDetailBand3: TppDetailBand
-      BeforePrint = ppDetailBand1BeforePrint
+    object ppDetailBand4: TppDetailBand
+      BeforePrint = ppDetailBand4BeforePrint
       Background1.Brush.Style = bsClear
       Background1.Gradient.EndColor = clWhite
       Background1.Gradient.StartColor = clWhite
@@ -6518,104 +5152,9 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
       Background2.Gradient.Style = gsNone
       PrintHeight = phDynamic
       mmBottomOffset = 0
-      mmHeight = 3969
+      mmHeight = 6879
       mmPrintPosition = 0
-      object ppDBText63: TppDBText
-        UserName = 'DBText8'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'KD_ITEM'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = []
-        Transparent = True
-        mmHeight = 3175
-        mmLeft = 100013
-        mmTop = 794
-        mmWidth = 12700
-        BandType = 4
-      end
-      object ppDBText64: TppDBText
-        UserName = 'DBText10'
-        HyperlinkColor = clBlue
-        AutoSize = True
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'QTY1'
-        DisplayFormat = '#,##0.##;(#,##0.##)'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = []
-        TextAlignment = taRightJustified
-        Transparent = True
-        mmHeight = 3260
-        mmLeft = 160099
-        mmTop = 709
-        mmWidth = 5503
-        BandType = 4
-      end
-      object ppDBText65: TppDBText
-        UserName = 'DBText6'
-        HyperlinkColor = clBlue
-        AutoSize = True
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'QTY2'
-        DisplayFormat = '#,##0.######;(#,##0.######); '
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = []
-        TextAlignment = taRightJustified
-        Transparent = True
-        mmHeight = 3260
-        mmLeft = 151892
-        mmTop = 709
-        mmWidth = 3133
-        BandType = 4
-      end
-      object ppDBMemo3: TppDBMemo
-        UserName = 'DBMemo3'
-        SaveOrder = 0
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        CharWrap = False
-        DataField = 'KETERANGAN'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = []
-        Transparent = True
-        mmHeight = 3440
-        mmLeft = 114036
-        mmTop = 529
-        mmWidth = 28575
-        BandType = 4
-        mmBottomOffset = 0
-        mmOverFlowOffset = 0
-        mmStopPosition = 0
-        mmMinHeight = 0
-        mmLeading = 0
-      end
-      object ppVariable3: TppVariable
+      object ppVariable4: TppVariable
         UserName = 'No2'
         HyperlinkColor = clBlue
         Border.BorderPositions = []
@@ -6629,160 +5168,277 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
-        Font.Size = 8
+        Font.Size = 9
         Font.Style = []
         TextAlignment = taCentered
         Transparent = True
-        mmHeight = 3246
-        mmLeft = 6553
-        mmTop = 723
-        mmWidth = 5151
+        mmHeight = 3725
+        mmLeft = 4418
+        mmTop = 2117
+        mmWidth = 5842
         BandType = 4
       end
-      object ppDBText66: TppDBText
+      object ppDBText86: TppDBText
         UserName = 'DBText1'
         HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
-        DataField = 'NO_NOTA'
+        DataField = 'JENIS'
+        DataPipeline = ppDBQReportBowse1
         Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
-        Font.Size = 8
+        Font.Size = 9
         Font.Style = []
         SuppressRepeatedValues = True
         Transparent = True
-        mmHeight = 3175
-        mmLeft = 13758
-        mmTop = 794
-        mmWidth = 22225
+        DataPipelineName = 'ppDBQReportBowse1'
+        mmHeight = 3725
+        mmLeft = 14023
+        mmTop = 2117
+        mmWidth = 45244
         BandType = 4
       end
-      object ppDBText67: TppDBText
-        UserName = 'DBText2'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'TGL'
-        DisplayFormat = 'dd/mm/yyyy'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = []
-        Transparent = True
-        mmHeight = 3175
-        mmLeft = 38100
-        mmTop = 794
-        mmWidth = 16140
-        BandType = 4
-      end
-      object ppDBText68: TppDBText
-        UserName = 'DBText3'
-        HyperlinkColor = clBlue
-        AutoSize = True
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'KD_SUB_LOKASI'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = []
-        Transparent = True
-        mmHeight = 3175
-        mmLeft = 63765
-        mmTop = 794
-        mmWidth = 8996
-        BandType = 4
-      end
-      object ppDBText69: TppDBText
-        UserName = 'DBText4'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'JML'
-        DisplayFormat = '#,#'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = []
-        TextAlignment = taCentered
-        Transparent = True
-        mmHeight = 3175
-        mmLeft = 75671
-        mmTop = 794
-        mmWidth = 10319
-        BandType = 4
-      end
-      object ppDBText70: TppDBText
-        UserName = 'DBText7'
-        HyperlinkColor = clBlue
-        AutoSize = True
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'GRUP'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = []
-        TextAlignment = taCentered
-        Transparent = True
-        mmHeight = 3175
-        mmLeft = 56886
-        mmTop = 794
-        mmWidth = 1852
-        BandType = 4
-      end
-      object ppDBText71: TppDBText
+      object ppDBText87: TppDBText
         UserName = 'DBText5'
         HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
-        DataField = 'QTY4'
+        DataField = 'AWAL'
+        DataPipeline = ppDBQReportBowse1
+        DisplayFormat = '#,0.000;-#,0.000;-'
         Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
-        Font.Size = 8
+        Font.Size = 9
         Font.Style = []
         TextAlignment = taRightJustified
         Transparent = True
-        mmHeight = 3260
-        mmLeft = 87313
-        mmTop = 709
-        mmWidth = 10319
+        DataPipelineName = 'ppDBQReportBowse1'
+        mmHeight = 3725
+        mmLeft = 62442
+        mmTop = 2117
+        mmWidth = 20902
         BandType = 4
       end
-      object ppDBText72: TppDBText
-        UserName = 'DBText9'
+      object ppDBText89: TppDBText
+        UserName = 'DBText3'
         HyperlinkColor = clBlue
-        AutoSize = True
         Border.BorderPositions = []
         Border.Color = clBlack
         Border.Style = psSolid
         Border.Visible = False
-        DataField = 'STD_PSN'
-        DisplayFormat = '0.0,0;(0.0,0) %'
+        DataField = 'PEMASUKAN'
+        DataPipeline = ppDBQReportBowse1
+        DisplayFormat = '#,0.000;-#,0.000;-'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'ppDBQReportBowse1'
+        mmHeight = 3725
+        mmLeft = 86519
+        mmTop = 2117
+        mmWidth = 30427
+        BandType = 4
+      end
+      object ppDBText91: TppDBText
+        UserName = 'DBText6'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'PENGELUARAN'
+        DataPipeline = ppDBQReportBowse1
+        DisplayFormat = '#,0.000;-#,0.000;-'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'ppDBQReportBowse1'
+        mmHeight = 3725
+        mmLeft = 119856
+        mmTop = 2117
+        mmWidth = 33602
+        BandType = 4
+      end
+      object ppDBText93: TppDBText
+        UserName = 'DBText8'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'AKHIR'
+        DataPipeline = ppDBQReportBowse1
+        DisplayFormat = '#,0.000;-#,0.000;-'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'ppDBQReportBowse1'
+        mmHeight = 3725
+        mmLeft = 156634
+        mmTop = 2117
+        mmWidth = 33867
+        BandType = 4
+      end
+      object ppLine91: TppLine
+        UserName = 'Line28'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 6879
+        mmLeft = 2910
+        mmTop = 0
+        mmWidth = 265
+        BandType = 4
+      end
+      object ppLine92: TppLine
+        UserName = 'Line29'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 6879
+        mmLeft = 12700
+        mmTop = 0
+        mmWidth = 265
+        BandType = 4
+      end
+      object ppLine94: TppLine
+        UserName = 'Line301'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 6879
+        mmLeft = 61119
+        mmTop = 0
+        mmWidth = 265
+        BandType = 4
+      end
+      object ppLine95: TppLine
+        UserName = 'Line32'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 6879
+        mmLeft = 84931
+        mmTop = 0
+        mmWidth = 265
+        BandType = 4
+      end
+      object ppLine97: TppLine
+        UserName = 'Line34'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 6879
+        mmLeft = 118798
+        mmTop = 0
+        mmWidth = 265
+        BandType = 4
+      end
+      object ppLine98: TppLine
+        UserName = 'Line35'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 6879
+        mmLeft = 155311
+        mmTop = 0
+        mmWidth = 265
+        BandType = 4
+      end
+      object ppLine99: TppLine
+        UserName = 'Line36'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 6879
+        mmLeft = 192617
+        mmTop = 0
+        mmWidth = 265
+        BandType = 4
+      end
+      object ppLine74: TppLine
+        UserName = 'Line74'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Weight = 0.750000000000000000
+        mmHeight = 265
+        mmLeft = 2910
+        mmTop = 0
+        mmWidth = 189707
+        BandType = 4
+      end
+      object ppLine75: TppLine
+        UserName = 'Line75'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Weight = 0.750000000000000000
+        mmHeight = 265
+        mmLeft = 2910
+        mmTop = 6615
+        mmWidth = 189707
+        BandType = 4
+      end
+    end
+    object ppFooterBand4: TppFooterBand
+      mmBottomOffset = 0
+      mmHeight = 4498
+      mmPrintPosition = 0
+      object ppLabel79: TppLabel
+        UserName = 'Label79'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'SYSTEM, 17 Jan 2007 16:35'
         Ellipsis = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
@@ -6792,42 +5448,13 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         TextAlignment = taRightJustified
         Transparent = True
         mmHeight = 3175
-        mmLeft = 183886
-        mmTop = 794
-        mmWidth = 10583
-        BandType = 4
+        mmLeft = 145786
+        mmTop = 529
+        mmWidth = 28840
+        BandType = 8
       end
-      object ppDBText73: TppDBText
-        UserName = 'DBText102'
-        HyperlinkColor = clBlue
-        AutoSize = True
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'QTY_STD'
-        DisplayFormat = '#,##0.##;(#,##0.##)'
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = []
-        TextAlignment = taRightJustified
-        Transparent = True
-        mmHeight = 3260
-        mmLeft = 172546
-        mmTop = 709
-        mmWidth = 7070
-        BandType = 4
-      end
-    end
-    object ppFooterBand3: TppFooterBand
-      mmBottomOffset = 0
-      mmHeight = 4498
-      mmPrintPosition = 0
-      object ppSystemVariable2: TppSystemVariable
-        UserName = 'SystemVariable1'
+      object ppSystemVariable3: TppSystemVariable
+        UserName = 'SystemVariable3'
         HyperlinkColor = clBlue
         Border.BorderPositions = []
         Border.Color = clBlack
@@ -6843,18 +5470,19 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         TextAlignment = taRightJustified
         Transparent = True
         mmHeight = 3175
-        mmLeft = 186532
-        mmTop = 1058
+        mmLeft = 184150
+        mmTop = 529
         mmWidth = 7938
         BandType = 8
       end
     end
-    object ppSummaryBand3: TppSummaryBand
+    object ppSummaryBand4: TppSummaryBand
+      BeforePrint = ppSummaryBand4BeforePrint
       AlignToBottom = False
       mmBottomOffset = 0
       mmHeight = 48419
       mmPrintPosition = 0
-      object ppDBText74: TppDBText
+      object ppDBText102: TppDBText
         UserName = 'DBText19'
         HyperlinkColor = clBlue
         Border.BorderPositions = []
@@ -6874,12 +5502,12 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Transparent = True
         DataPipelineName = 'ppDBQTransaksi'
         mmHeight = 4233
-        mmLeft = 3175
-        mmTop = 21696
+        mmLeft = 26988
+        mmTop = 34925
         mmWidth = 33602
         BandType = 7
       end
-      object ppDBText75: TppDBText
+      object ppDBText103: TppDBText
         UserName = 'DBText42'
         HyperlinkColor = clBlue
         Border.BorderPositions = []
@@ -6899,62 +5527,12 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Transparent = True
         DataPipelineName = 'ppDBQTransaksi'
         mmHeight = 4233
-        mmLeft = 41275
-        mmTop = 21696
+        mmLeft = 65088
+        mmTop = 34925
         mmWidth = 33602
         BandType = 7
       end
-      object ppDBText76: TppDBText
-        UserName = 'DBText43'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'TTD3'
-        DataPipeline = ppDBQTransaksi
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = [fsBold, fsUnderline]
-        ParentDataPipeline = False
-        TextAlignment = taCentered
-        Transparent = True
-        DataPipelineName = 'ppDBQTransaksi'
-        mmHeight = 4233
-        mmLeft = 79375
-        mmTop = 21696
-        mmWidth = 33602
-        BandType = 7
-      end
-      object ppDBText77: TppDBText
-        UserName = 'DBText44'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'DIV3'
-        DataPipeline = ppDBQTransaksi
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = []
-        ParentDataPipeline = False
-        TextAlignment = taCentered
-        Transparent = True
-        DataPipelineName = 'ppDBQTransaksi'
-        mmHeight = 4233
-        mmLeft = 79375
-        mmTop = 8996
-        mmWidth = 33602
-        BandType = 7
-      end
-      object ppDBText78: TppDBText
+      object ppDBText106: TppDBText
         UserName = 'DBText45'
         HyperlinkColor = clBlue
         Border.BorderPositions = []
@@ -6974,12 +5552,12 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Transparent = True
         DataPipelineName = 'ppDBQTransaksi'
         mmHeight = 3440
-        mmLeft = 41275
-        mmTop = 8996
+        mmLeft = 65088
+        mmTop = 12700
         mmWidth = 33602
         BandType = 7
       end
-      object ppDBText79: TppDBText
+      object ppDBText107: TppDBText
         UserName = 'DBText46'
         HyperlinkColor = clBlue
         Border.BorderPositions = []
@@ -6999,37 +5577,12 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Transparent = True
         DataPipelineName = 'ppDBQTransaksi'
         mmHeight = 3440
-        mmLeft = 3175
-        mmTop = 8996
+        mmLeft = 44715
+        mmTop = 12700
         mmWidth = 33602
         BandType = 7
       end
-      object ppDBText80: TppDBText
-        UserName = 'DBText47'
-        HyperlinkColor = clBlue
-        Border.BorderPositions = []
-        Border.Color = clBlack
-        Border.Style = psSolid
-        Border.Visible = False
-        DataField = 'JAB3'
-        DataPipeline = ppDBQTransaksi
-        Ellipsis = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = [fsItalic]
-        ParentDataPipeline = False
-        TextAlignment = taCentered
-        Transparent = True
-        DataPipelineName = 'ppDBQTransaksi'
-        mmHeight = 4233
-        mmLeft = 79375
-        mmTop = 25929
-        mmWidth = 33602
-        BandType = 7
-      end
-      object ppDBText81: TppDBText
+      object ppDBText109: TppDBText
         UserName = 'DBText48'
         HyperlinkColor = clBlue
         Border.BorderPositions = []
@@ -7049,12 +5602,12 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Transparent = True
         DataPipelineName = 'ppDBQTransaksi'
         mmHeight = 3969
-        mmLeft = 41275
-        mmTop = 25929
+        mmLeft = 65088
+        mmTop = 39158
         mmWidth = 33602
         BandType = 7
       end
-      object ppDBText82: TppDBText
+      object ppDBText110: TppDBText
         UserName = 'DBText401'
         HyperlinkColor = clBlue
         Border.BorderPositions = []
@@ -7074,13 +5627,2156 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         Transparent = True
         DataPipelineName = 'ppDBQTransaksi'
         mmHeight = 3969
-        mmLeft = 3175
-        mmTop = 25929
+        mmLeft = 26988
+        mmTop = 39158
         mmWidth = 33602
         BandType = 7
       end
+      object ppDBCalc17: TppDBCalc
+        UserName = 'DBCalc8'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'AKHIR'
+        DataPipeline = ppDBQReportBowse1
+        DisplayFormat = '#,0.000;-#,0.000;-'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        ParentDataPipeline = False
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'ppDBQReportBowse1'
+        mmHeight = 3895
+        mmLeft = 62442
+        mmTop = 794
+        mmWidth = 20902
+        BandType = 7
+      end
+      object ppDBCalc20: TppDBCalc
+        UserName = 'DBCalc4'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'PEMASUKAN'
+        DataPipeline = ppDBQReportBowse1
+        DisplayFormat = '#,0.000;-#,0.000;-'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        ParentDataPipeline = False
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'ppDBQReportBowse1'
+        mmHeight = 3895
+        mmLeft = 86519
+        mmTop = 794
+        mmWidth = 30427
+        BandType = 7
+      end
+      object ppDBCalc23: TppDBCalc
+        UserName = 'DBCalc7'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'PENGELUARAN'
+        DataPipeline = ppDBQReportBowse1
+        DisplayFormat = '#,0.000;-#,0.000;-'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        ParentDataPipeline = False
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'ppDBQReportBowse1'
+        mmHeight = 3895
+        mmLeft = 119856
+        mmTop = 794
+        mmWidth = 33602
+        BandType = 7
+      end
+      object ppDBCalc24: TppDBCalc
+        UserName = 'DBCalc2'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'AKHIR'
+        DataPipeline = ppDBQReportBowse1
+        DisplayFormat = '#,0.000;-#,0.000;-'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        ParentDataPipeline = False
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'ppDBQReportBowse1'
+        mmHeight = 3895
+        mmLeft = 157163
+        mmTop = 794
+        mmWidth = 33338
+        BandType = 7
+      end
+      object ppLine111: TppLine
+        UserName = 'Line48'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 5556
+        mmLeft = 2910
+        mmTop = 0
+        mmWidth = 265
+        BandType = 7
+      end
+      object ppLine112: TppLine
+        UserName = 'Line49'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 5556
+        mmLeft = 61119
+        mmTop = 0
+        mmWidth = 265
+        BandType = 7
+      end
+      object ppLabel98: TppLabel
+        UserName = 'Label41'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'TOTAL'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 3316
+        mmLeft = 27447
+        mmTop = 1323
+        mmWidth = 8890
+        BandType = 7
+      end
+      object ppLine114: TppLine
+        UserName = 'Line501'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 5556
+        mmLeft = 84931
+        mmTop = 0
+        mmWidth = 265
+        BandType = 7
+      end
+      object ppLine116: TppLine
+        UserName = 'Line53'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 5556
+        mmLeft = 118798
+        mmTop = 0
+        mmWidth = 265
+        BandType = 7
+      end
+      object ppLine118: TppLine
+        UserName = 'Line55'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 5556
+        mmLeft = 155311
+        mmTop = 0
+        mmWidth = 265
+        BandType = 7
+      end
+      object ppLine120: TppLine
+        UserName = 'Line57'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 5556
+        mmLeft = 192617
+        mmTop = 0
+        mmWidth = 265
+        BandType = 7
+      end
+      object ppLine76: TppLine
+        UserName = 'Line76'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Weight = 0.750000000000000000
+        mmHeight = 265
+        mmLeft = 3175
+        mmTop = 0
+        mmWidth = 189707
+        BandType = 7
+      end
+      object ppLine77: TppLine
+        UserName = 'Line77'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Weight = 0.750000000000000000
+        mmHeight = 265
+        mmLeft = 2910
+        mmTop = 5292
+        mmWidth = 189707
+        BandType = 7
+      end
+      object ppDBText88: TppDBText
+        UserName = 'DBText88'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'TTD3'
+        DataPipeline = ppDBQTransaksi
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold, fsUnderline]
+        ParentDataPipeline = False
+        TextAlignment = taCentered
+        Transparent = True
+        DataPipelineName = 'ppDBQTransaksi'
+        mmHeight = 4233
+        mmLeft = 103188
+        mmTop = 34925
+        mmWidth = 33602
+        BandType = 7
+      end
+      object ppDBText90: TppDBText
+        UserName = 'DBText90'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'TTD4'
+        DataPipeline = ppDBQTransaksi
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold, fsUnderline]
+        ParentDataPipeline = False
+        TextAlignment = taCentered
+        Transparent = True
+        DataPipelineName = 'ppDBQTransaksi'
+        mmHeight = 4233
+        mmLeft = 141288
+        mmTop = 34925
+        mmWidth = 33602
+        BandType = 7
+      end
+      object ppDBText92: TppDBText
+        UserName = 'DBText92'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'JAB3'
+        DataPipeline = ppDBQTransaksi
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsItalic]
+        ParentDataPipeline = False
+        TextAlignment = taCentered
+        Transparent = True
+        DataPipelineName = 'ppDBQTransaksi'
+        mmHeight = 3969
+        mmLeft = 103188
+        mmTop = 39158
+        mmWidth = 33602
+        BandType = 7
+      end
+      object ppDBText94: TppDBText
+        UserName = 'DBText94'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'JAB4'
+        DataPipeline = ppDBQTransaksi
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsItalic]
+        ParentDataPipeline = False
+        TextAlignment = taCentered
+        Transparent = True
+        DataPipelineName = 'ppDBQTransaksi'
+        mmHeight = 3969
+        mmLeft = 141288
+        mmTop = 39158
+        mmWidth = 33602
+        BandType = 7
+      end
+      object ppDBText95: TppDBText
+        UserName = 'DBText95'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'DIV3'
+        DataPipeline = ppDBQTransaksi
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        TextAlignment = taCentered
+        Transparent = True
+        DataPipelineName = 'ppDBQTransaksi'
+        mmHeight = 4233
+        mmLeft = 103188
+        mmTop = 12700
+        mmWidth = 33602
+        BandType = 7
+      end
+      object ppDBText96: TppDBText
+        UserName = 'DBText301'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'DIV4'
+        DataPipeline = ppDBQTransaksi
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        TextAlignment = taCentered
+        Transparent = True
+        DataPipelineName = 'ppDBQTransaksi'
+        mmHeight = 4233
+        mmLeft = 141288
+        mmTop = 12700
+        mmWidth = 33602
+        BandType = 7
+      end
+      object ppLabel78: TppLabel
+        UserName = 'Label78'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'Label78'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 3302
+        mmLeft = 153723
+        mmTop = 7938
+        mmWidth = 9567
+        BandType = 7
+      end
     end
-    object ppParameterList3: TppParameterList
+    object ppParameterList4: TppParameterList
+    end
+  end
+  object ppDBQReportBowse1: TppDBPipeline
+    DataSource = dsQBrowse1
+    OpenDataSource = False
+    UserName = 'DBQBrowse1'
+    Left = 720
+    Top = 48
+    object ppDBQReportBowse1ppField1: TppField
+      FieldAlias = 'JENIS'
+      FieldName = 'JENIS'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 0
+      Searchable = False
+      Sortable = False
+    end
+    object ppDBQReportBowse1ppField2: TppField
+      FieldAlias = 'AWAL'
+      FieldName = 'AWAL'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 1
+      Searchable = False
+      Sortable = False
+    end
+    object ppDBQReportBowse1ppField3: TppField
+      FieldAlias = 'PEMASUKAN'
+      FieldName = 'PEMASUKAN'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 2
+      Searchable = False
+      Sortable = False
+    end
+    object ppDBQReportBowse1ppField4: TppField
+      FieldAlias = 'PENGELUARAN'
+      FieldName = 'PENGELUARAN'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 3
+      Searchable = False
+      Sortable = False
+    end
+    object ppDBQReportBowse1ppField5: TppField
+      FieldAlias = 'AKHIR'
+      FieldName = 'AKHIR'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 4
+      Searchable = False
+      Sortable = False
+    end
+  end
+  object ppReportMaster: TppReport
+    AutoStop = False
+    DataPipeline = ppDBQMaster
+    PrinterSetup.BinName = 'Default'
+    PrinterSetup.DocumentName = 'Report'
+    PrinterSetup.Orientation = poLandscape
+    PrinterSetup.PaperName = 'A4'
+    PrinterSetup.PrinterName = 'doPDF 11'
+    PrinterSetup.SaveDeviceSettings = False
+    PrinterSetup.mmMarginBottom = 6350
+    PrinterSetup.mmMarginLeft = 6350
+    PrinterSetup.mmMarginRight = 6350
+    PrinterSetup.mmMarginTop = 6350
+    PrinterSetup.mmPaperHeight = 210000
+    PrinterSetup.mmPaperWidth = 297000
+    PrinterSetup.PaperSize = 9
+    Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\ts.rtm'
+    Units = utMillimeters
+    DeviceType = 'Screen'
+    EmailSettings.ReportFormat = 'PDF'
+    LanguageID = 'Default'
+    OutlineSettings.CreateNode = True
+    OutlineSettings.CreatePageNodes = True
+    OutlineSettings.Enabled = False
+    OutlineSettings.Visible = False
+    PDFSettings.EmbedFontOptions = [efUseSubset]
+    PDFSettings.EncryptSettings.AllowCopy = True
+    PDFSettings.EncryptSettings.AllowInteract = True
+    PDFSettings.EncryptSettings.AllowModify = True
+    PDFSettings.EncryptSettings.AllowPrint = True
+    PDFSettings.EncryptSettings.Enabled = False
+    PDFSettings.FontEncoding = feAnsi
+    RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+    RTFSettings.DefaultFont.Color = clWindowText
+    RTFSettings.DefaultFont.Height = -13
+    RTFSettings.DefaultFont.Name = 'Arial'
+    RTFSettings.DefaultFont.Style = []
+    TextSearchSettings.DefaultString = '<FindText>'
+    TextSearchSettings.Enabled = False
+    Left = 792
+    Top = 128
+    Version = '12.03'
+    mmColumnWidth = 197300
+    DataPipelineName = 'ppDBQMaster'
+    object ppTitleBand2: TppTitleBand
+      BeforePrint = ppTitleBand2BeforePrint
+      PrintHeight = phDynamic
+      mmBottomOffset = 0
+      mmHeight = 27517
+      mmPrintPosition = 0
+      object ppLabel1: TppLabel
+        UserName = 'NamaLaporan'
+        HyperlinkColor = clBlue
+        AutoSize = False
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'Transaksi Org'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 14
+        Font.Style = []
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 6350
+        mmLeft = 6879
+        mmTop = 16404
+        mmWidth = 270934
+        BandType = 1
+      end
+      object ppLabel13: TppLabel
+        UserName = 'Label9'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = '====================================='
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3704
+        mmLeft = 6615
+        mmTop = 12435
+        mmWidth = 75671
+        BandType = 1
+      end
+      object ppLabel15: TppLabel
+        UserName = 'Periode'
+        HyperlinkColor = clBlue
+        AutoSize = False
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = '01 Nop 2006 s/d 30 Nop 2006'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 4233
+        mmLeft = 6879
+        mmTop = 23283
+        mmWidth = 270934
+        BandType = 1
+      end
+      object ppDBText11: TppDBText
+        UserName = 'DBText11'
+        HyperlinkColor = clBlue
+        AutoSize = True
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'PERUSAHAAN'
+        DataPipeline = ppDBPerusahaan
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        ParentDataPipeline = False
+        Transparent = True
+        DataPipelineName = 'ppDBPerusahaan'
+        mmHeight = 4191
+        mmLeft = 6615
+        mmTop = 1058
+        mmWidth = 58886
+        BandType = 1
+      end
+      object ppDBText15: TppDBText
+        UserName = 'DBText12'
+        HyperlinkColor = clBlue
+        AutoSize = True
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'ALAMAT1'
+        DataPipeline = ppDBPerusahaan
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = []
+        ParentDataPipeline = False
+        Transparent = True
+        DataPipelineName = 'ppDBPerusahaan'
+        mmHeight = 3725
+        mmLeft = 6615
+        mmTop = 5292
+        mmWidth = 14224
+        BandType = 1
+      end
+      object ppDBText16: TppDBText
+        UserName = 'DBText13'
+        HyperlinkColor = clBlue
+        AutoSize = True
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'TELEPON1'
+        DataPipeline = ppDBPerusahaan
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = []
+        ParentDataPipeline = False
+        Transparent = True
+        DataPipelineName = 'ppDBPerusahaan'
+        mmHeight = 3725
+        mmLeft = 6615
+        mmTop = 9260
+        mmWidth = 16679
+        BandType = 1
+      end
+    end
+    object ppHeaderBand2: TppHeaderBand
+      BeforePrint = ppHeaderBand1BeforePrint
+      mmBottomOffset = 0
+      mmHeight = 12435
+      mmPrintPosition = 0
+      object ppLabel16: TppLabel
+        UserName = 'Label6'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'NO'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 4763
+        mmTop = 5027
+        mmWidth = 5556
+        BandType = 0
+      end
+      object ppLine2: TppLine
+        UserName = 'Line1'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Weight = 0.750000000000000000
+        mmHeight = 529
+        mmLeft = 3175
+        mmTop = 0
+        mmWidth = 274109
+        BandType = 0
+      end
+      object ppLine64: TppLine
+        UserName = 'Line3'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 12171
+        mmLeft = 277548
+        mmTop = 0
+        mmWidth = 265
+        BandType = 0
+      end
+      object ppLabel20: TppLabel
+        UserName = 'Label1'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'NAMA MITRA'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 16933
+        mmTop = 5027
+        mmWidth = 20638
+        BandType = 0
+      end
+      object ppLabel21: TppLabel
+        UserName = 'Label3'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'JENIS'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 60590
+        mmTop = 5027
+        mmWidth = 7959
+        BandType = 0
+      end
+      object ppLine78: TppLine
+        UserName = 'Line4'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 12171
+        mmLeft = 2910
+        mmTop = 0
+        mmWidth = 265
+        BandType = 0
+      end
+      object ppLine79: TppLine
+        UserName = 'Line5'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 12171
+        mmLeft = 12700
+        mmTop = 0
+        mmWidth = 265
+        BandType = 0
+      end
+      object ppLine80: TppLine
+        UserName = 'Line6'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 12171
+        mmLeft = 43656
+        mmTop = 0
+        mmWidth = 265
+        BandType = 0
+      end
+      object ppLine81: TppLine
+        UserName = 'Line7'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 12171
+        mmLeft = 87577
+        mmTop = 0
+        mmWidth = 265
+        BandType = 0
+      end
+      object ppLine82: TppLine
+        UserName = 'Line8'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 12171
+        mmLeft = 99219
+        mmTop = 0
+        mmWidth = 265
+        BandType = 0
+      end
+      object ppLine83: TppLine
+        UserName = 'Line9'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 12171
+        mmLeft = 119592
+        mmTop = 0
+        mmWidth = 265
+        BandType = 0
+      end
+      object ppLabel29: TppLabel
+        UserName = 'Label11'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'KP'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 91546
+        mmTop = 5027
+        mmWidth = 3810
+        BandType = 0
+      end
+      object ppLabel44: TppLabel
+        UserName = 'Label18'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'ARAH'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 105569
+        mmTop = 5027
+        mmWidth = 7874
+        BandType = 0
+      end
+      object ppLabel46: TppLabel
+        UserName = 'Label24'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'KONSTRUKSI'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 134938
+        mmTop = 5027
+        mmWidth = 18373
+        BandType = 0
+      end
+      object ppLine87: TppLine
+        UserName = 'Line13'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 12171
+        mmLeft = 168540
+        mmTop = 0
+        mmWidth = 265
+        BandType = 0
+      end
+      object ppLine88: TppLine
+        UserName = 'Line14'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 12171
+        mmLeft = 224367
+        mmTop = 0
+        mmWidth = 265
+        BandType = 0
+      end
+      object ppLine106: TppLine
+        UserName = 'Line25'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Weight = 0.750000000000000000
+        mmHeight = 529
+        mmLeft = 2910
+        mmTop = 11906
+        mmWidth = 274903
+        BandType = 0
+      end
+      object ppLine84: TppLine
+        UserName = 'Line84'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 12171
+        mmLeft = 187061
+        mmTop = 0
+        mmWidth = 265
+        BandType = 0
+      end
+      object ppLine85: TppLine
+        UserName = 'Line85'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 12171
+        mmLeft = 205317
+        mmTop = 0
+        mmWidth = 265
+        BandType = 0
+      end
+      object ppLine86: TppLine
+        UserName = 'Line86'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 12171
+        mmLeft = 242359
+        mmTop = 264
+        mmWidth = 265
+        BandType = 0
+      end
+      object ppLine89: TppLine
+        UserName = 'Line89'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 12171
+        mmLeft = 260351
+        mmTop = 264
+        mmWidth = 265
+        BandType = 0
+      end
+      object ppLabel22: TppLabel
+        UserName = 'Label22'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'JUMLAH'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 3302
+        mmLeft = 172509
+        mmTop = 3175
+        mmWidth = 11515
+        BandType = 0
+      end
+      object ppLabel23: TppLabel
+        UserName = 'Label23'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'KG'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 3302
+        mmLeft = 176150
+        mmTop = 7144
+        mmWidth = 4233
+        BandType = 0
+      end
+      object ppLabel25: TppLabel
+        UserName = 'Label25'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'JUMLAH'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 3302
+        mmLeft = 191294
+        mmTop = 3175
+        mmWidth = 11515
+        BandType = 0
+      end
+      object ppLabel26: TppLabel
+        UserName = 'Label26'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'POTONG'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 3302
+        mmLeft = 191189
+        mmTop = 7144
+        mmWidth = 11853
+        BandType = 0
+      end
+      object ppLabel28: TppLabel
+        UserName = 'Label28'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'JUMLAH'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 3302
+        mmLeft = 209815
+        mmTop = 3175
+        mmWidth = 11515
+        BandType = 0
+      end
+      object ppLabel35: TppLabel
+        UserName = 'Label35'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'SPRING'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 3302
+        mmLeft = 210345
+        mmTop = 7144
+        mmWidth = 10583
+        BandType = 0
+      end
+      object ppLabel36: TppLabel
+        UserName = 'Label36'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'JUMLAH'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 3302
+        mmLeft = 228336
+        mmTop = 3175
+        mmWidth = 11515
+        BandType = 0
+      end
+      object ppLabel43: TppLabel
+        UserName = 'Label43'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'BEAM'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 3302
+        mmLeft = 230051
+        mmTop = 7144
+        mmWidth = 8213
+        BandType = 0
+      end
+      object ppLabel45: TppLabel
+        UserName = 'Label45'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'JML BS'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 3302
+        mmLeft = 246063
+        mmTop = 3175
+        mmWidth = 10160
+        BandType = 0
+      end
+      object ppLabel47: TppLabel
+        UserName = 'Label47'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'POTONG'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 3302
+        mmLeft = 245269
+        mmTop = 7144
+        mmWidth = 11853
+        BandType = 0
+      end
+      object ppLabel48: TppLabel
+        UserName = 'Label48'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = '% BS'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 3302
+        mmLeft = 266171
+        mmTop = 5027
+        mmWidth = 6773
+        BandType = 0
+      end
+    end
+    object ppDetailBand2: TppDetailBand
+      BeforePrint = ppDetailBand2BeforePrint
+      Background1.Brush.Style = bsClear
+      Background1.Gradient.EndColor = clWhite
+      Background1.Gradient.StartColor = clWhite
+      Background1.Gradient.Style = gsNone
+      Background2.Brush.Style = bsClear
+      Background2.Gradient.EndColor = clWhite
+      Background2.Gradient.StartColor = clWhite
+      Background2.Gradient.Style = gsNone
+      PrintHeight = phDynamic
+      mmBottomOffset = 0
+      mmHeight = 7408
+      mmPrintPosition = 0
+      object ppVariable1: TppVariable
+        UserName = 'No2'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        BlankWhenZero = False
+        CalcOrder = 0
+        DataType = dtInteger
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 3302
+        mmLeft = 4842
+        mmTop = 2117
+        mmWidth = 4995
+        BandType = 4
+      end
+      object ppDBText18: TppDBText
+        UserName = 'DBText1'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'MITRA'
+        DataPipeline = ppDBQMaster
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        SuppressRepeatedValues = True
+        Transparent = True
+        DataPipelineName = 'ppDBQMaster'
+        mmHeight = 3302
+        mmLeft = 14023
+        mmTop = 2117
+        mmWidth = 29104
+        BandType = 4
+      end
+      object ppDBText20: TppDBText
+        UserName = 'DBText5'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'KP'
+        DataPipeline = ppDBQMaster
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taCentered
+        Transparent = True
+        DataPipelineName = 'ppDBQMaster'
+        mmHeight = 3302
+        mmLeft = 89429
+        mmTop = 2117
+        mmWidth = 8731
+        BandType = 4
+      end
+      object ppDBText21: TppDBText
+        UserName = 'DBText2'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'JENIS'
+        DataPipeline = ppDBQMaster
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        SuppressRepeatedValues = True
+        Transparent = True
+        DataPipelineName = 'ppDBQMaster'
+        mmHeight = 3175
+        mmLeft = 45508
+        mmTop = 2117
+        mmWidth = 41275
+        BandType = 4
+      end
+      object ppLine107: TppLine
+        UserName = 'Line26'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Weight = 0.750000000000000000
+        mmHeight = 529
+        mmLeft = 2910
+        mmTop = 0
+        mmWidth = 274903
+        BandType = 4
+      end
+      object ppDBText25: TppDBText
+        UserName = 'DBText3'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'ARAH'
+        DataPipeline = ppDBQMaster
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taCentered
+        Transparent = True
+        DataPipelineName = 'ppDBQMaster'
+        mmHeight = 3302
+        mmLeft = 100806
+        mmTop = 2117
+        mmWidth = 17198
+        BandType = 4
+      end
+      object ppDBText26: TppDBText
+        UserName = 'DBText4'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'KONSTRUKSI'
+        DataPipeline = ppDBQMaster
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        DataPipelineName = 'ppDBQMaster'
+        mmHeight = 3302
+        mmLeft = 121179
+        mmTop = 2117
+        mmWidth = 45773
+        BandType = 4
+      end
+      object ppDBText32: TppDBText
+        UserName = 'DBText6'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'QTY_KG'
+        DataPipeline = ppDBQMaster
+        DisplayFormat = '#,0.000;-#,0.000;-'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'ppDBQMaster'
+        mmHeight = 3302
+        mmLeft = 169863
+        mmTop = 2117
+        mmWidth = 15610
+        BandType = 4
+      end
+      object ppDBText33: TppDBText
+        UserName = 'DBText7'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'QTY_SPRING'
+        DataPipeline = ppDBQMaster
+        DisplayFormat = '#,0.000;-#,0.000;-'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'ppDBQMaster'
+        mmHeight = 3302
+        mmLeft = 206375
+        mmTop = 2117
+        mmWidth = 16404
+        BandType = 4
+      end
+      object ppDBText34: TppDBText
+        UserName = 'DBText8'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'QTY_PTG'
+        DataPipeline = ppDBQMaster
+        DisplayFormat = '#,0.000;-#,0.000;-'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'ppDBQMaster'
+        mmHeight = 3302
+        mmLeft = 188384
+        mmTop = 2117
+        mmWidth = 15346
+        BandType = 4
+      end
+      object ppDBText35: TppDBText
+        UserName = 'DBText9'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'QTY_BS'
+        DataPipeline = ppDBQMaster
+        DisplayFormat = '#,0.000;-#,0.000;-'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'ppDBQMaster'
+        mmHeight = 3302
+        mmLeft = 243946
+        mmTop = 2117
+        mmWidth = 14817
+        BandType = 4
+      end
+      object ppDBText36: TppDBText
+        UserName = 'DBText10'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'QTY_BEAM'
+        DataPipeline = ppDBQMaster
+        DisplayFormat = '#,0.000;-#,0.000;-'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'ppDBQMaster'
+        mmHeight = 3302
+        mmLeft = 225955
+        mmTop = 2117
+        mmWidth = 14817
+        BandType = 4
+      end
+      object ppLine108: TppLine
+        UserName = 'Line27'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Weight = 0.750000000000000000
+        mmHeight = 529
+        mmLeft = 2910
+        mmTop = 7144
+        mmWidth = 274903
+        BandType = 4
+      end
+      object ppLine109: TppLine
+        UserName = 'Line28'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 7144
+        mmLeft = 2910
+        mmTop = 0
+        mmWidth = 265
+        BandType = 4
+      end
+      object ppLine110: TppLine
+        UserName = 'Line29'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 7144
+        mmLeft = 12700
+        mmTop = 0
+        mmWidth = 265
+        BandType = 4
+      end
+      object ppLine113: TppLine
+        UserName = 'Line30'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 7144
+        mmLeft = 43656
+        mmTop = 0
+        mmWidth = 265
+        BandType = 4
+      end
+      object ppLine115: TppLine
+        UserName = 'Line301'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 7144
+        mmLeft = 87577
+        mmTop = 0
+        mmWidth = 265
+        BandType = 4
+      end
+      object ppLine117: TppLine
+        UserName = 'Line32'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 7144
+        mmLeft = 99219
+        mmTop = 0
+        mmWidth = 265
+        BandType = 4
+      end
+      object ppLine119: TppLine
+        UserName = 'Line33'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 7144
+        mmLeft = 119592
+        mmTop = 0
+        mmWidth = 265
+        BandType = 4
+      end
+      object ppLine121: TppLine
+        UserName = 'Line34'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 7144
+        mmLeft = 168540
+        mmTop = 0
+        mmWidth = 265
+        BandType = 4
+      end
+      object ppLine122: TppLine
+        UserName = 'Line35'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 7144
+        mmLeft = 187061
+        mmTop = 0
+        mmWidth = 265
+        BandType = 4
+      end
+      object ppLine123: TppLine
+        UserName = 'Line36'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 7144
+        mmLeft = 205317
+        mmTop = 0
+        mmWidth = 265
+        BandType = 4
+      end
+      object ppLine124: TppLine
+        UserName = 'Line37'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 7144
+        mmLeft = 224367
+        mmTop = 0
+        mmWidth = 265
+        BandType = 4
+      end
+      object ppLine125: TppLine
+        UserName = 'Line38'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 7144
+        mmLeft = 242359
+        mmTop = 0
+        mmWidth = 265
+        BandType = 4
+      end
+      object ppLine126: TppLine
+        UserName = 'Line39'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 7144
+        mmLeft = 260351
+        mmTop = 0
+        mmWidth = 265
+        BandType = 4
+      end
+      object ppLine132: TppLine
+        UserName = 'Line45'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Position = lpLeft
+        Weight = 0.750000000000000000
+        mmHeight = 7144
+        mmLeft = 277548
+        mmTop = 0
+        mmWidth = 265
+        BandType = 4
+      end
+      object ppDBText37: TppDBText
+        UserName = 'DBText101'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'QTY_PERSEN'
+        DataPipeline = ppDBQMaster
+        DisplayFormat = '#,0.000;-#,0.000;-'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'ppDBQMaster'
+        mmHeight = 3302
+        mmLeft = 261938
+        mmTop = 2117
+        mmWidth = 14023
+        BandType = 4
+      end
+    end
+    object ppFooterBand2: TppFooterBand
+      mmBottomOffset = 0
+      mmHeight = 3175
+      mmPrintPosition = 0
+      object ppSystemVariable2: TppSystemVariable
+        UserName = 'SystemVariable1'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        VarType = vtPageNo
+        DisplayFormat = 'Hal : #'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 269876
+        mmTop = 0
+        mmWidth = 7938
+        BandType = 8
+      end
+      object ppLabel57: TppLabel
+        UserName = 'UserCetak1'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'SYSTEM, 17 Jan 2007 16:35'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 216959
+        mmTop = 0
+        mmWidth = 28840
+        BandType = 8
+      end
+    end
+    object ppSummaryBand2: TppSummaryBand
+      BeforePrint = ppSummaryBand2BeforePrint
+      AlignToBottom = False
+      mmBottomOffset = 0
+      mmHeight = 31221
+      mmPrintPosition = 0
+      object ppDBText51: TppDBText
+        UserName = 'DBText19'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'TTD1'
+        DataPipeline = ppDBQTransaksi
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold, fsUnderline]
+        ParentDataPipeline = False
+        TextAlignment = taCentered
+        Transparent = True
+        DataPipelineName = 'ppDBQTransaksi'
+        mmHeight = 4233
+        mmLeft = 124354
+        mmTop = 22754
+        mmWidth = 33602
+        BandType = 7
+      end
+      object ppDBText52: TppDBText
+        UserName = 'DBText42'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'TTD2'
+        DataPipeline = ppDBQTransaksi
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold, fsUnderline]
+        ParentDataPipeline = False
+        TextAlignment = taCentered
+        Transparent = True
+        DataPipelineName = 'ppDBQTransaksi'
+        mmHeight = 4233
+        mmLeft = 162454
+        mmTop = 22754
+        mmWidth = 33602
+        BandType = 7
+      end
+      object ppDBText53: TppDBText
+        UserName = 'DBText43'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'TTD3'
+        DataPipeline = ppDBQTransaksi
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold, fsUnderline]
+        ParentDataPipeline = False
+        TextAlignment = taCentered
+        Transparent = True
+        DataPipelineName = 'ppDBQTransaksi'
+        mmHeight = 4233
+        mmLeft = 200555
+        mmTop = 22754
+        mmWidth = 33602
+        BandType = 7
+      end
+      object ppDBText54: TppDBText
+        UserName = 'DBText44'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'DIV3'
+        DataPipeline = ppDBQTransaksi
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        TextAlignment = taCentered
+        Transparent = True
+        DataPipelineName = 'ppDBQTransaksi'
+        mmHeight = 4233
+        mmLeft = 200555
+        mmTop = 4233
+        mmWidth = 33602
+        BandType = 7
+      end
+      object ppDBText55: TppDBText
+        UserName = 'DBText45'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'DIV2'
+        DataPipeline = ppDBQTransaksi
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        TextAlignment = taCentered
+        Transparent = True
+        DataPipelineName = 'ppDBQTransaksi'
+        mmHeight = 3440
+        mmLeft = 162454
+        mmTop = 4233
+        mmWidth = 33602
+        BandType = 7
+      end
+      object ppDBText56: TppDBText
+        UserName = 'DBText46'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'DIV1'
+        DataPipeline = ppDBQTransaksi
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        TextAlignment = taCentered
+        Transparent = True
+        DataPipelineName = 'ppDBQTransaksi'
+        mmHeight = 3440
+        mmLeft = 142082
+        mmTop = 4233
+        mmWidth = 33602
+        BandType = 7
+      end
+      object ppDBText57: TppDBText
+        UserName = 'DBText47'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'JAB3'
+        DataPipeline = ppDBQTransaksi
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsItalic]
+        ParentDataPipeline = False
+        TextAlignment = taCentered
+        Transparent = True
+        DataPipelineName = 'ppDBQTransaksi'
+        mmHeight = 4233
+        mmLeft = 200555
+        mmTop = 26988
+        mmWidth = 33602
+        BandType = 7
+      end
+      object ppDBText58: TppDBText
+        UserName = 'DBText48'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'JAB2'
+        DataPipeline = ppDBQTransaksi
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsItalic]
+        ParentDataPipeline = False
+        TextAlignment = taCentered
+        Transparent = True
+        DataPipelineName = 'ppDBQTransaksi'
+        mmHeight = 3969
+        mmLeft = 162454
+        mmTop = 26988
+        mmWidth = 33602
+        BandType = 7
+      end
+      object ppDBText59: TppDBText
+        UserName = 'DBText401'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'JAB1'
+        DataPipeline = ppDBQTransaksi
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsItalic]
+        ParentDataPipeline = False
+        TextAlignment = taCentered
+        Transparent = True
+        DataPipelineName = 'ppDBQTransaksi'
+        mmHeight = 3969
+        mmLeft = 124354
+        mmTop = 26988
+        mmWidth = 33602
+        BandType = 7
+      end
+      object ppDBText60: TppDBText
+        UserName = 'DBText29'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'TTD4'
+        DataPipeline = ppDBQTransaksi
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold, fsUnderline]
+        ParentDataPipeline = False
+        TextAlignment = taCentered
+        Transparent = True
+        DataPipelineName = 'ppDBQTransaksi'
+        mmHeight = 4233
+        mmLeft = 239448
+        mmTop = 22754
+        mmWidth = 33602
+        BandType = 7
+      end
+      object ppDBText61: TppDBText
+        UserName = 'DBText30'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'DIV4'
+        DataPipeline = ppDBQTransaksi
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        TextAlignment = taCentered
+        Transparent = True
+        DataPipelineName = 'ppDBQTransaksi'
+        mmHeight = 4233
+        mmLeft = 239448
+        mmTop = 4233
+        mmWidth = 33602
+        BandType = 7
+      end
+      object ppDBText62: TppDBText
+        UserName = 'DBText31'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'JAB4'
+        DataPipeline = ppDBQTransaksi
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsItalic]
+        ParentDataPipeline = False
+        TextAlignment = taCentered
+        Transparent = True
+        DataPipelineName = 'ppDBQTransaksi'
+        mmHeight = 4233
+        mmLeft = 239448
+        mmTop = 26988
+        mmWidth = 33602
+        BandType = 7
+      end
+      object ppLabel59: TppLabel
+        UserName = 'Label42'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'Label42'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 250561
+        mmTop = 265
+        mmWidth = 9790
+        BandType = 7
+      end
+    end
+    object ppParameterList2: TppParameterList
     end
   end
 end

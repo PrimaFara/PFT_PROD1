@@ -282,79 +282,150 @@ type
     QMasterQTY_BS: TFloatField;
     QProcRekapBulanan: TOracleQuery;
     ppDBQMaster: TppDBPipeline;
-    ppDBQMasterppField1: TppField;
-    ppDBQMasterppField2: TppField;
-    ppDBQMasterppField3: TppField;
-    ppDBQMasterppField4: TppField;
-    ppDBQMasterppField5: TppField;
-    ppDBQMasterppField6: TppField;
-    ppDBQMasterppField7: TppField;
-    ppDBQMasterppField8: TppField;
-    ppDBQMasterppField9: TppField;
-    ppDBQMasterppField10: TppField;
-    ppDBQMasterppField11: TppField;
-    ppDBQMasterppField12: TppField;
-    ppDBQMasterppField13: TppField;
-    ppDBQMasterppField14: TppField;
-    ppDBQMasterppField15: TppField;
-    ppDBQMasterppField16: TppField;
-    ppDBQMasterppField17: TppField;
-    ppDBQMasterppField18: TppField;
-    ppDBQMasterppField19: TppField;
-    ppReportInput: TppReport;
+    ppDBQTransaksi: TppDBPipeline;
+    ppDBQDetail: TppDBPipeline;
+    ppDBQDetailppMasterFieldLink1: TppMasterFieldLink;
+    Panel5: TPanel;
+    QMasterQTY_PERSEN: TFloatField;
+    ppDBPerusahaan: TppDBPipeline;
+    Panel6: TPanel;
+    BitBtn3: TBitBtn;
+    Panel7: TPanel;
+    BitBtn4: TBitBtn;
+    Panel8: TPanel;
+    BitBtn5: TBitBtn;
+    BitBtn6: TBitBtn;
+    ppReportBrowse1: TppReport;
+    ppTitleBand4: TppTitleBand;
+    ppLabel69: TppLabel;
+    ppLabel70: TppLabel;
+    ppLabel71: TppLabel;
+    ppDBText83: TppDBText;
+    ppDBText84: TppDBText;
+    ppDBText85: TppDBText;
+    ppHeaderBand4: TppHeaderBand;
+    ppLabel72: TppLabel;
+    ppLabel73: TppLabel;
+    ppLabel74: TppLabel;
+    ppLine67: TppLine;
+    ppLine68: TppLine;
+    ppLine69: TppLine;
+    ppLine70: TppLine;
+    ppLabel76: TppLabel;
+    ppLine71: TppLine;
+    ppLine72: TppLine;
+    ppDetailBand4: TppDetailBand;
+    ppVariable4: TppVariable;
+    ppDBText86: TppDBText;
+    ppDBText87: TppDBText;
+    ppDBText89: TppDBText;
+    ppDBText91: TppDBText;
+    ppDBText93: TppDBText;
+    ppLine91: TppLine;
+    ppLine92: TppLine;
+    ppLine94: TppLine;
+    ppLine95: TppLine;
+    ppLine97: TppLine;
+    ppLine98: TppLine;
+    ppLine99: TppLine;
+    ppFooterBand4: TppFooterBand;
+    ppSummaryBand4: TppSummaryBand;
+    ppDBText102: TppDBText;
+    ppDBText103: TppDBText;
+    ppDBText106: TppDBText;
+    ppDBText107: TppDBText;
+    ppDBText109: TppDBText;
+    ppDBText110: TppDBText;
+    ppDBCalc17: TppDBCalc;
+    ppDBCalc20: TppDBCalc;
+    ppDBCalc23: TppDBCalc;
+    ppDBCalc24: TppDBCalc;
+    ppLine111: TppLine;
+    ppLine112: TppLine;
+    ppLabel98: TppLabel;
+    ppLine114: TppLine;
+    ppLine116: TppLine;
+    ppLine118: TppLine;
+    ppLine120: TppLine;
+    ppParameterList4: TppParameterList;
+    ppDBQReportBowse1: TppDBPipeline;
+    ppLabel75: TppLabel;
+    ppLabel77: TppLabel;
+    ppLine65: TppLine;
+    ppLine73: TppLine;
+    ppLine66: TppLine;
+    ppLine74: TppLine;
+    ppLine75: TppLine;
+    ppLine76: TppLine;
+    ppLine77: TppLine;
+    ppDBText88: TppDBText;
+    ppDBText90: TppDBText;
+    ppDBText92: TppDBText;
+    ppDBText94: TppDBText;
+    ppDBText95: TppDBText;
+    ppDBText96: TppDBText;
+    ppLabel78: TppLabel;
+    ppLabel79: TppLabel;
+    ppSystemVariable3: TppSystemVariable;
+    ppReportMaster: TppReport;
     ppTitleBand2: TppTitleBand;
-    ppDBText15: TppDBText;
-    ppDBText50: TppDBText;
-    ppVariable2: TppVariable;
-    ppDBText26: TppDBText;
-    ppLabel25: TppLabel;
-    ppDBText11: TppDBText;
-    ppDBText16: TppDBText;
-    ppDBText18: TppDBText;
     ppLabel1: TppLabel;
     ppLabel13: TppLabel;
     ppLabel15: TppLabel;
-    ppDBText20: TppDBText;
-    ppLabel16: TppLabel;
-    ppDBText25: TppDBText;
-    ppLabel20: TppLabel;
-    ppLabel35: TppLabel;
-    ppLabel21: TppLabel;
-    ppLabel22: TppLabel;
-    ppLabel23: TppLabel;
-    ppDBText51: TppDBText;
+    ppDBText11: TppDBText;
+    ppDBText15: TppDBText;
+    ppDBText16: TppDBText;
     ppHeaderBand2: TppHeaderBand;
-    ppLabel26: TppLabel;
-    ppLabel28: TppLabel;
+    ppLabel16: TppLabel;
+    ppLine2: TppLine;
+    ppLine64: TppLine;
+    ppLabel20: TppLabel;
+    ppLabel21: TppLabel;
+    ppLine78: TppLine;
+    ppLine79: TppLine;
+    ppLine80: TppLine;
+    ppLine81: TppLine;
+    ppLine82: TppLine;
+    ppLine83: TppLine;
     ppLabel29: TppLabel;
-    ppLabel36: TppLabel;
-    ppLabel43: TppLabel;
     ppLabel44: TppLabel;
-    ppLabel45: TppLabel;
     ppLabel46: TppLabel;
-    ppLabel47: TppLabel;
-    ppLabel48: TppLabel;
-    ppLabel49: TppLabel;
+    ppLine87: TppLine;
+    ppLine88: TppLine;
+    ppLine106: TppLine;
     ppDetailBand2: TppDetailBand;
+    ppVariable1: TppVariable;
+    ppDBText18: TppDBText;
+    ppDBText20: TppDBText;
     ppDBText21: TppDBText;
+    ppLine107: TppLine;
+    ppDBText25: TppDBText;
+    ppDBText26: TppDBText;
     ppDBText32: TppDBText;
-    ppDBMemo1: TppDBMemo;
     ppDBText33: TppDBText;
     ppDBText34: TppDBText;
     ppDBText35: TppDBText;
     ppDBText36: TppDBText;
     ppDBText37: TppDBText;
-    ppDBText38: TppDBText;
-    ppDBText39: TppDBText;
-    ppVariable1: TppVariable;
-    ppLabel50: TppLabel;
+    ppLine108: TppLine;
+    ppLine109: TppLine;
+    ppLine110: TppLine;
+    ppLine113: TppLine;
+    ppLine115: TppLine;
+    ppLine117: TppLine;
+    ppLine119: TppLine;
+    ppLine121: TppLine;
+    ppLine122: TppLine;
+    ppLine123: TppLine;
+    ppLine124: TppLine;
+    ppLine125: TppLine;
+    ppLine126: TppLine;
+    ppLine132: TppLine;
     ppFooterBand2: TppFooterBand;
-    ppUserCetak2: TppLabel;
-    ppDBText41: TppDBText;
+    ppSystemVariable2: TppSystemVariable;
+    ppLabel57: TppLabel;
     ppSummaryBand2: TppSummaryBand;
-    ppLabel51: TppLabel;
-    ppDBMemo2: TppDBMemo;
-    ppDBText40: TppDBText;
+    ppDBText51: TppDBText;
     ppDBText52: TppDBText;
     ppDBText53: TppDBText;
     ppDBText54: TppDBText;
@@ -363,68 +434,27 @@ type
     ppDBText57: TppDBText;
     ppDBText58: TppDBText;
     ppDBText59: TppDBText;
-    ppLine2: TppLine;
-    ppLine64: TppLine;
-    ppDBCalc2: TppDBCalc;
-    ppDBCalc16: TppDBCalc;
-    ppPageStyle1: TppPageStyle;
-    raCodeModule1: TraCodeModule;
-    ppParameterList2: TppParameterList;
-    ppDBQTransaksi: TppDBPipeline;
-    ppDBQDetail: TppDBPipeline;
-    ppDBQDetailppMasterFieldLink1: TppMasterFieldLink;
-    ppReport1: TppReport;
-    ppTitleBand3: TppTitleBand;
-    ppLabel52: TppLabel;
-    ppLabel53: TppLabel;
-    ppLabel54: TppLabel;
     ppDBText60: TppDBText;
     ppDBText61: TppDBText;
     ppDBText62: TppDBText;
-    ppLabel55: TppLabel;
-    ppHeaderBand3: TppHeaderBand;
-    ppLabel56: TppLabel;
-    ppLabel57: TppLabel;
-    ppLabel58: TppLabel;
     ppLabel59: TppLabel;
-    ppLabel60: TppLabel;
-    ppLabel61: TppLabel;
-    ppLabel62: TppLabel;
-    ppLabel63: TppLabel;
-    ppLabel64: TppLabel;
-    ppLabel65: TppLabel;
-    ppLabel66: TppLabel;
-    ppLabel67: TppLabel;
-    ppLabel68: TppLabel;
-    ppDetailBand3: TppDetailBand;
-    ppDBText63: TppDBText;
-    ppDBText64: TppDBText;
-    ppDBText65: TppDBText;
-    ppDBMemo3: TppDBMemo;
-    ppVariable3: TppVariable;
-    ppDBText66: TppDBText;
-    ppDBText67: TppDBText;
-    ppDBText68: TppDBText;
-    ppDBText69: TppDBText;
-    ppDBText70: TppDBText;
-    ppDBText71: TppDBText;
-    ppDBText72: TppDBText;
-    ppDBText73: TppDBText;
-    ppFooterBand3: TppFooterBand;
-    ppSystemVariable2: TppSystemVariable;
-    ppSummaryBand3: TppSummaryBand;
-    ppDBText74: TppDBText;
-    ppDBText75: TppDBText;
-    ppDBText76: TppDBText;
-    ppDBText77: TppDBText;
-    ppDBText78: TppDBText;
-    ppDBText79: TppDBText;
-    ppDBText80: TppDBText;
-    ppDBText81: TppDBText;
-    ppDBText82: TppDBText;
-    ppParameterList3: TppParameterList;
-    Panel5: TPanel;
-    QMasterQTY_PERSEN: TFloatField;
+    ppParameterList2: TppParameterList;
+    BitBtn7: TBitBtn;
+    ppLine84: TppLine;
+    ppLine85: TppLine;
+    ppLine86: TppLine;
+    ppLine89: TppLine;
+    ppLabel22: TppLabel;
+    ppLabel23: TppLabel;
+    ppLabel25: TppLabel;
+    ppLabel26: TppLabel;
+    ppLabel28: TppLabel;
+    ppLabel35: TppLabel;
+    ppLabel36: TppLabel;
+    ppLabel43: TppLabel;
+    ppLabel45: TppLabel;
+    ppLabel47: TppLabel;
+    ppLabel48: TppLabel;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);
@@ -468,6 +498,14 @@ type
     procedure Label9Click(Sender: TObject);
     procedure wwDBSpinEdit2Change(Sender: TObject);
     procedure QMasterCalcFields(DataSet: TDataSet);
+    procedure TabSheet3Show(Sender: TObject);
+    procedure BitBtn6Click(Sender: TObject);
+    procedure ppDetailBand4BeforePrint(Sender: TObject);
+    procedure ppSummaryBand4BeforePrint(Sender: TObject);
+    procedure ppTitleBand4BeforePrint(Sender: TObject);
+    procedure BitBtn7Click(Sender: TObject);
+    procedure ppTitleBand2BeforePrint(Sender: TObject);
+    procedure ppSummaryBand2BeforePrint(Sender: TObject);
   //  procedure ppNo2Print(Sender: TObject);
   private
     { Private declarations }
@@ -967,7 +1005,7 @@ end;
 
 procedure TLaporanDeptKemitraanFrm.ppDetailBand2BeforePrint(Sender: TObject);
 begin
- // ppNo2.AsInteger:=ppNo2.AsInteger+1;
+  ppVariable1.AsInteger:=ppVariable1.AsInteger+1;
 end;
 
 procedure TLaporanDeptKemitraanFrm.ppDetailBand1BeforePrint(Sender: TObject);
@@ -1098,9 +1136,9 @@ var
   vqty1, vqty2 : real;
 begin
      QBrowse1.DisableControls;
+     QBrowse1.Close;
      QBrowse1.SetVariable('pawal', vTglAwal2.Date);
      QBrowse1.SetVariable('pakhir', vTglAkhir2.Date);
-     QBrowse1.Close;
      QBrowse1.Open;
      QBrowse1.EnableControls;
      vqty1:=0;
@@ -1191,6 +1229,74 @@ var vqty_ptg: Real;
 begin
   if QMasterQTY_PTG.AsFloat >= 1 then vqty_ptg:=QMasterQTY_PTG.AsFloat else vqty_ptg:=1;
   QMasterQTY_PERSEN.AsFloat:=(QMasterQTY_BS.AsFloat/vqty_ptg)*100;
+end;
+
+procedure TLaporanDeptKemitraanFrm.TabSheet3Show(Sender: TObject);
+begin
+  QBrowse1.Close;
+  QBrowse1.SetVariable('pawal', vTglAwal2.DateTime);
+  QBrowse1.SetVariable('pakhir', vTglAkhir2.DateTime);
+  QBrowse1.Open;
+end;
+
+procedure TLaporanDeptKemitraanFrm.BitBtn6Click(Sender: TObject);
+begin
+  if vTglAwal2.Date>vTglAkhir2.DateTime then
+    ShowMessage('Tgl. Akhir harus lebih besar dari Tgl. Awal !')
+    else
+    begin
+      ppReportBrowse1.Print;
+    end;
+end;
+
+procedure TLaporanDeptKemitraanFrm.ppDetailBand4BeforePrint(
+  Sender: TObject);
+begin
+  ppVariable4.AsInteger:=ppVariable4.AsInteger+1;
+end;
+
+procedure TLaporanDeptKemitraanFrm.ppSummaryBand4BeforePrint(
+  Sender: TObject);
+begin
+  ppLabel78.Caption:='Pekalongan, '+FormatDateTime('mmmm yyyy',vTglAwal2.Date);
+end;
+
+procedure TLaporanDeptKemitraanFrm.ppTitleBand4BeforePrint(
+  Sender: TObject);
+begin
+  ppVariable4.AsInteger:=0;
+  ppLabel69.Caption:='STOK AFAL KEMITRAAN';
+  ppLabel71.Caption:=vTglAwal2.Text+' s/d '+vTglAkhir2.Text;
+  DMFrm.QTime.Close;
+  DMFrm.QTime.Open;
+  ppLabel79.Caption:=DMFrm.QTimeVUSER_CETAK.AsString;
+end;
+
+procedure TLaporanDeptKemitraanFrm.BitBtn7Click(Sender: TObject);
+begin
+  if vTglAwal0.Date>vTglAkhir0.DateTime then
+    ShowMessage('Tgl. Akhir harus lebih besar dari Tgl. Awal !')
+    else
+    begin
+      ppReportMaster.Print;
+    end;
+end;
+
+procedure TLaporanDeptKemitraanFrm.ppTitleBand2BeforePrint(
+  Sender: TObject);
+begin
+  ppVariable1.AsInteger:=0;
+  ppLabel1.Caption:='LAPORAN BULANAN PRODUKSI KEMITRAAN';
+  ppLabel15.Caption:=vTglAwal0.Text+' s/d '+vTglAkhir0.Text;
+  DMFrm.QTime.Close;
+  DMFrm.QTime.Open;
+  ppLabel57.Caption:=DMFrm.QTimeVUSER_CETAK.AsString;
+end;
+
+procedure TLaporanDeptKemitraanFrm.ppSummaryBand2BeforePrint(
+  Sender: TObject);
+begin
+  ppLabel59.Caption:='Pekalongan, '+FormatDateTime('mmmm yyyy',vTglAwal0.Date);
 end;
 
 end.
