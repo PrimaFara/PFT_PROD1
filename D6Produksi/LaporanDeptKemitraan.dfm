@@ -105,6 +105,16 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
             OnClick = BitBtn7Click
             NumGlyphs = 2
           end
+          object BitBtn8: TBitBtn
+            Left = 354
+            Top = 14
+            Width = 75
+            Height = 25
+            Caption = '&Export'
+            TabOrder = 2
+            OnClick = BitBtn8Click
+            NumGlyphs = 2
+          end
         end
         object Panel3: TPanel
           Left = 0
@@ -898,6 +908,16 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
                   Caption = '&Print'
                   TabOrder = 1
                   OnClick = BitBtn6Click
+                  NumGlyphs = 2
+                end
+                object BitBtn9: TBitBtn
+                  Left = 354
+                  Top = 14
+                  Width = 75
+                  Height = 25
+                  Caption = '&Export'
+                  TabOrder = 2
+                  OnClick = BitBtn9Click
                   NumGlyphs = 2
                 end
               end

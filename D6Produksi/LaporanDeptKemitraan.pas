@@ -455,6 +455,8 @@ type
     ppLabel45: TppLabel;
     ppLabel47: TppLabel;
     ppLabel48: TppLabel;
+    BitBtn8: TBitBtn;
+    BitBtn9: TBitBtn;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);
@@ -506,6 +508,8 @@ type
     procedure BitBtn7Click(Sender: TObject);
     procedure ppTitleBand2BeforePrint(Sender: TObject);
     procedure ppSummaryBand2BeforePrint(Sender: TObject);
+    procedure BitBtn8Click(Sender: TObject);
+    procedure BitBtn9Click(Sender: TObject);
   //  procedure ppNo2Print(Sender: TObject);
   private
     { Private declarations }
@@ -1297,6 +1301,188 @@ procedure TLaporanDeptKemitraanFrm.ppSummaryBand2BeforePrint(
   Sender: TObject);
 begin
   ppLabel59.Caption:='Pekalongan, '+FormatDateTime('mmmm yyyy',vTglAwal0.Date);
+end;
+
+procedure TLaporanDeptKemitraanFrm.BitBtn8Click(Sender: TObject);
+var
+  ExcelApp: Variant;
+  Workbook: Variant;
+  Worksheet: Variant;
+  i, j: Integer;
+  Field: TField;
+  FormatSettings: TFormatSettings;
+begin
+  ShowMessage('Tunggu Hingga Proses Selesai. Klik Ok untuk memulai');
+  
+  // Inisialisasi TFormatSettings untuk mengontrol pemisah desimal
+  GetLocaleFormatSettings(GetThreadLocale, FormatSettings);
+  FormatSettings.DecimalSeparator := '.';
+
+  // Menampilkan dialog Save As
+  DMFrm.SaveDialog1.Filter := 'Excel Files|*.xlsx';
+  DMFrm.SaveDialog1.DefaultExt := 'xlsx';
+
+  if DMFrm.SaveDialog1.Execute then
+  begin
+    // Membuat instance dari Excel
+    ExcelApp := CreateOleObject('Excel.Application');
+    ExcelApp.Visible := False; // Atur ke True jika Anda ingin melihat proses di Excel
+
+    // Menambahkan workbook baru
+    Workbook := ExcelApp.Workbooks.Add;
+    Worksheet := Workbook.Worksheets[1];
+
+    // Menulis header ke worksheet
+    for i := 0 to wwDBGrid1.DataSource.DataSet.FieldCount - 1 do
+    begin
+      Worksheet.Cells[1, i + 1].Value := wwDBGrid1.DataSource.DataSet.Fields[i].DisplayName;
+    end;
+
+    // Menulis data ke worksheet
+    wwDBGrid1.DataSource.DataSet.First;
+    j := 2; // Mulai dari baris kedua untuk data, karena baris pertama untuk header
+    while not wwDBGrid1.DataSource.DataSet.Eof do
+    begin
+      for i := 0 to wwDBGrid1.DataSource.DataSet.FieldCount - 1 do
+      begin
+        Field := wwDBGrid1.DataSource.DataSet.Fields[i];
+
+        // Memeriksa tipe data field
+        if Field.DataType in [ftDate, ftDateTime] then
+        begin
+          Worksheet.Cells[j, i + 1].Value := Field.AsDateTime;
+          Worksheet.Cells[j, i + 1].NumberFormat := 'dd/mm/yyyy';
+        end
+        else if Field.DataType in [ftFloat, ftCurrency, ftBCD] then
+        begin
+          // Menyimpan nilai float dalam string dengan FormatSettings yang benar
+          Worksheet.Cells[j, i + 1].Value := FloatToStr(Field.AsFloat, FormatSettings);
+          Worksheet.Cells[j, i + 1].NumberFormat := '0.00'; // Atur format angka dengan dua desimal
+        end
+        else
+        begin
+          Worksheet.Cells[j, i + 1].Value := Field.AsString;
+        end;
+
+        // Mengatur alignment sel untuk angka menjadi rata kanan
+        if Field.DataType in [ftInteger, ftFloat, ftCurrency, ftBCD] then
+        begin
+          Worksheet.Cells[j, i + 1].HorizontalAlignment := 3; // xlRight
+        end;
+      end;
+      Inc(j);
+      wwDBGrid1.DataSource.DataSet.Next;
+    end;
+
+    // Menyimpan workbook ke file yang dipilih pengguna
+    Workbook.SaveAs(DMFrm.SaveDialog1.FileName);
+
+    // Menutup workbook dan mengeluarkan Excel dari memori
+    Workbook.Close(False);
+    ExcelApp.Quit;
+
+    // Melepaskan objek COM
+    Worksheet := Unassigned;
+    Workbook := Unassigned;
+    ExcelApp := Unassigned;
+
+    ShowMessage('Data berhasil diekspor ke ' + DMFrm.SaveDialog1.FileName);
+  end
+  else
+  begin
+    ShowMessage('Proses penyimpanan dibatalkan.');
+  end;
+end;
+
+procedure TLaporanDeptKemitraanFrm.BitBtn9Click(Sender: TObject);
+var
+  ExcelApp: Variant;
+  Workbook: Variant;
+  Worksheet: Variant;
+  i, j: Integer;
+  Field: TField;
+  FormatSettings: TFormatSettings;
+begin
+  ShowMessage('Tunggu Hingga Proses Selesai. Klik Ok untuk memulai');
+  
+  // Inisialisasi TFormatSettings untuk mengontrol pemisah desimal
+  GetLocaleFormatSettings(GetThreadLocale, FormatSettings);
+  FormatSettings.DecimalSeparator := '.';
+
+  // Menampilkan dialog Save As
+  DMFrm.SaveDialog1.Filter := 'Excel Files|*.xlsx';
+  DMFrm.SaveDialog1.DefaultExt := 'xlsx';
+
+  if DMFrm.SaveDialog1.Execute then
+  begin
+    // Membuat instance dari Excel
+    ExcelApp := CreateOleObject('Excel.Application');
+    ExcelApp.Visible := False; // Atur ke True jika Anda ingin melihat proses di Excel
+
+    // Menambahkan workbook baru
+    Workbook := ExcelApp.Workbooks.Add;
+    Worksheet := Workbook.Worksheets[1];
+
+    // Menulis header ke worksheet
+    for i := 0 to wwDBGrid3.DataSource.DataSet.FieldCount - 1 do
+    begin
+      Worksheet.Cells[1, i + 1].Value := wwDBGrid3.DataSource.DataSet.Fields[i].DisplayName;
+    end;
+
+    // Menulis data ke worksheet
+    wwDBGrid3.DataSource.DataSet.First;
+    j := 2; // Mulai dari baris kedua untuk data, karena baris pertama untuk header
+    while not wwDBGrid3.DataSource.DataSet.Eof do
+    begin
+      for i := 0 to wwDBGrid3.DataSource.DataSet.FieldCount - 1 do
+      begin
+        Field := wwDBGrid3.DataSource.DataSet.Fields[i];
+
+        // Memeriksa tipe data field
+        if Field.DataType in [ftDate, ftDateTime] then
+        begin
+          Worksheet.Cells[j, i + 1].Value := Field.AsDateTime;
+          Worksheet.Cells[j, i + 1].NumberFormat := 'dd/mm/yyyy';
+        end
+        else if Field.DataType in [ftFloat, ftCurrency, ftBCD] then
+        begin
+          // Menyimpan nilai float dalam string dengan FormatSettings yang benar
+          Worksheet.Cells[j, i + 1].Value := FloatToStr(Field.AsFloat, FormatSettings);
+          Worksheet.Cells[j, i + 1].NumberFormat := '0.00'; // Atur format angka dengan dua desimal
+        end
+        else
+        begin
+          Worksheet.Cells[j, i + 1].Value := Field.AsString;
+        end;
+
+        // Mengatur alignment sel untuk angka menjadi rata kanan
+        if Field.DataType in [ftInteger, ftFloat, ftCurrency, ftBCD] then
+        begin
+          Worksheet.Cells[j, i + 1].HorizontalAlignment := 3; // xlRight
+        end;
+      end;
+      Inc(j);
+      wwDBGrid3.DataSource.DataSet.Next;
+    end;
+
+    // Menyimpan workbook ke file yang dipilih pengguna
+    Workbook.SaveAs(DMFrm.SaveDialog1.FileName);
+
+    // Menutup workbook dan mengeluarkan Excel dari memori
+    Workbook.Close(False);
+    ExcelApp.Quit;
+
+    // Melepaskan objek COM
+    Worksheet := Unassigned;
+    Workbook := Unassigned;
+    ExcelApp := Unassigned;
+
+    ShowMessage('Data berhasil diekspor ke ' + DMFrm.SaveDialog1.FileName);
+  end
+  else
+  begin
+    ShowMessage('Proses penyimpanan dibatalkan.');
+  end;
 end;
 
 end.
