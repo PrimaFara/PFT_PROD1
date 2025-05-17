@@ -125,6 +125,14 @@ type
     BitBtn4: TBitBtn;
     BtnSimpan: TBitBtn;
     wwDBGrid2: TwwDBGrid;
+    QKunciKD_TRANSAKSI: TStringField;
+    QKunciNAMA_TRANSAKSI: TStringField;
+    QKunciBAGIAN: TStringField;
+    Panel2: TPanel;
+    BitBtn2: TBitBtn;
+    DateTimePicker1: TDateTimePicker;
+    Label3: TLabel;
+    QSetAll: TOracleQuery;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure wwDBGrid2TitleButtonClick(Sender: TObject;
@@ -158,6 +166,7 @@ type
     procedure BtnSimpanClick(Sender: TObject);
     procedure BtnEditing4Click(Sender: TObject);
     procedure BtnBrowse4Click(Sender: TObject);
+    procedure BitBtn2Click(Sender: TObject);
   private
     { Private declarations }
     vorder, SelectedFont : String;
@@ -645,8 +654,10 @@ end;
 procedure TProsesAwalTahunFrm.BitBtn4Click(Sender: TObject);
 begin
   QKunci.Close;
+  QKunci.SetVariable('myparam', 'where kd_transaksi like ''%'+ECari4.Text+'%'' or nama_transaksi like ''%'+ECari4.Text+'%'' or bagian like ''%'+ECari4.Text+'%''');
   QKunci.Open;
   QKunci.EnableControls;
+  BtnEditing4.Down:=False;
 end;
 
 procedure TProsesAwalTahunFrm.BtnSimpanClick(Sender: TObject);
@@ -659,6 +670,11 @@ begin
      DMFrm.OS.ApplyUpdates([QKunci],True);
      BtnSimpan.Enabled:=False;
      wwDBGrid2.ReadOnly:=True;
+     BitBtn4.Click;
+     BtnEditing4.Down:=false;
+     BtnBrowse4.Down:=true;
+     Panel2.Visible:=false;
+     ShowMessage('Set kunci tanggal berhasil!');
     except
       on E : Exception do
       begin
@@ -680,6 +696,7 @@ begin
   QKunci.First;
   QKunci.Edit;
   BtnSimpan.Enabled:=True;
+  if panel2.Visible=false then panel2.Visible:=true; 
 end;
 
 procedure TProsesAwalTahunFrm.BtnBrowse4Click(Sender: TObject);
@@ -688,7 +705,40 @@ begin
   if BtnSimpan.Enabled=True then BtnSimpan.Enabled:=False;
   QBrowse.Open;
   QBrowse.Refresh;
-  wwDBGrid2.Refresh; 
+  wwDBGrid2.Refresh;
+  if panel2.Visible=true then panel2.Visible:=false; 
+end;
+
+procedure TProsesAwalTahunFrm.BitBtn2Click(Sender: TObject);
+var kataKunci : String;
+begin
+  kataKunci := InputBox('Input Required', 'Masukan kata kunci:', '');
+  if (kataKunci='ppcoke') then
+  begin
+    try
+     QSetAll.Close;
+     QSetAll.SetVariable('closed_date', DateTimePicker1.Date);
+     QSetAll.Execute;
+     BtnSimpan.Enabled:=False;
+     wwDBGrid2.ReadOnly:=True;
+     BitBtn4.Click;
+     BtnEditing4.Down:=false;
+     BtnBrowse4.Down:=true;
+     Panel2.Visible:=false;
+     ShowMessage('Set kunci tanggal berhasil!');
+    except
+      on E : Exception do
+      begin
+       ShowMessage(E.Message);
+       BtnSimpan.Enabled:=True;
+      end;
+    end;
+  end
+  else
+  begin
+    ShowMessage('Kata kunci salah!!');
+    Abort;
+  end;
 end;
 
 end.

@@ -1,7 +1,7 @@
 object ProsesAwalTahunFrm: TProsesAwalTahunFrm
-  Left = 252
-  Top = 125
-  Width = 817
+  Left = 249
+  Top = 141
+  Width = 994
   Height = 485
   Caption = 'Proses Awal Tahun'
   Color = clBtnFace
@@ -23,17 +23,17 @@ object ProsesAwalTahunFrm: TProsesAwalTahunFrm
     Left = 0
     Top = 0
     Width = 137
-    Height = 454
+    Height = 447
     Align = alLeft
     BevelOuter = bvNone
     Color = 7039851
     TabOrder = 0
   end
   object PanelRight: TPanel
-    Left = 777
+    Left = 977
     Top = 0
-    Width = 32
-    Height = 454
+    Width = 1
+    Height = 447
     Align = alClient
     BevelOuter = bvNone
     Color = clAppWorkSpace
@@ -42,8 +42,8 @@ object ProsesAwalTahunFrm: TProsesAwalTahunFrm
   object PanelMain: TPanel
     Left = 137
     Top = 0
-    Width = 640
-    Height = 454
+    Width = 840
+    Height = 447
     Align = alLeft
     BevelOuter = bvNone
     Ctl3D = False
@@ -51,8 +51,8 @@ object ProsesAwalTahunFrm: TProsesAwalTahunFrm
     TabOrder = 2
     object Label1: TLabel
       Left = 0
-      Top = 441
-      Width = 640
+      Top = 434
+      Width = 840
       Height = 13
       Align = alBottom
       Color = clSkyBlue
@@ -61,7 +61,7 @@ object ProsesAwalTahunFrm: TProsesAwalTahunFrm
     object DBText3: TDBText
       Left = 0
       Top = 49
-      Width = 640
+      Width = 840
       Height = 27
       Align = alTop
       Alignment = taRightJustify
@@ -79,7 +79,7 @@ object ProsesAwalTahunFrm: TProsesAwalTahunFrm
     object PanelHeader: TPanel
       Left = 0
       Top = 0
-      Width = 640
+      Width = 840
       Height = 49
       Align = alTop
       BevelOuter = bvNone
@@ -96,8 +96,8 @@ object ProsesAwalTahunFrm: TProsesAwalTahunFrm
     object PageControl1: TPageControl
       Left = 0
       Top = 76
-      Width = 640
-      Height = 365
+      Width = 840
+      Height = 358
       ActivePage = TabSheet2
       Align = alClient
       Style = tsFlatButtons
@@ -108,7 +108,7 @@ object ProsesAwalTahunFrm: TProsesAwalTahunFrm
         object PanelMaster: TPanel
           Left = 0
           Top = 0
-          Width = 632
+          Width = 832
           Height = 145
           Align = alTop
           BevelOuter = bvNone
@@ -120,10 +120,10 @@ object ProsesAwalTahunFrm: TProsesAwalTahunFrm
           ParentFont = False
           TabOrder = 0
           DesignSize = (
-            632
+            832
             145)
           object LBarcode: TDBText
-            Left = 534
+            Left = 734
             Top = 0
             Width = 90
             Height = 24
@@ -142,8 +142,8 @@ object ProsesAwalTahunFrm: TProsesAwalTahunFrm
           object Label2: TLabel
             Left = 12
             Top = 24
-            Width = 149
-            Height = 21
+            Width = 146
+            Height = 19
             Caption = 'Proses Awal Tahun'
             Font.Charset = ANSI_CHARSET
             Font.Color = clWindowText
@@ -155,8 +155,8 @@ object ProsesAwalTahunFrm: TProsesAwalTahunFrm
           object Label4: TLabel
             Left = 109
             Top = 81
-            Width = 39
-            Height = 16
+            Width = 34
+            Height = 15
             Caption = '=> OK'
             Font.Charset = ANSI_CHARSET
             Font.Color = clTeal
@@ -169,8 +169,8 @@ object ProsesAwalTahunFrm: TProsesAwalTahunFrm
           object Label7: TLabel
             Left = 109
             Top = 104
-            Width = 39
-            Height = 16
+            Width = 34
+            Height = 15
             Caption = '=> OK'
             Font.Charset = ANSI_CHARSET
             Font.Color = clTeal
@@ -183,8 +183,8 @@ object ProsesAwalTahunFrm: TProsesAwalTahunFrm
           object Label9: TLabel
             Left = 247
             Top = 104
-            Width = 39
-            Height = 16
+            Width = 34
+            Height = 15
             Caption = '=> OK'
             Font.Charset = ANSI_CHARSET
             Font.Color = clTeal
@@ -197,8 +197,8 @@ object ProsesAwalTahunFrm: TProsesAwalTahunFrm
           object Label10: TLabel
             Left = 247
             Top = 81
-            Width = 39
-            Height = 16
+            Width = 34
+            Height = 15
             Caption = '=> OK'
             Font.Charset = ANSI_CHARSET
             Font.Color = clTeal
@@ -211,8 +211,8 @@ object ProsesAwalTahunFrm: TProsesAwalTahunFrm
           object Label11: TLabel
             Left = 404
             Top = 82
-            Width = 39
-            Height = 16
+            Width = 34
+            Height = 15
             Caption = '=> OK'
             Font.Charset = ANSI_CHARSET
             Font.Color = clTeal
@@ -225,8 +225,8 @@ object ProsesAwalTahunFrm: TProsesAwalTahunFrm
           object Label12: TLabel
             Left = 404
             Top = 105
-            Width = 39
-            Height = 16
+            Width = 34
+            Height = 15
             Caption = '=> OK'
             Font.Charset = ANSI_CHARSET
             Font.Color = clTeal
@@ -239,8 +239,8 @@ object ProsesAwalTahunFrm: TProsesAwalTahunFrm
           object Label13: TLabel
             Left = 572
             Top = 105
-            Width = 39
-            Height = 16
+            Width = 34
+            Height = 15
             Caption = '=> OK'
             Font.Charset = ANSI_CHARSET
             Font.Color = clTeal
@@ -251,7 +251,7 @@ object ProsesAwalTahunFrm: TProsesAwalTahunFrm
             Visible = False
           end
           object BitBtn1: TBitBtn
-            Left = 305
+            Left = 505
             Top = 21
             Width = 75
             Height = 25
@@ -394,17 +394,17 @@ object ProsesAwalTahunFrm: TProsesAwalTahunFrm
         end
         object PanelFooter1: TPanel
           Left = 0
-          Top = 296
-          Width = 632
+          Top = 289
+          Width = 832
           Height = 38
           Align = alBottom
           BevelOuter = bvNone
           TabOrder = 1
           DesignSize = (
-            632
+            832
             38)
           object BtnClose1: TBitBtn
-            Left = 542
+            Left = 742
             Top = 6
             Width = 75
             Height = 25
@@ -528,7 +528,7 @@ object ProsesAwalTahunFrm: TProsesAwalTahunFrm
             end
           end
           object BtnPrintBrowse: TBitBtn
-            Left = 461
+            Left = 661
             Top = 7
             Width = 75
             Height = 25
@@ -542,16 +542,16 @@ object ProsesAwalTahunFrm: TProsesAwalTahunFrm
         object Panel1: TPanel
           Left = 0
           Top = 145
-          Width = 632
-          Height = 151
+          Width = 832
+          Height = 144
           Align = alClient
           Caption = 'Panel1'
           TabOrder = 2
           object wwDBGrid1: TwwDBGrid
             Left = 1
             Top = 1
-            Width = 630
-            Height = 149
+            Width = 830
+            Height = 142
             ControlType.Strings = (
               'GW0;CheckBox;1;0'
               'PENGERING1;CheckBox;1;0'
@@ -595,14 +595,14 @@ object ProsesAwalTahunFrm: TProsesAwalTahunFrm
         OnShow = TabSheet2Show
         object PanelFooter2: TPanel
           Left = 0
-          Top = 293
-          Width = 632
+          Top = 286
+          Width = 832
           Height = 41
           Align = alBottom
           BevelOuter = bvNone
           TabOrder = 0
           DesignSize = (
-            632
+            832
             41)
           object wwDBNavigator1: TwwDBNavigator
             Left = 0
@@ -684,7 +684,7 @@ object ProsesAwalTahunFrm: TProsesAwalTahunFrm
             end
           end
           object BtnClose2: TBitBtn
-            Left = 536
+            Left = 736
             Top = 8
             Width = 75
             Height = 25
@@ -722,7 +722,7 @@ object ProsesAwalTahunFrm: TProsesAwalTahunFrm
         object Panel6: TPanel
           Left = 0
           Top = 0
-          Width = 632
+          Width = 832
           Height = 49
           Align = alTop
           BevelInner = bvLowered
@@ -814,12 +814,70 @@ object ProsesAwalTahunFrm: TProsesAwalTahunFrm
               5990555555555555577755555555555555555555555555555555}
             NumGlyphs = 2
           end
+          object Panel2: TPanel
+            Left = 584
+            Top = 2
+            Width = 246
+            Height = 45
+            Align = alRight
+            BevelOuter = bvNone
+            Color = clActiveCaption
+            TabOrder = 2
+            Visible = False
+            object Label3: TLabel
+              Left = 39
+              Top = 0
+              Width = 158
+              Height = 13
+              Caption = 'Set Tanggal Kunci Transaksi'
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clYellow
+              Font.Height = -11
+              Font.Name = 'Tahoma'
+              Font.Style = [fsBold]
+              ParentFont = False
+            end
+            object BitBtn2: TBitBtn
+              Left = 153
+              Top = 17
+              Width = 82
+              Height = 25
+              Caption = 'T&erapkan'
+              Default = True
+              ModalResult = 1
+              TabOrder = 0
+              OnClick = BitBtn2Click
+              Glyph.Data = {
+                76010000424D7601000000000000760000002800000020000000100000000100
+                04000000000000010000130B0000130B00001000000000000000000000000000
+                800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+                FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333330070
+                7700333333337777777733333333008088003333333377F73377333333330088
+                88003333333377FFFF7733333333000000003FFFFFFF77777777000000000000
+                000077777777777777770FFFFFFF0FFFFFF07F3333337F3333370FFFFFFF0FFF
+                FFF07F3FF3FF7FFFFFF70F00F0080CCC9CC07F773773777777770FFFFFFFF039
+                99337F3FFFF3F7F777F30F0000F0F09999937F7777373777777F0FFFFFFFF999
+                99997F3FF3FFF77777770F00F000003999337F773777773777F30FFFF0FF0339
+                99337F3FF7F3733777F30F08F0F0337999337F7737F73F7777330FFFF0039999
+                93337FFFF7737777733300000033333333337777773333333333}
+              NumGlyphs = 2
+            end
+            object DateTimePicker1: TDateTimePicker
+              Left = 37
+              Top = 17
+              Width = 105
+              Height = 24
+              Date = 45794.392426724540000000
+              Time = 45794.392426724540000000
+              TabOrder = 1
+            end
+          end
         end
         object wwDBGrid2: TwwDBGrid
           Left = 0
           Top = 49
-          Width = 632
-          Height = 244
+          Width = 832
+          Height = 237
           ControlType.Strings = (
             'GW0;CheckBox;1;0'
             'PENGERING1;CheckBox;1;0'
@@ -829,25 +887,34 @@ object ProsesAwalTahunFrm: TProsesAwalTahunFrm
             'CELUP1;CheckBox;1;0'
             'PENGERING0;CheckBox;1;0')
           Selected.Strings = (
-            'TRANSAKSI'#9'18'#9'KUNCI TGL~TRANSAKSI'
-            'OPR_UPDATE'#9'20'#9'LOG USER'
-            'TGL_UPDATE'#9'20'#9'LOG TGL')
+            'BAGIAN'#9'18'#9'BAGIAN'#9#9
+            'NAMA_TRANSAKSI'#9'35'#9'NAMA TRANSAKSI'#9'F'
+            'KD_TRANSAKSI'#9'3'#9'KODE~TRANSAKSI'#9#9
+            'TRANSAKSI'#9'12'#9'KUNCI TGL~TRANSAKSI'#9#9
+            'OPR_UPDATE'#9'12'#9'LOG USER'#9#9
+            'TGL_UPDATE'#9'18'#9'LOG TGL'#9#9)
           IniAttributes.Delimiter = ';;'
-          TitleColor = clBtnFace
+          TitleColor = clSkyBlue
           FixedCols = 0
           ShowHorzScrollBar = True
           Align = alClient
           DataSource = dsQKunci
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
           Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgWordWrap]
+          ParentFont = False
           ReadOnly = True
           TabOrder = 2
           TitleAlignment = taLeftJustify
-          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Charset = ANSI_CHARSET
           TitleFont.Color = clWindowText
-          TitleFont.Height = -11
-          TitleFont.Name = 'MS Sans Serif'
+          TitleFont.Height = -12
+          TitleFont.Name = 'Tahoma'
           TitleFont.Style = []
-          TitleLines = 1
+          TitleLines = 3
           TitleButtons = False
         end
       end
@@ -1359,31 +1426,54 @@ object ProsesAwalTahunFrm: TProsesAwalTahunFrm
   end
   object QKunci: TOracleDataSet
     SQL.Strings = (
-      'select t.*, t.rowid from ipisma_db3.tutup_buku t')
+      'select t.*, t.rowid from ipisma_db3.tutup_transaksi t'
+      ':myparam'
+      'order by t.bagian, t.kd_transaksi')
+    Variables.Data = {
+      0300000001000000080000003A4D59504152414D010000000000000000000000}
     QBEDefinition.QBEFieldDefs = {
-      0400000004000000090000005452414E53414B53490100000000000400000042
+      0400000007000000090000005452414E53414B53490100000000000400000042
       554B550100000000000A0000004F50525F5550444154450100000000000A0000
-      0054474C5F555044415445010000000000}
+      0054474C5F5550444154450100000000000C0000004B445F5452414E53414B53
+      490100000000000E0000004E414D415F5452414E53414B534901000000000006
+      00000042414749414E010000000000}
     QueryAllRecords = False
     CountAllRecords = True
     CachedUpdates = True
     Session = DMFrm.OS
     Left = 24
     Top = 296
+    object QKunciBAGIAN: TStringField
+      DisplayWidth = 18
+      FieldName = 'BAGIAN'
+      Size = 64
+    end
+    object QKunciNAMA_TRANSAKSI: TStringField
+      DisplayLabel = 'NAMA TRANSAKSI'
+      DisplayWidth = 35
+      FieldName = 'NAMA_TRANSAKSI'
+      Size = 64
+    end
+    object QKunciKD_TRANSAKSI: TStringField
+      DisplayLabel = 'KODE~TRANSAKSI'
+      DisplayWidth = 3
+      FieldName = 'KD_TRANSAKSI'
+      Size = 6
+    end
     object QKunciTRANSAKSI: TDateTimeField
       DisplayLabel = 'KUNCI TGL~TRANSAKSI'
-      DisplayWidth = 18
+      DisplayWidth = 12
       FieldName = 'TRANSAKSI'
     end
     object QKunciOPR_UPDATE: TStringField
       DisplayLabel = 'LOG USER'
-      DisplayWidth = 20
+      DisplayWidth = 12
       FieldName = 'OPR_UPDATE'
       Size = 30
     end
     object QKunciTGL_UPDATE: TDateTimeField
       DisplayLabel = 'LOG TGL'
-      DisplayWidth = 20
+      DisplayWidth = 18
       FieldName = 'TGL_UPDATE'
     end
     object QKunciBUKU: TDateTimeField
@@ -1396,5 +1486,21 @@ object ProsesAwalTahunFrm: TProsesAwalTahunFrm
     DataSet = QKunci
     Left = 72
     Top = 304
+  end
+  object QSetAll: TOracleQuery
+    SQL.Strings = (
+      'begin'
+      
+        ' update ipisma_db3.tutup_transaksi set transaksi=trunc(:closed_d' +
+        'ate);'
+      ' commit;'
+      'end;')
+    Session = DMFrm.OS
+    Variables.Data = {
+      03000000010000000C0000003A434C4F5345445F444154450C00000000000000
+      00000000}
+    Cursor = crSQLWait
+    Left = 592
+    Top = 47
   end
 end
