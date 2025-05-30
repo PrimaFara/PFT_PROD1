@@ -1,6 +1,6 @@
 object HasilCelupFrm: THasilCelupFrm
-  Left = 261
-  Top = 148
+  Left = 265
+  Top = 56
   Width = 1011
   Height = 590
   Caption = 'Hasil Celup'

@@ -1,6 +1,6 @@
 object HasilSoftConesFrm: THasilSoftConesFrm
-  Left = 193
-  Top = 128
+  Left = 190
+  Top = 37
   Width = 1036
   Height = 611
   ActiveControl = vTglAwal
@@ -967,10 +967,10 @@ object HasilSoftConesFrm: THasilSoftConesFrm
               'RASIO'#9'7'#9'Spring'#9'F'#9'RASIO MASTER'
               'RASIO2'#9'7'#9'isi'#9'F'#9'RASIO MASTER'
               'QTY2'#9'5'#9'Pcs'#9'F'#9'QTY'
-              'QTY1'#9'12'#9'Hasil (Kg)'#9'F'#9'QTY'
+              'QTY1'#9'12'#9'Hasil Kg'#9'F'#9'QTY'
               'RASIO3'#9'7'#9'Rasio'#9'F'#9'QTY'
-              'QTY_STD'#9'10'#9'Std (Kg)'#9'F'#9'QTY'
-              'STD_PSN'#9'6'#9'%'#9'F'#9'QTY'
+              'QTY_STD'#9'10'#9'Std Kg'#9'F'#9'QTY'
+              'STD_PSN'#9'6'#9'Persen'#9'F'#9'QTY'
               'NO_LOT'#9'10'#9'NO LOT'#9'F'
               'OPR_INSERT'#9'20'#9'OPERATOR'#9'F')
             IniAttributes.Enabled = True
@@ -978,15 +978,15 @@ object HasilSoftConesFrm: THasilSoftConesFrm
             IniAttributes.FileName = 'produksi'
             IniAttributes.Delimiter = ';;'
             IniAttributes.CheckNewFields = True
-            ExportOptions.ExportType = wwgetSYLK
-            ExportOptions.Options = [esoDblQuoteFields, esoBestColFit, esoShowRecordNo, esoShowAlternating]
+            ExportOptions.ExportType = wwgetHTML
+            ExportOptions.Options = [esoShowHeader, esoShowFooter, esoShowTitle, esoDblQuoteFields, esoBestColFit, esoShowRecordNo, esoShowAlternating]
             TitleColor = clBackground
             FixedCols = 0
             ShowHorzScrollBar = True
             EditControlOptions = [ecoSearchOwnerForm, ecoDisableDateTimePicker]
             Align = alClient
             BorderStyle = bsNone
-            Ctl3D = False
+            Ctl3D = True
             DataSource = dsQBrowse
             Font.Charset = ANSI_CHARSET
             Font.Color = clWindowText
@@ -1100,7 +1100,7 @@ object HasilSoftConesFrm: THasilSoftConesFrm
             end
           end
           object BtnClose2: TBitBtn
-            Left = 402
+            Left = 498
             Top = 8
             Width = 75
             Height = 25
@@ -1120,7 +1120,7 @@ object HasilSoftConesFrm: THasilSoftConesFrm
             NumGlyphs = 2
           end
           object BtnPrintBrowse: TBitBtn
-            Left = 322
+            Left = 418
             Top = 8
             Width = 75
             Height = 25
@@ -1137,6 +1137,17 @@ object HasilSoftConesFrm: THasilSoftConesFrm
             Caption = 'Design'
             TabOrder = 4
             OnClick = BtnDesign2Click
+            NumGlyphs = 2
+          end
+          object BitBtn8: TBitBtn
+            Left = 327
+            Top = 8
+            Width = 75
+            Height = 25
+            Caption = '&Old Export'
+            TabOrder = 5
+            Visible = False
+            OnClick = BitBtn8Click
             NumGlyphs = 2
           end
         end
@@ -1268,12 +1279,6 @@ object HasilSoftConesFrm: THasilSoftConesFrm
     object QBrowseSPEED_PER_MNT2: TFloatField
       FieldName = 'SPEED_PER_MNT2'
     end
-    object QBrowseeffisiensi: TFloatField
-      FieldKind = fkCalculated
-      FieldName = 'effisiensi'
-      DisplayFormat = '0.0,0 %'
-      Calculated = True
-    end
     object QBrowseRASIO: TFloatField
       FieldName = 'RASIO'
       DisplayFormat = '#,0.0000;-#,0.0000;-'
@@ -1281,12 +1286,6 @@ object HasilSoftConesFrm: THasilSoftConesFrm
     object QBrowseRASIO2: TFloatField
       FieldName = 'RASIO2'
       DisplayFormat = '#,0.0000;-#,0.0000;-'
-    end
-    object QBrowseRASIO3: TFloatField
-      FieldKind = fkCalculated
-      FieldName = 'RASIO3'
-      DisplayFormat = '#,0.0000;-#,0.0000;-'
-      Calculated = True
     end
   end
   object dsQBrowse: TwwDataSource

@@ -1,6 +1,6 @@
 object HasilCelupFrm: THasilCelupFrm
-  Left = 261
-  Top = 148
+  Left = 265
+  Top = 56
   Width = 1011
   Height = 590
   Caption = 'Hasil Celup'
@@ -1020,6 +1020,7 @@ object HasilCelupFrm: THasilCelupFrm
             IniAttributes.CheckNewFields = True
             ExportOptions.ExportType = wwgetSYLK
             ExportOptions.Options = [esoShowHeader, esoShowFooter, esoDblQuoteFields, esoBestColFit, esoShowAlternating]
+            ExportOptions.TitleName = 'HASIL MESIN SOFTCONE'
             TitleColor = clBackground
             FixedCols = 0
             ShowHorzScrollBar = True

@@ -320,7 +320,6 @@ type
     QTotalKRAT: TFloatField;
     QTotalPCS: TFloatField;
     QBrowseSPEED_PER_MNT: TFloatField;
-    QBrowseeffisiensi: TFloatField;
     QBrowseSPEED_PER_MNT2: TFloatField;
     QTransaksiDOC_ISO: TStringField;
     ppDBQTransaksippField19: TppField;
@@ -332,7 +331,6 @@ type
     QBrowseRASIO: TFloatField;
     QBrowseRASIO2: TFloatField;
     QDetailRASIO3: TFloatField;
-    QBrowseRASIO3: TFloatField;
     QItemQTY: TFloatField;
     QItemQTY2: TFloatField;
     QBrowseRPM: TStringField;
@@ -355,6 +353,7 @@ type
     StringField4: TStringField;
     QItemNewQTY: TFloatField;
     QItemNewQTY2: TFloatField;
+    BitBtn8: TBitBtn;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);
@@ -421,6 +420,7 @@ type
     procedure wwDBDateTimePicker1Change(Sender: TObject);
     procedure QMasterTGLChange(Sender: TField);
     procedure QItemNewBeforeQuery(Sender: TOracleDataSet);
+    procedure BitBtn8Click(Sender: TObject);
   //  procedure ppNo2Print(Sender: TObject);
   private
     { Private declarations }
@@ -437,7 +437,7 @@ procedure ShowForm(pNamaMenu:String; pkode : String; pjudul : string; pjns_brg :
 
 implementation
 
-uses DM, Pembelian;
+uses DM, Pembelian, ComObj;
 
 {$R *.dfm}
 
@@ -530,45 +530,116 @@ begin
 end;
 
 procedure THasilSoftConesFrm.BtnExportClick(Sender: TObject);
+var
+  ExcelApp: Variant;
+  Workbook: Variant;
+  Worksheet: Variant;
+  i, j: Integer;
+  Field: TField;
+  FormatSettings: TFormatSettings;
 begin
-{DMFrm.SaveDialog1.FileName:=PanelHeader.Caption+' '+
-      vTglAwal.Text+' sd '+vTglAkhir.Text+'.xls';
-    if DMFrm.SaveDialog1.Execute then
-    begin
-      try
-        wwDBGrid2.ExportOptions.FileName:=DMFrm.SaveDialog1.FileName;
-        wwDBGrid2.ExportOptions.TitleName:='Hasil SoftCones';
-        wwDBGrid2.ExportOptions.Save;
-        if MessageDlg('Ekspor Data Sukses, Lihat Hasil ?',mtWarning,[mbYes, mbNo],0)=mrYes then
-        begin
-          DMFrm.LMDStarter1.Command:=DMFrm.SaveDialog1.FileName;
-          DMFrm.LMDStarter1.Execute;
-        end;
-  		Except
-    	  ShowMessage('Ekspor Data Gagal !');
-  		end;
-    end;    }
-     if QBrowse.Active then
+  ShowMessage('Tunggu Hingga Proses Selesai. Klik Ok untuk memulai');
+  
+  // Inisialisasi TFormatSettings untuk mengontrol pemisah desimal
+  GetLocaleFormatSettings(GetThreadLocale, FormatSettings);
+  FormatSettings.DecimalSeparator := '.';
+
+  // Menampilkan dialog Save As
+  DMFrm.SaveDialog1.Filter := 'Excel Files|*.xlsx';
+  DMFrm.SaveDialog1.DefaultExt := 'xlsx';
+
+  if DMFrm.SaveDialog1.Execute then
   begin
-     DMFrm.SaveDialog1.DefaultExt:='XLK';
-     DMFrm.SaveDialog1.Filter:='Excel files (*.XLK)|*.XLK';
-     DMFrm.SaveDialog1.FileName:=PanelHeader.Caption+' '+ vTglAwal.Text+' sd '+vTglAkhir.Text+'.xlK';
-   //DMFrm.SaveDialog1.FileName:='HASIL MESIN SOFTCONES';
-     wwDBGrid2.ExportOptions.TitleName:='HASIL MESIN SOFTCONES';
-       if DMFrm.SaveDialog1.Execute then
-       begin
-         try
-         wwDBGrid2.ExportOptions.FileName:=DMFrm.SaveDialog1.FileName;
-         wwDBGrid2.ExportOptions.Save;
-         ShowMessage('Simpan Sukses !');
-         except
-         ShowMessage('Simpan Gagal !');
-         end;
-       end;
+    // Membuat instance dari Excel
+    ExcelApp := CreateOleObject('Excel.Application');
+    ExcelApp.Visible := False; // Atur ke True jika Anda ingin melihat proses di Excel
+
+    // Menambahkan workbook baru
+    Workbook := ExcelApp.Workbooks.Add;
+    Worksheet := Workbook.Worksheets[1];
+
+    // Menambahkan judul laporan
+    Worksheet.Cells[1, 1].Value := 'REKAP BULANAN DEPARTEMEN KEMITRAAN';
+    Worksheet.Range['A1', 'Z1'].Merge; // Gabung cell agar judul rata tengah
+    Worksheet.Range['A1'].Font.Bold := True;
+    Worksheet.Range['A1'].Font.Size := 14;
+    Worksheet.Range['A1'].HorizontalAlignment := 3; // xlCenter
+
+    // Menulis periode
+    Worksheet.Cells[2, 1].Value := 'Periode : '+DateToStr(vtglAwal.Date)+' s/d '+DateToStr(vtglAkhir.Date);
+    Worksheet.Range['A2', 'Z2'].Merge; // Gabung cell agar judul rata tengah
+    Worksheet.Range['A2'].Font.Italic := True;
+    Worksheet.Range['A2'].Font.Size := 12;
+    Worksheet.Range['A2'].HorizontalAlignment := 3; // xlCenter
+
+    // Menulis header ke worksheet
+    Worksheet.Range['A3', 'Z3'].Font.Bold := True;
+    Worksheet.Range['A3', 'Z3'].Font.Size := 10;
+    Worksheet.Range['A3', 'Z3'].HorizontalAlignment := 3; // xlCenter
+    for i := 0 to wwDBGrid1.DataSource.DataSet.FieldCount - 1 do
+    begin
+      Worksheet.Cells[3, i + 1].Value := wwDBGrid2.DataSource.DataSet.Fields[i].DisplayName;
+    end;
+
+    // Menulis data mulai dari baris ke-4
+    wwDBGrid2.DataSource.DataSet.First;
+    j := 4;
+    while not wwDBGrid2.DataSource.DataSet.Eof do
+    begin
+      for i := 0 to wwDBGrid2.DataSource.DataSet.FieldCount - 1 do
+      begin
+        Field := wwDBGrid2.DataSource.DataSet.Fields[i];
+
+        if Field.DataType in [ftDate, ftDateTime] then
+        begin
+          Worksheet.Cells[j, i + 1].Value := Field.AsDateTime;
+          Worksheet.Cells[j, i + 1].NumberFormat := 'dd/mm/yyyy';
+        end
+        else if Field.DataType in [ftFloat, ftCurrency, ftBCD] then
+        begin
+          Worksheet.Cells[j, i + 1].Value := FloatToStr(Field.AsFloat, FormatSettings);
+          Worksheet.Cells[j, i + 1].NumberFormat := '0.00';
+        end
+        else
+        begin
+          Worksheet.Cells[j, i + 1].Value := Field.AsString;
+        end;
+
+        if Field.DataType in [ftInteger, ftFloat, ftCurrency, ftBCD] then
+        begin
+          Worksheet.Cells[j, i + 1].HorizontalAlignment := 3; // xlRight
+        end;
+      end;
+      Inc(j);
+      wwDBGrid2.DataSource.DataSet.Next;
+    end;
+
+    // GARIS BORDER
+    // Menambahkan border ke semua sel header dan data
+    // Worksheet.Range['A4','K4'].Borders.LineStyle:=1;
+    // Worksheet.Range['A4','K4'].Borders.Weight:=2;
+
+    // AUTOFIT CELL
+    Worksheet.Columns.AutoFit;
+
+    // Menyimpan workbook ke file yang dipilih pengguna
+    Workbook.SaveAs(DMFrm.SaveDialog1.FileName);
+
+    // Menutup workbook dan mengeluarkan Excel dari memori
+    Workbook.Close(False);
+    ExcelApp.Quit;
+
+    // Melepaskan objek COM
+    Worksheet := Unassigned;
+    Workbook := Unassigned;
+    ExcelApp := Unassigned;
+
+    ShowMessage('Data berhasil diekspor ke ' + DMFrm.SaveDialog1.FileName);
   end
   else
-    ShowMessage('Tabel belum di-OPEN !');
-
+  begin
+    ShowMessage('Proses penyimpanan dibatalkan.');
+  end;
 end;
 
 procedure THasilSoftConesFrm.BtnOkClick(Sender: TObject);
@@ -1294,6 +1365,31 @@ procedure THasilSoftConesFrm.QItemNewBeforeQuery(Sender: TOracleDataSet);
 begin
   QItemNew.SetVariable('pkd_benang', QLokasiKD_BENANG.AsString);
   QItemNew.SetVariable('pibukti', QMasterIBUKTI.AsInteger);
+end;
+
+procedure THasilSoftConesFrm.BitBtn8Click(Sender: TObject);
+begin
+if QBrowse.Active then
+  begin
+     DMFrm.SaveDialog1.DefaultExt:='XLS';
+     //DMFrm.SaveDialog1.Filter:='Excel files (*.XLK)|*.XLK';
+     DMFrm.SaveDialog1.Filter:='Excel files (*.XLS)|*.XLS';
+     DMFrm.SaveDialog1.FileName:='HASIL MESIN SOFTCONE';
+   //DMFrm.SaveDialog1.FileName:='HASIL MESIN SOFTCONES';
+     wwDBGrid2.ExportOptions.TitleName:='HASIL MESIN SOFTCONES';
+       if DMFrm.SaveDialog1.Execute then
+       begin
+         try
+         wwDBGrid2.ExportOptions.FileName:=DMFrm.SaveDialog1.FileName;
+         wwDBGrid2.ExportOptions.Save;
+         ShowMessage('Simpan Sukses !');
+         except
+         ShowMessage('Simpan Gagal !');
+         end;
+       end;
+  end
+  else
+    ShowMessage('Tabel belum di-OPEN !');
 end;
 
 end.

@@ -1,6 +1,6 @@
 object HakMenuFrm: THakMenuFrm
-  Left = 123
-  Top = 80
+  Left = 237
+  Top = 119
   Width = 1010
   Height = 560
   Caption = 'Hak Menu'
@@ -23,7 +23,7 @@ object HakMenuFrm: THakMenuFrm
     Left = 0
     Top = 0
     Width = 121
-    Height = 526
+    Height = 522
     Align = alLeft
     BevelOuter = bvNone
     Color = 7039851
@@ -32,8 +32,8 @@ object HakMenuFrm: THakMenuFrm
   object PanelRight: TPanel
     Left = 761
     Top = 0
-    Width = 241
-    Height = 526
+    Width = 233
+    Height = 522
     Align = alClient
     BevelOuter = bvNone
     Color = clAppWorkSpace
@@ -43,7 +43,7 @@ object HakMenuFrm: THakMenuFrm
     Left = 121
     Top = 0
     Width = 640
-    Height = 526
+    Height = 522
     Align = alLeft
     BevelOuter = bvNone
     Ctl3D = False
@@ -51,7 +51,7 @@ object HakMenuFrm: THakMenuFrm
     TabOrder = 2
     object Label1: TLabel
       Left = 0
-      Top = 513
+      Top = 509
       Width = 640
       Height = 13
       Align = alBottom
@@ -97,7 +97,7 @@ object HakMenuFrm: THakMenuFrm
       Left = 0
       Top = 76
       Width = 640
-      Height = 437
+      Height = 433
       ActivePage = TabSheet2
       Align = alClient
       Style = tsFlatButtons
@@ -295,7 +295,7 @@ object HakMenuFrm: THakMenuFrm
           Left = 0
           Top = 226
           Width = 632
-          Height = 142
+          Height = 138
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 2
@@ -352,7 +352,7 @@ object HakMenuFrm: THakMenuFrm
         end
         object PanelFooter1: TPanel
           Left = 0
-          Top = 368
+          Top = 364
           Width = 632
           Height = 38
           Align = alBottom
@@ -629,7 +629,7 @@ object HakMenuFrm: THakMenuFrm
           Left = 0
           Top = 70
           Width = 632
-          Height = 295
+          Height = 291
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 1
@@ -637,11 +637,15 @@ object HakMenuFrm: THakMenuFrm
             Left = 0
             Top = 0
             Width = 632
-            Height = 295
+            Height = 291
+            ControlType.Strings = (
+              'IUPDATE;CheckBox;1;0'
+              'ISAKTIF;CheckBox;1;0')
             Selected.Strings = (
               'VUSER'#9'16'#9'USER'#9'F'
               'TIPE'#9'16'#9'TIPE'#9#9
-              'KETERANGAN'#9'53'#9'KETERANGAN'#9'F')
+              'ISAKTIF'#9'7'#9'ISAKTIF'#9'F'
+              'IUPDATE'#9'8'#9'IUPDATE'#9'F')
             IniAttributes.Enabled = True
             IniAttributes.FileName = 'PismatexPurchasing.INI'
             IniAttributes.Delimiter = ';;'
@@ -681,7 +685,7 @@ object HakMenuFrm: THakMenuFrm
         end
         object PanelFooter2: TPanel
           Left = 0
-          Top = 365
+          Top = 361
           Width = 632
           Height = 41
           Align = alBottom
@@ -789,14 +793,42 @@ object HakMenuFrm: THakMenuFrm
       'select a.*, b.keterangan from vuser a, menu_tipe b'
       'where a.tipe=b.tipe')
     QBEDefinition.QBEFieldDefs = {
-      0400000003000000040000005449504501000000000005000000565553455201
-      00000000000A0000004B45544552414E47414E010000000000}
+      0400000006000000040000005449504501000000000005000000565553455201
+      00000000000A0000004B45544552414E47414E010000000000060000004B445F
+      444956010000000000070000004953414B544946010000000000070000004955
+      5044415445010000000000}
     ReadOnly = True
     QueryAllRecords = False
     Session = DMFrm.OS
     AfterScroll = QBrowseAfterScroll
-    Left = 856
+    Left = 824
     Top = 8
+    object QBrowseTIPE: TStringField
+      FieldName = 'TIPE'
+      Size = 16
+    end
+    object QBrowseVUSER: TStringField
+      FieldName = 'VUSER'
+      Required = True
+      Size = 30
+    end
+    object QBrowseKD_DIV: TStringField
+      FieldName = 'KD_DIV'
+      Size = 5
+    end
+    object QBrowseISAKTIF: TStringField
+      FieldName = 'ISAKTIF'
+      Size = 1
+    end
+    object QBrowseIUPDATE: TStringField
+      FieldName = 'IUPDATE'
+      Required = True
+      Size = 1
+    end
+    object QBrowseKETERANGAN: TStringField
+      FieldName = 'KETERANGAN'
+      Size = 255
+    end
   end
   object dsQBrowse: TwwDataSource
     DataSet = QBrowse

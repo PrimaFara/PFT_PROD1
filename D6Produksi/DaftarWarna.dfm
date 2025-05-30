@@ -1,9 +1,9 @@
 object DaftarWarnaFrm: TDaftarWarnaFrm
-  Left = 199
-  Top = 121
+  Left = 203
+  Top = 90
   AutoScroll = False
   Caption = 'DaftarWarnaFrm'
-  ClientHeight = 558
+  ClientHeight = 443
   ClientWidth = 1114
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -40,7 +40,7 @@ object DaftarWarnaFrm: TDaftarWarnaFrm
     Left = 0
     Top = 49
     Width = 1114
-    Height = 509
+    Height = 394
     ActivePage = TabSheet3
     Align = alClient
     TabOrder = 1
@@ -52,7 +52,7 @@ object DaftarWarnaFrm: TDaftarWarnaFrm
         Left = 0
         Top = 49
         Width = 511
-        Height = 377
+        Height = 262
         ControlType.Strings = (
           'KD_KEL;CustomEdit;LookJenis;F'
           'KD_SATUAN;CustomEdit;LookSatuan;F'
@@ -207,7 +207,7 @@ object DaftarWarnaFrm: TDaftarWarnaFrm
       end
       object Panel6: TPanel
         Left = 0
-        Top = 426
+        Top = 311
         Width = 1106
         Height = 55
         Align = alBottom
@@ -336,7 +336,7 @@ object DaftarWarnaFrm: TDaftarWarnaFrm
   end
   object DSQMaster: TwwDataSource
     DataSet = Qmaster
-    Left = 40
-    Top = 400
+    Left = 88
+    Top = 328
   end
 end

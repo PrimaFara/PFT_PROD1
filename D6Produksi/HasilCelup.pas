@@ -1249,7 +1249,7 @@ begin
      DMFrm.SaveDialog1.Filter:='Excel files (*.XLK)|*.XLK';
      DMFrm.SaveDialog1.FileName:=PanelHeader.Caption+' '+ vTglAwal.Text+' sd '+vTglAkhir.Text+'.xlK';
    //DMFrm.SaveDialog1.FileName:='HASIL MESIN SOFTCONES';
-     wwDBGrid2.ExportOptions.TitleName:='HASIL MESIN SOFTCONES';
+     //wwDBGrid2.ExportOptions.TitleName:='HASIL MESIN SOFTCONES';
        if DMFrm.SaveDialog1.Execute then
        begin
          try

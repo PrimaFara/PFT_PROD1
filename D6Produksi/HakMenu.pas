@@ -99,6 +99,12 @@ type
     Label3: TLabel;
     QBuatUser: TOracleQuery;
     Button1: TButton;
+    QBrowseTIPE: TStringField;
+    QBrowseVUSER: TStringField;
+    QBrowseKD_DIV: TStringField;
+    QBrowseISAKTIF: TStringField;
+    QBrowseIUPDATE: TStringField;
+    QBrowseKETERANGAN: TStringField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure wwDBGrid2TitleButtonClick(Sender: TObject;

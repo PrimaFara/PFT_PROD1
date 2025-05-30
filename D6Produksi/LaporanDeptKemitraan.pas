@@ -1332,22 +1332,38 @@ begin
     Workbook := ExcelApp.Workbooks.Add;
     Worksheet := Workbook.Worksheets[1];
 
+    // Menambahkan judul laporan
+    Worksheet.Cells[1, 1].Value := 'REKAP BULANAN DEPARTEMEN KEMITRAAN';
+    Worksheet.Range['A1', 'K1'].Merge; // Gabung cell agar judul rata tengah
+    Worksheet.Range['A1'].Font.Bold := True;
+    Worksheet.Range['A1'].Font.Size := 14;
+    Worksheet.Range['A1'].HorizontalAlignment := 3; // xlCenter
+
+    // Menulis periode
+    Worksheet.Cells[2, 1].Value := 'Periode : '+DateToStr(vtglAwal0.Date)+' s/d '+DateToStr(vtglAkhir0.Date);
+    Worksheet.Range['A2', 'K2'].Merge; // Gabung cell agar judul rata tengah
+    Worksheet.Range['A2'].Font.Italic := True;
+    Worksheet.Range['A2'].Font.Size := 12;
+    Worksheet.Range['A2'].HorizontalAlignment := 3; // xlCenter
+
     // Menulis header ke worksheet
+    Worksheet.Range['A3', 'K3'].Font.Bold := True;
+    Worksheet.Range['A3', 'K3'].Font.Size := 10;
+    Worksheet.Range['A3', 'K3'].HorizontalAlignment := 3; // xlCenter
     for i := 0 to wwDBGrid1.DataSource.DataSet.FieldCount - 1 do
     begin
-      Worksheet.Cells[1, i + 1].Value := wwDBGrid1.DataSource.DataSet.Fields[i].DisplayName;
+      Worksheet.Cells[3, i + 1].Value := wwDBGrid1.DataSource.DataSet.Fields[i].DisplayName;
     end;
 
-    // Menulis data ke worksheet
+    // Menulis data mulai dari baris ke-4
     wwDBGrid1.DataSource.DataSet.First;
-    j := 2; // Mulai dari baris kedua untuk data, karena baris pertama untuk header
+    j := 4;
     while not wwDBGrid1.DataSource.DataSet.Eof do
     begin
       for i := 0 to wwDBGrid1.DataSource.DataSet.FieldCount - 1 do
       begin
         Field := wwDBGrid1.DataSource.DataSet.Fields[i];
 
-        // Memeriksa tipe data field
         if Field.DataType in [ftDate, ftDateTime] then
         begin
           Worksheet.Cells[j, i + 1].Value := Field.AsDateTime;
@@ -1355,16 +1371,14 @@ begin
         end
         else if Field.DataType in [ftFloat, ftCurrency, ftBCD] then
         begin
-          // Menyimpan nilai float dalam string dengan FormatSettings yang benar
           Worksheet.Cells[j, i + 1].Value := FloatToStr(Field.AsFloat, FormatSettings);
-          Worksheet.Cells[j, i + 1].NumberFormat := '0.00'; // Atur format angka dengan dua desimal
+          Worksheet.Cells[j, i + 1].NumberFormat := '0.00';
         end
         else
         begin
           Worksheet.Cells[j, i + 1].Value := Field.AsString;
         end;
 
-        // Mengatur alignment sel untuk angka menjadi rata kanan
         if Field.DataType in [ftInteger, ftFloat, ftCurrency, ftBCD] then
         begin
           Worksheet.Cells[j, i + 1].HorizontalAlignment := 3; // xlRight
@@ -1373,6 +1387,14 @@ begin
       Inc(j);
       wwDBGrid1.DataSource.DataSet.Next;
     end;
+
+    // GARIS BORDER
+    // Menambahkan border ke semua sel header dan data
+    // Worksheet.Range['A4','K4'].Borders.LineStyle:=1;
+    // Worksheet.Range['A4','K4'].Borders.Weight:=2;
+
+    // AUTOFIT CELL
+    Worksheet.Columns.AutoFit;
 
     // Menyimpan workbook ke file yang dipilih pengguna
     Workbook.SaveAs(DMFrm.SaveDialog1.FileName);
