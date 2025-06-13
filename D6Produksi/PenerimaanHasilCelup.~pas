@@ -747,23 +747,14 @@ end;
 
 procedure TPenerimaanHasilCelupFrm.TabSheet1Show(Sender: TObject);
 begin
-  if (EditCari.Text='') and (QBrowseIBUKTI.AsString<>'') then
-//      EditCari.Text:=QBrowseIBUKTI.AsString
-      EditCari.Text:=QBrowseNO_NOTA.AsString
-      else  EditCari.Text:='0';
+  if (EditCari.Text='') and (QBrowseIBUKTI.AsString<>'') then EditCari.Text:=QBrowseNO_NOTA.AsString else EditCari.Text:='0';
 
   QMaster.Close;
   QMaster.SequenceField.Sequence:=cUserTabel+'no_register';
   QMaster.SequenceField.Field:='IBUKTI';
-
-  QMaster.SQL.Text:='select a.*, a.rowid from '+cUserTabel+'bukti4 a'+
-    ' where a.no_nota=:pno_nota';
-//    ' where a.ibukti=:pno_nota';
-//  QMaster.DeclareVariable('pno_nota',otInteger);
+  QMaster.SQL.Text:='select a.*, a.rowid from '+cUserTabel+'bukti4 a where a.no_nota=:pno_nota';
   QMaster.DeclareVariable('pno_nota',otString);
   QMaster.SetVariable('pno_nota',EditCari.Text);
-//  QMaster.SetVariable('pno_nota',StrToInt(EditCari.Text));
-//  ShowMessage(QMaster.SQL.Text);
   QMaster.Open;
 
   QDetail.Close;
@@ -772,15 +763,8 @@ begin
   QDetail.Master:=QMaster;
   QDetail.DeclareVariable('IBUKTI',otInteger);
   QDetail.MasterFields:='IBUKTI';
-{  QDetail.SQL.Text:='select a.*, b.kd_sub_kel, a.rowid from '+cUserTabel+'bukti_detail4 a, '+cUserTabel+'VITEMALL b'+
-    ' where a.ibukti=:ibukti and a.kd_item=b.kd_item(+)';
-//    SHOWMESSAGE(QDetail.SQL.Text);
-}
-  QDetail.SQL.Text:='select a.*, a.rowid from '+cUserTabel+'bukti_detail4 a'+
-    ' where a.ibukti=:ibukti';
-
+  QDetail.SQL.Text:='select a.*, a.rowid from '+cUserTabel+'bukti_detail4 a where a.ibukti=:ibukti';
   QDetail.SetVariable('ibukti',QMasterIBUKTI.AsInteger);
-// ShowMessage(QDetail.SQL.Text);
   QDetail.Open;
   wwDBGrid1UpdateFooter(nil);
 
@@ -790,32 +774,28 @@ begin
   cbTransaksi.Visible:=QTransaksiKD_TRANSAKSI.AsString='884';
   LTransaksi.Visible:=QTransaksiKD_TRANSAKSI.AsString='884';
 
-if QTransaksiKD_TRANSAKSI.AsString='883' then
-begin
-  cbTransaksi.Visible:=QTransaksiKD_TRANSAKSI.AsString='883';
-  LTransaksi.Visible:=QTransaksiKD_TRANSAKSI.AsString='883';
+  if QTransaksiKD_TRANSAKSI.AsString='883' then
+  begin
+    cbTransaksi.Visible:=QTransaksiKD_TRANSAKSI.AsString='883';
+    LTransaksi.Visible:=QTransaksiKD_TRANSAKSI.AsString='883';
 
     cbtransaksi.Items.Clear;
     cbtransaksi.Items.Add('DARI PERSIAPAN');
     cbtransaksi.Items.Add('DARI TENUN');
-end
-
-else
-
-if QTransaksiKD_TRANSAKSI.AsString='884' then
-begin
-  cbTransaksi.Visible:=QTransaksiKD_TRANSAKSI.AsString='884';
-  LTransaksi.Visible:=QTransaksiKD_TRANSAKSI.AsString='884';
-
-    cbtransaksi.Items.Clear;
-    cbtransaksi.Items.Add('KOREKSI');
-    cbtransaksi.Items.Add('PROSES ULANG');
-    cbtransaksi.Items.Add('KELUAR PROSES');
-    cbtransaksi.Items.Add('DARI MITRA');
-    cbtransaksi.Items.Add('LAINNYA');
-end;
-
-end;
+  end
+  else
+    if QTransaksiKD_TRANSAKSI.AsString='884' then
+    begin
+      cbTransaksi.Visible:=QTransaksiKD_TRANSAKSI.AsString='884';
+      LTransaksi.Visible:=QTransaksiKD_TRANSAKSI.AsString='884';
+      cbtransaksi.Items.Clear;
+      cbtransaksi.Items.Add('KOREKSI');
+      cbtransaksi.Items.Add('PROSES ULANG');
+      cbtransaksi.Items.Add('KELUAR PROSES');
+      cbtransaksi.Items.Add('DARI MITRA');
+      cbtransaksi.Items.Add('LAINNYA');
+    end;
+  end;
 
 procedure TPenerimaanHasilCelupFrm.TabSheet1Exit(Sender: TObject);
 begin

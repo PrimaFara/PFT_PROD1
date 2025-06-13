@@ -24,8 +24,8 @@ object PenerimaanHasilCelupFrm: TPenerimaanHasilCelupFrm
   object PanelMain: TPanel
     Left = 0
     Top = 0
-    Width = 1070
-    Height = 562
+    Width = 1078
+    Height = 569
     Align = alClient
     BevelOuter = bvNone
     Ctl3D = False
@@ -33,8 +33,8 @@ object PenerimaanHasilCelupFrm: TPenerimaanHasilCelupFrm
     TabOrder = 0
     object Label1: TLabel
       Left = 0
-      Top = 549
-      Width = 1070
+      Top = 556
+      Width = 1078
       Height = 13
       Align = alBottom
       Color = clSkyBlue
@@ -43,7 +43,7 @@ object PenerimaanHasilCelupFrm: TPenerimaanHasilCelupFrm
     object DBText3: TDBText
       Left = 0
       Top = 49
-      Width = 1070
+      Width = 1078
       Height = 27
       Align = alTop
       Alignment = taRightJustify
@@ -61,7 +61,7 @@ object PenerimaanHasilCelupFrm: TPenerimaanHasilCelupFrm
     object PanelHeader: TPanel
       Left = 0
       Top = 0
-      Width = 1070
+      Width = 1078
       Height = 49
       Align = alTop
       BevelOuter = bvNone
@@ -78,9 +78,9 @@ object PenerimaanHasilCelupFrm: TPenerimaanHasilCelupFrm
     object PageControl1: TPageControl
       Left = 0
       Top = 76
-      Width = 1070
-      Height = 473
-      ActivePage = TabSheet2
+      Width = 1078
+      Height = 480
+      ActivePage = TabSheet1
       Align = alClient
       Style = tsFlatButtons
       TabOrder = 1
@@ -91,7 +91,7 @@ object PenerimaanHasilCelupFrm: TPenerimaanHasilCelupFrm
         object PanelMaster: TPanel
           Left = 0
           Top = 0
-          Width = 1062
+          Width = 1070
           Height = 137
           Align = alTop
           BevelOuter = bvNone
@@ -380,16 +380,16 @@ object PenerimaanHasilCelupFrm: TPenerimaanHasilCelupFrm
         object PanelDetail: TPanel
           Left = 0
           Top = 178
-          Width = 1062
-          Height = 223
+          Width = 1070
+          Height = 230
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 2
           object wwDBGrid1: TwwDBGrid
             Left = 0
             Top = 0
-            Width = 1062
-            Height = 223
+            Width = 1070
+            Height = 230
             ControlType.Strings = (
               'KD_SUB_LOKASI;CustomEdit;LookLokasi;F'
               'KD_ITEM;CustomEdit;LookItem;F'
@@ -522,8 +522,8 @@ object PenerimaanHasilCelupFrm: TPenerimaanHasilCelupFrm
         end
         object PanelFooter1: TPanel
           Left = 0
-          Top = 401
-          Width = 1062
+          Top = 408
+          Width = 1070
           Height = 41
           Align = alBottom
           BevelOuter = bvNone
@@ -676,7 +676,7 @@ object PenerimaanHasilCelupFrm: TPenerimaanHasilCelupFrm
         object PanelBand: TPanel
           Left = 0
           Top = 137
-          Width = 1062
+          Width = 1070
           Height = 41
           Align = alTop
           BevelOuter = bvNone
@@ -814,7 +814,7 @@ object PenerimaanHasilCelupFrm: TPenerimaanHasilCelupFrm
         object LabelBanner: TLabel
           Left = 0
           Top = 57
-          Width = 1062
+          Width = 1070
           Height = 13
           Align = alTop
           Color = clSkyBlue
@@ -823,7 +823,7 @@ object PenerimaanHasilCelupFrm: TPenerimaanHasilCelupFrm
         object PanelFilter: TPanel
           Left = 0
           Top = 0
-          Width = 1062
+          Width = 1070
           Height = 57
           Align = alTop
           BevelOuter = bvNone
@@ -957,16 +957,16 @@ object PenerimaanHasilCelupFrm: TPenerimaanHasilCelupFrm
         object PanelBrowse: TPanel
           Left = 0
           Top = 70
-          Width = 1062
-          Height = 331
+          Width = 1070
+          Height = 338
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 1
           object wwDBGrid2: TwwDBGrid
             Left = 0
             Top = 0
-            Width = 1062
-            Height = 331
+            Width = 1070
+            Height = 338
             DisableThemes = True
             DisableThemesInTitle = True
             ControlType.Strings = (
@@ -1025,8 +1025,8 @@ object PenerimaanHasilCelupFrm: TPenerimaanHasilCelupFrm
         end
         object PanelFooter2: TPanel
           Left = 0
-          Top = 401
-          Width = 1062
+          Top = 408
+          Width = 1070
           Height = 41
           Align = alBottom
           BevelOuter = bvNone
@@ -1303,7 +1303,7 @@ object PenerimaanHasilCelupFrm: TPenerimaanHasilCelupFrm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 210000
     PrinterSetup.mmPaperWidth = 297000
-    PrinterSetup.PaperSize = 256
+    PrinterSetup.PaperSize = 9
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\ts.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'

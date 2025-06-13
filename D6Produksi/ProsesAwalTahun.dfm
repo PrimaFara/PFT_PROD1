@@ -888,11 +888,12 @@ object ProsesAwalTahunFrm: TProsesAwalTahunFrm
             'PENGERING0;CheckBox;1;0')
           Selected.Strings = (
             'BAGIAN'#9'18'#9'BAGIAN'#9#9
-            'NAMA_TRANSAKSI'#9'35'#9'NAMA TRANSAKSI'#9'F'
+            'NAMA_TRANSAKSI'#9'35'#9'NAMA TRANSAKSI'#9'F'#9
             'KD_TRANSAKSI'#9'3'#9'KODE~TRANSAKSI'#9#9
             'TRANSAKSI'#9'12'#9'KUNCI TGL~TRANSAKSI'#9#9
             'OPR_UPDATE'#9'12'#9'LOG USER'#9#9
-            'TGL_UPDATE'#9'18'#9'LOG TGL'#9#9)
+            'TGL_UPDATE'#9'18'#9'LOG TGL'#9#9
+            'STATUS'#9'10'#9'STATUS'#9'F'#9)
           IniAttributes.Delimiter = ';;'
           TitleColor = clSkyBlue
           FixedCols = 0
@@ -1432,11 +1433,11 @@ object ProsesAwalTahunFrm: TProsesAwalTahunFrm
     Variables.Data = {
       0300000001000000080000003A4D59504152414D010000000000000000000000}
     QBEDefinition.QBEFieldDefs = {
-      0400000007000000090000005452414E53414B53490100000000000400000042
+      0400000008000000090000005452414E53414B53490100000000000400000042
       554B550100000000000A0000004F50525F5550444154450100000000000A0000
       0054474C5F5550444154450100000000000C0000004B445F5452414E53414B53
       490100000000000E0000004E414D415F5452414E53414B534901000000000006
-      00000042414749414E010000000000}
+      00000042414749414E01000000000006000000535441545553010000000000}
     QueryAllRecords = False
     CountAllRecords = True
     CachedUpdates = True
@@ -1475,6 +1476,11 @@ object ProsesAwalTahunFrm: TProsesAwalTahunFrm
       DisplayLabel = 'LOG TGL'
       DisplayWidth = 18
       FieldName = 'TGL_UPDATE'
+    end
+    object QKunciSTATUS: TStringField
+      DisplayWidth = 10
+      FieldName = 'STATUS'
+      Size = 10
     end
     object QKunciBUKU: TDateTimeField
       DisplayWidth = 18

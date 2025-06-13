@@ -133,6 +133,7 @@ type
     DateTimePicker1: TDateTimePicker;
     Label3: TLabel;
     QSetAll: TOracleQuery;
+    QKunciSTATUS: TStringField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure wwDBGrid2TitleButtonClick(Sender: TObject;
