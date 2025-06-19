@@ -23,8 +23,8 @@ object ValidasiKeluarBBFrm: TValidasiKeluarBBFrm
   object PanelMain: TPanel
     Left = 0
     Top = 0
-    Width = 1081
-    Height = 546
+    Width = 1073
+    Height = 539
     Align = alClient
     BevelOuter = bvNone
     Ctl3D = False
@@ -32,8 +32,8 @@ object ValidasiKeluarBBFrm: TValidasiKeluarBBFrm
     TabOrder = 0
     object Label1: TLabel
       Left = 0
-      Top = 533
-      Width = 1081
+      Top = 526
+      Width = 1073
       Height = 13
       Align = alBottom
       Color = clSkyBlue
@@ -42,7 +42,7 @@ object ValidasiKeluarBBFrm: TValidasiKeluarBBFrm
     object DBText3: TDBText
       Left = 0
       Top = 49
-      Width = 1081
+      Width = 1073
       Height = 27
       Align = alTop
       Alignment = taRightJustify
@@ -60,7 +60,7 @@ object ValidasiKeluarBBFrm: TValidasiKeluarBBFrm
     object PanelHeader: TPanel
       Left = 0
       Top = 0
-      Width = 1081
+      Width = 1073
       Height = 49
       Align = alTop
       BevelOuter = bvNone
@@ -77,8 +77,8 @@ object ValidasiKeluarBBFrm: TValidasiKeluarBBFrm
     object PageControl1: TPageControl
       Left = 0
       Top = 76
-      Width = 1081
-      Height = 457
+      Width = 1073
+      Height = 450
       ActivePage = TabSheet2
       Align = alClient
       Style = tsFlatButtons
@@ -90,7 +90,7 @@ object ValidasiKeluarBBFrm: TValidasiKeluarBBFrm
         object PanelMaster: TPanel
           Left = 0
           Top = 0
-          Width = 1073
+          Width = 1065
           Height = 137
           Align = alTop
           BevelOuter = bvNone
@@ -435,16 +435,16 @@ object ValidasiKeluarBBFrm: TValidasiKeluarBBFrm
         object PanelDetail: TPanel
           Left = 0
           Top = 178
-          Width = 1073
-          Height = 207
+          Width = 1065
+          Height = 200
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 2
           object wwDBGrid1: TwwDBGrid
             Left = 0
             Top = 0
-            Width = 1073
-            Height = 207
+            Width = 1065
+            Height = 200
             ControlType.Strings = (
               'KD_SUB_LOKASI;CustomEdit;LookLokasi;F'
               'KD_ITEM;CustomEdit;LookItem;F'
@@ -594,8 +594,8 @@ object ValidasiKeluarBBFrm: TValidasiKeluarBBFrm
         end
         object PanelFooter1: TPanel
           Left = 0
-          Top = 385
-          Width = 1073
+          Top = 378
+          Width = 1065
           Height = 41
           Align = alBottom
           BevelOuter = bvNone
@@ -767,7 +767,7 @@ object ValidasiKeluarBBFrm: TValidasiKeluarBBFrm
         object PanelBand: TPanel
           Left = 0
           Top = 137
-          Width = 1073
+          Width = 1065
           Height = 41
           Align = alTop
           BevelOuter = bvNone
@@ -914,7 +914,7 @@ object ValidasiKeluarBBFrm: TValidasiKeluarBBFrm
         object LabelBanner: TLabel
           Left = 0
           Top = 57
-          Width = 1073
+          Width = 1065
           Height = 13
           Align = alTop
           Color = clSkyBlue
@@ -923,7 +923,7 @@ object ValidasiKeluarBBFrm: TValidasiKeluarBBFrm
         object PanelFilter: TPanel
           Left = 0
           Top = 0
-          Width = 1073
+          Width = 1065
           Height = 57
           Align = alTop
           BevelOuter = bvNone
@@ -1057,16 +1057,16 @@ object ValidasiKeluarBBFrm: TValidasiKeluarBBFrm
         object PanelBrowse: TPanel
           Left = 0
           Top = 70
-          Width = 1073
-          Height = 315
+          Width = 1065
+          Height = 308
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 1
           object wwDBGrid2: TwwDBGrid
             Left = 0
             Top = 0
-            Width = 1073
-            Height = 315
+            Width = 1065
+            Height = 308
             DisableThemes = True
             DisableThemesInTitle = True
             ControlType.Strings = (
@@ -1128,8 +1128,8 @@ object ValidasiKeluarBBFrm: TValidasiKeluarBBFrm
         end
         object PanelFooter2: TPanel
           Left = 0
-          Top = 385
-          Width = 1073
+          Top = 378
+          Width = 1065
           Height = 41
           Align = alBottom
           BevelOuter = bvNone
@@ -1419,7 +1419,7 @@ object ValidasiKeluarBBFrm: TValidasiKeluarBBFrm
     PrinterSetup.BinName = 'Default'
     PrinterSetup.DocumentName = 'Report'
     PrinterSetup.Orientation = poLandscape
-    PrinterSetup.PaperName = 'A4'
+    PrinterSetup.PaperName = 'Custom'
     PrinterSetup.PrinterName = 'Fax'
     PrinterSetup.SaveDeviceSettings = False
     PrinterSetup.mmMarginBottom = 6350
@@ -1428,7 +1428,7 @@ object ValidasiKeluarBBFrm: TValidasiKeluarBBFrm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 210000
     PrinterSetup.mmPaperWidth = 297000
-    PrinterSetup.PaperSize = 9
+    PrinterSetup.PaperSize = 256
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\ts.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'
@@ -2741,7 +2741,6 @@ object ValidasiKeluarBBFrm: TValidasiKeluarBBFrm
     end
     object QMasterTGL: TDateTimeField
       FieldName = 'TGL'
-      OnChange = QMasterTGLChange
       DisplayFormat = 'dd mmm yyyy'
     end
     object QMasterKETERANGAN: TStringField
@@ -5106,6 +5105,52 @@ object ValidasiKeluarBBFrm: TValidasiKeluarBBFrm
   object QItem: TOracleDataSet
     SQL.Strings = (
       'select * from ('
+      'select '
+      '  x.kd_sub_kel,'
+      '  x.kd_item,'
+      '  x.nama_item,'
+      '  x.warna, '
+      '  x.kd_warna,'
+      '  x.kd_satuan, '
+      '  x.kd_sub_lokasi,'
+      '  x.rasio,'
+      '  nvl(x.qty,0)-nvl(y.qty3,0) as qty, '
+      '  nvl(x.qty2,0)-nvl(y.qty8,0) as qty2,'
+      '  x.tgl_stok'
+      'from ('
+      ' select'
+      
+        '  b.kd_sub_kel, b.kd_item, b.nama_item, a.warna, a.kd_warna, b.k' +
+        'd_satuan, '
+      
+        '  '#39'30-00000'#39' as kd_sub_lokasi, b.rasio, a.stok_kg as qty, ROUND(' +
+        'a.stok_kg/nvl(b.rasio,1)) as qty2, a.tgl_stok'
+      ' from ('
+      '  select'
+      '   a.kd_item, a.kd_warna, a.warna,'
+      
+        '   (sum(a.awal_thn)+sum(awal_tgl)+sum(qty_in))-sum(a.qty_out) as' +
+        ' stok_kg,'
+      '   a.tgl_stok, a.ibukti'
+      '  from ipisma_db3.TEMP_LOOKUP_GW25 a'
+      '  group by a.kd_item, a.kd_warna, a.warna, a.tgl_stok, a.ibukti'
+      ' ) a'
+      ' left join ipisma_db3.item b on a.kd_item=b.kd_item'
+      ' where a.stok_kg <> 0 and a.ibukti=:pibukti'
+      ' order by b.kd_sub_kel, b.nama_item, a.warna'
+      ') x'
+      
+        'left join (select ibukti, kd_item, kd_warna, sum(qty3) as qty3, ' +
+        'sum(qty8) as qty8 from ipisma_db3.bukti_detail4 group by ibukti,' +
+        ' kd_item, kd_warna) y'
+      
+        'on y.ibukti=:pibukti and x.kd_item=y.kd_item and x.kd_warna=y.kd' +
+        '_warna'
+      'order by x.kd_sub_kel, x.warna'
+      ') x'
+      ':myparam'
+      ''
+      '/*select * from ('
       ' select'
       
         '  b.kd_sub_kel, b.kd_item, b.nama_item, a.warna, a.kd_warna, b.k' +
@@ -5130,6 +5175,7 @@ object ValidasiKeluarBBFrm: TValidasiKeluarBBFrm
       ' order by b.kd_sub_kel, b.nama_item, a.warna'
       ')'
       ':myparam'
+      '*/'
       ''
       ''
       '/*'
@@ -5152,7 +5198,8 @@ object ValidasiKeluarBBFrm: TValidasiKeluarBBFrm
       ':myparam'
       '*/')
     Variables.Data = {
-      0300000001000000080000003A4D59504152414D010000000000000000000000}
+      0300000002000000080000003A4D59504152414D010000000000000000000000
+      080000003A504942554B5449030000000000000000000000}
     QBEDefinition.QBEFieldDefs = {
       040000000B000000070000004B445F4954454D010000000000090000004E414D
       415F4954454D010000000000090000004B445F53415455414E0100000000000D
@@ -5165,7 +5212,7 @@ object ValidasiKeluarBBFrm: TValidasiKeluarBBFrm
     ReadOnly = True
     QueryAllRecords = False
     Session = DMFrm.OS
-    OnCalcFields = QItemCalcFields
+    BeforeOpen = QItemBeforeOpen
     Left = 232
     Top = 328
     object QItemKD_SUB_KEL: TStringField
@@ -5415,12 +5462,13 @@ object ValidasiKeluarBBFrm: TValidasiKeluarBBFrm
   object QProc_getStok: TOracleQuery
     SQL.Strings = (
       'begin'
-      '  ipisma_db3.proc_temp_lookup_gw(:ptgl, :ptgl2);'
+      '  ipisma_db3.proc_temp_lookup_gw25(:ptgl, :ptgl2, :pibukti);'
       'end;')
     Session = DMFrm.OS
     Variables.Data = {
-      0300000002000000050000003A5054474C0C0000000000000000000000060000
-      003A5054474C320C0000000000000000000000}
+      0300000003000000050000003A5054474C0C0000000000000000000000060000
+      003A5054474C320C0000000000000000000000080000003A504942554B544903
+      0000000000000000000000}
     Cursor = crSQLWait
     Left = 832
     Top = 144
@@ -5497,7 +5545,7 @@ object ValidasiKeluarBBFrm: TValidasiKeluarBBFrm
     PrinterSetup.BinName = 'Default'
     PrinterSetup.DocumentName = 'Report'
     PrinterSetup.Orientation = poLandscape
-    PrinterSetup.PaperName = 'A4'
+    PrinterSetup.PaperName = 'Custom'
     PrinterSetup.PrinterName = 'Fax'
     PrinterSetup.SaveDeviceSettings = False
     PrinterSetup.mmMarginBottom = 6350
@@ -5506,7 +5554,7 @@ object ValidasiKeluarBBFrm: TValidasiKeluarBBFrm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 210000
     PrinterSetup.mmPaperWidth = 297000
-    PrinterSetup.PaperSize = 9
+    PrinterSetup.PaperSize = 256
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\ts.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'

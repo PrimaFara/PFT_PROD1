@@ -1,7 +1,7 @@
 object InfoMutasiGWFrm: TInfoMutasiGWFrm
-  Left = 170
-  Top = 45
-  Width = 1100
+  Left = 191
+  Top = 59
+  Width = 1084
   Height = 606
   Caption = 'InfoMutasiGW 1'
   Color = clBtnFace
@@ -23,7 +23,7 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
   object PanelMain: TPanel
     Left = 0
     Top = 0
-    Width = 1084
+    Width = 1068
     Height = 568
     Align = alClient
     BevelOuter = bvNone
@@ -33,7 +33,7 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
     object Label1: TLabel
       Left = 0
       Top = 555
-      Width = 1084
+      Width = 1068
       Height = 13
       Align = alBottom
       Color = clSkyBlue
@@ -42,7 +42,7 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
     object DBText3: TDBText
       Left = 0
       Top = 49
-      Width = 1084
+      Width = 1068
       Height = 27
       Align = alTop
       Alignment = taRightJustify
@@ -60,7 +60,7 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
     object PanelHeader: TPanel
       Left = 0
       Top = 0
-      Width = 1084
+      Width = 1068
       Height = 49
       Align = alTop
       BevelOuter = bvNone
@@ -77,13 +77,13 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
     object PanelFooter2: TPanel
       Left = 0
       Top = 514
-      Width = 1084
+      Width = 1068
       Height = 41
       Align = alBottom
       BevelOuter = bvNone
       TabOrder = 1
       DesignSize = (
-        1084
+        1068
         41)
       object wwDBNavigator1: TwwDBNavigator
         Left = 0
@@ -165,7 +165,7 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
         end
       end
       object BtnExport: TBitBtn
-        Left = 314
+        Left = 298
         Top = 8
         Width = 75
         Height = 25
@@ -176,7 +176,7 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
         NumGlyphs = 2
       end
       object BtnPrintBrowse: TBitBtn
-        Left = 898
+        Left = 882
         Top = 8
         Width = 75
         Height = 25
@@ -198,7 +198,7 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
         NumGlyphs = 2
       end
       object BtnClose1: TBitBtn
-        Left = 999
+        Left = 983
         Top = 8
         Width = 75
         Height = 25
@@ -221,7 +221,7 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
     object PageControl1: TPageControl
       Left = 0
       Top = 76
-      Width = 1084
+      Width = 1068
       Height = 438
       ActivePage = TabSheet1
       Align = alClient
@@ -231,7 +231,7 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
         object LabelBanner: TLabel
           Left = 0
           Top = 93
-          Width = 1076
+          Width = 1060
           Height = 13
           Align = alTop
           Color = clSkyBlue
@@ -240,7 +240,7 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
         object PanelBrowse: TPanel
           Left = 0
           Top = 106
-          Width = 1076
+          Width = 1060
           Height = 304
           Align = alClient
           BevelOuter = bvNone
@@ -248,7 +248,7 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
           object wwDBGridNew: TwwDBGrid
             Left = 0
             Top = 0
-            Width = 1076
+            Width = 1060
             Height = 304
             ControlType.Strings = (
               'ISFIXED;CheckBox;1;0')
@@ -310,7 +310,7 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
           object wwDBGrid2: TwwDBGrid
             Left = 0
             Top = 0
-            Width = 1076
+            Width = 1060
             Height = 304
             ControlType.Strings = (
               'ISFIXED;CheckBox;1;0')
@@ -325,6 +325,7 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
               'MASUK3'#9'10'#9'Retur~dari Produksi'#9'F'#9'MASUK'
               'MASUK6'#9'10'#9'Jasa Kelos'#9'F'#9'MASUK'
               'MASUK7'#9'10'#9'Retur~dari Mitra'#9'F'#9'MASUK'
+              'MASUK5'#9'10'#9'Doubling'#9'F'#9'MASUK'
               'MASUK4'#9'10'#9'Koreksi'#9'F'#9'MASUK'
               'KELUAR1'#9'10'#9'Persiapan'#9'F'#9'KELUAR'
               'KELUAR2'#9'10'#9'Tenun'#9'F'#9'KELUAR'
@@ -333,12 +334,9 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
               'KELUAR5'#9'10'#9'Pengganti~Retur Produksi'#9'F'#9'KELUAR'
               'KELUAR9'#9'10'#9'Jasa Kelos'#9'F'#9'KELUAR'
               'KELUAR8'#9'10'#9'Kemitraan'#9'F'#9'KELUAR'
+              'KELUAR7'#9'10'#9'Doubling'#9'F'#9'KELUAR'
               'KELUAR6'#9'10'#9'Koreksi'#9'F'#9'KELUAR'
-              'AKHIR'#9'10'#9'AKHIR'#9'F'
-              'KELUAR7'#9'10'#9'Kirim'#9'F'#9'DOUBLING'
-              'MASUK5'#9'10'#9'Terima'#9'F'#9'DOUBLING'
-              'SISADOUBLING'#9'10'#9'Sisa'#9'F'#9'DOUBLING'
-              'FISIK'#9'10'#9'FISIK'#9'F')
+              'FISIK'#9'10'#9'AKHIR'#9'F')
             IniAttributes.Enabled = True
             IniAttributes.Delimiter = ';;'
             IniAttributes.CheckNewFields = True
@@ -378,13 +376,13 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
         object PanelFilter: TPanel
           Left = 0
           Top = 0
-          Width = 1076
+          Width = 1060
           Height = 93
           Align = alTop
           BevelOuter = bvNone
           TabOrder = 1
           DesignSize = (
-            1076
+            1060
             93)
           object Bevel1: TBevel
             Left = 271
@@ -393,7 +391,7 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
             Height = 41
           end
           object Label5: TLabel
-            Left = 1018
+            Left = 1002
             Top = 16
             Width = 43
             Height = 13
@@ -463,7 +461,7 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
             NumGlyphs = 2
           end
           object wwDBSpinLine2: TwwDBSpinEdit
-            Left = 1020
+            Left = 1004
             Top = 32
             Width = 41
             Height = 19
@@ -564,7 +562,7 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
         object LabelBanner2: TLabel
           Left = 0
           Top = 73
-          Width = 1076
+          Width = 1060
           Height = 13
           Align = alTop
           Color = clSkyBlue
@@ -573,13 +571,13 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
         object Panel1: TPanel
           Left = 0
           Top = 0
-          Width = 1076
+          Width = 1060
           Height = 73
           Align = alTop
           BevelOuter = bvNone
           TabOrder = 0
           DesignSize = (
-            1076
+            1060
             73)
           object Bevel2: TBevel
             Left = 334
@@ -588,7 +586,7 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
             Height = 41
           end
           object Label7: TLabel
-            Left = 1018
+            Left = 1002
             Top = 16
             Width = 43
             Height = 13
@@ -651,7 +649,7 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
             NumGlyphs = 2
           end
           object wwDBSpinEdit1: TwwDBSpinEdit
-            Left = 1020
+            Left = 1004
             Top = 32
             Width = 41
             Height = 19
@@ -734,7 +732,7 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
         object Panel2: TPanel
           Left = 0
           Top = 86
-          Width = 1076
+          Width = 1060
           Height = 324
           Align = alClient
           BevelOuter = bvNone
@@ -742,8 +740,8 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
           object wwDBGrid1: TwwDBGrid
             Left = 0
             Top = 0
-            Width = 568
-            Height = 331
+            Width = 544
+            Height = 324
             ControlType.Strings = (
               'ISFIXED;CheckBox;1;0')
             Selected.Strings = (
@@ -789,10 +787,10 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
             OnTitleButtonClick = wwDBGrid1TitleButtonClick
           end
           object PanelRiwayat: TPanel
-            Left = 568
+            Left = 544
             Top = 0
             Width = 516
-            Height = 331
+            Height = 324
             Align = alRight
             BevelOuter = bvNone
             Caption = 'PanelRiwayat'
@@ -837,7 +835,7 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
               Left = 0
               Top = 49
               Width = 516
-              Height = 282
+              Height = 275
               ControlType.Strings = (
                 'ISFIXED;CheckBox;1;0')
               Selected.Strings = (
@@ -882,6 +880,238 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
           end
         end
       end
+      object TabSheet3: TTabSheet
+        Caption = 'Mutasi Benang Doubling'
+        ImageIndex = 2
+        object Label12: TLabel
+          Left = 0
+          Top = 73
+          Width = 1060
+          Height = 13
+          Align = alTop
+          Color = clSkyBlue
+          ParentColor = False
+        end
+        object Panel3: TPanel
+          Left = 0
+          Top = 0
+          Width = 1060
+          Height = 73
+          Align = alTop
+          BevelOuter = bvNone
+          TabOrder = 0
+          DesignSize = (
+            1060
+            73)
+          object Bevel3: TBevel
+            Left = 334
+            Top = 17
+            Width = 217
+            Height = 41
+          end
+          object Label6: TLabel
+            Left = 1002
+            Top = 16
+            Width = 43
+            Height = 13
+            Cursor = crHandPoint
+            Anchors = [akTop, akRight]
+            Caption = 'Spasi (%)'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlue
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsUnderline]
+            ParentFont = False
+            OnClick = Label6Click
+          end
+          object SpeedButton3: TSpeedButton
+            Left = 404
+            Top = 22
+            Width = 89
+            Height = 30
+            Cursor = crHandPoint
+            GroupIndex = 1
+            Caption = 'Mode &Cari'
+            NumGlyphs = 2
+            OnClick = SpeedButton3Click
+          end
+          object SpeedButton4: TSpeedButton
+            Left = 494
+            Top = 22
+            Width = 53
+            Height = 30
+            Cursor = crHandPoint
+            GroupIndex = 1
+            Caption = '&Oke'
+            NumGlyphs = 2
+            OnClick = SpeedButton4Click
+          end
+          object Label10: TLabel
+            Left = 8
+            Top = 12
+            Width = 44
+            Height = 13
+            Caption = 'Tgl. Awal'
+          end
+          object Label11: TLabel
+            Left = 136
+            Top = 12
+            Width = 45
+            Height = 13
+            Caption = 'Tgl. Akhir'
+          end
+          object BitBtn4: TBitBtn
+            Left = 338
+            Top = 23
+            Width = 65
+            Height = 29
+            Cursor = crHandPoint
+            Caption = '&Refresh'
+            TabOrder = 0
+            OnClick = BitBtn4Click
+            NumGlyphs = 2
+          end
+          object wwDBSpinEdit2: TwwDBSpinEdit
+            Left = 1004
+            Top = 32
+            Width = 41
+            Height = 19
+            Anchors = [akTop, akRight]
+            Increment = 100.000000000000000000
+            MaxValue = 400.000000000000000000
+            MinValue = 100.000000000000000000
+            Value = 100.000000000000000000
+            TabOrder = 1
+            UnboundDataType = wwDefault
+            OnChange = wwDBSpinEdit2Change
+          end
+          object vTglAwal3: TwwDBDateTimePicker
+            Left = 8
+            Top = 27
+            Width = 113
+            Height = 22
+            BorderStyle = bsNone
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 2
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = vTglAwal3Change
+          end
+          object vTglAkhir3: TwwDBDateTimePicker
+            Left = 136
+            Top = 27
+            Width = 113
+            Height = 22
+            BorderStyle = bsNone
+            CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+            CalendarAttributes.Font.Color = clWindowText
+            CalendarAttributes.Font.Height = -11
+            CalendarAttributes.Font.Name = 'MS Sans Serif'
+            CalendarAttributes.Font.Style = []
+            Epoch = 1950
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -13
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ShowButton = True
+            TabOrder = 3
+            DisplayFormat = 'dd mmm yyyy'
+            OnChange = vTglAkhir2Change
+          end
+          object CheckBox4: TCheckBox
+            Left = 560
+            Top = 40
+            Width = 137
+            Height = 17
+            Caption = 'Tampilkan riwayat mutasi'
+            TabOrder = 4
+          end
+          object CheckBox5: TCheckBox
+            Left = 560
+            Top = 18
+            Width = 137
+            Height = 17
+            Caption = 'Yang ada stoknya saja'
+            Checked = True
+            State = cbChecked
+            TabOrder = 5
+            OnClick = CheckBox5Click
+          end
+        end
+        object Panel4: TPanel
+          Left = 0
+          Top = 86
+          Width = 1060
+          Height = 324
+          Align = alClient
+          BevelOuter = bvNone
+          Caption = 'Panel4'
+          TabOrder = 1
+          object wwDBGrid4: TwwDBGrid
+            Left = 0
+            Top = 0
+            Width = 1060
+            Height = 324
+            ControlType.Strings = (
+              'ISFIXED;CheckBox;1;0')
+            Selected.Strings = (
+              'NO_BENANG'#9'30'#9'KONSTRUKSI'#9'F'
+              'WARNA'#9'20'#9'WARNA'#9'F'
+              'AWAL'#9'20'#9'AWAL'#9'F'
+              'QTY_IN'#9'20'#9'MASUK'#9'F'
+              'QTY_OUT'#9'20'#9'KELUAR'#9'F'
+              'CQTY_AKHIR'#9'20'#9'SISA'#9'F')
+            IniAttributes.Enabled = True
+            IniAttributes.Delimiter = ';;'
+            IniAttributes.CheckNewFields = True
+            ExportOptions.ExportType = wwgetHTML
+            ExportOptions.Options = [esoShowHeader, esoShowFooter, esoShowTitle, esoDblQuoteFields, esoBestColFit, esoShowRecordNo, esoShowAlternating]
+            TitleColor = clBackground
+            OnRowChanged = wwDBGrid1RowChanged
+            FixedCols = 0
+            ShowHorzScrollBar = True
+            EditControlOptions = [ecoSearchOwnerForm, ecoDisableDateTimePicker]
+            Align = alClient
+            BorderStyle = bsNone
+            Ctl3D = False
+            DataSource = dsQBrowse3
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            KeyOptions = []
+            Options = [dgEditing, dgTitles, dgColumnResize, dgColLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgWordWrap, dgPerfectRowFit, dgShowFooter, dgNoLimitColSize, dgTrailingEllipsis, dgRowResize, dgFixedProportionalResize]
+            ParentCtl3D = False
+            ParentFont = False
+            TabOrder = 0
+            TitleAlignment = taCenter
+            TitleFont.Charset = ANSI_CHARSET
+            TitleFont.Color = clWhite
+            TitleFont.Height = -11
+            TitleFont.Name = 'Arial'
+            TitleFont.Style = []
+            TitleLines = 2
+            TitleButtons = True
+            UseTFields = False
+            OnTitleButtonClick = wwDBGrid1TitleButtonClick
+          end
+        end
+      end
     end
   end
   object QBrowse: TOracleDataSet
@@ -910,8 +1140,8 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
     AfterScroll = QBrowseAfterScroll
     OnCalcFields = QBrowseCalcFields
     OnFilterRecord = QBrowseFilterRecord
-    Left = 220
-    Top = 40
+    Left = 212
+    Top = 16
     object QBrowseKD_ITEM: TStringField
       FieldName = 'KD_ITEM'
       Required = True
@@ -1041,7 +1271,6 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
   object dsQBrowse: TwwDataSource
     DataSet = QBrowse
     Left = 240
-    Top = 8
   end
   object ppReportBrowse: TppReport
     AutoStop = False
@@ -1049,7 +1278,7 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
     PrinterSetup.BinName = 'Default'
     PrinterSetup.DocumentName = 'Report'
     PrinterSetup.Orientation = poLandscape
-    PrinterSetup.PaperName = 'A4'
+    PrinterSetup.PaperName = 'Custom'
     PrinterSetup.PrinterName = 'Fax'
     PrinterSetup.SaveDeviceSettings = False
     PrinterSetup.mmMarginBottom = 6350
@@ -3165,8 +3394,8 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
       'where kd_transaksi='#39'108'#39)
     QBEDefinition.QBEFieldDefs = {04000000010000000800000053494E4F50534953010000000000}
     Session = DMFrm.OS
-    Left = 120
-    Top = 40
+    Left = 112
+    Top = 16
   end
   object dsQSOP: TwwDataSource
     DataSet = QSOP
@@ -3286,8 +3515,8 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
       0101010100000000070000003A56524153494F03000000040000000100000000
       0000000A0000003A5653595344415445320C00000007000000786D031E010101
       00000000}
-    Left = 264
-    Top = 56
+    Left = 280
+    Top = 24
   end
   object QDump3: TOracleQuery
     SQL.Strings = (
@@ -3514,13 +3743,12 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
       061E01010100000000070000003A56524153494F040000000800000000000000
       0000F03F000000000D0000003A564B445F4A4E535F4954454D05000000000000
       0000000000}
-    Left = 208
-    Top = 96
+    Left = 296
   end
   object dsQBrowse2: TwwDataSource
     DataSet = QBrowse2
-    Left = 576
-    Top = 40
+    Left = 560
+    Top = 32
   end
   object QBrowse2: TOracleDataSet
     SQL.Strings = (
@@ -3701,7 +3929,7 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
   end
   object dsQBrowseNew: TwwDataSource
     DataSet = QBrowseNew
-    Left = 256
+    Left = 72
     Top = 288
   end
   object QBrowseNew: TOracleDataSet
@@ -3758,8 +3986,8 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
     Session = DMFrm.OS
     AfterScroll = QBrowseNewAfterScroll
     OnCalcFields = QBrowseNewCalcFields
-    Left = 236
-    Top = 320
+    Left = 76
+    Top = 344
     object QBrowseNewKD_ITEM: TStringField
       FieldName = 'KD_ITEM'
       Required = True
@@ -3863,5 +4091,109 @@ object InfoMutasiGWFrm: TInfoMutasiGWFrm
       DisplayFormat = '#,##0.##;(#,##0.##);-'
       Calculated = True
     end
+  end
+  object QDump5: TOracleQuery
+    SQL.Strings = (
+      'begin'
+      ' ipisma_db3.proc_temp_mutasi_gw_doubling(:vsysdate, :vsysdate2);'
+      'end;'
+      '')
+    Session = DMFrm.OS
+    Variables.Data = {
+      0300000002000000090000003A56535953444154450C00000007000000786B06
+      01010101000000000A0000003A5653595344415445320C000000000000000000
+      0000}
+    Cursor = crSQLWait
+    Left = 896
+    Top = 192
+  end
+  object QBrowse3: TOracleDataSet
+    SQL.Strings = (
+      'select a.* from'
+      '('
+      
+        ' select t.kd_item, t.no_benang, t.kd_warna, y.warna, (sum(t.awal' +
+        '_thn)+sum(t.awal_tgl)) as awal, sum(t.qty_in) as qty_in, sum(t.q' +
+        'ty_out) as qty_out'
+      ' from ipisma_db3.TEMP_MUTASI_GW_DOUBLING t'
+      ' left join ipisma_db3.warna_baru y on t.kd_warna=y.kd_warna'
+      ' group by t.kd_item, t.no_benang, t.kd_warna, y.warna'
+      ') a'
+      ':vorder'
+      ''
+      ''
+      ''
+      '/*'
+      'select a.* from'
+      '('
+      
+        ' select t.kd_item, t.no_benang, y.warna, sum(t.awal_thn+t.awal_t' +
+        'gl) as awal, sum(t.qty_in) as qty_in, sum(t.qty_out) as qty_out'
+      ' from ipisma_db3.TEMP_MUTASI_GW t'
+      ' left join ipisma_db3.warna_baru y on t.kd_warna=y.kd_warna'
+      
+        ' WHERE (t.awal_thn <> 0) or (t.awal_tgl <> 0) or (t.qty_in <> 0)' +
+        ' or (t.qty_out <> 0)'
+      ' group by t.kd_item, t.no_benang, y.warna'
+      ') a'
+      ':vorder'
+      '*/')
+    Variables.Data = {
+      0300000001000000070000003A564F5244455201000000130000006F72646572
+      206279206E6F5F62656E616E670000000000}
+    QBEDefinition.QBEFieldDefs = {
+      0400000007000000050000005741524E41010000000000090000004E4F5F4245
+      4E414E47010000000000040000004157414C010000000000060000005154595F
+      494E010000000000070000005154595F4F5554010000000000070000004B445F
+      4954454D010000000000080000004B445F5741524E41010000000000}
+    Cursor = crSQLWait
+    ReadOnly = True
+    QueryAllRecords = False
+    Session = DMFrm.OS
+    AfterScroll = QBrowse3AfterScroll
+    OnCalcFields = QBrowse3CalcFields
+    OnFilterRecord = QBrowse3FilterRecord
+    Left = 524
+    Top = 72
+    object QBrowse3CQTY_AKHIR: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'CQTY_AKHIR'
+      DisplayFormat = '#,##0.##;(#,##0.##);-'
+      Calculated = True
+    end
+    object QBrowse3KD_ITEM: TStringField
+      FieldName = 'KD_ITEM'
+      Required = True
+      Size = 50
+    end
+    object QBrowse3NO_BENANG: TStringField
+      FieldName = 'NO_BENANG'
+      Size = 225
+    end
+    object QBrowse3KD_WARNA: TStringField
+      FieldName = 'KD_WARNA'
+      Size = 6
+    end
+    object QBrowse3WARNA: TStringField
+      FieldName = 'WARNA'
+      Size = 50
+    end
+    object QBrowse3AWAL: TFloatField
+      FieldName = 'AWAL'
+      DisplayFormat = '#,##0.##;(#,##0.##);-'
+    end
+    object QBrowse3QTY_IN: TFloatField
+      FieldName = 'QTY_IN'
+      DisplayFormat = '#,##0.##;(#,##0.##);-'
+    end
+    object QBrowse3QTY_OUT: TFloatField
+      FieldName = 'QTY_OUT'
+      DisplayFormat = '#,##0.##;(#,##0.##);-'
+    end
+  end
+  object dsQBrowse3: TwwDataSource
+    DataSet = QBrowse3
+    Left = 568
+    Top = 72
   end
 end

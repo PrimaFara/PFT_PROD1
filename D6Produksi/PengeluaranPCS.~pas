@@ -139,8 +139,6 @@ type
     wwDBComboBox2: TwwDBComboBox;
     Label10: TLabel;
     QItem: TOracleDataSet;
-    QItemNAMA_ITEM: TStringField;
-    QItemKD_ITEM: TStringField;
     LookItem: TwwDBLookupComboDlg;
     QBrowseSHIFT: TStringField;
     QBrowseGRUP: TStringField;
@@ -201,25 +199,19 @@ type
     ppDBText48: TppDBText;
     ppDBText49: TppDBText;
     QDetailQTY3: TFloatField;
-    QItemKD_SUB_LOKASI: TStringField;
-    QItemQTY: TFloatField;
     QMasterSTATUS: TStringField;
     QDetailQTY6: TFloatField;
     QDetailQTY8: TFloatField;
     QDetailRASIO: TFloatField;
     QBrowseRASIO: TFloatField;
     RadioGroup1: TRadioGroup;
-    QItemRASIO: TFloatField;
     QBrowseQTY3: TFloatField;
     QBrowseQTY8: TFloatField;
     CBPreview: TCheckBox;
     QDetailKD_WARNA: TStringField;
     QDetailNO_BATCH: TStringField;
     QDetailWARNA: TStringField;
-    QItemKD_WARNA: TStringField;
-    QItemWARNA: TStringField;
     QDetailKD_SUB_LOKASI2: TStringField;
-    QItemQTY2: TFloatField;
     QDetailNO_BUKTI: TStringField;
     QDetailSTATUS: TStringField;
     LookResep: TwwDBLookupComboDlg;
@@ -342,8 +334,6 @@ type
     QTransaksiDOC_ISO: TStringField;
     ppDBText29: TppDBText;
     Label18: TLabel;
-    QItemRASIO2: TFloatField;
-    QItemKD_SUB_KEL: TStringField;
     QDetailKD_SUB_KEL: TStringField;
     QResep: TOracleDataSet;
     QResepNO_RESEP: TStringField;
@@ -359,9 +349,18 @@ type
     QResepNotaNO_NOTA: TStringField;
     EditKG: TCheckBox;
     QProc_getStok: TOracleQuery;
-    QItemTGL_STOK: TDateTimeField;
     QDetailJAM1: TDateTimeField;
     wwDBDateTimePicker222: TwwDBDateTimePicker;
+    QItemKD_SUB_KEL: TStringField;
+    QItemKD_ITEM: TStringField;
+    QItemNAMA_ITEM: TStringField;
+    QItemWARNA: TStringField;
+    QItemKD_WARNA: TStringField;
+    QItemKD_SUB_LOKASI: TStringField;
+    QItemRASIO: TFloatField;
+    QItemQTY: TFloatField;
+    QItemQTY2: TFloatField;
+    QItemTGL_STOK: TDateTimeField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);
@@ -431,7 +430,7 @@ type
     procedure QMasterAfterDelete(DataSet: TDataSet);
     procedure QDetailQTY8Change(Sender: TField);
     procedure QResepBeforeQuery(Sender: TOracleDataSet);
-    procedure QMasterTGLChange(Sender: TField);
+    procedure QItemBeforeOpen(DataSet: TDataSet);
 
     
   private
@@ -834,7 +833,7 @@ begin
   vresep:='';
   QMaster.Close;
   QMaster.SetVariable('myparam1',QBrowseIBUKTI.AsInteger);
-  //QMaster.SetVariable('myparam2','');
+  QMaster.SetVariable('myparam2','1');
   //QMaster.SetVariable('myparam2',QBrowseNO_NOTA.AsString);
   QMaster.Open;
   QDetail.Close;
@@ -981,6 +980,13 @@ end;
 
 procedure TPengeluaranPCSFrm.LookItemEnter(Sender: TObject);
 begin
+  QProc_getStok.Close;
+  QProc_getStok.SetVariable('ptgl', QMasterTGL.AsDateTime);
+  QProc_getStok.SetVariable('ptgl2', QMasterTGL.AsDateTime);
+  QProc_getStok.SetVariable('pibukti', QMasterIBUKTI.AsInteger);
+  QProc_getStok.Execute;
+
+  (sender as TwwDBLookupComboDlg).LookupTable.Close;
   (sender as TwwDBLookupComboDlg).LookupTable.Open;
 end;
 
@@ -1477,8 +1483,8 @@ begin
   begin
     QItem.Close;
     QItem.DeclareVariable('myparam',otSubst);
-//    QItem.SetVariable('myparam',' where (kd_item like ''%'+vfilter_item+'%'') and (warna like ''%'+vfilter_warna+'%'')');
-    QItem.SetVariable('myparam',' where ((kd_sub_kel like ''%'+vfilter_item+'%'') or (nama_item like ''%'+vfilter_item+'%'')) and (warna like ''%'+vfilter_warna+'%'')');
+    //QItem.SetVariable('myparam',' where ((x.kd_sub_kel like ''%'+vfilter_item+'%'') or (nama_item like ''%'+vfilter_item+'%'')) and (x.warna like ''%'+vfilter_warna+'%'')');
+    QItem.SetVariable('myparam',' where ((x.kd_sub_kel like ''%'+vfilter_item+'%'') or (nama_item like ''%'+vfilter_item+'%'')) and (x.warna like ''%'+vfilter_warna+'%'')');
     QItem.Open;
   end;
 end;
@@ -1634,12 +1640,10 @@ end;   }
 end;
 
 
-procedure TPengeluaranPCSFrm.QMasterTGLChange(Sender: TField);
+procedure TPengeluaranPCSFrm.QItemBeforeOpen(DataSet: TDataSet);
 begin
-  QProc_getStok.Close;
-  QProc_getStok.SetVariable('ptgl', QMasterTGL.AsDateTime);
-  QProc_getStok.SetVariable('ptgl2', QMasterTGL.AsDateTime);
-  QProc_getStok.Execute;
+  //ShowMessage('QMasterIBUKTI : '+QMasterIBUKTI.AsString);
+  QItem.SetVariable('pibukti', QMasterIBUKTI.AsInteger);
 end;
 
 end.

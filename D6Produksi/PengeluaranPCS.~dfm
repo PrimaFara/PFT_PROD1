@@ -1,6 +1,6 @@
 object PengeluaranPCSFrm: TPengeluaranPCSFrm
-  Left = 237
-  Top = 123
+  Left = 252
+  Top = 92
   Width = 1009
   Height = 603
   Caption = 'PENGELUARAN KE PERSIAPAN'
@@ -2744,7 +2744,6 @@ object PengeluaranPCSFrm: TPengeluaranPCSFrm
     end
     object QMasterTGL: TDateTimeField
       FieldName = 'TGL'
-      OnChange = QMasterTGLChange
       DisplayFormat = 'dd mmm yyyy'
     end
     object QMasterKETERANGAN: TStringField
@@ -5107,6 +5106,57 @@ object PengeluaranPCSFrm: TPengeluaranPCSFrm
   object QItem: TOracleDataSet
     SQL.Strings = (
       'select * from ('
+      'select '
+      '  x.kd_sub_kel,'
+      '  x.kd_item,'
+      '  x.nama_item,'
+      '  x.warna, '
+      '  x.kd_warna,'
+      '  x.kd_satuan, '
+      '  x.kd_sub_lokasi,'
+      '  x.rasio,'
+      '  nvl(x.qty,0)-nvl(y.qty3,0) as qty, '
+      '  nvl(x.qty2,0)-nvl(y.qty8,0) as qty2,'
+      '  x.tgl_stok'
+      'from ('
+      ' select'
+      
+        '  b.kd_sub_kel, b.kd_item, b.nama_item, a.warna, a.kd_warna, b.k' +
+        'd_satuan, '
+      
+        '  '#39'30-00000'#39' as kd_sub_lokasi, b.rasio, a.stok_kg as qty, ROUND(' +
+        'a.stok_kg/nvl(b.rasio,1)) as qty2, a.tgl_stok'
+      ' from ('
+      '  select'
+      '   a.kd_item, a.kd_warna, a.warna,'
+      
+        '   (sum(a.awal_thn)+sum(awal_tgl)+sum(qty_in))-sum(a.qty_out) as' +
+        ' stok_kg,'
+      '   a.tgl_stok, a.ibukti'
+      '  from ipisma_db3.TEMP_LOOKUP_GW25 a'
+      '  group by a.kd_item, a.kd_warna, a.warna, a.tgl_stok, a.ibukti'
+      ' ) a'
+      ' left join ipisma_db3.item b on a.kd_item=b.kd_item'
+      ' where a.stok_kg <> 0 and a.ibukti=:pibukti'
+      ' order by b.kd_sub_kel, b.nama_item, a.warna'
+      ') x'
+      
+        'left join (select ibukti, kd_item, kd_warna, sum(qty3) as qty3, ' +
+        'sum(qty8) as qty8 from ipisma_db3.bukti_detail4 group by ibukti,' +
+        ' kd_item, kd_warna) y'
+      
+        'on y.ibukti=:pibukti and x.kd_item=y.kd_item and x.kd_warna=y.kd' +
+        '_warna'
+      'order by x.kd_sub_kel, x.warna'
+      ') x'
+      ':myparam'
+      ''
+      ''
+      ''
+      ''
+      ''
+      '/*'
+      'select * from ('
       ' select'
       
         '  b.kd_sub_kel, b.kd_item, b.nama_item, a.warna, a.kd_warna, b.k' +
@@ -5130,87 +5180,61 @@ object PengeluaranPCSFrm: TPengeluaranPCSFrm
       ' where a.stok_kg <> 0'
       ' order by b.kd_sub_kel, b.nama_item, a.warna'
       ')'
-      ':myparam')
+      ':myparam'
+      '*/')
     Variables.Data = {
-      0300000001000000080000003A4D59504152414D010000000000000000000000}
+      0300000002000000080000003A4D59504152414D010000000000000000000000
+      080000003A504942554B54490300000004000000D007000000000000}
     QBEDefinition.QBEFieldDefs = {
-      040000000A000000070000004B445F4954454D010000000000090000004E414D
+      040000000B000000070000004B445F4954454D010000000000090000004E414D
       415F4954454D010000000000090000004B445F53415455414E0100000000000D
       0000004B445F5355425F4C4F4B41534901000000000003000000515459010000
       000000050000005741524E41010000000000080000004B445F5741524E410100
       0000000005000000524153494F01000000000004000000515459320100000000
-      000A0000004B445F5355425F4B454C010000000000}
+      000A0000004B445F5355425F4B454C0100000000000800000054474C5F53544F
+      4B010000000000}
     Cursor = crSQLWait
     ReadOnly = True
     QueryAllRecords = False
     Session = DMFrm.OS
+    BeforeOpen = QItemBeforeOpen
     Left = 176
     Top = 400
     object QItemKD_SUB_KEL: TStringField
-      DisplayLabel = 'JENIS BENANG'
-      DisplayWidth = 64
       FieldName = 'KD_SUB_KEL'
-      Required = True
-      Size = 64
+      Size = 32
+    end
+    object QItemKD_ITEM: TStringField
+      FieldName = 'KD_ITEM'
+      Size = 50
     end
     object QItemNAMA_ITEM: TStringField
-      DisplayLabel = 'KETERANGAN ITEM PATAL'
-      DisplayWidth = 35
       FieldName = 'NAMA_ITEM'
-      Required = True
       Size = 50
     end
     object QItemWARNA: TStringField
-      DisplayWidth = 25
       FieldName = 'WARNA'
-      Size = 50
-    end
-    object QItemKD_ITEM: TStringField
-      DisplayLabel = 'KODE'
-      DisplayWidth = 11
-      FieldName = 'KD_ITEM'
-      Required = True
-      Size = 50
-    end
-    object QItemRASIO: TFloatField
-      DisplayWidth = 10
-      FieldName = 'RASIO'
-      DisplayFormat = '#,0.0000;-#,0.0000;-'
-    end
-    object QItemKD_SUB_LOKASI: TStringField
-      DisplayLabel = 'LOKASI'
-      DisplayWidth = 10
-      FieldName = 'KD_SUB_LOKASI'
-      Required = True
-      Size = 12
-    end
-    object QItemQTY2: TFloatField
-      DisplayLabel = 'PCS'
-      DisplayWidth = 25
-      FieldName = 'QTY2'
-      DisplayFormat = '#,###'
-    end
-    object QItemQTY: TFloatField
-      DisplayLabel = 'KG'
-      DisplayWidth = 25
-      FieldName = 'QTY'
-      DisplayFormat = '#,##0.##;(#,##0.##);-'
-    end
-    object QItemTGL_STOK: TDateTimeField
-      DisplayWidth = 10
-      FieldName = 'TGL_STOK'
-    end
-    object QItemRASIO2: TFloatField
-      DisplayWidth = 10
-      FieldKind = fkCalculated
-      FieldName = 'RASIO2'
-      Visible = False
-      Calculated = True
+      Size = 128
     end
     object QItemKD_WARNA: TStringField
       FieldName = 'KD_WARNA'
-      Visible = False
-      Size = 12
+      Size = 6
+    end
+    object QItemKD_SUB_LOKASI: TStringField
+      FieldName = 'KD_SUB_LOKASI'
+      Size = 8
+    end
+    object QItemRASIO: TFloatField
+      FieldName = 'RASIO'
+    end
+    object QItemQTY: TFloatField
+      FieldName = 'QTY'
+    end
+    object QItemQTY2: TFloatField
+      FieldName = 'QTY2'
+    end
+    object QItemTGL_STOK: TDateTimeField
+      FieldName = 'TGL_STOK'
     end
   end
   object OD_Detail: TOracleDataSet
@@ -5506,12 +5530,13 @@ object PengeluaranPCSFrm: TPengeluaranPCSFrm
   object QProc_getStok: TOracleQuery
     SQL.Strings = (
       'begin'
-      '  ipisma_db3.proc_temp_lookup_gw(:ptgl, :ptgl2);'
+      '  ipisma_db3.proc_temp_lookup_gw25(:ptgl, :ptgl2, :pibukti);'
       'end;')
     Session = DMFrm.OS
     Variables.Data = {
-      0300000002000000050000003A5054474C0C0000000000000000000000060000
-      003A5054474C320C0000000000000000000000}
+      0300000003000000050000003A5054474C0C0000000000000000000000060000
+      003A5054474C320C0000000000000000000000080000003A504942554B544903
+      0000000000000000000000}
     Cursor = crSQLWait
     Left = 848
     Top = 128

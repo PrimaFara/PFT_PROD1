@@ -576,13 +576,14 @@ type
     procedure cbTransaksiCloseUp(Sender: TwwDBComboBox; Select: Boolean);
     procedure QMasterAfterDelete(DataSet: TDataSet);
     procedure QDetailQTY8Change(Sender: TField);
-    procedure QMasterTGLChange(Sender: TField);
     procedure BitBtn1Click(Sender: TObject);
     procedure ppTitleBand3BeforePrint(Sender: TObject);
     procedure ppDetailBand3BeforePrint(Sender: TObject);
     procedure ppTitleBand4BeforePrint(Sender: TObject);
     procedure ppDetailBand4BeforePrint(Sender: TObject);
     procedure ppFooterBand4BeforePrint(Sender: TObject);
+    procedure wwDBDateTimePicker1CloseUp(Sender: TObject);
+    procedure QItemBeforeOpen(DataSet: TDataSet);
   private
     { Private declarations }
     vshift, vgrup, vdiv, vorder, SelectedFont, vkode, vjns_brg, vjns_lokasi, vfilter_item,
@@ -984,7 +985,8 @@ begin
   vresep:='';
   QMaster.Close;
   QMaster.SetVariable('myparam1',QBrowseIBUKTI.AsInteger);
-  QMaster.SetVariable('myparam2',QBrowseNO_NOTA.AsString);
+  //QMaster.SetVariable('myparam2',QBrowseNO_NOTA.AsString);
+  QMaster.SetVariable('myparam2','1');
   QMaster.Open;
   QDetail.Close;
   QDetail.SetVariable('IBUKTI',QBrowseIBUKTI.AsInteger);
@@ -1134,6 +1136,13 @@ end;
 
 procedure TValidasiKeluarBBFrm.LookItemEnter(Sender: TObject);
 begin
+  QProc_getStok.Close;
+  QProc_getStok.SetVariable('ptgl', QMasterTGL.AsDateTime);
+  QProc_getStok.SetVariable('ptgl2', QMasterTGL.AsDateTime);
+  QProc_getStok.SetVariable('pibukti', QMasterIBUKTI.AsInteger);
+  QProc_getStok.Execute;
+
+  (sender as TwwDBLookupComboDlg).LookupTable.Close;
   (sender as TwwDBLookupComboDlg).LookupTable.Open;
 end;
 
@@ -1541,7 +1550,7 @@ begin
     QItem.Close;
     QItem.DeclareVariable('myparam',otSubst);
 //    QItem.SetVariable('myparam',' where (kd_item like ''%'+vfilter_item+'%'') and (warna like ''%'+vfilter_warna+'%'')');
-    QItem.SetVariable('myparam',' where ((kd_sub_kel like ''%'+vfilter_item+'%'') or (nama_item like ''%'+vfilter_item+'%'')) and (warna like ''%'+vfilter_warna+'%'')');
+    QItem.SetVariable('myparam',' where ((x.kd_sub_kel like ''%'+vfilter_item+'%'') or (x.nama_item like ''%'+vfilter_item+'%'')) and (x.warna like ''%'+vfilter_warna+'%'')');
     QItem.Open;
   end;
 end;
@@ -1555,7 +1564,7 @@ begin
     QItem.DeclareVariable('myparam',otSubst);
 //    QItem.SetVariable('myparam',' where (kd_item like ''%'+vfilter_item+'%'') and (warna like ''%'+vfilter_warna+'%'')');
 //    QItem.SetVariable('myparam',' where (nama_item like ''%'+vfilter_item+'%'') and (warna like ''%'+vfilter_warna+'%'')');
-    QItem.SetVariable('myparam',' where ((kd_sub_kel like ''%'+vfilter_item+'%'') or (nama_item like ''%'+vfilter_item+'%'')) and (warna like ''%'+vfilter_warna+'%'')');
+    QItem.SetVariable('myparam',' where ((x.kd_sub_kel like ''%'+vfilter_item+'%'') or (x.nama_item like ''%'+vfilter_item+'%'')) and (x.warna like ''%'+vfilter_warna+'%'')');
     QItem.Open;
   end;
 end;
@@ -1655,14 +1664,6 @@ begin
 
 end;
 
-procedure TValidasiKeluarBBFrm.QMasterTGLChange(Sender: TField);
-begin
-  QProc_getStok.Close;
-  QProc_getStok.SetVariable('ptgl', QMasterTGL.AsDateTime);
-  QProc_getStok.SetVariable('ptgl2', QMasterTGL.AsDateTime);
-  QProc_getStok.Execute;
-end;
-
 procedure TValidasiKeluarBBFrm.BitBtn1Click(Sender: TObject);
 begin
   ppDBQMaster.Close;
@@ -1720,6 +1721,19 @@ begin
   DMFrm.QTime.Close;
   DMFrm.QTime.Open;
   ppLabel82.Caption:=DMFrm.QTimeVUSER_CETAK.AsString;
+end;
+
+procedure TValidasiKeluarBBFrm.wwDBDateTimePicker1CloseUp(Sender: TObject);
+begin
+  QProc_getStok.Close;
+  QProc_getStok.SetVariable('ptgl', QMasterTGL.AsDateTime);
+  QProc_getStok.SetVariable('ptgl2', QMasterTGL.AsDateTime);
+  QProc_getStok.Execute;
+end;
+
+procedure TValidasiKeluarBBFrm.QItemBeforeOpen(DataSet: TDataSet);
+begin
+  QItem.SetVariable('pibukti', QMasterIBUKTI.AsInteger);
 end;
 
 end.

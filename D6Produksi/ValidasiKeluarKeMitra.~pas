@@ -444,7 +444,7 @@ type
       State: TGridDrawState; Highlight: Boolean; AFont: TFont;
       ABrush: TBrush);
     procedure QMasterAfterDelete(DataSet: TDataSet);
-    procedure QMasterTGLChange(Sender: TField);
+    procedure wwDBDateTimePicker1CloseUp(Sender: TObject);
 
   private
     { Private declarations }
@@ -884,7 +884,8 @@ begin
   vresep:='';
   QMaster.Close;
   QMaster.SetVariable('myparam1',QBrowseIBUKTI.AsInteger);
-  QMaster.SetVariable('myparam2',QBrowseNO_NOTA.AsString);
+  //QMaster.SetVariable('myparam2',QBrowseNO_NOTA.AsString);
+  QMaster.SetVariable('myparam2','1');
   QMaster.Open;
   QDetail.Close;
   QDetail.Open;
@@ -1529,7 +1530,8 @@ begin
 end;
 
 
-procedure TValidasiKeluarKeMitraFrm.QMasterTGLChange(Sender: TField);
+procedure TValidasiKeluarKeMitraFrm.wwDBDateTimePicker1CloseUp(
+  Sender: TObject);
 begin
   QProc_getStok.Close;
   QProc_getStok.SetVariable('ptgl', QMasterTGL.AsDateTime);

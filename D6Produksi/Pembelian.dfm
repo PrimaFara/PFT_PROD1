@@ -1,9 +1,9 @@
 object PembelianFrm: TPembelianFrm
-  Left = 262
-  Top = 77
+  Left = 199
+  Top = 137
   BorderStyle = bsSingle
   Caption = 'Aplikasi - PRODUKSI 1 - PT. Prima Fara Textile'
-  ClientHeight = 494
+  ClientHeight = 424
   ClientWidth = 745
   Color = clGray
   Font.Charset = DEFAULT_CHARSET
@@ -25,7 +25,7 @@ object PembelianFrm: TPembelianFrm
     Left = 0
     Top = 40
     Width = 745
-    Height = 432
+    Height = 362
     Align = alClient
     Picture.Data = {
       0A544A504547496D61676596610600FFD8FFE000104A46494600010100000100
@@ -13102,7 +13102,7 @@ object PembelianFrm: TPembelianFrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 472
+    Top = 402
     Width = 745
     Height = 22
     Color = clSilver

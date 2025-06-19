@@ -289,6 +289,34 @@ type
     QBrowseNewAWAL: TFloatField;
     PTopR: TPanel;
     BitBtn3: TBitBtn;
+    TabSheet3: TTabSheet;
+    Panel3: TPanel;
+    Bevel3: TBevel;
+    Label6: TLabel;
+    SpeedButton3: TSpeedButton;
+    SpeedButton4: TSpeedButton;
+    Label10: TLabel;
+    Label11: TLabel;
+    BitBtn4: TBitBtn;
+    wwDBSpinEdit2: TwwDBSpinEdit;
+    vTglAwal3: TwwDBDateTimePicker;
+    vTglAkhir3: TwwDBDateTimePicker;
+    CheckBox4: TCheckBox;
+    CheckBox5: TCheckBox;
+    Label12: TLabel;
+    Panel4: TPanel;
+    wwDBGrid4: TwwDBGrid;
+    QDump5: TOracleQuery;
+    QBrowse3: TOracleDataSet;
+    dsQBrowse3: TwwDataSource;
+    QBrowse3KD_ITEM: TStringField;
+    QBrowse3NO_BENANG: TStringField;
+    QBrowse3KD_WARNA: TStringField;
+    QBrowse3WARNA: TStringField;
+    QBrowse3AWAL: TFloatField;
+    QBrowse3QTY_IN: TFloatField;
+    QBrowse3QTY_OUT: TFloatField;
+    QBrowse3CQTY_AKHIR: TFloatField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);
@@ -337,6 +365,16 @@ type
       AFieldName: String);
     procedure QBrowseNewCalcFields(DataSet: TDataSet);
     procedure BitBtn3Click(Sender: TObject);
+    procedure vTglAwal3Change(Sender: TObject);
+    procedure BitBtn4Click(Sender: TObject);
+    procedure SpeedButton3Click(Sender: TObject);
+    procedure SpeedButton4Click(Sender: TObject);
+    procedure CheckBox5Click(Sender: TObject);
+    procedure QBrowse3FilterRecord(DataSet: TDataSet; var Accept: Boolean);
+    procedure QBrowse3CalcFields(DataSet: TDataSet);
+    procedure QBrowse3AfterScroll(DataSet: TDataSet);
+    procedure Label6Click(Sender: TObject);
+    procedure wwDBSpinEdit2Change(Sender: TObject);
   private
     { Private declarations }
     vorder, SelectedFont, vkode, vitem : String;
@@ -981,7 +1019,7 @@ begin
         vt4:=vt4+QBrowse2CQTY_AKHIR.AsFloat;
         QBrowse2.Next;
       end;
-      QBrowse.EnableControls;
+      QBrowse2.EnableControls;
       wwDBGrid1.ColumnByName('AWAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##);-',vt1);
       wwDBGrid1.ColumnByName('QTY_IN').FooterValue:=FormatFloat('#,##0.##;(#,##0.##);-',vt2);
       wwDBGrid1.ColumnByName('QTY_OUT').FooterValue:=FormatFloat('#,##0.##;(#,##0.##);-',vt3);
@@ -1132,6 +1170,128 @@ begin
       ShowMessage('Simpan Gagal !');
     end;
   end;
+end;
+
+procedure TInfoMutasiGWFrm.vTglAwal3Change(Sender: TObject);
+begin
+  vTglAkhir3.DateTime:=EndOfTheMonth(vTglAwal3.Date);
+end;
+
+procedure TInfoMutasiGWFrm.BitBtn4Click(Sender: TObject);
+var
+  vtw1, vtw2, vtw3, vtw4 : real;
+begin
+  vorder:=' order by no_benang';
+  if vTglAwal3.Date>vTglAkhir3.DateTime then
+    ShowMessage('Tgl. Akhir harus lebih besar dari Tgl. Awal !')
+  else
+  begin
+      QDump5.Close;
+      QDump5.SetVariable('vsysdate',vTglAwal3.Date);
+      QDump5.SetVariable('vsysdate2',vTglAkhir3.Date);
+      QDump5.Execute;
+      //warna format baru
+
+      if QBrowse3.QBEMode then QBrowse3.QBEMode:=False;
+
+      QBrowse3.DisableControls;
+      QBrowse3.Close;
+      QBrowse3.Open;
+
+      vtw1:=0; vtw2:=0; vtw3:=0; vtw4:=0;
+      while not QBrowse3.Eof do
+      begin
+        vtw1:=vtw1+QBrowse3AWAL.AsFloat;
+        vtw2:=vtw2+QBrowse3QTY_IN.AsFloat;
+        vtw3:=vtw3+QBrowse3QTY_OUT.AsFloat;
+        vtw4:=vtw4+QBrowse3CQTY_AKHIR.AsFloat;
+        QBrowse3.Next;
+      end;
+
+      QBrowse3.EnableControls;
+      wwDBGrid4.ColumnByName('AWAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##);-',vtw1);
+      wwDBGrid4.ColumnByName('QTY_IN').FooterValue:=FormatFloat('#,##0.##;(#,##0.##);-',vtw2);
+      wwDBGrid4.ColumnByName('QTY_OUT').FooterValue:=FormatFloat('#,##0.##;(#,##0.##);-',vtw3);
+      wwDBGrid4.ColumnByName('CQTY_AKHIR').FooterValue:=FormatFloat('#,##0.##;(#,##0.##);-',vtw4);
+  end;
+end;
+
+procedure TInfoMutasiGWFrm.SpeedButton3Click(Sender: TObject);
+begin
+  if not QBrowse3.QBEMode then
+  begin
+    wwDBGrid4.Options:=wwDBGrid4.Options-[dgRowSelect,dgAlwaysShowSelection];
+    QBrowse3.QBEMode:=TRUE;
+  end
+  else
+    QBrowse3.ClearQBE;
+end;
+
+procedure TInfoMutasiGWFrm.SpeedButton4Click(Sender: TObject);
+var
+  vt1, vt2, vt3, vt4: real;
+
+begin
+  if QBrowse3.QBEMode then
+  begin
+    QBrowse3.ExecuteQBE;
+    wwDBGrid4.Options:=wwDBGrid4.Options+[dgRowSelect,dgAlwaysShowSelection];
+
+      vt1:=0; vt2:=0; vt3:=0; vt4:=0;
+      while not QBrowse3.Eof do
+      begin
+        vt1:=vt1+QBrowse3AWAL.AsFloat;
+        vt2:=vt2+QBrowse3QTY_IN.AsFloat;
+        vt3:=vt3+QBrowse3QTY_OUT.AsFloat;
+        vt4:=vt4+QBrowse3CQTY_AKHIR.AsFloat;
+        QBrowse3.Next;
+      end;
+      QBrowse3.EnableControls;
+      wwDBGrid4.ColumnByName('AWAL').FooterValue:=FormatFloat('#,##0.##;(#,##0.##);-',vt1);
+      wwDBGrid4.ColumnByName('QTY_IN').FooterValue:=FormatFloat('#,##0.##;(#,##0.##);-',vt2);
+      wwDBGrid4.ColumnByName('QTY_OUT').FooterValue:=FormatFloat('#,##0.##;(#,##0.##);-',vt3);
+      wwDBGrid4.ColumnByName('CQTY_AKHIR').FooterValue:=FormatFloat('#,##0.##;(#,##0.##);-',vt4);
+  end;
+end;
+
+procedure TInfoMutasiGWFrm.CheckBox5Click(Sender: TObject);
+begin
+  if CheckBox5.Checked then QBrowse3.Filtered:=True else QBrowse3.Filtered:=False;
+end;
+
+procedure TInfoMutasiGWFrm.QBrowse3FilterRecord(DataSet: TDataSet;
+  var Accept: Boolean);
+begin
+  Accept:=(QBrowse3AWAL.AsFloat<>0) or
+    (QBrowse3QTY_IN.AsFloat<>0) or
+    (QBrowse3QTY_OUT.AsFloat<>0) or
+    (QBrowse3CQTY_AKHIR.AsFloat<>0);
+end;
+
+procedure TInfoMutasiGWFrm.QBrowse3CalcFields(DataSet: TDataSet);
+begin
+  QBrowse3CQTY_AKHIR.AsFloat:=(QBrowse3AWAL.AsFloat+QBrowse3QTY_IN.AsFloat)-QBrowse3QTY_OUT.AsFloat;
+end;
+
+procedure TInfoMutasiGWFrm.QBrowse3AfterScroll(DataSet: TDataSet);
+begin
+  Label12.Caption:='Record ke '+IntToStr(QBrowse3.RecNo)+' dari '+FormatFloat('#,#',QBrowse3.RecordCount)+' Records';
+end;
+
+procedure TInfoMutasiGWFrm.Label6Click(Sender: TObject);
+begin
+  if DMFrm.FontDialog1.Execute then
+  begin
+    wwDBGrid4.Font.Name:=DMFrm.FontDialog1.Font.Name;
+    wwDBGrid4.Font.Size:=DMFrm.FontDialog1.Font.Size;
+    wwDBGrid4.Font.Color:=DMFrm.FontDialog1.Font.Color;
+    wwDBGrid4.Font.Style:=DMFrm.FontDialog1.Font.Style;
+  end;
+end;
+
+procedure TInfoMutasiGWFrm.wwDBSpinEdit2Change(Sender: TObject);
+begin
+  wwDBGrid4.RowHeightPercent:=Round(wwDBSpinEdit2.Value);
 end;
 
 end.

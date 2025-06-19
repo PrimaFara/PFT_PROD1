@@ -79,7 +79,7 @@ object ValidasiKeluarKeMitraFrm: TValidasiKeluarKeMitraFrm
       Top = 76
       Width = 1157
       Height = 533
-      ActivePage = TabSheet2
+      ActivePage = TabSheet1
       Align = alClient
       Style = tsFlatButtons
       TabOrder = 1
@@ -369,6 +369,7 @@ object ValidasiKeluarKeMitraFrm: TValidasiKeluarKeMitraFrm
             Epoch = 1950
             ShowButton = True
             TabOrder = 5
+            OnCloseUp = wwDBDateTimePicker1CloseUp
           end
           object DBMemo1: TDBMemo
             Left = 7
@@ -3018,7 +3019,6 @@ object ValidasiKeluarKeMitraFrm: TValidasiKeluarKeMitraFrm
     end
     object QMasterTGL: TDateTimeField
       FieldName = 'TGL'
-      OnChange = QMasterTGLChange
       DisplayFormat = 'dd mmm yyyy'
     end
     object QMasterKETERANGAN: TStringField
