@@ -442,7 +442,7 @@ object PenerimaanKGFrm: TPenerimaanKGFrm
               'KD_WARNA'#9'5'#9'Kode'#9'F'#9'WARNA'
               'WARNA'#9'17'#9#9'T'#9'WARNA'
               'QTY1'#9'15'#9'Kg'#9'F'#9'QTY'
-              'QTY6'#9'15'#9'Pcs'#9'T'#9'QTY'
+              'QTY6'#9'15'#9'Pcs'#9'F'#9'QTY'
               'KD_SUB_LOKASI'#9'9'#9'LOKASI'#9'F')
             IniAttributes.Enabled = True
             IniAttributes.Delimiter = ';;'
