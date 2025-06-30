@@ -1042,7 +1042,7 @@ end;
 
 
 ////MAA 11-01-2020 {TRANSAKSI KOREKSI BISA ENTRY QTY PCS & KG
-if (QTransaksiKD_TRANSAKSI.AsString='884') and (cbtransaksi.Text='KOREKSI') then
+if ((QTransaksiKD_TRANSAKSI.AsString='884') and (cbtransaksi.Text='KOREKSI')) OR (QTransaksiKD_TRANSAKSI.AsString='883') then
    wwDBGrid1.ColumnByName('QTY6').ReadOnly:=False
 else
    wwDBGrid1.ColumnByName('QTY6').ReadOnly:=True;
@@ -1183,7 +1183,7 @@ BEGIN
         Abort;
      end
      else
-  if QDetailQTY6.Asfloat=0 then
+  if (QDetailQTY6.Asfloat=0) AND (QTransaksiKD_TRANSAKSI.AsString<>'883') then
      begin
        if QDetailRASIO.AsFloat>0 then
          QDetailQTY6.AsFloat:=QDetailQTY1.AsFloat / QDetailRASIO.AsFloat
@@ -1352,7 +1352,7 @@ procedure TPenerimaanKGFrm.cbTransaksiCloseUp(
   Sender: TwwDBComboBox; Select: Boolean);
 begin
 ////MAA 11-01-2020 {TRANSAKSI KOREKSI BISA ENTRY QTY PCS & KG
-if (QTransaksiKD_TRANSAKSI.AsString='884') and (cbtransaksi.Text='KOREKSI') then
+if ((QTransaksiKD_TRANSAKSI.AsString='884') and (cbtransaksi.Text='KOREKSI')) OR (QTransaksiKD_TRANSAKSI.AsString='883') then
    wwDBGrid1.ColumnByName('QTY6').ReadOnly:=False
 else
    wwDBGrid1.ColumnByName('QTY6').ReadOnly:=True;
@@ -1381,10 +1381,8 @@ end;
 procedure TPenerimaanKGFrm.QDetailApplyRecord(Sender: TOracleDataSet;
   Action: Char; var Applied: Boolean; var NewRowId: String);
 begin
- if QDetailRASIO.AsFloat>0 then
-         QDetailQTY6.AsFloat:=QDetailQTY1.AsFloat / QDetailRASIO.AsFloat
-       else
-          ShowMessage('CEK RASIO MASTER !');  
+ if (QDetailRASIO.AsFloat>0) AND (QTransaksiKD_TRANSAKSI.AsString<>'883') then
+  QDetailQTY6.AsFloat:=QDetailQTY1.AsFloat / QDetailRASIO.AsFloat else ShowMessage('CEK RASIO MASTER !');
 end;
 
 procedure TPenerimaanKGFrm.QMasterNO_RESEPChange(Sender: TField);

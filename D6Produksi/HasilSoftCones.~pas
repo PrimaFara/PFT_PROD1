@@ -204,14 +204,11 @@ type
     QBrowseQTY4: TFloatField;
     QBrowseTGL: TDateTimeField;
     QBrowseNO_NOTA: TStringField;
-    QBrowseSHIFT: TStringField;
     QBrowseKD_ITEM: TStringField;
     QBrowseKETERANGAN: TStringField;
     QBrowseQTY1: TFloatField;
     QBrowseQTY2: TFloatField;
-    QBrowseJAM2: TDateTimeField;
     QBrowseSHIFTGRUP: TStringField;
-    QBrowseGRUP: TStringField;
     RadioGroup1: TRadioGroup;
     CBPreview: TCheckBox;
     ppLabel12: TppLabel;
@@ -271,7 +268,6 @@ type
     ppDBMemo2: TppDBMemo;
     ppPageStyle1: TppPageStyle;
     raCodeModule1: TraCodeModule;
-    QBrowseEFF_MESIN: TFloatField;
     QDetailQTY5: TFloatField;
     QDetailQTY6: TFloatField;
     QDetailOPR_INSERT: TStringField;
@@ -319,8 +315,6 @@ type
     QBrowseOPR_INSERT: TStringField;
     QTotalKRAT: TFloatField;
     QTotalPCS: TFloatField;
-    QBrowseSPEED_PER_MNT: TFloatField;
-    QBrowseSPEED_PER_MNT2: TFloatField;
     QTransaksiDOC_ISO: TStringField;
     ppDBQTransaksippField19: TppField;
     ppLabel37: TppLabel;
@@ -354,6 +348,11 @@ type
     QItemNewQTY: TFloatField;
     QItemNewQTY2: TFloatField;
     BitBtn8: TBitBtn;
+    QBrowseSHIFT: TStringField;
+    QBrowseJAM2: TDateTimeField;
+    QBrowseGRUP: TStringField;
+    QBrowseSPEED_PER_MNT: TFloatField;
+    QBrowseSPEED_PER_MNT2: TFloatField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);

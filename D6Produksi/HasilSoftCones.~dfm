@@ -1186,40 +1186,40 @@ object HasilSoftConesFrm: THasilSoftConesFrm
     OnCalcFields = QBrowseCalcFields
     Left = 848
     Top = 8
-    object QBrowseRPM: TStringField
-      FieldName = 'RPM'
-      Size = 50
+    object QBrowseNO_NOTA: TStringField
+      FieldName = 'NO_NOTA'
+      Size = 22
+    end
+    object QBrowseTGL: TDateTimeField
+      FieldName = 'TGL'
+      DisplayFormat = 'dd mmm yyyy'
+    end
+    object QBrowseSHIFTGRUP: TStringField
+      FieldName = 'SHIFTGRUP'
+      Size = 4
     end
     object QBrowseKD_SUB_LOKASI: TStringField
       FieldName = 'KD_SUB_LOKASI'
       Required = True
       Size = 12
     end
-    object QBrowseEFF: TFloatField
-      FieldName = 'EFF'
-      DisplayFormat = '0.0,0 %'
+    object QBrowseRPM: TStringField
+      FieldName = 'RPM'
+      Size = 50
     end
     object QBrowseJML: TFloatField
       FieldName = 'JML'
-    end
-    object QBrowseQTY3: TFloatField
-      FieldName = 'QTY3'
     end
     object QBrowseQTY4: TFloatField
       FieldName = 'QTY4'
       DisplayFormat = '#,0.00;-#,0.00;-'
     end
-    object QBrowseTGL: TDateTimeField
-      FieldName = 'TGL'
-      DisplayFormat = 'dd mmm yyyy'
+    object QBrowseEFF: TFloatField
+      FieldName = 'EFF'
+      DisplayFormat = '0.0,0 %'
     end
-    object QBrowseNO_NOTA: TStringField
-      FieldName = 'NO_NOTA'
-      Size = 22
-    end
-    object QBrowseSHIFT: TStringField
-      FieldName = 'SHIFT'
-      Size = 5
+    object QBrowseQTY3: TFloatField
+      FieldName = 'QTY3'
     end
     object QBrowseKD_ITEM: TStringField
       FieldName = 'KD_ITEM'
@@ -1229,29 +1229,21 @@ object HasilSoftConesFrm: THasilSoftConesFrm
       FieldName = 'KETERANGAN'
       Size = 255
     end
-    object QBrowseQTY1: TFloatField
-      FieldName = 'QTY1'
+    object QBrowseRASIO: TFloatField
+      FieldName = 'RASIO'
+      DisplayFormat = '#,0.0000;-#,0.0000;-'
+    end
+    object QBrowseRASIO2: TFloatField
+      FieldName = 'RASIO2'
       DisplayFormat = '#,0.0000;-#,0.0000;-'
     end
     object QBrowseQTY2: TFloatField
       FieldName = 'QTY2'
       DisplayFormat = '#,0;-#,0;-'
     end
-    object QBrowseJAM2: TDateTimeField
-      FieldName = 'JAM2'
-      DisplayFormat = 'dd/mm/yyyy hh:mm'
-    end
-    object QBrowseSHIFTGRUP: TStringField
-      FieldName = 'SHIFTGRUP'
-      Size = 4
-    end
-    object QBrowseGRUP: TStringField
-      FieldName = 'GRUP'
-      Size = 1
-    end
-    object QBrowseEFF_MESIN: TFloatField
-      FieldName = 'EFF_MESIN'
-      DisplayFormat = '0.0,0 %'
+    object QBrowseQTY1: TFloatField
+      FieldName = 'QTY1'
+      DisplayFormat = '#,0.0000;-#,0.0000;-'
     end
     object QBrowseQTY_STD: TFloatField
       FieldName = 'QTY_STD'
@@ -1261,10 +1253,6 @@ object HasilSoftConesFrm: THasilSoftConesFrm
       FieldName = 'STD_PSN'
       DisplayFormat = '0.0,0;(0.0,0)'
     end
-    object QBrowseIBUKTI: TFloatField
-      FieldName = 'IBUKTI'
-      Required = True
-    end
     object QBrowseNO_LOT: TStringField
       FieldName = 'NO_LOT'
       Size = 22
@@ -1273,19 +1261,27 @@ object HasilSoftConesFrm: THasilSoftConesFrm
       FieldName = 'OPR_INSERT'
       Size = 30
     end
+    object QBrowseIBUKTI: TFloatField
+      FieldName = 'IBUKTI'
+      Required = True
+    end
+    object QBrowseSHIFT: TStringField
+      FieldName = 'SHIFT'
+      Size = 5
+    end
+    object QBrowseJAM2: TDateTimeField
+      FieldName = 'JAM2'
+      DisplayFormat = 'dd/mm/yyyy hh:mm'
+    end
+    object QBrowseGRUP: TStringField
+      FieldName = 'GRUP'
+      Size = 1
+    end
     object QBrowseSPEED_PER_MNT: TFloatField
       FieldName = 'SPEED_PER_MNT'
     end
     object QBrowseSPEED_PER_MNT2: TFloatField
       FieldName = 'SPEED_PER_MNT2'
-    end
-    object QBrowseRASIO: TFloatField
-      FieldName = 'RASIO'
-      DisplayFormat = '#,0.0000;-#,0.0000;-'
-    end
-    object QBrowseRASIO2: TFloatField
-      FieldName = 'RASIO2'
-      DisplayFormat = '#,0.0000;-#,0.0000;-'
     end
   end
   object dsQBrowse: TwwDataSource
@@ -2665,8 +2661,8 @@ object HasilSoftConesFrm: THasilSoftConesFrm
     BeforeDelete = QMasterBeforeDelete
     AfterDelete = QMasterAfterDelete
     OnNewRecord = QMasterNewRecord
-    Left = 168
-    Top = 168
+    Left = 184
+    Top = 136
     object QMasterIBUKTI: TFloatField
       FieldName = 'IBUKTI'
     end
@@ -2749,8 +2745,8 @@ object HasilSoftConesFrm: THasilSoftConesFrm
   end
   object dsQMaster: TwwDataSource
     DataSet = QMaster
-    Left = 112
-    Top = 160
+    Left = 152
+    Top = 128
   end
   object QDetail: TOracleDataSet
     SQL.Strings = (
