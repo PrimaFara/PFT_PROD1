@@ -558,23 +558,23 @@ begin
     Worksheet := Workbook.Worksheets[1];
 
     // Menambahkan judul laporan
-    Worksheet.Cells[1, 1].Value := 'REKAP BULANAN DEPARTEMEN KEMITRAAN';
-    Worksheet.Range['A1', 'Z1'].Merge; // Gabung cell agar judul rata tengah
+    Worksheet.Cells[1, 1].Value := 'HASIL PRODUKSI SOFTCONE';
+    Worksheet.Range['A1', 'S1'].Merge; // Gabung cell agar judul rata tengah
     Worksheet.Range['A1'].Font.Bold := True;
     Worksheet.Range['A1'].Font.Size := 14;
     Worksheet.Range['A1'].HorizontalAlignment := 3; // xlCenter
 
     // Menulis periode
     Worksheet.Cells[2, 1].Value := 'Periode : '+DateToStr(vtglAwal.Date)+' s/d '+DateToStr(vtglAkhir.Date);
-    Worksheet.Range['A2', 'Z2'].Merge; // Gabung cell agar judul rata tengah
+    Worksheet.Range['A2', 'S2'].Merge; // Gabung cell agar judul rata tengah
     Worksheet.Range['A2'].Font.Italic := True;
     Worksheet.Range['A2'].Font.Size := 12;
     Worksheet.Range['A2'].HorizontalAlignment := 3; // xlCenter
 
     // Menulis header ke worksheet
-    Worksheet.Range['A3', 'Z3'].Font.Bold := True;
-    Worksheet.Range['A3', 'Z3'].Font.Size := 10;
-    Worksheet.Range['A3', 'Z3'].HorizontalAlignment := 3; // xlCenter
+    Worksheet.Range['A3', 'S3'].Font.Bold := True;
+    Worksheet.Range['A3', 'S3'].Font.Size := 10;
+    Worksheet.Range['A3', 'S3'].HorizontalAlignment := 3; // xlCenter
     for i := 0 to wwDBGrid1.DataSource.DataSet.FieldCount - 1 do
     begin
       Worksheet.Cells[3, i + 1].Value := wwDBGrid2.DataSource.DataSet.Fields[i].DisplayName;
