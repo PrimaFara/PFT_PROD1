@@ -457,6 +457,26 @@ type
     ppLabel48: TppLabel;
     BitBtn8: TBitBtn;
     BitBtn9: TBitBtn;
+    PanelHistory: TPanel;
+    CheckBox2: TCheckBox;
+    wwDBGrid4: TwwDBGrid;
+    PanelTop: TPanel;
+    PTopR: TPanel;
+    BitBtn10: TBitBtn;
+    QBrowseDetail: TOracleDataSet;
+    dsQBrowseDetail: TwwDataSource;
+    QBrowseDetailNAMA_MITRA: TStringField;
+    QBrowseDetailNAMA_ITEM: TStringField;
+    QBrowseDetailTGL: TDateTimeField;
+    QBrowseDetailNO_NOTA: TStringField;
+    QBrowseDetailVUSER: TStringField;
+    QBrowseDetailLKIRIM: TFloatField;
+    QBrowseDetailPKIRIM: TFloatField;
+    QBrowseDetailLMASUK: TFloatField;
+    QBrowseDetailPMASUK: TFloatField;
+    QBrowseDetailLKOREKSI: TFloatField;
+    QBrowseDetailPKOREKSI: TFloatField;
+    QBrowseDetailKETERANGAN: TStringField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure BtnExportClick(Sender: TObject);
@@ -510,6 +530,9 @@ type
     procedure ppSummaryBand2BeforePrint(Sender: TObject);
     procedure BitBtn8Click(Sender: TObject);
     procedure BitBtn9Click(Sender: TObject);
+    procedure CheckBox2Click(Sender: TObject);
+    procedure wwDBGrid2RowChanged(Sender: TObject);
+    procedure BitBtn10Click(Sender: TObject);
   //  procedure ppNo2Print(Sender: TObject);
   private
     { Private declarations }
@@ -880,10 +903,13 @@ begin
       wwDBGrid2.ColumnByName('PAKAN_TERIMA_AFVAL').FooterValue:=FormatFloat('#,0.000;-#,0.000;-',vterima_afval_p);
       wwDBGrid2.ColumnByName('PAKAN_KOREKSI').FooterValue:=FormatFloat('#,0.000;-#,0.000;-',vkoreksi_p);
       wwDBGrid2.ColumnByName('PAKAN_AKHIR').FooterValue:=FormatFloat('#,0.000;-#,0.000;-',vakhir_p);
-      
+
       LabelBanner.Caption:='Data : '+FormatFloat('#,#',QBrowse.RecordCount)+' Records';
     {azmi}
   end;
+
+  PanelHistory.Visible:=false;
+  CheckBox2.Checked:=false;
 
 end;
 
@@ -1313,7 +1339,7 @@ var
   FormatSettings: TFormatSettings;
 begin
   ShowMessage('Tunggu Hingga Proses Selesai. Klik Ok untuk memulai');
-  
+
   // Inisialisasi TFormatSettings untuk mengontrol pemisah desimal
   GetLocaleFormatSettings(GetThreadLocale, FormatSettings);
   FormatSettings.DecimalSeparator := '.';
@@ -1504,6 +1530,65 @@ begin
   else
   begin
     ShowMessage('Proses penyimpanan dibatalkan.');
+  end;
+end;
+
+procedure TLaporanDeptKemitraanFrm.CheckBox2Click(Sender: TObject);
+begin
+  if PanelHistory.Visible=false then PanelHistory.Visible:=true else PanelHistory.Visible:=false;
+end;
+
+procedure TLaporanDeptKemitraanFrm.wwDBGrid2RowChanged(Sender: TObject);
+var vt1, vt2, vt3, vt4, vt5, vt6 : real;
+begin
+  if CheckBox2.Checked then
+  begin
+    QBrowseDetail.DisableControls;
+    QBrowseDetail.Close;
+    QBrowseDetail.SetVariable('pnama_mitra', QBrowseNAMA_MITRA.AsString);
+    QBrowseDetail.SetVariable('pnama_item', QBrowseBENANG.AsString);
+    QBrowseDetail.Open;
+
+    vt1:=0; vt2:=0; vt3:=0; vt4:=0; vt5:=0; vt6:=0;
+    while not QBrowseDetail.Eof do
+    begin
+       vt1:=vt1+QBrowseDetailLKIRIM.AsFloat;
+       vt2:=vt2+QBrowseDetailPKIRIM.AsFloat;
+       vt3:=vt3+QBrowseDetailLMASUK.AsFloat;
+       vt4:=vt4+QBrowseDetailPMASUK.AsFloat;
+       vt5:=vt5+QBrowseDetailLKOREKSI.AsFloat;
+       vt6:=vt6+QBrowseDetailPKOREKSI.AsFloat;
+       QBrowseDetail.Next;
+    end;
+
+    QBrowseDetail.EnableControls;
+    wwDBGrid4.ColumnByName('LKIRIM').FooterValue:=FormatFloat('#,##0.##;(#,##0.##);-',vt1);
+    wwDBGrid4.ColumnByName('PKIRIM').FooterValue:=FormatFloat('#,##0.##;(#,##0.##);-',vt2);
+    wwDBGrid4.ColumnByName('LMASUK').FooterValue:=FormatFloat('#,##0.##;(#,##0.##);-',vt3);
+    wwDBGrid4.ColumnByName('PMASUK').FooterValue:=FormatFloat('#,##0.##;(#,##0.##);-',vt4);
+    wwDBGrid4.ColumnByName('LKOREKSI').FooterValue:=FormatFloat('#,##0.##;(#,##0.##);-',vt5);
+    wwDBGrid4.ColumnByName('PKOREKSI').FooterValue:=FormatFloat('#,##0.##;(#,##0.##);-',vt6);
+
+    PanelTop.Caption:=QBrowseNAMA_MITRA.AsString+' - '+QBrowseBENANG.AsString;
+  end;
+end;
+
+procedure TLaporanDeptKemitraanFrm.BitBtn10Click(Sender: TObject);
+begin
+  QBrowseDetail.Active;
+  DMFrm.SaveDialog1.DefaultExt:='XLK';
+  DMFrm.SaveDialog1.Filter:='Excel files (*.XLK)|*.XLK';
+  DMFrm.SaveDialog1.FileName:='Riwayat Mutasi Bng Warna '+ vTglAwal.Text+' sd '+vTglAkhir.Text+'.xlK';
+  wwDBGrid4.ExportOptions.TitleName:=PanelTop.Caption+' Per '+vTglAwal.Text+' sd '+vTglAkhir.Text;
+  if DMFrm.SaveDialog1.Execute then
+  begin
+    try
+      wwDBGrid4.ExportOptions.FileName:=DMFrm.SaveDialog1.FileName;
+      wwDBGrid4.ExportOptions.Save;
+      ShowMessage('Simpan Sukses !');
+    except
+      ShowMessage('Simpan Gagal !');
+    end;
   end;
 end;
 

@@ -1,8 +1,8 @@
 object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
-  Left = 185
-  Top = 24
+  Left = 188
+  Top = 117
   Width = 1091
-  Height = 611
+  Height = 596
   Caption = 'Laporan Dept Kemitraan'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -24,7 +24,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
     Left = 0
     Top = 0
     Width = 1075
-    Height = 573
+    Height = 558
     Align = alClient
     BevelOuter = bvNone
     Ctl3D = False
@@ -32,7 +32,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
     TabOrder = 0
     object Label1: TLabel
       Left = 0
-      Top = 560
+      Top = 545
       Width = 1075
       Height = 13
       Align = alBottom
@@ -60,7 +60,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
       Left = 0
       Top = 73
       Width = 1075
-      Height = 487
+      Height = 472
       ActivePage = TabSheet1
       Align = alClient
       Style = tsFlatButtons
@@ -79,7 +79,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         end
         object PanelFooter1: TPanel
           Left = 0
-          Top = 415
+          Top = 400
           Width = 1067
           Height = 41
           Align = alBottom
@@ -233,7 +233,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
           Left = 0
           Top = 70
           Width = 1067
-          Height = 345
+          Height = 330
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 2
@@ -241,7 +241,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
             Left = 0
             Top = 0
             Width = 1067
-            Height = 345
+            Height = 330
             Selected.Strings = (
               'MITRA'#9'15'#9'MITRA'#9'F'
               'JENIS'#9'35'#9'JENIS'#9'F'
@@ -448,20 +448,29 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
             TabOrder = 4
             OnClick = cbAdaTransaksiClick
           end
+          object CheckBox2: TCheckBox
+            Left = 449
+            Top = -1
+            Width = 137
+            Height = 17
+            Caption = 'Tampilkan riwayat mutasi'
+            TabOrder = 5
+            OnClick = CheckBox2Click
+          end
         end
         object PanelBrowse: TPanel
           Left = 0
           Top = 70
-          Width = 1067
-          Height = 345
+          Width = 504
+          Height = 330
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 1
           object wwDBGrid2: TwwDBGrid
             Left = 0
             Top = 0
-            Width = 1067
-            Height = 345
+            Width = 504
+            Height = 330
             Selected.Strings = (
               'NAMA_MITRA'#9'25'#9'NAMA MITRA'#9'F'
               'BENANG'#9'20'#9'BENANG'#9'F'
@@ -487,6 +496,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
             ExportOptions.ExportType = wwgetSYLK
             ExportOptions.Options = [esoDblQuoteFields, esoBestColFit, esoShowRecordNo, esoShowAlternating]
             TitleColor = clBackground
+            OnRowChanged = wwDBGrid2RowChanged
             FixedCols = 0
             ShowHorzScrollBar = True
             EditControlOptions = [ecoSearchOwnerForm, ecoDisableDateTimePicker]
@@ -521,7 +531,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
         end
         object PanelFooter2: TPanel
           Left = 0
-          Top = 415
+          Top = 400
           Width = 1067
           Height = 41
           Align = alBottom
@@ -644,6 +654,103 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
             Caption = 'Design'
             TabOrder = 4
             NumGlyphs = 2
+          end
+        end
+        object PanelHistory: TPanel
+          Left = 504
+          Top = 70
+          Width = 563
+          Height = 330
+          Align = alRight
+          BevelOuter = bvNone
+          Caption = 'PanelHistory'
+          TabOrder = 3
+          Visible = False
+          object wwDBGrid4: TwwDBGrid
+            Left = 0
+            Top = 49
+            Width = 563
+            Height = 281
+            ControlType.Strings = (
+              'ISFIXED;CheckBox;1;0')
+            Selected.Strings = (
+              'TGL'#9'10'#9'Tgl'#9'F'
+              'NO_NOTA'#9'13'#9'No Nota'#9'F'
+              'VUSER'#9'7'#9'User'#9'F'
+              'LKIRIM'#9'6'#9'Lusi'#9'F'#9'Kirim (Kg)'
+              'PKIRIM'#9'6'#9'Pakan'#9'F'#9'Kirim (Kg)'
+              'LMASUK'#9'6'#9'Lusi'#9'F'#9'Masuk (Kg)'
+              'PMASUK'#9'6'#9'Pakan'#9'F'#9'Masuk (Kg)'
+              'LKOREKSI'#9'6'#9'Lusi'#9'F'#9'Koreksi (Kg)'
+              'PKOREKSI'#9'6'#9'Pakan'#9'F'#9'Koreksi (Kg)'
+              'KETERANGAN'#9'25'#9'Keterangan'#9'F')
+            IniAttributes.Enabled = True
+            IniAttributes.Delimiter = ';;'
+            IniAttributes.CheckNewFields = True
+            ExportOptions.ExportType = wwgetHTML
+            ExportOptions.Options = [esoShowHeader, esoShowFooter, esoShowTitle, esoDblQuoteFields, esoBestColFit, esoShowRecordNo, esoShowAlternating]
+            TitleColor = clNavy
+            FixedCols = 0
+            ShowHorzScrollBar = True
+            EditControlOptions = [ecoSearchOwnerForm, ecoDisableDateTimePicker]
+            Align = alClient
+            BorderStyle = bsNone
+            Ctl3D = False
+            DataSource = dsQBrowseDetail
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = []
+            KeyOptions = []
+            Options = [dgEditing, dgTitles, dgColumnResize, dgColLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgWordWrap, dgPerfectRowFit, dgShowFooter, dgNoLimitColSize, dgTrailingEllipsis, dgRowResize, dgFixedProportionalResize]
+            ParentCtl3D = False
+            ParentFont = False
+            TabOrder = 0
+            TitleAlignment = taCenter
+            TitleFont.Charset = ANSI_CHARSET
+            TitleFont.Color = clWhite
+            TitleFont.Height = -11
+            TitleFont.Name = 'Arial'
+            TitleFont.Style = []
+            TitleLines = 2
+            TitleButtons = True
+            UseTFields = False
+          end
+          object PanelTop: TPanel
+            Left = 0
+            Top = 0
+            Width = 563
+            Height = 49
+            Align = alTop
+            BevelOuter = bvNone
+            Caption = 'PanelTop'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Arial'
+            Font.Style = [fsBold]
+            ParentFont = False
+            TabOrder = 1
+            object PTopR: TPanel
+              Left = 395
+              Top = 0
+              Width = 168
+              Height = 49
+              Align = alRight
+              BevelOuter = bvNone
+              TabOrder = 0
+              object BitBtn10: TBitBtn
+                Left = 16
+                Top = 14
+                Width = 129
+                Height = 23
+                Caption = 'Export &Riwayat'
+                TabOrder = 0
+                OnClick = BitBtn10Click
+                NumGlyphs = 2
+              end
+            end
           end
         end
       end
@@ -795,7 +902,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
           Left = 0
           Top = 57
           Width = 1067
-          Height = 399
+          Height = 384
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 1
@@ -964,7 +1071,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
     AfterScroll = QBrowseAfterScroll
     OnCalcFields = QBrowseCalcFields
     OnFilterRecord = QBrowseFilterRecord
-    Left = 848
+    Left = 840
     Top = 8
     object QBrowseNAMA_MITRA: TStringField
       FieldName = 'NAMA_MITRA'
@@ -4269,7 +4376,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
     Cursor = crSQLWait
     BeforeQuery = QProcUpdateMutasiBeforeQuery
     Left = 576
-    Top = 64
+    Top = 56
   end
   object ppDBQMaster: TppDBPipeline
     DataSource = dsQMaster
@@ -4277,7 +4384,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
     RefreshAfterPost = True
     UserName = 'DBQMaster'
     Left = 720
-    Top = 120
+    Top = 104
     object ppDBQMasterppField1: TppField
       FieldAlias = 'MITRA'
       FieldName = 'MITRA'
@@ -6160,8 +6267,8 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
     RTFSettings.DefaultFont.Style = []
     TextSearchSettings.DefaultString = '<FindText>'
     TextSearchSettings.Enabled = False
-    Left = 792
-    Top = 128
+    Left = 776
+    Top = 112
     Version = '12.03'
     mmColumnWidth = 197300
     DataPipelineName = 'ppDBQMaster'
@@ -7798,5 +7905,81 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
     end
     object ppParameterList2: TppParameterList
     end
+  end
+  object QBrowseDetail: TOracleDataSet
+    SQL.Strings = (
+      'select * from ipisma_db3.vmaklon_riwayat t'
+      
+        'where t.nama_mitra=:pnama_mitra and t.nama_item=:pnama_item and ' +
+        't.keterangan NOT LIKE '#39'%SALDO AWAL%'#39)
+    Variables.Data = {
+      03000000020000000C0000003A504E414D415F4D495452410500000000000000
+      000000000B0000003A504E414D415F4954454D050000000000000000000000}
+    QBEDefinition.QBEFieldDefs = {
+      040000000C0000000300000054474C010000000000070000004E4F5F4E4F5441
+      0100000000000A0000004B45544552414E47414E0100000000000A0000004E41
+      4D415F4D49545241010000000000090000004E414D415F4954454D0100000000
+      00050000005655534552010000000000060000004C4B4952494D010000000000
+      06000000504B4952494D010000000000060000004C4D4153554B010000000000
+      06000000504D4153554B010000000000080000004C4B4F52454B534901000000
+      000008000000504B4F52454B5349010000000000}
+    Cursor = crSQLWait
+    ReadOnly = True
+    QueryAllRecords = False
+    Session = DMFrm.OS
+    Left = 748
+    Top = 288
+    object QBrowseDetailNAMA_MITRA: TStringField
+      FieldName = 'NAMA_MITRA'
+      Size = 128
+    end
+    object QBrowseDetailNAMA_ITEM: TStringField
+      FieldName = 'NAMA_ITEM'
+      Size = 128
+    end
+    object QBrowseDetailTGL: TDateTimeField
+      FieldName = 'TGL'
+    end
+    object QBrowseDetailNO_NOTA: TStringField
+      FieldName = 'NO_NOTA'
+      Size = 64
+    end
+    object QBrowseDetailVUSER: TStringField
+      FieldName = 'VUSER'
+      Size = 64
+    end
+    object QBrowseDetailLKIRIM: TFloatField
+      FieldName = 'LKIRIM'
+      DisplayFormat = '#,0.000;-#,0.000;-'
+    end
+    object QBrowseDetailPKIRIM: TFloatField
+      FieldName = 'PKIRIM'
+      DisplayFormat = '#,0.000;-#,0.000;-'
+    end
+    object QBrowseDetailLMASUK: TFloatField
+      FieldName = 'LMASUK'
+      DisplayFormat = '#,0.000;-#,0.000;-'
+    end
+    object QBrowseDetailPMASUK: TFloatField
+      FieldName = 'PMASUK'
+      DisplayFormat = '#,0.000;-#,0.000;-'
+    end
+    object QBrowseDetailLKOREKSI: TFloatField
+      FieldName = 'LKOREKSI'
+      DisplayFormat = '#,0.000;-#,0.000;-'
+    end
+    object QBrowseDetailPKOREKSI: TFloatField
+      FieldName = 'PKOREKSI'
+      DisplayFormat = '#,0.000;-#,0.000;-'
+    end
+    object QBrowseDetailKETERANGAN: TStringField
+      FieldName = 'KETERANGAN'
+      Size = 255
+    end
+  end
+  object dsQBrowseDetail: TwwDataSource
+    DataSet = QBrowseDetail
+    Left = 808
+    Top = 304
   end
 end
