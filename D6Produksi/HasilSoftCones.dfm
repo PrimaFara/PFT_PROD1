@@ -2618,10 +2618,6 @@ object HasilSoftConesFrm: THasilSoftConesFrm
     Left = 952
     Top = 72
   end
-  object dsQBrowseDetail: TwwDataSource
-    Left = 904
-    Top = 104
-  end
   object ppDBPerusahaan: TppDBPipeline
     DataSource = DMFrm.dsPerusahaan
     OpenDataSource = False

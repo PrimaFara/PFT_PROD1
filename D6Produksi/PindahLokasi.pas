@@ -58,7 +58,6 @@ type
     ppDBQBrowseDetail: TppDBPipeline;
     ppDesigner1: TppDesigner;
     BtnDesign2: TBitBtn;
-    dsQBrowseDetail: TwwDataSource;
     ppDBPerusahaan: TppDBPipeline;
     QMaster: TOracleDataSet;
     QMasterNO_NOTA: TStringField;

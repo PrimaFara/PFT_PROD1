@@ -1,8 +1,8 @@
 object HasilSoftConesFrm: THasilSoftConesFrm
-  Left = 190
-  Top = 37
+  Left = 195
+  Top = 120
   Width = 1036
-  Height = 611
+  Height = 593
   ActiveControl = vTglAwal
   Caption = 'Hasil SoftCones'
   Color = clBtnFace
@@ -26,7 +26,7 @@ object HasilSoftConesFrm: THasilSoftConesFrm
     Left = 0
     Top = 0
     Width = 1028
-    Height = 580
+    Height = 562
     Align = alClient
     BevelOuter = bvNone
     Ctl3D = False
@@ -34,7 +34,7 @@ object HasilSoftConesFrm: THasilSoftConesFrm
     TabOrder = 0
     object Label1: TLabel
       Left = 0
-      Top = 567
+      Top = 549
       Width = 1028
       Height = 13
       Align = alBottom
@@ -80,7 +80,7 @@ object HasilSoftConesFrm: THasilSoftConesFrm
       Left = 0
       Top = 76
       Width = 1028
-      Height = 491
+      Height = 473
       ActivePage = TabSheet2
       Align = alClient
       Style = tsFlatButtons
@@ -357,7 +357,7 @@ object HasilSoftConesFrm: THasilSoftConesFrm
           Left = 0
           Top = 178
           Width = 1020
-          Height = 241
+          Height = 223
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 2
@@ -365,7 +365,7 @@ object HasilSoftConesFrm: THasilSoftConesFrm
             Left = 0
             Top = 0
             Width = 1020
-            Height = 241
+            Height = 223
             ControlType.Strings = (
               'KD_SUB_LOKASI;CustomEdit;LookLokasi;F'
               'KD_ITEM;CustomEdit;LookItem;F'
@@ -492,7 +492,7 @@ object HasilSoftConesFrm: THasilSoftConesFrm
         end
         object PanelFooter1: TPanel
           Left = 0
-          Top = 419
+          Top = 401
           Width = 1020
           Height = 41
           Align = alBottom
@@ -943,7 +943,7 @@ object HasilSoftConesFrm: THasilSoftConesFrm
           Left = 0
           Top = 70
           Width = 1020
-          Height = 349
+          Height = 331
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 1
@@ -951,7 +951,7 @@ object HasilSoftConesFrm: THasilSoftConesFrm
             Left = 0
             Top = 0
             Width = 1020
-            Height = 349
+            Height = 331
             Selected.Strings = (
               'NO_NOTA'#9'14'#9'Nomer'#9'F'#9'NOTA'
               'TGL'#9'11'#9'Tanggal'#9'F'#9'NOTA'
@@ -1014,7 +1014,7 @@ object HasilSoftConesFrm: THasilSoftConesFrm
         end
         object PanelFooter2: TPanel
           Left = 0
-          Top = 419
+          Top = 401
           Width = 1020
           Height = 41
           Align = alBottom

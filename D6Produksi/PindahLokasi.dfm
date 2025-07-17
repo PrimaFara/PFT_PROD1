@@ -23,8 +23,8 @@ object PindahLokasiFrm: TPindahLokasiFrm
   object PanelMain: TPanel
     Left = 0
     Top = 0
-    Width = 1135
-    Height = 566
+    Width = 1143
+    Height = 573
     Align = alClient
     BevelOuter = bvNone
     Ctl3D = False
@@ -32,8 +32,8 @@ object PindahLokasiFrm: TPindahLokasiFrm
     TabOrder = 0
     object Label1: TLabel
       Left = 0
-      Top = 553
-      Width = 1135
+      Top = 560
+      Width = 1143
       Height = 13
       Align = alBottom
       Color = clSkyBlue
@@ -42,7 +42,7 @@ object PindahLokasiFrm: TPindahLokasiFrm
     object DBText3: TDBText
       Left = 0
       Top = 49
-      Width = 1135
+      Width = 1143
       Height = 27
       Align = alTop
       Alignment = taRightJustify
@@ -60,7 +60,7 @@ object PindahLokasiFrm: TPindahLokasiFrm
     object PanelHeader: TPanel
       Left = 0
       Top = 0
-      Width = 1135
+      Width = 1143
       Height = 49
       Align = alTop
       BevelOuter = bvNone
@@ -77,8 +77,8 @@ object PindahLokasiFrm: TPindahLokasiFrm
     object PageControl1: TPageControl
       Left = 0
       Top = 76
-      Width = 1135
-      Height = 477
+      Width = 1143
+      Height = 484
       ActivePage = TabSheet2
       Align = alClient
       Style = tsFlatButtons
@@ -90,7 +90,7 @@ object PindahLokasiFrm: TPindahLokasiFrm
         object PanelMaster: TPanel
           Left = 0
           Top = 0
-          Width = 1127
+          Width = 1135
           Height = 137
           Align = alTop
           BevelOuter = bvNone
@@ -353,16 +353,16 @@ object PindahLokasiFrm: TPindahLokasiFrm
         object PanelDetail: TPanel
           Left = 0
           Top = 178
-          Width = 1127
-          Height = 227
+          Width = 1135
+          Height = 234
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 2
           object wwDBGrid1: TwwDBGrid
             Left = 0
             Top = 0
-            Width = 1127
-            Height = 227
+            Width = 1135
+            Height = 234
             ControlType.Strings = (
               'KD_ITEM;CustomEdit;LookItem;F'
               'KD_SUB_LOKASI2;CustomEdit;LookLokasi2;F')
@@ -471,8 +471,8 @@ object PindahLokasiFrm: TPindahLokasiFrm
         end
         object PanelFooter1: TPanel
           Left = 0
-          Top = 405
-          Width = 1127
+          Top = 412
+          Width = 1135
           Height = 41
           Align = alBottom
           BevelOuter = bvNone
@@ -589,7 +589,7 @@ object PindahLokasiFrm: TPindahLokasiFrm
         object PanelBand: TPanel
           Left = 0
           Top = 137
-          Width = 1127
+          Width = 1135
           Height = 41
           Align = alTop
           BevelOuter = bvNone
@@ -712,7 +712,7 @@ object PindahLokasiFrm: TPindahLokasiFrm
         object LabelBanner: TLabel
           Left = 0
           Top = 57
-          Width = 1127
+          Width = 1135
           Height = 13
           Align = alTop
           Color = clSkyBlue
@@ -721,7 +721,7 @@ object PindahLokasiFrm: TPindahLokasiFrm
         object PanelFilter: TPanel
           Left = 0
           Top = 0
-          Width = 1127
+          Width = 1135
           Height = 57
           Align = alTop
           BevelOuter = bvNone
@@ -854,16 +854,16 @@ object PindahLokasiFrm: TPindahLokasiFrm
         object PanelBrowse: TPanel
           Left = 0
           Top = 70
-          Width = 1127
-          Height = 335
+          Width = 1135
+          Height = 342
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 1
           object wwDBGrid2: TwwDBGrid
             Left = 0
             Top = 0
-            Width = 1127
-            Height = 335
+            Width = 1135
+            Height = 342
             Selected.Strings = (
               'NO_NOTA'#9'14'#9'NO NOTA'#9'F'
               'TANGGAL'#9'11'#9'TANGGAL'#9'F'
@@ -917,8 +917,8 @@ object PindahLokasiFrm: TPindahLokasiFrm
         end
         object PanelFooter2: TPanel
           Left = 0
-          Top = 405
-          Width = 1127
+          Top = 412
+          Width = 1135
           Height = 41
           Align = alBottom
           BevelOuter = bvNone
@@ -1051,8 +1051,8 @@ object PindahLokasiFrm: TPindahLokasiFrm
         object wwDBRichEdit1: TwwDBRichEdit
           Left = 0
           Top = 0
-          Width = 1127
-          Height = 446
+          Width = 1135
+          Height = 453
           Align = alClient
           AutoURLDetect = False
           Color = clInfoBk
@@ -1211,7 +1211,7 @@ object PindahLokasiFrm: TPindahLokasiFrm
     PrinterSetup.mmMarginTop = 6350
     PrinterSetup.mmPaperHeight = 210000
     PrinterSetup.mmPaperWidth = 297000
-    PrinterSetup.PaperSize = 256
+    PrinterSetup.PaperSize = 9
     Template.FileName = 'D:\_Proyek\iPismaTex\Aplikasi\Report\ts.rtm'
     Units = utMillimeters
     DeviceType = 'Screen'
@@ -2388,10 +2388,6 @@ object PindahLokasiFrm: TPindahLokasiFrm
     WindowWidth = 600
     Left = 952
     Top = 72
-  end
-  object dsQBrowseDetail: TwwDataSource
-    Left = 832
-    Top = 80
   end
   object ppDBPerusahaan: TppDBPipeline
     DataSource = DMFrm.dsPerusahaan
