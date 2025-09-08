@@ -13315,7 +13315,7 @@ object PembelianFrm: TPembelianFrm
     object Master1: TMenuItem
       Caption = 'Master'
       object N00KonstruksiSarung1: TMenuItem
-        Caption = '00. Konstruksi Sarung'
+        Caption = '00. Konversi Item'
         OnClick = N00KonstruksiSarung1Click
       end
       object BahanBakuBenang2: TMenuItem

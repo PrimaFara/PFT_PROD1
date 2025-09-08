@@ -61,7 +61,8 @@ uses
   LaporanDeptKemitraan in 'LaporanDeptKemitraan.pas' {LaporanDeptKemitraanFrm},
   AfvalMitra in 'AfvalMitra.pas' {AfvalMitraFrm},
   KoreksiMitra in 'KoreksiMitra.pas' {KoreksiMitraFrm},
-  RekapMitra in 'RekapMitra.pas' {RekapMitraFrm};
+  RekapMitra in 'RekapMitra.pas' {RekapMitraFrm},
+  KonversiItem in 'KonversiItem.pas' {KonversiItemFrm};
 
 {$R *.res}
 

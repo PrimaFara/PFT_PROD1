@@ -61,7 +61,8 @@ uses
   LaporanDeptKemitraan in 'LaporanDeptKemitraan.pas' {LaporanDeptKemitraanFrm},
   AfvalMitra in 'AfvalMitra.pas' {AfvalMitraFrm},
   KoreksiMitra in 'KoreksiMitra.pas' {KoreksiMitraFrm},
-  RekapMitra in 'RekapMitra.pas' {RekapMitraFrm};
+  RekapMitra in 'RekapMitra.pas' {RekapMitraFrm},
+  KonversiItem in 'KonversiItem.pas' {KonversiItemFrm};
 
 {$R *.res}
 
@@ -76,6 +77,7 @@ begin
   Application.CreateForm(TPembelianFrm, PembelianFrm);
   Application.CreateForm(TKriteria_Tanggal1_FRM, Kriteria_Tanggal1_FRM);
   Application.CreateForm(TKriteria_Tanggal1_FRM, Kriteria_Tanggal1_FRM);
+  Application.CreateForm(TKonversiItemFrm, KonversiItemFrm);
   SplashForm.Hide; // Hide Splash Screen
   SplashForm.Free; // Free Splah Screen
   Application.Run;

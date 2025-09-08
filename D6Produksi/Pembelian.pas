@@ -266,7 +266,7 @@ uses DM, TipeMenu, HakMenu, OrganisasiItem, OrganisasiLokasi,
   LapMutStokGW, HasilPengeringan, MyColor, PenerimaanKG,
   PenerimaanHasilCelup, Penerimaan_JasaKelos, PengeluaranPCS, SJMaklon, TerimaMaklon,
   DaftarUnpost, PermintaanUnpost, Unpost, DaftarWarna, ProsesAwalTahun, PindahLokasi3,
-  PermintaanKoreksiPengering, LaporanDeptKemitraan, AfvalMitra, KoreksiMitra, RekapMitra;
+  PermintaanKoreksiPengering, LaporanDeptKemitraan, AfvalMitra, KoreksiMitra, RekapMitra, KonversiItem;
 
 {$R *.dfm}
 
@@ -646,7 +646,9 @@ end;
 
 procedure TPembelianFrm.N00KonstruksiSarung1Click(Sender: TObject);
 begin
-  OrganisasiItem.ShowForm((Sender as TMenuItem).Name,copy((Sender as TMenuItem).Caption,2,2),(Sender as TMenuItem).Caption);
+  {KonversiItem.ShowForm((Sender as TMenuItem).Name,copy((Sender as TMenuItem).Caption,2,2),(Sender as TMenuItem).Caption);}
+  if KonversiItemFrm=nil then KonversiItemFrm:=TKonversiItemFrm.Create(Self)
+  else KonversiItemFrm.show;
 end;
 
 procedure TPembelianFrm.InfoSemuaItem1Click(Sender: TObject);
