@@ -1189,7 +1189,10 @@ end;
 procedure TLaporanDeptKemitraanFrm.ppSummaryBand1BeforePrint(
   Sender: TObject);
 begin
-  ppLabel42.Caption:='Pekalongan, '+FormatDateTime('mmmm yyyy',vTglAwal.Date);
+  DMFrm.QTime.Close;
+  DMFrm.QTime.Open;
+  //ppLabel42.Caption:='Pekalongan, '+FormatDateTime('mmmm yyyy',vTglAwal.Date);
+  ppLabel42.Caption:='Pekalongan, '+FormatDateTime('dd mmmm yyyy',DMFrm.QTimeTanggal.AsDateTime);
 end;
 
 procedure TLaporanDeptKemitraanFrm.BitBtn2Click(Sender: TObject);

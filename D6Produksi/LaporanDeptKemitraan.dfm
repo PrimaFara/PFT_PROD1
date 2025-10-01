@@ -61,7 +61,7 @@ object LaporanDeptKemitraanFrm: TLaporanDeptKemitraanFrm
       Top = 73
       Width = 1075
       Height = 472
-      ActivePage = TabSheet1
+      ActivePage = TabSheet2
       Align = alClient
       Style = tsFlatButtons
       TabOrder = 1

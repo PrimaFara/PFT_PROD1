@@ -21,6 +21,7 @@ object DMFrm: TDMFrm
     LogonUsername = 'IPISMA_DB3'
     LogonPassword = 'IPISMA_DB3'
     LogonDatabase = 'PFPROD'
+    Connected = True
     Left = 24
     Top = 8
   end
@@ -111,11 +112,8 @@ object DMFrm: TDMFrm
   end
   object QTime: TOracleDataSet
     SQL.Strings = (
-      '')
-    QBEDefinition.QBEFieldDefs = {
-      0400000004000000050000005655534552010000000000030000004A414D0100
-      000000000B00000056555345525F434554414B010000000000060000004B445F
-      444956010000000000}
+      'select trunc(sysdate) as tanggal from dual')
+    QBEDefinition.QBEFieldDefs = {04000000010000000700000054414E4747414C010000000000}
     Cursor = crSQLWait
     Session = OS
     BeforeOpen = QTimeBeforeOpen
@@ -135,6 +133,9 @@ object DMFrm: TDMFrm
     object QTimeKD_DIV: TStringField
       FieldName = 'KD_DIV'
       Size = 5
+    end
+    object QTimeTANGGAL: TDateTimeField
+      FieldName = 'TANGGAL'
     end
   end
   object Perusahaan: TOracleDataSet

@@ -213,6 +213,7 @@ type
     QMyInfoTGL_FINISH: TDateTimeField;
     QUserISAKTIF: TStringField;
     QUserIUPDATE: TStringField;
+    QTimeTANGGAL: TDateTimeField;
     function Barcode(MyFld: PAnsiChar; BType: PAnsiChar; useMsgBox: Integer): PAnsiChar;
     procedure OSAfterLogOn(Sender: TOracleSession);
     procedure ProcReadIni(pFileIni: String; pSection : String; var pGrid : TwwDBGrid);
@@ -465,7 +466,7 @@ procedure TDMFrm.QTimeBeforeOpen(DataSet: TDataSet);
 begin
   QTime.SQL.Text:='select user as vuser, sysdate as jam,'+
     ' user||'', ''||to_char(sysdate,''dd Mon yyyy hh24:mi'') as vuser_cetak,'+
-    ' b.kd_div from dual a, '+cUserTabel+'vuser b'+
+    ' b.kd_div, trunc(sysdate) as tanggal from dual a, '+cUserTabel+'vuser b'+
     ' where user=b.vuser';
 end;
 
